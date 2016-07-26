@@ -2,6 +2,15 @@
 
 $(document).ready(function() {
   mapView.init();
+  var socket = io.connect('http://' + document.domain + ':' + location.port + '/event');
+    socket.on('connect', function() {
+      console.log('connected!');
+    });
+    socket.on('logging', function(msg) {
+      var output = msg.output;
+      var color = msg.color;
+      log(msg);
+    });
 });
 
 var mapView = {
