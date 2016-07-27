@@ -359,7 +359,7 @@ var mapView = {
             lng: parseFloat(data.longitude)
           });
           user.catchables[data.spawnpoint_id].setIcon({
-            url: 'image/pokemon/' + Pokemon.getImageById(id),
+            url: 'image/pokemon/' + Pokemon.getImageById(data.pokemon_id),
             scaledSize: new google.maps.Size(70, 70)
           });
         }
