@@ -5,22 +5,22 @@ var logger = new Logger("#logs-panel .card-content");
 $(document).ready(function() {
   mapView.init();
   var socket = io.connect('http://' + document.domain + ':' + location.port + '/event');
-    socket.on('connect', function() {
-      console.log('connected!');
-    });
-    socket.on('logging', function(msg) {
-      for(var i = 0; i < msg.length; i++) {
-        logger.log({
-          message: msg[i].output,
-          color: msg[i].color + "-text",
-          toast: msg[i].toast || false
-        });
-      }
-    });
+
+  socket.on('connect', function() {
+    console.log('connected!');
+  });
+  socket.on('logging', function(msg) {
+    for(var i = 0; i < msg.length; i++) {
+      logger.log({
+        message: msg[i].output,
+        color: msg[i].color + "-text",
+        toast: msg[i].toast || false
+      });
+    }
+  });
 });
 
 var mapView = {
-  map: [],
   user_index: 0,
   emptyDex: [],
   forts: [],
@@ -56,8 +56,6 @@ var mapView = {
     '#BA4A00'
   ],
   playerInfo: {},
-  pokedex: {},
-  pokemoncandyArray: {},
   user_data: {},
   pathcoords: {},
   settings: {},
@@ -66,27 +64,24 @@ var mapView = {
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
+    self.loadJSON('data/pokemondata.json', function(data, successData) {
+      //self.pokemonArray = data;
+      Pokemon.setPokemonData(data);
+    }, self.errorFunc, 'pokemonData');
+
+    self.loadJSON('data/pokemoncandy.json', function(data, successData) {
+      //self.pokemoncandyArray = data;
+      Pokemon.setPokemonCandyData(data);
+    }, self.errorFunc, 'pokemonCandy');
+
+    for (var i = 0; i < self.settings.users.length; i++) {
+      var username = self.settings.users[i];
+      self.user_data[username] = new Player(username);
+      self.pathcoords[username] = [];
+    }
+
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
-      logger.log({
-        message: 'Loading Data..'
-      });
-      self.loadJSON('data/pokemondata.json', function(data, successData) {
-        //self.pokemonArray = data;
-        Pokemon.setPokemonData(data);
-      }, self.errorFunc, 'pokemonData');
-      self.loadJSON('data/pokemoncandy.json', function(data, successData) {
-        //self.pokemoncandyArray = data;
-        Pokemon.setPokemonCandyData(data);
-      }, self.errorFunc, 'pokemonCandy');
-      for (var i = 0; i < self.settings.users.length; i++) {
-        var username = self.settings.users[i];
-        self.user_data[username] = new Player(username);
-        self.pathcoords[username] = [];
-      }
       self.initMap();
-      logger.log({
-        message: 'Data Loaded!'
-      });
     });
   },
   bindUi: function() {
@@ -170,7 +165,7 @@ var mapView = {
     });
     self.placeTrainer();
     self.addCatchable();
-    setInterval(self.updateTrainer, 1000);
+    setInterval(self.placeTrainer, 1000);
     setInterval(self.addCatchable, 1000);
     setInterval(self.addInventory, 5000);
   },
@@ -272,7 +267,7 @@ var mapView = {
         self.sortAndShowBagPokemon('cp', user_id);
         break;
       case 4:
-        var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
+        var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.getNumEntries();
         $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 151');
 
         var sortButtons = '<div class="col s12 pokedex-sort" dat-user-id="' + user_id + '">Sort : ';
@@ -395,7 +390,7 @@ var mapView = {
 
     for (var i = 0; i < user.bagCandy.length; i++) {
       var checkCandy = user.bagCandy[i].inventory_item_data.pokemon_family.family_id;
-      if (self.pokemoncandyArray[p_num] === checkCandy) {
+      if (Pokemon.getCandyId(p_num) === checkCandy) {
         return (user.bagCandy[i].inventory_item_data.pokemon_family.candy || 0);
       }
     }
@@ -406,7 +401,6 @@ var mapView = {
   },
   placeTrainer: function() {
     var self = mapView;
-
     for (var i = 0; i < self.settings.users.length; i++) {
       self.loadJSON('location-' + self.settings.users[i] + '.json', self.trainerFunc, self.errorFunc, i);
     }
@@ -414,80 +408,26 @@ var mapView = {
   sortAndShowBagPokemon: function(sortOn, user_id) {
     var self = this,
       eggs = 0,
-      sortedPokemon = [],
       out = '',
       user = self.user_data[self.settings.users[user_id]],
       user_id = user_id || 0;
 
     if (!user.bagPokemon.length) return;
 
+    var sortedPokemon = user.getSortedPokemon(sortOn);
+
     out = '<div class="items"><div class="row">';
-    for (var i = 0; i < user.bagPokemon.length; i++) {
-      if (user.bagPokemon[i].inventory_item_data.pokemon_data.is_egg) {
-        eggs++;
-        continue;
-      }
-      var pokemonData = user.bagPokemon[i].inventory_item_data.pokemon_data;
-      sortedPokemon.push(new Pokemon(pokemonData));
-    }
-    switch (sortOn) {
-      case 'name':
-        sortedPokemon.sort(function(a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          if (a.combatPower > b.combatPower) return -1;
-          if (a.combatPower < b.combatPower) return 1;
-          return 0;
-        });
-        break;
-      case 'id':
-        sortedPokemon.sort(function(a, b) {
-          if (a.id < b.id) return -1;
-          if (a.id > b.id) return 1;
-          if (a.combatPower > b.combatPower) return -1;
-          if (a.combatPower < b.combatPower) return 1;
-          return 0;
-        });
-        break;
-      case 'cp':
-        sortedPokemon.sort(function(a, b) {
-          if (a.combatPower > b.combatPower) return -1;
-          if (a.combatPower < b.combatPower) return 1;
-          return 0;
-        });
-        break;
-      case 'iv':
-        sortedPokemon.sort(function(a, b) {
-          if (a.iv > b.iv) return -1;
-          if (a.iv < b.iv) return 1;
-          return 0;
-        });
-        break;
-      case 'time':
-        sortedPokemon.sort(function(a, b) {
-          if (a.creationTime > b.creationTime) return -1;
-          if (a.creationTime < b.creationTime) return 1;
-          return 0;
-        });
-        break;
-      default:
-        sortedPokemon.sort(function(a, b) {
-          if (a.cp > b.cp) return -1;
-          if (a.cp < b.cp) return 1;
-          return 0;
-        });
-        break;
-    }
+
     for (var i = 0; i < sortedPokemon.length; i++) {
-      var pokemon = sortedPokemon[i];
-      var pkmnNum = pokemon.id,
-        pkmnImage = pokemon.image,
-        pkmnName = Pokemon.getNameById(pkmnNum);
-        pkmnCP = pokemon.combatPower,
-        pkmnIV = pokemon.IV,
-        pkmnIVA = pokemon.attackIV,
-        pkmnIVD = pokemon.defenseIV,
-        pkmnIVS = pokemon.speedIV,
+      var myPokemon = sortedPokemon[i];
+      var pkmnNum = myPokemon.id,
+        pkmnImage = Pokemon.getImageById(myPokemon.id),
+        pkmnName = Pokemon.getNameById(pkmnNum),
+        pkmnCP = myPokemon.combatPower,
+        pkmnIV = myPokemon.IV,
+        pkmnIVA = myPokemon.attackIV,
+        pkmnIVD = myPokemon.defenseIV,
+        pkmnIVS = myPokemon.speedIV,
         candyNum = self.getCandy(pkmnNum, user_id);
 
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
@@ -498,7 +438,7 @@ var mapView = {
         pkmnCP +
         '<br>IV: ' +
         pkmnIV +
-        '<br>A/D/S:' +
+        '<br>A/D/S: ' +
         pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br>Candy: ' +
         candyNum +
@@ -517,73 +457,27 @@ var mapView = {
   sortAndShowPokedex: function(sortOn, user_id) {
     var self = this,
       out = '',
-      sortedPokedex = [],
       user_id = (user_id || 0),
       user = self.user_data[self.settings.users[user_id]];
 
     if (!user.pokedex.length) return;
 
     out = '<div class="items"><div class="row">';
-    for (var i = 0; i < user.pokedex.length; i++) {
-      var pokedex_entry = user.pokedex[i].inventory_item_data.pokedex_entry,
-        pkmID = pokedex_entry.pokedex_entry_number,
-        pkmnName = Pokemon.getNameById(pkmID),
-        pkmEnc = pokedex_entry.times_encountered,
-        pkmCap = pokedex_entry.times_captured;
-
-      sortedPokedex.push({
-        "name": pkmnName,
-        "id": pkmID,
-        "cap": (pkmCap || 0),
-        "enc": (pkmEnc || 0)
-      });
-    }
-    switch (sortOn) {
-      case 'id':
-        sortedPokedex.sort(function(a, b) {
-          return a.id - b.id;
-        });
-        break;
-      case 'name':
-        sortedPokedex.sort(function(a, b) {
-          if (a.name < b.name) return -1;
-          if (a.name > b.name) return 1;
-          return 0;
-        });
-        break;
-      case 'enc':
-        sortedPokedex.sort(function(a, b) {
-          return a.enc - b.enc;
-        });
-        break;
-      case 'cap':
-        sortedPokedex.sort(function(a, b) {
-          return a.cap - b.cap;
-        });
-        break;
-      default:
-        sortedPokedex.sort(function(a, b) {
-          return a.id - b.id;
-        });
-        break;
-    }
+    var userPokedex = new Pokedex(user.pokedex);
+    var sortedPokedex = userPokedex.getAllEntriesSorted(sortOn);
     for (var i = 0; i < sortedPokedex.length; i++) {
-      var pkmnNum = sortedPokedex[i].id,
-        pkmnImage = Pokemon.getImageById(pkmnNum),
-        pkmnName = Pokemon.getNameById(pkmnNum),
-        pkmnEnc = sortedPokedex[i].enc,
-        pkmnCap = sortedPokedex[i].cap,
-        candyNum = self.getCandy(pkmnNum, user_id);
+      var entry = sortedPokedex[i];
+      var candyNum = self.getCandy(entry.id, user_id);
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
-        pkmnImage +
+        entry.image +
         '" class="png_img"><br><b> ' +
-        Pokemon.getPaddedId(pkmnNum) +
-        ' ' +
-        pkmnName +
+        Pokemon.getPaddedId(entry.id) +
+        ' - ' +
+        entry.name +
         '</b><br>Times Seen: ' +
-        pkmnEnc +
+        entry.encountered +
         '<br>Times Caught: ' +
-        pkmnCap +
+        entry.captured +
         '<br>Candy: ' +
         candyNum +
         '</div>';
@@ -710,12 +604,6 @@ var mapView = {
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       });
-    }
-  },
-  updateTrainer: function() {
-    var self = mapView;
-    for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json', self.trainerFunc, self.errorFunc, i);
     }
   },
   loadJSON: function(path, success, error, successData) {

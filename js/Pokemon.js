@@ -10,21 +10,10 @@ class Pokemon {
     this.creationTime = data.creation_time_ms || 0;
   }
 
-  get image() {
-    return this.paddedId + '.png';
-  }
-
-  get paddedId() {
-    return Pokemon.getPaddedId(this.id);
-  }
-
   static getPaddedId(id) {
-    var padLength = 3;
-    var myString = '' + id;
-    while (myString.length < length) {
-      myString = '0' + myString;
-    }
-    return myString;
+    var str = '' + id;
+    var pad = '000'
+    return pad.substring(0, pad.length - str.length) + str
   }
 
   static getImageById(id) {
@@ -45,5 +34,9 @@ class Pokemon {
 
   static getNameById(id) {
     return Pokemon.getPokemonById(id).Name;
+  }
+
+  static getCandyId(id) {
+    return Pokemon.pokemonCandyData[id];
   }
 }
