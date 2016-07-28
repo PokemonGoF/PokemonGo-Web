@@ -24,7 +24,7 @@ class Player {
     this.bagCandy = filterInventory(data, 'pokemon_family');
     this.bagItems = filterInventory(data, 'item');
     this.pokedex = new Pokedex(filterInventory(data, 'pokedex_entry'));
-    this.stats = filterInventory(data, 'player_stats');
+    this.stats = filterInventory(data, 'player_stats')[0].inventory_item_data.player_stats;
     this.updatePokemon(filterInventory(data, 'pokemon_data'));
   } 
 

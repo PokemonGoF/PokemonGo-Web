@@ -4,6 +4,7 @@ var logger = new Logger("#logs-panel .card-content");
 
 $(document).ready(function() {
   mapView.init();
+  
   var socket = io.connect('http://' + document.domain + ':' + location.port + '/event');
 
   socket.on('connect', function() {
@@ -19,6 +20,22 @@ $(document).ready(function() {
     }
   });
 });
+
+function loadJSON(path) {
+  return new Promise(function(fulfill, reject) {
+    $.get({
+      url: path + "?" + Date.now()
+    }).done(function(data) {
+      if(data !== undefined) {
+        fulfill(data);
+      } else {
+        reject(data);
+      }
+    }).fail(function(jqXHR, textContent, thrownError) {
+      reject(thrownError);
+    });
+  });
+}
 
 var mapView = {
   user_index: 0,
@@ -64,15 +81,9 @@ var mapView = {
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
-    self.loadJSON('data/pokemondata.json', function(data, successData) {
-      //self.pokemonArray = data;
-      Pokemon.setPokemonData(data);
-    }, self.errorFunc, 'pokemonData');
+    loadJSON('data/pokemondata.json').then(Pokemon.setPokemonData);
 
-    self.loadJSON('data/pokemoncandy.json', function(data, successData) {
-      //self.pokemoncandyArray = data;
-      Pokemon.setPokemonCandyData(data);
-    }, self.errorFunc, 'pokemonCandy');
+    loadJSON('data/pokemoncandy.json').then(Pokemon.setPokemonCandyData);
 
     for (var i = 0; i < self.settings.users.length; i++) {
       var username = self.settings.users[i];
@@ -172,13 +183,19 @@ var mapView = {
   addCatchable: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('catchable-' + self.settings.users[i] + '.json', self.catchSuccess, self.errorFunc, i);
+      var username = self.settings.users[i];
+      loadJSON('catchable-' + username + '.json').then(function(data) {
+        self.catchSuccess(data, username);
+      });
     }
   },
   addInventory: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('inventory-' + self.settings.users[i] + '.json', self.invSuccess, self.errorFunc, i);
+      var username = self.settings.users[i];
+      loadJSON('inventory-' + username + '.json').then(function(data) {
+        self.user_data[username].updateInventory(data);
+      });
     }
   },
   buildMenu: function(user_id, menu) {
@@ -187,7 +204,7 @@ var mapView = {
     $("#submenu").show();
     switch (menu) {
       case 1:
-        var current_user_stats = self.user_data[self.settings.users[user_id]].stats[0].inventory_item_data.player_stats;
+        var current_user_stats = self.user_data[self.settings.users[user_id]].stats;
         $('#subtitle').html('Trainer Info');
         $('#sortButtons').html('');
 
@@ -310,9 +327,9 @@ var mapView = {
     $('#trainers').html(out);
     $('.collapsible').collapsible();
   },
-  catchSuccess: function(data, user_index) {
+  catchSuccess: function(data, username) {
     var self = mapView,
-      user = self.user_data[self.settings.users[user_index]],
+      user = self.user_data[username],
       poke_name = '';
     if (data !== undefined && Object.keys(data).length > 0) {
       if (user.catchables === undefined) {
@@ -322,7 +339,7 @@ var mapView = {
         if (user.catchables.hasOwnProperty(data.spawnpoint_id) === false) {
           poke_name = Pokemon.getPokemonById(data.pokemon_id).Name;
           logger.log({
-            message: "[" + self.settings.users[user_index] + "] " + poke_name + " appeared",
+            message: "[" + username + "] " + poke_name + " appeared",
             color: "green-text"
           });
           user.catchables[data.spawnpoint_id] = new google.maps.Marker({
@@ -362,7 +379,7 @@ var mapView = {
     } else {
       if (user.catchables !== undefined && Object.keys(user.catchables).length > 0) {
         logger.log({
-          message: "[" + self.settings.users[user_index] + "] " + poke_name + " has been caught or fled"
+          message: "[" + username + "] " + poke_name + " has been caught or fled"
         });
         for (var key in user.catchables) {
           user.catchables[key].setMap(null);
@@ -376,7 +393,8 @@ var mapView = {
   },
   findBot: function(user_index) {
     var self = this,
-      coords = self.pathcoords[self.settings.users[user_index]][self.pathcoords[self.settings.users[user_index]].length - 1];
+      username = self.settings.users[user_index],
+      coords = self.pathcoords[username][self.pathcoords[username].length - 1];
 
     self.map.setZoom(self.settings.zoom);
     self.map.panTo({
@@ -395,14 +413,13 @@ var mapView = {
       }
     }
   },
-  invSuccess: function(data, user_index) {
-    var self = mapView;
-    self.user_data[self.settings.users[user_index]].updateInventory(data);
-  },
   placeTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json', self.trainerFunc, self.errorFunc, i);
+      var username = self.settings.users[i];
+      loadJSON('location-' + username + '.json').then(function(data) {
+        self.trainerFunc(data, username);
+      });
     }
   },
   sortAndShowBagPokemon: function(sortOn, user_id) {
@@ -460,11 +477,8 @@ var mapView = {
       user_id = (user_id || 0),
       user = self.user_data[self.settings.users[user_id]];
 
-    if (!user.pokedex.length) return;
-
     out = '<div class="items"><div class="row">';
-    var userPokedex = new Pokedex(user.pokedex);
-    var sortedPokedex = userPokedex.getAllEntriesSorted(sortOn);
+    var sortedPokedex = user.pokedex.getAllEntriesSorted(sortOn);
     for (var i = 0; i < sortedPokedex.length; i++) {
       var entry = sortedPokedex[i];
       var candyNum = self.getCandy(entry.id, user_id);
@@ -490,9 +504,9 @@ var mapView = {
     });
     $('#subcontent').html(out);
   },
-  trainerFunc: function(data, user_index) {
+  trainerFunc: function(data, username) {
     var self = mapView,
-      coords = self.pathcoords[self.settings.users[user_index]][self.pathcoords[self.settings.users[user_index]].length - 1];
+      coords = self.pathcoords[username][self.pathcoords[username].length - 1];
     for (var i = 0; i < data.cells.length; i++) {
       var cell = data.cells[i];
       if (data.cells[i].forts != undefined) {
@@ -547,27 +561,27 @@ var mapView = {
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       }];
-      if (tempcoords.lat != coords.lat && tempcoords.lng != coords.lng || self.pathcoords[self.settings.users[user_index]].length === 1) {
-        self.pathcoords[self.settings.users[user_index]].push({
+      if (tempcoords.lat != coords.lat && tempcoords.lng != coords.lng || self.pathcoords[username].length === 1) {
+        self.pathcoords[username].push({
           lat: parseFloat(data.lat),
           lng: parseFloat(data.lng)
         });
       }
     } else {
-      self.pathcoords[self.settings.users[user_index]].push({
+      self.pathcoords[username].push({
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       });
     }
-    if (self.user_data[self.settings.users[user_index]].hasOwnProperty('marker') === false) {
+    if (self.user_data[username].hasOwnProperty('marker') === false) {
       self.buildTrainerList();
       self.addInventory();
       logger.log({
-        message: "Trainer loaded: " + self.settings.users[user_index],
+        message: "Trainer loaded: " + username,
         color: "blue-text"
       });
       var randomSex = Math.floor(Math.random() * 1);
-      self.user_data[self.settings.users[user_index]].marker = new google.maps.Marker({
+      self.user_data[username].marker = new google.maps.Marker({
         map: self.map,
         position: {
           lat: parseFloat(data.lat),
@@ -575,25 +589,26 @@ var mapView = {
         },
         icon: 'image/trainer/' + self.trainerSex[randomSex] + Math.floor(Math.random() * self.numTrainers[randomSex] + 1) + '.png',
         zIndex: 2,
-        label: self.settings.users[user_index],
+        label: username,
         clickable: false
       });
     } else {
-      self.user_data[self.settings.users[user_index]].marker.setPosition({
+      self.user_data[username].marker.setPosition({
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       });
-      if (self.pathcoords[self.settings.users[user_index]].length === 2) {
-        self.user_data[self.settings.users[user_index]].trainerPath = new google.maps.Polyline({
+      if (self.pathcoords[username].length === 2) {
+        self.user_data[username].trainerPath = new google.maps.Polyline({
           map: self.map,
-          path: self.pathcoords[self.settings.users[user_index]],
+          path: self.pathcoords[username],
           geodisc: true,
-          strokeColor: self.pathColors[user_index],
+          // Need to set proper stroke color
+          strokeColor: self.pathColors[0],
           strokeOpacity: 0.0,
           strokeWeight: 2
         });
       } else {
-        self.user_data[self.settings.users[user_index]].trainerPath.setPath(self.pathcoords[self.settings.users[user_index]]);
+        self.user_data[username].trainerPath.setPath(self.pathcoords[username]);
       }
     }
     if (self.settings.users.length === 1 && self.settings.userZoom === true) {
@@ -605,17 +620,6 @@ var mapView = {
         lng: parseFloat(data.lng)
       });
     }
-  },
-  loadJSON: function(path, success, error, successData) {
-    $.get({
-      url: path + "?" + Date.now()
-    }).done(function(data) {
-      if(data !== undefined) {
-        success(data, successData)
-      } else {
-        error(data)
-      }
-    })
   },
 };
 
