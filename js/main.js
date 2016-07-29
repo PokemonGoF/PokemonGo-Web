@@ -248,12 +248,13 @@ var mapView = {
           '<br><div class="progress botbar-' + user_id + '" style="height: 10px"> <div class="determinate bot-' + user_id + '" style="width: '+
           ((current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) /
           self.levelXpArray[current_user_stats.level - 1].exp_to_next_level) * 100 +
-          '%"></div></div>Exp: ' +
+          '%"></div></div>Total Exp: ' +
           current_user_stats.experience +
           '<br>Exp to Lvl ' +
           (parseInt(current_user_stats.level, 10) + 1) +
           ': ' +
-          (parseInt(current_user_stats.next_level_xp, 10) - current_user_stats.experience) +
+          (current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) +
+		  ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level +
           '<br>Pokemon Encountered: ' +
           (current_user_stats.pokemons_encountered || 0) +
           '<br>Pokeballs Thrown: ' +
