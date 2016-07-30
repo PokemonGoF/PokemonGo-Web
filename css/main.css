@@ -106,10 +106,26 @@ html, body {
 	white-space: nowrap;
 	overflow: hidden;
 }
+
+#streetview-panel {
+	display: none;
+	position: fixed;
+	height: 400px;
+	width: 400px;
+	z-index: 5;
+	left: 10px;
+	top: 100px;
+}
+#streetview-panel .card {
+	
+	height: 100%;
+	margin: 0;
+}
+
 #logs-panel {
 	display: none;
 	position: fixed;
-	height: 50vh;
+	height: 25vh;
 	width: 360px;
 	z-index: 5;
 	left: 10px;
@@ -120,6 +136,8 @@ html, body {
 	height: 100%;
 	margin: 0;
 }
+
+
 .log-item {
 	padding: .3em 0 .3em 0;
 	font-size: 14px;

@@ -63,6 +63,8 @@ var mapView = {
   stats: {},
   user_data: {},
   pathcoords: {},
+  bearing: 0,
+  previousPosition: {},
   itemsArray: {
     '0': 'Unknown',
     '1': 'Pokeball',
@@ -151,6 +153,24 @@ var mapView = {
         });
       }
     });
+	
+	$('#streetViewOn').change(function() {
+	  if ($('#streetViewOn').is(":checked")){
+		
+		self.log({
+        message: 'Enabling Streetview!'
+		});
+		self.updateStreetView();
+		 $('#streetview-panel').show();
+	  }
+	  else{
+		self.log({
+		message: 'Disabling Streetview!'
+		});
+			$('#streetview-panel').hide(1000);
+	  }
+    });
+	
 
     $('#optionsButton').click(function() {
       $('#optionsList').toggle();
@@ -214,6 +234,7 @@ var mapView = {
     setInterval(self.updateTrainer, 1000);
     setInterval(self.addCatchable, 1000);
     setInterval(self.addInventory, 5000);
+	setInterval(self.updateStreetView, 5000);
   },
   addCatchable: function() {
     var self = mapView;
@@ -685,7 +706,7 @@ var mapView = {
   trainerFunc: function(data, user_index) {
     var self = mapView,
       coords = self.pathcoords[self.settings.users[user_index]][self.pathcoords[self.settings.users[user_index]].length - 1];
-    for (var i = 0; i < data.cells.length; i++) {
+	for (var i = 0; i < data.cells.length; i++) {
       var cell = data.cells[i];
       if (data.cells[i].forts != undefined) {
         for (var x = 0; x < data.cells[i].forts.length; x++) {
@@ -805,16 +826,85 @@ var mapView = {
     }
   },
   loadJSON: function(path, success, error, successData) {
-    $.get({
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          if (success)
+            success(JSON.parse(xhr.responseText.replace(/\bNaN\b/g, 'null')), successData);
+        } else {
+          if (error)
+            error(xhr);
+        }
+      }
+    };
+    xhr.open('GET', path, true);
+    xhr.send();
+  },
+  
+  updateStreetView: function() {
+	  self = mapView;
+	  //TODO: fix the multi trainer thing..
+	  var userindex =0;
+	  
+	  if($('#streetViewOn').is(":checked")){
+		if(self.settings.gStreetViewAPIKey != undefined && self.settings.gStreetViewAPIKey != "YOUR_API_KEY_HERE"){
+	       
+			self.loadJSON('location-' + self.settings.users[userindex] + '.json', self.streetViewFunc, self.errorFunc, 0);
+			
+		}
+		else{
+		    $("#streetview-panel .card-content").replaceWith("Add a google streetview api key in config/userdata.js<br>apply for a key at: <a href=\"https://console.developers.google.com/flows/enableapi?apiid=street_view_image_backend&keyType=CLIENT_SIDE&reusekey=true\">google</a>");
+		}
+	  }
+  },
+  streetViewFunc: function(data, user_index) {
+	var self = mapView;
+	 
+
+	    
+		var heading = 0;
+		
+		if(self.previousPosition.lat === undefined){
+			self.previousPosition.lat = data.lat;
+			self.previousPosition.lng = data.lng;
+		}
+		if(data.lat != self.previousPosition.lat){
+			
+			//somehow I would think it was the other way around, must be weekend...
+			self.bearing = getBearing(self.previousPosition.lat, self.previousPosition.lng,data.lat,data.lng);
+			
+			self.previousPosition.lat = data.lat;
+			self.previousPosition.lng = data.lng;
+		}else{
+			//do nothing, keep current bearing..
+			
+		}
+		
+		
+		var url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+parseFloat(data.lat)+","+parseFloat(data.lng)+"&fov=120&heading="+ self.bearing+ "&pitch=10&key="+ self.settings.gStreetViewAPIKey;
+		//self.log({
+        //message: 'updating streetview... to: ' + url
+		//});
+		$("#streetview-panel").html("<img src=\""+url+"\">");
+	
+  },
+  
+/*
+  loadJSON: function(path, success, error, successData) {
+    $.getJSON({
       url: path + "?" + Date.now()
     }).done(function(data) {
       if(data !== undefined) {
-        success(data, successData)
+        success(data, successData);
+        console.log(data);
       } else {
-        error(data)
+        error(data);
       }
-    })
+    });
   },
+*/
+  
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
     var currentDate = new Date();
@@ -834,4 +924,30 @@ if (!String.prototype.format) {
       return typeof args[number] != 'undefined' ? args[number] : match;
     });
   };
+}
+
+function radians(n) {
+  return n * (Math.PI / 180);
+}
+function degrees(n) {
+  return n * (180 / Math.PI);
+}
+
+function getBearing(startLat,startLong,endLat,endLong){
+  startLat = radians(startLat);
+  startLong = radians(startLong);
+  endLat = radians(endLat);
+  endLong = radians(endLong);
+
+  var dLong = endLong - startLong;
+
+  var dPhi = Math.log(Math.tan(endLat/2.0+Math.PI/4.0)/Math.tan(startLat/2.0+Math.PI/4.0));
+  if (Math.abs(dLong) > Math.PI){
+    if (dLong > 0.0)
+       dLong = -(2.0 * Math.PI - dLong);
+    else
+       dLong = (2.0 * Math.PI + dLong);
+  }
+
+  return (degrees(Math.atan2(dLong, dPhi)) + 360.0) % 360.0;
 }
