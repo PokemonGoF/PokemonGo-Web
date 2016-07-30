@@ -63,6 +63,8 @@ var mapView = {
   stats: {},
   user_data: {},
   pathcoords: {},
+  bearing: 0,
+  previousPosition: {},
   itemsArray: {
     '0': 'Unknown',
     '1': 'Pokeball',
@@ -842,12 +844,13 @@ var mapView = {
   
   updateStreetView: function() {
 	  self = mapView;
-	 
-			
+	  //TODO: fix the multi trainer thing..
+	  var userindex =0;
+	  
 	  if($('#streetViewOn').is(":checked")){
 		if(self.settings.gStreetViewAPIKey != undefined && self.settings.gStreetViewAPIKey != "YOUR_API_KEY_HERE"){
-	        //TODO: Somehow fix the multi trainer thing..
-			self.loadJSON('location-' + self.settings.users[0] + '.json', self.streetViewFunc, self.errorFunc, 0);
+	       
+			self.loadJSON('location-' + self.settings.users[userindex] + '.json', self.streetViewFunc, self.errorFunc, 0);
 			
 		}
 		else{
@@ -859,8 +862,27 @@ var mapView = {
 	var self = mapView;
 	 
 
-	    //TODO: Add direction based upon previous coordinates
-		var url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+parseFloat(data.lat)+","+parseFloat(data.lng)+"&fov=90&heading=90&pitch=10&key="+ self.settings.gStreetViewAPIKey;
+	    
+		var heading = 0;
+		
+		if(self.previousPosition.lat === undefined){
+			self.previousPosition.lat = data.lat;
+			self.previousPosition.lng = data.lng;
+		}
+		if(data.lat != self.previousPosition.lat){
+			
+			//somehow I would think it was the other way around, must be weekend...
+			self.bearing = getBearing(self.previousPosition.lat, self.previousPosition.lng,data.lat,data.lng);
+			
+			self.previousPosition.lat = data.lat;
+			self.previousPosition.lng = data.lng;
+		}else{
+			//do nothing, keep current bearing..
+			
+		}
+		
+		
+		var url = "https://maps.googleapis.com/maps/api/streetview?size=400x400&location="+parseFloat(data.lat)+","+parseFloat(data.lng)+"&fov=120&heading="+ self.bearing+ "&pitch=10&key="+ self.settings.gStreetViewAPIKey;
 		//self.log({
         //message: 'updating streetview... to: ' + url
 		//});
@@ -902,4 +924,30 @@ if (!String.prototype.format) {
       return typeof args[number] != 'undefined' ? args[number] : match;
     });
   };
+}
+
+function radians(n) {
+  return n * (Math.PI / 180);
+}
+function degrees(n) {
+  return n * (180 / Math.PI);
+}
+
+function getBearing(startLat,startLong,endLat,endLong){
+  startLat = radians(startLat);
+  startLong = radians(startLong);
+  endLat = radians(endLat);
+  endLong = radians(endLong);
+
+  var dLong = endLong - startLong;
+
+  var dPhi = Math.log(Math.tan(endLat/2.0+Math.PI/4.0)/Math.tan(startLat/2.0+Math.PI/4.0));
+  if (Math.abs(dLong) > Math.PI){
+    if (dLong > 0.0)
+       dLong = -(2.0 * Math.PI - dLong);
+    else
+       dLong = (2.0 * Math.PI + dLong);
+  }
+
+  return (degrees(Math.atan2(dLong, dPhi)) + 360.0) % 360.0;
 }
