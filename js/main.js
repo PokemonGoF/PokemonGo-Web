@@ -864,7 +864,7 @@ var mapView = {
 		//self.log({
         //message: 'updating streetview... to: ' + url
 		//});
-		$("#streetview-panel .card-content").replaceWith("<img src=\""+url+"\">");
+		$("#streetview-panel").html("<img src=\""+url+"\">");
 	
   },
   
