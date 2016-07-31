@@ -444,9 +444,9 @@ var mapView = {
       user = self.user_data[self.settings.users[user_id]];
 
     for (var i = 0; i < user.bagCandy.length; i++) {
-      var checkCandy = user.bagCandy[i].inventory_item_data.pokemon_family.family_id;
+      var checkCandy = user.bagCandy[i].inventory_item_data.candy.family_id;
       if (self.pokemoncandyArray[p_num] === checkCandy) {
-        return (user.bagCandy[i].inventory_item_data.pokemon_family.candy || 0);
+        return (user.bagCandy[i].inventory_item_data.candy.candy || 0);
       }
     }
   },
