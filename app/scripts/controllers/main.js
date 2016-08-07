@@ -8,10 +8,11 @@
  * Controller of the pokemonGoWebViewApp
  */
 angular.module('pokemonGoWebViewApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', 'NgMap', '$rootScope', function ($scope, NgMap, $rootScope) {
+    $scope.sidebar_shown = true;
+    $scope.maps = [];
+    $scope.$on('mapInitialized', function(event, map) {
+      $scope.maps.push(map)
+    })
+
+  }]);

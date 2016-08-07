@@ -1,6 +1,26 @@
+#wrapper.sidebar_hidden {
+  padding-left: 0px; }
+
 .navbar-header {
   width: 225px;
   border: none; }
+
+.sidebar_hidden .sidebar_toggle {
+  position: absolute;
+  left: 0; }
+
+.sidebar_toggle {
+  position: relative;
+  top: 100px;
+  padding: 5px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
 
 .navbar-fixed-top {
   border: none; }
