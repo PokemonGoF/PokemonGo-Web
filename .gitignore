@@ -3,3 +3,13 @@
 /.tmp
 /.sass-cache
 /bower_components
+# Generated and config files
+userdata.js
+catchable-*.json
+inventory-*.json
+location-*.json
+# Generated and config files
+/app/userdata.js
+/app/catchable-*.json
+/app/inventory-*.json
+/app/location-*.json
