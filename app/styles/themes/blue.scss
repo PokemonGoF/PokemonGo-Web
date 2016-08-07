@@ -1,0 +1,21 @@
+.navbar-header{
+  background-color: #415f79;
+  .navbar-brand{
+    color: #fff;
+  }
+}
+.navbar-fixed-top{
+  background-color: #708b9e;
+}
+
+.top-nav > li > a{
+  color: #fff;
+}
+
+.side-nav{
+  background-color: #16232c;
+}
+.top-nav > li > a:hover, .top-nav > li > a:focus, .top-nav > .open > a, .top-nav > .open > a:hover, .top-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+  background-color: #1e3344;
+}

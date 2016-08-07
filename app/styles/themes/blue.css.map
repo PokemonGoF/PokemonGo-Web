@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,cAAc;EACZ,gBAAgB,EAAE,OAAO;EACzB,4BAAa;IACX,KAAK,EAAE,IAAI;;AAGf,iBAAiB;EACf,gBAAgB,EAAE,OAAO;;AAG3B,iBAAiB;EACf,KAAK,EAAE,IAAI;;AAGb,SAAS;EACP,gBAAgB,EAAE,OAAO;;AAE3B;2IAC2I;EACzI,gBAAgB,EAAE,OAAO",
+"sources": ["blue.scss"],
+"names": [],
+"file": "blue.css"
+}
