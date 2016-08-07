@@ -12,4 +12,4 @@ location-*.json
 /app/userdata.js
 /app/catchable-*.json
 /app/inventory-*.json
-/app/location-*.json
+/app/location-*.json/.idea
