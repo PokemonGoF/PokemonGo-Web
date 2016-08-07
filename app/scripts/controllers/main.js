@@ -8,7 +8,7 @@
  * Controller of the pokemonGoWebViewApp
  */
 angular.module('pokemonGoWebViewApp')
-  .controller('MainCtrl', ['$scope', 'NgMap', '$rootScope', function ($scope, NgMap, $rootScope) {
+  .controller('MainCtrl', ['$scope', 'NgMap', '$rootScope', 'EventService', function ($scope, NgMap, $rootScope, EventService) {
     $scope.sidebar_shown = true;
     $scope.maps = [];
 
