@@ -8,9 +8,14 @@
  * Controller of the pokemonGoWebViewApp
  */
 angular.module('pokemonGoWebViewApp')
-  .controller('MainCtrl', ['$scope', 'NgMap', '$rootScope', 'socketFactory', 'mySocket', function ($scope, NgMap, $rootScope, socketFactory, mySocket) {
+  .controller('MainCtrl', ['$scope', 'NgMap', '$rootScope', 'EventService', 'socketFactory', 'mySocket', function ($scope, NgMap, $rootScope, EventService, socketFactory, mySocket) {
     $scope.sidebar_shown = true;
     $scope.maps = [];
+
+    $scope.active_bot = null;
+    $scope.events = [];
+    $scope.bots = [];
+
     $scope.$on('mapInitialized', function(event, map) {
       $scope.maps.push(map)
     });
