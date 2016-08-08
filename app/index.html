@@ -45,7 +45,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b
                         class="caret"></b></a>
                 <ul class="dropdown-menu message-dropdown">
-                    <li class="message-preview">
+                    <li class="message-preview" ng-repeat="pokemon in pokemons">
                         <a href="#">
                             <div class="media">
                                     <span class="pull-left">
@@ -59,25 +59,40 @@
                                 </div>
                             </div>
                         </a>
-                    <li class="message-preview">
-                        <a href="#">
-                        <div class="media">
-                        <span class="pull-left">
-                        <img class="media-object" src="./images/pokemon/029.png" alt="">
-                        </span>
-                        <div class="media-body">
-                        <h5 class="media-heading"><strong>Nidoran F appeared!</strong>
-                        </h5>
-                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                        <p>[CP 165] [Potential 0.56] [6/5/14]</p>
-</div>
-</div>
-                        </a>
                     </li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b
+                        class="caret"></b></a>
+                <ul class="dropdown-menu alert-dropdown">
+                  <li>
+                    <strong>Spun Pokestop: </strong>{{ pokestop }}
+                  </li>
+                  <!--
+                    <li>
+                        <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
                     </li>
-                    <li class="message-footer">
-                        <a href="#">Read All New Messages</a>
+                    <li>
+                        <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
                     </li>
+                    <li>
+                        <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                    </li>
+                    <li>
+                        <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#">View All</a>
+                    </li>
+                    -->
                 </ul>
             </li>
             <li class="dropdown">
@@ -158,6 +173,7 @@
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
 <script src="bower_components/socket.io-client/socket.io.js"></script>
+<script src="bower_components/angular-socket-io/socket.js"></script>
 
 <!-- endbower -->
 <!-- endbuild -->
