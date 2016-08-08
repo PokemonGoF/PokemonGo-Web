@@ -2,10 +2,163 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9eef4ab-d4b0-48fe-8fe5-2589220ce6b0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/001.png" afterPath="$PROJECT_DIR$/app/images/pokemon/001.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/002.png" afterPath="$PROJECT_DIR$/app/images/pokemon/002.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/003.png" afterPath="$PROJECT_DIR$/app/images/pokemon/003.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/004.png" afterPath="$PROJECT_DIR$/app/images/pokemon/004.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/005.png" afterPath="$PROJECT_DIR$/app/images/pokemon/005.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/006.png" afterPath="$PROJECT_DIR$/app/images/pokemon/006.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/007.png" afterPath="$PROJECT_DIR$/app/images/pokemon/007.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/008.png" afterPath="$PROJECT_DIR$/app/images/pokemon/008.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/009.png" afterPath="$PROJECT_DIR$/app/images/pokemon/009.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/010.png" afterPath="$PROJECT_DIR$/app/images/pokemon/010.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/011.png" afterPath="$PROJECT_DIR$/app/images/pokemon/011.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/012.png" afterPath="$PROJECT_DIR$/app/images/pokemon/012.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/013.png" afterPath="$PROJECT_DIR$/app/images/pokemon/013.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/014.png" afterPath="$PROJECT_DIR$/app/images/pokemon/014.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/015.png" afterPath="$PROJECT_DIR$/app/images/pokemon/015.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/016.png" afterPath="$PROJECT_DIR$/app/images/pokemon/016.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/017.png" afterPath="$PROJECT_DIR$/app/images/pokemon/017.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/018.png" afterPath="$PROJECT_DIR$/app/images/pokemon/018.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/019.png" afterPath="$PROJECT_DIR$/app/images/pokemon/019.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/020.png" afterPath="$PROJECT_DIR$/app/images/pokemon/020.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/021.png" afterPath="$PROJECT_DIR$/app/images/pokemon/021.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/022.png" afterPath="$PROJECT_DIR$/app/images/pokemon/022.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/023.png" afterPath="$PROJECT_DIR$/app/images/pokemon/023.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/024.png" afterPath="$PROJECT_DIR$/app/images/pokemon/024.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/025.png" afterPath="$PROJECT_DIR$/app/images/pokemon/025.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/026.png" afterPath="$PROJECT_DIR$/app/images/pokemon/026.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/027.png" afterPath="$PROJECT_DIR$/app/images/pokemon/027.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/028.png" afterPath="$PROJECT_DIR$/app/images/pokemon/028.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/029.png" afterPath="$PROJECT_DIR$/app/images/pokemon/029.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/030.png" afterPath="$PROJECT_DIR$/app/images/pokemon/030.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/031.png" afterPath="$PROJECT_DIR$/app/images/pokemon/031.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/032.png" afterPath="$PROJECT_DIR$/app/images/pokemon/032.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/033.png" afterPath="$PROJECT_DIR$/app/images/pokemon/033.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/034.png" afterPath="$PROJECT_DIR$/app/images/pokemon/034.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/035.png" afterPath="$PROJECT_DIR$/app/images/pokemon/035.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/036.png" afterPath="$PROJECT_DIR$/app/images/pokemon/036.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/037.png" afterPath="$PROJECT_DIR$/app/images/pokemon/037.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/038.png" afterPath="$PROJECT_DIR$/app/images/pokemon/038.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/039.png" afterPath="$PROJECT_DIR$/app/images/pokemon/039.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/040.png" afterPath="$PROJECT_DIR$/app/images/pokemon/040.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/041.png" afterPath="$PROJECT_DIR$/app/images/pokemon/041.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/042.png" afterPath="$PROJECT_DIR$/app/images/pokemon/042.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/043.png" afterPath="$PROJECT_DIR$/app/images/pokemon/043.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/044.png" afterPath="$PROJECT_DIR$/app/images/pokemon/044.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/045.png" afterPath="$PROJECT_DIR$/app/images/pokemon/045.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/046.png" afterPath="$PROJECT_DIR$/app/images/pokemon/046.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/047.png" afterPath="$PROJECT_DIR$/app/images/pokemon/047.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/048.png" afterPath="$PROJECT_DIR$/app/images/pokemon/048.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/049.png" afterPath="$PROJECT_DIR$/app/images/pokemon/049.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/050.png" afterPath="$PROJECT_DIR$/app/images/pokemon/050.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/051.png" afterPath="$PROJECT_DIR$/app/images/pokemon/051.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/052.png" afterPath="$PROJECT_DIR$/app/images/pokemon/052.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/053.png" afterPath="$PROJECT_DIR$/app/images/pokemon/053.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/054.png" afterPath="$PROJECT_DIR$/app/images/pokemon/054.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/055.png" afterPath="$PROJECT_DIR$/app/images/pokemon/055.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/056.png" afterPath="$PROJECT_DIR$/app/images/pokemon/056.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/057.png" afterPath="$PROJECT_DIR$/app/images/pokemon/057.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/058.png" afterPath="$PROJECT_DIR$/app/images/pokemon/058.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/059.png" afterPath="$PROJECT_DIR$/app/images/pokemon/059.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/060.png" afterPath="$PROJECT_DIR$/app/images/pokemon/060.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/061.png" afterPath="$PROJECT_DIR$/app/images/pokemon/061.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/062.png" afterPath="$PROJECT_DIR$/app/images/pokemon/062.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/063.png" afterPath="$PROJECT_DIR$/app/images/pokemon/063.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/064.png" afterPath="$PROJECT_DIR$/app/images/pokemon/064.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/065.png" afterPath="$PROJECT_DIR$/app/images/pokemon/065.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/066.png" afterPath="$PROJECT_DIR$/app/images/pokemon/066.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/067.png" afterPath="$PROJECT_DIR$/app/images/pokemon/067.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/068.png" afterPath="$PROJECT_DIR$/app/images/pokemon/068.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/069.png" afterPath="$PROJECT_DIR$/app/images/pokemon/069.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/070.png" afterPath="$PROJECT_DIR$/app/images/pokemon/070.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/071.png" afterPath="$PROJECT_DIR$/app/images/pokemon/071.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/072.png" afterPath="$PROJECT_DIR$/app/images/pokemon/072.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/073.png" afterPath="$PROJECT_DIR$/app/images/pokemon/073.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/074.png" afterPath="$PROJECT_DIR$/app/images/pokemon/074.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/075.png" afterPath="$PROJECT_DIR$/app/images/pokemon/075.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/076.png" afterPath="$PROJECT_DIR$/app/images/pokemon/076.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/077.png" afterPath="$PROJECT_DIR$/app/images/pokemon/077.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/078.png" afterPath="$PROJECT_DIR$/app/images/pokemon/078.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/079.png" afterPath="$PROJECT_DIR$/app/images/pokemon/079.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/080.png" afterPath="$PROJECT_DIR$/app/images/pokemon/080.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/081.png" afterPath="$PROJECT_DIR$/app/images/pokemon/081.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/082.png" afterPath="$PROJECT_DIR$/app/images/pokemon/082.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/083.png" afterPath="$PROJECT_DIR$/app/images/pokemon/083.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/084.png" afterPath="$PROJECT_DIR$/app/images/pokemon/084.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/085.png" afterPath="$PROJECT_DIR$/app/images/pokemon/085.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/086.png" afterPath="$PROJECT_DIR$/app/images/pokemon/086.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/087.png" afterPath="$PROJECT_DIR$/app/images/pokemon/087.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/088.png" afterPath="$PROJECT_DIR$/app/images/pokemon/088.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/089.png" afterPath="$PROJECT_DIR$/app/images/pokemon/089.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/090.png" afterPath="$PROJECT_DIR$/app/images/pokemon/090.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/091.png" afterPath="$PROJECT_DIR$/app/images/pokemon/091.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/092.png" afterPath="$PROJECT_DIR$/app/images/pokemon/092.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/093.png" afterPath="$PROJECT_DIR$/app/images/pokemon/093.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/094.png" afterPath="$PROJECT_DIR$/app/images/pokemon/094.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/095.png" afterPath="$PROJECT_DIR$/app/images/pokemon/095.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/096.png" afterPath="$PROJECT_DIR$/app/images/pokemon/096.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/097.png" afterPath="$PROJECT_DIR$/app/images/pokemon/097.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/098.png" afterPath="$PROJECT_DIR$/app/images/pokemon/098.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/099.png" afterPath="$PROJECT_DIR$/app/images/pokemon/099.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/100.png" afterPath="$PROJECT_DIR$/app/images/pokemon/100.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/101.png" afterPath="$PROJECT_DIR$/app/images/pokemon/101.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/102.png" afterPath="$PROJECT_DIR$/app/images/pokemon/102.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/103.png" afterPath="$PROJECT_DIR$/app/images/pokemon/103.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/104.png" afterPath="$PROJECT_DIR$/app/images/pokemon/104.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/105.png" afterPath="$PROJECT_DIR$/app/images/pokemon/105.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/106.png" afterPath="$PROJECT_DIR$/app/images/pokemon/106.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/107.png" afterPath="$PROJECT_DIR$/app/images/pokemon/107.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/108.png" afterPath="$PROJECT_DIR$/app/images/pokemon/108.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/109.png" afterPath="$PROJECT_DIR$/app/images/pokemon/109.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/110.png" afterPath="$PROJECT_DIR$/app/images/pokemon/110.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/111.png" afterPath="$PROJECT_DIR$/app/images/pokemon/111.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/112.png" afterPath="$PROJECT_DIR$/app/images/pokemon/112.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/113.png" afterPath="$PROJECT_DIR$/app/images/pokemon/113.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/114.png" afterPath="$PROJECT_DIR$/app/images/pokemon/114.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/115.png" afterPath="$PROJECT_DIR$/app/images/pokemon/115.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/116.png" afterPath="$PROJECT_DIR$/app/images/pokemon/116.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/117.png" afterPath="$PROJECT_DIR$/app/images/pokemon/117.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/118.png" afterPath="$PROJECT_DIR$/app/images/pokemon/118.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/119.png" afterPath="$PROJECT_DIR$/app/images/pokemon/119.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/120.png" afterPath="$PROJECT_DIR$/app/images/pokemon/120.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/121.png" afterPath="$PROJECT_DIR$/app/images/pokemon/121.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/122.png" afterPath="$PROJECT_DIR$/app/images/pokemon/122.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/123.png" afterPath="$PROJECT_DIR$/app/images/pokemon/123.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/124.png" afterPath="$PROJECT_DIR$/app/images/pokemon/124.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/125.png" afterPath="$PROJECT_DIR$/app/images/pokemon/125.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/126.png" afterPath="$PROJECT_DIR$/app/images/pokemon/126.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/127.png" afterPath="$PROJECT_DIR$/app/images/pokemon/127.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/128.png" afterPath="$PROJECT_DIR$/app/images/pokemon/128.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/129.png" afterPath="$PROJECT_DIR$/app/images/pokemon/129.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/130.png" afterPath="$PROJECT_DIR$/app/images/pokemon/130.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/131.png" afterPath="$PROJECT_DIR$/app/images/pokemon/131.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/132.png" afterPath="$PROJECT_DIR$/app/images/pokemon/132.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/133.png" afterPath="$PROJECT_DIR$/app/images/pokemon/133.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/134.png" afterPath="$PROJECT_DIR$/app/images/pokemon/134.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/135.png" afterPath="$PROJECT_DIR$/app/images/pokemon/135.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/136.png" afterPath="$PROJECT_DIR$/app/images/pokemon/136.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/137.png" afterPath="$PROJECT_DIR$/app/images/pokemon/137.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/138.png" afterPath="$PROJECT_DIR$/app/images/pokemon/138.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/139.png" afterPath="$PROJECT_DIR$/app/images/pokemon/139.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/140.png" afterPath="$PROJECT_DIR$/app/images/pokemon/140.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/141.png" afterPath="$PROJECT_DIR$/app/images/pokemon/141.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/142.png" afterPath="$PROJECT_DIR$/app/images/pokemon/142.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/143.png" afterPath="$PROJECT_DIR$/app/images/pokemon/143.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/144.png" afterPath="$PROJECT_DIR$/app/images/pokemon/144.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/145.png" afterPath="$PROJECT_DIR$/app/images/pokemon/145.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/146.png" afterPath="$PROJECT_DIR$/app/images/pokemon/146.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/147.png" afterPath="$PROJECT_DIR$/app/images/pokemon/147.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/148.png" afterPath="$PROJECT_DIR$/app/images/pokemon/148.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/149.png" afterPath="$PROJECT_DIR$/app/images/pokemon/149.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/150.png" afterPath="$PROJECT_DIR$/app/images/pokemon/150.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/images/pokemon/151.png" afterPath="$PROJECT_DIR$/app/images/pokemon/151.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/catchable-superstoner.json" afterPath="$PROJECT_DIR$/app/catchable-superstoner.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/inventory-superstoner.json" afterPath="$PROJECT_DIR$/app/inventory-superstoner.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/location-superstoner.json" afterPath="$PROJECT_DIR$/app/location-superstoner.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/app.js" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
     </list>
     <ignored path="webview.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,54 +179,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="136" column="62" selection-start-line="136" selection-start-column="62" selection-end-line="136" selection-end-column="62" />
+            <state relative-caret-position="105">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
               <folding>
-                <marker date="1470609152959" expanded="true" signature="872:1025" ph="..." />
-                <marker date="1470609152959" expanded="true" signature="965:993" ph="..." />
+                <marker date="1470624923000" expanded="true" signature="872:1025" ph="..." />
+                <marker date="1470624923000" expanded="true" signature="965:993" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="185">
+              <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="147">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blue.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/themes/blue.scss">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="15" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autosizecontainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,24 +225,21 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme_base.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/styles/theme_base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
-              <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+            <state relative-caret-position="310">
+              <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,13 +248,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/styles/theme.scss" />
-        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/styles/theme_base.scss" />
         <option value="$PROJECT_DIR$/app/styles/themes/blue.scss" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
+        <option value="$PROJECT_DIR$/bower_components/socket.io-client/lib/socket.js" />
+        <option value="$PROJECT_DIR$/app/scripts/factories/sockets.js" />
+        <option value="$PROJECT_DIR$/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
       </list>
     </option>
   </component>
@@ -130,9 +272,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="3200" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="13" />
+    <option name="y" value="73" />
+    <option name="width" value="1142" />
+    <option name="height" value="753" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -159,78 +302,194 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
+              <option name="myItemId" value="PokemonGo-Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
+              <option name="myItemId" value="PokemonGo-Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
+              <option name="myItemId" value="PokemonGo-Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socket.io-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="socket.io-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bower_components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
+              <option name="myItemId" value="PokemonGo-Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
+              <option name="myItemId" value="PokemonGo-Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webview" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="directives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PokemonGo-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,23 +497,33 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -299,36 +568,59 @@
       <updated>1470603275271</updated>
       <workItem from="1470603277290" duration="6044000" />
       <workItem from="1470609660254" duration="48000" />
+      <workItem from="1470610673965" duration="6175000" />
+      <workItem from="1470622611828" duration="2091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6092000" />
+    <option name="totallyTimeSpent" value="14358000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3200" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <frame x="13" y="73" width="1142" height="753" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2145359" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3495935" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18569781" sideWeight="0.50313973" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18467852" sideWeight="0.4968603" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18569781" sideWeight="0.50313973" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994923" sideWeight="0.49375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18569781" sideWeight="0.4968603" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21507065" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -348,119 +640,271 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2121">
+          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="101" selection-end-column="28" />
           <folding>
-            <marker date="1470609152959" expanded="true" signature="872:1025" ph="..." />
-            <marker date="1470609152959" expanded="true" signature="965:993" ph="..." />
+            <marker date="1470624923000" expanded="true" signature="872:1025" ph="..." />
+            <marker date="1470624923000" expanded="true" signature="965:993" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="147">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/themes/blue.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/theme_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/theme_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/themes/blue.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        <state relative-caret-position="672">
+          <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="39" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="136" column="62" selection-start-line="136" selection-start-column="62" selection-end-line="136" selection-end-column="62" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1470609152959" expanded="true" signature="872:1025" ph="..." />
-            <marker date="1470609152959" expanded="true" signature="965:993" ph="..." />
+            <marker date="1470624923000" expanded="true" signature="872:1025" ph="..." />
+            <marker date="1470624923000" expanded="true" signature="965:993" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/themes/blue.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/theme_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470624923000" expanded="true" signature="872:1025" ph="..." />
+            <marker date="1470624923000" expanded="true" signature="965:993" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/themes/blue.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/theme_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/theme_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2457">
+          <caret line="117" column="11" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/themes/blue.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/directives/autosizecontainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/socket.io-client/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/socket.io-client/.bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/socket.io-client/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/socket.io-client/lib/socket.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/socket.io-client/lib/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/socket.io-client/socket.io.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/factories/sockets.js" />
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+          <folding>
+            <marker date="1470624923000" expanded="true" signature="872:1025" ph="..." />
+            <marker date="1470624923000" expanded="true" signature="965:993" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="32" column="49" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
