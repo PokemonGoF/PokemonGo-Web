@@ -23,6 +23,13 @@ angular.module('pokemonGoWebViewApp')
     $scope.customMarkers = [];
     $scope.items = [];
     $scope.pokedex = [];
+
+    for(var i = 1; i <= 151; i++){
+      var entry = {};
+      entry.pid = toThreeDigits(i);
+      entry.caught = false;
+      $scope.pokedex[i] = entry;
+    }
     $scope.pokemons = [];
     $scope.eggs = [];
     $scope.candies = [];
@@ -205,7 +212,7 @@ angular.module('pokemonGoWebViewApp')
         } else if (inventory[i].inventory_item_data.hasOwnProperty('candy')) {
           $scope.candies.push( inventory[i].inventory_item_data );
         } else if (inventory[i].inventory_item_data.hasOwnProperty('pokedex_entry')) {
-          $scope.pokedex[inventory[i].inventory_item_data.pokedex_entry.pokemon_id] = true;
+          $scope.pokedex[inventory[i].inventory_item_data.pokedex_entry.pokemon_id].caught = true;
           //$scope.pokedex.push( inventory[i].inventory_item_data );
         } else if (inventory[i].inventory_item_data.hasOwnProperty('item')) {
           $scope.items.push( inventory[i].inventory_item_data );

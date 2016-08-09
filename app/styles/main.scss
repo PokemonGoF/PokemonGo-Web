@@ -79,3 +79,10 @@ body{
   padding: 0px;
   display: inline;
 }
+
+.saturate{
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}
