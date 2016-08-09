@@ -29,6 +29,9 @@ module.exports = function(config) {
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
+      'bower_components/sio-client/socket.io.js',
+      'bower_components/ngmap/build/scripts/ng-map.js',
+      'bower_components/socket.io-client/socket.io.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

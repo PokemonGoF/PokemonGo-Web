@@ -1,3 +1,6 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
 #wrapper.sidebar_hidden{
   padding-left: 0px;
 }
@@ -30,4 +33,48 @@
 }
 .container-fluid, #page-wrapper{
   padding: 0 !important;
+}
+
+.navbar {
+  height: 76px;
+}
+.btn-default {
+  color: #647f92;
+  border-radius: 2px;
+  font-size: 11px;
+  height: 33px;
+  width: 106px;
+}
+.side-nav li{
+  width: 100%;
+  color: #647f94;
+}
+
+.top-nav li {
+  line-height: 72px;
+}
+
+.top-nav button{
+  margin-left: 18px;
+}
+
+.offset-right{
+  margin-right: 36px;
+}
+.navbar-header{
+  height: 76px;
+}
+.navbar-header a{
+  line-height: 48px;
+}
+
+@media (min-width: 768px){
+  .side-nav {
+    top: 76px !important;
+  }
+}
+
+.top-nav > li > a {
+  padding: 0px;
+  display: inline;
 }
