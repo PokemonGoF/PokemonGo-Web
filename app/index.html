@@ -67,8 +67,8 @@
           <li class="dropdown offset-right">
             <button class="dropdown-toggle btn btn-default" data-toggle="dropdown" type="button">POKEDEX</button>
             <ul class="dropdown-menu message-dropdown pokedex">
-              <li class="message-preview" ng-repeat="pokemon in pokemons | filter : search | orderBy : 'cp' : true">
-                <img class="media-object pokemon" src="./images/pokemon/{{ pokemon.pid }}.png" alt="">
+              <li class="pokedex-entry" ng-repeat="entry in pokedex">
+                <img ng-class="{'saturate': entry.caught == false}" class="saturate media-object pokemon" src="./images/pokemon/{{ entry.pid }}.png" alt="">
               </li>
 
             </ul>
