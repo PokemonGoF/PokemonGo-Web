@@ -36,80 +36,50 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">PokemonGo-Bot</a>
+            <a class="navbar-brand" href="index.html">PokémonGo Bot</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b
-                        class="caret"></b></a>
-                <ul class="dropdown-menu message-dropdown">
-                    <li class="message-preview">
-                        <a href="#">
-                            <div class="media">
-                                    <span class="pull-left">
-                                        <img class="media-object" src="./images/pokemon/029.png" alt="">
-                                    </span>
-                                <div class="media-body">
-                                    <h5 class="media-heading"><strong>Nidoran F has been captured!</strong>
-                                    </h5>
-                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:33 PM</p>
-                                    <p>[CP 165] [Potential 0.56] [6/5/14] [+210 exp]</p>
-                                </div>
-                            </div>
-                        </a>
-                    <li class="message-preview">
-                        <a href="#">
-                        <div class="media">
-                        <span class="pull-left">
-                        <img class="media-object" src="./images/pokemon/029.png" alt="">
-                        </span>
-                        <div class="media-body">
-                        <h5 class="media-heading"><strong>Nidoran F appeared!</strong>
-                        </h5>
-                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                        <p>[CP 165] [Potential 0.56] [6/5/14]</p>
-</div>
-</div>
-                        </a>
-                    </li>
-                    </li>
-                    <li class="message-footer">
-                        <a href="#">Read All New Messages</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> My_awesome_bot <b
-                        class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> Bot_2</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> bot_3</a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-fw fa-user"></i> bot_4</a>
-                    </li>
-                    <li class="divider"></li>
-                </ul>
-            </li>
+          <li>
+            <button type="button" class="btn btn-default">ITEMS</button>
+          </li>
+          <li class="dropdown">
+              <button class="dropdown-toggle btn btn-default" data-toggle="dropdown" type="button">POKEMON</button>
+            <ul class="dropdown-menu message-dropdown">
+              <li><input type="text" ng-model="search.name" placeholder="Search your PokeBag" /> </li>
+              <li class="message-preview" ng-repeat="pokemon in pokemons | filter : search | orderBy : 'cp' : true">
+                <a href="#">
+                  <div class="media">
+                                      <span class="pull-left">
+                                          <img class="media-object pokemon" src="./images/pokemon/{{ pokemon.pid }}.png" alt="">
+                                      </span>
+                    <div class="media-body">
+                      <h5 class="media-heading">#{{ pokemon.pokemon_id}} <strong><span class="highlight">{{ pokemon.name }}</span></strong>
+                      </h5>
+                      <p>CP &nbsp;<span class="small">{{ pokemon.cp }}</span>&nbsp; &nbsp; IV &nbsp;<span class="small">{{ pokemon.iv }}</span></p>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="dropdown">
+            <button class="dropdown-toggle btn btn-default" data-toggle="dropdown" type="button">POKEDEX</button>
+            <ul class="dropdown-menu message-dropdown pokedex">
+              <li class="message-preview" ng-repeat="pokemon in pokemons | filter : search | orderBy : 'cp' : true">
+                <img class="media-object pokemon" src="./images/pokemon/{{ pokemon.pid }}.png" alt="">
+              </li>
+
+            </ul>
+          </li>
+
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav" ng-show="sidebar_shown">
                 <li>
-                    <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Items</a>
-                </li>
-                <li>
-                    <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                </li>
-                <li>
-                    <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                </li>
-                <li>
-                    <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
+                    <p>This panel wil have lots of fancy settings in a future version</p>
                 </li>
             </ul>
             <div class="sidebar_toggle" ng-click="sidebar_shown = !sidebar_shown" ng-cloak>{{ (sidebar_shown) ? '<<' : '>>'}}</div>
@@ -120,7 +90,13 @@
     <div id="page-wrapper">
 
         <div class="container-fluid">
-                <ng-map auto-size-container center="41,-87" zoom="3"></ng-map>
+                <ng-map auto-size-container center="{{ playerPosition }}" zoom="{{ zoom }}">
+                  <custom-marker ng-repeat="marker in customMarkers" position="{{marker.position}}">
+                    <div>
+                      <img src="images/pokemon/{{marker.id}}.gif" />
+                    </div>
+                  </custom-marker>
+                </ng-map>
         </div>
         <!-- /.container-fluid -->
 
@@ -162,6 +138,7 @@
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="config/userdata.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/directives/autosizecontainer.js"></script>
