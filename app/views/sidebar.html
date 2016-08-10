@@ -8,8 +8,9 @@
                 <span>Level: {{bot.player_stats.level}}</span>
                 <span>Exp: {{bot.player_stats.experience}}</span>
                 <div>
-                    [Go to]
-                    [Follow]<br />
+                    <button class="btn btn-sm btn-small" ng-click="findBot(bot)" ng-disabled="!bot.position">Go to</button>
+                    <button class="btn btn-sm btn-small" ng-click="followBot(bot)" ng-disabled="!bot.position">Follow</button>
+                    <br />
                     [Items]
                     [Pokemon]
                     [Pokedex]

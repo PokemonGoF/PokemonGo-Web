@@ -48,7 +48,6 @@ angular.module('pokemonGoWebViewApp')
         } else if (inventory_item.hasOwnProperty('item')) {
           _bots[bot].inventory.push(inventory_item.item);
         } else if(inventory_item.hasOwnProperty('player_stats')){
-          console.log(inventory_item)
           _bots[bot].player_stats = inventory_item.player_stats
         } else if(inventory_item.hasOwnProperty('egg_incubators')){
           _bots[bot].egg_incubators = inventory_item.egg_incubators
@@ -57,7 +56,6 @@ angular.module('pokemonGoWebViewApp')
 
       delete player.username;
       _bots[bot] = angular.merge(_bots[bot], player);
-      console.log(_bots)
     };
 
     var initialize_pokedex = function (botName) {
@@ -98,9 +96,9 @@ angular.module('pokemonGoWebViewApp')
           initialize_pokedex(bot_name);
           EventService.on('get_player_info:' + bot_name, get_player_info_callback);
           get_player_info(bot_name);
-          // $interval(function(){
-          //   get_player_info(bot_name)
-          // }, 5000)
+          $interval(function(){
+            get_player_info(bot_name)
+          }, 5000)
         });
         return _bots
       },

@@ -154,7 +154,6 @@ body {
     .title {
       color: #fff;
       text-align: center;
-      text-align: center;
       background-color: #fff;
       padding: 2px;
     }
@@ -193,7 +192,7 @@ body {
     border-color: #fff transparent;
     display: block;
     width: 0;
-    z-index: 1;
+    z-index: 0;
     margin-left: -6px;
     bottom: -6px;
     left: 50%;
