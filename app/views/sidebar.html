@@ -1,0 +1,28 @@
+<ul ng-controller="MenuCtrl" class="side_menu">
+    <li ng-repeat="bot in bots">
+        <div class="menu_row">
+            <div class="title" ng-style="{'color': bot.color}">
+                {{bot.name}}
+            </div>
+            <div class="stat_pane">
+                <span>Level: {{bot.player_stats.level}}</span>
+                <span>Exp: {{bot.player_stats.experience}}</span>
+                <div>
+                    [Go to]
+                    [Follow]<br />
+                    [Items]
+                    [Pokemon]
+                    [Pokedex]
+                </div>
+                <div class="progress_container">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                             aria-valuemin="0" aria-valuemax="100" style="width: {{ (bot.player_stats.experience  / bot.player_stats.next_level_xp ) * 100 }}%">
+                            <span class="sr-only">70% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

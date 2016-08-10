@@ -40,7 +40,7 @@
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
-          <li>
+         <!-- <li>
             <button type="button" class="btn btn-default">ITEMS</button>
           </li>
           <li class="dropdown">
@@ -73,15 +73,13 @@
 
             </ul>
           </li>
-
+        -->
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav side-nav" ng-show="sidebar_shown">
-                <li>
-                    <p>This panel wil have lots of fancy settings in a future version</p>
-                </li>
-            </ul>
+            <div class="nav navbar-nav side-nav" ng-class="{'sidebar_hidden': !sidebar_shown}" ng-include="'views/sidebar.html'">
+
+            </div>
             <div class="sidebar_toggle" ng-click="sidebar_shown = !sidebar_shown" ng-cloak>{{ (sidebar_shown) ? '<<' : '>>'}}</div>
         </div>
         <!-- /.navbar-collapse -->
@@ -89,14 +87,8 @@
 
     <div id="page-wrapper">
 
-        <div class="container-fluid">
-                <ng-map auto-size-container center="{{ playerPosition }}" zoom="{{ zoom }}">
-                  <custom-marker ng-repeat="marker in customMarkers" position="{{marker.position}}">
-                    <div>
-                      <img src="images/pokemon/{{marker.id}}.gif" />
-                    </div>
-                  </custom-marker>
-                </ng-map>
+        <div class="container-fluid" ng-view>
+
         </div>
         <!-- /.container-fluid -->
 
@@ -143,6 +135,11 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/directives/autosizecontainer.js"></script>
 <script src="scripts/services/eventservice.js"></script>
+<script src="scripts/services/botmanager.js"></script>
+<script src="scripts/controllers/map.js"></script>
+<script src="scripts/controllers/menu.js"></script>
+<script src="scripts/services/toolservice.js"></script>
 <!-- endbuild -->
+<script src="config/userdata.js"></script>
 </body>
 </html>

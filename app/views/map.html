@@ -1,0 +1,31 @@
+<div ng-controller="MapCtrl">
+    <ng-map auto-size-container center="{{ map_center }}" zoom="{{ zoom }}">
+        <span ng-repeat="bot in bots" ng-if="bot.shown_on_map">
+            <custom-marker position="[{{bot.position[0]}}, {{bot.position[1]}}]">
+                <div class="trainer_marker" ng-style="{'border-color': bot.color }">
+                    <div class="inner"> {{bot.name }}</div>
+                </div>
+                <div class="triangle" ng-style="
+                {'border-color': bot.color +' transparent'}">
+
+                </div>
+            </custom-marker>
+            <shape name="polyline"
+               path="{{bot.location_history}}"
+               geodesic="true"
+               stroke-color="{{bot.color}}"
+               stroke-opacity="1.0"
+               stroke-weight="2">
+            </shape>
+
+
+        </span>
+
+        <custom-marker ng-repeat="pokemon in map_pokemons" position="{{pokemon.position}}">
+            <div>
+                <img src="images/pokemon/{{pokemon.id}}.png"/>
+            </div>
+        </custom-marker>
+    </ng-map>
+</div>
+

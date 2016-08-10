@@ -19,11 +19,11 @@ angular.module('pokemonGoWebViewApp')
       packet.data = ["*"].concat(args);
       onevent.call(this, packet);      // additional call to catch-all
     };
-
+/*
     socket.on("*",function(event,data) {
       console.log('Socket IO Event: ', event);
       console.log('Socket IO data: ', data);
-    });
+    });*/
 
     return {
       on: function (eventName, callback) {
