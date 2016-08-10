@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
   mapView.init();
-  var socket = io.connect('http://' + document.domain + ':' + location.port + '/event');
+  var socket = io.connect( location.protocol + "//" + document.domain + ':' + location.port + '/event');
     socket.on('connect', function() {
       console.log('connected!');
     });
