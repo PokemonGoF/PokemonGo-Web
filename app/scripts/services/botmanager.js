@@ -56,6 +56,7 @@ angular.module('pokemonGoWebViewApp')
 
       delete player.username;
       _bots[bot] = angular.merge(_bots[bot], player);
+      //console.log(_bots)
     };
 
     var initialize_pokedex = function (botName) {
@@ -77,7 +78,8 @@ angular.module('pokemonGoWebViewApp')
       eggs: [],
       candies: [],
       pokemons: [],
-      player_stats: {}
+      player_stats: {},
+      follow_on_map: false
 
     };
     var get_player_info = function(bot_name){

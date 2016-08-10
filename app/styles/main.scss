@@ -2,9 +2,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-#wrapper{
+#wrapper {
   transition: all 1s ease-in-out;
 }
+
 #wrapper.sidebar_hidden {
   padding-left: 0px;
 }
@@ -14,9 +15,9 @@ body {
   border: none;
 }
 
-.navbar-nav.side-nav{
+.navbar-nav.side-nav {
   transition: all 1s ease-in-out;
-  &.sidebar_hidden{
+  &.sidebar_hidden {
     left: 0;
   }
 }
@@ -145,36 +146,48 @@ body {
   border-radius: 30px;
   box-shadow: 0 6px 12px 0px #757575;
 }
-
-
+.percent-blue{
+  color: #337ab7 !important;
+}
+.progress-bar{
+  span{
+    text-align: center;
+  }
+}
 .side_menu {
   padding-left: 0px;
-  li {
-    list-style-type: none;
-    .title {
-      color: #fff;
-      text-align: center;
-      background-color: #fff;
-      padding: 2px;
-    }
-    .menu_row {
-      padding-left: 5px;
+  .menu_row{
+    border-left: 10px solid;
+    .panel {
       background-color: #1e3344;
-      .progress_container {
-
-        padding-right: 5px;
-        padding-bottom: 5px;
-        .progress {
-          height: 10px;
-          margin-bottom: 0px;
+      .panel-heading{
+        a{
+          background-color: transparent !important;
         }
+      }
+      .panel-body{
+        padding: 10px;
+        .stat_pane {
+          .inventory_btns {
+            margin-top: 5px;
+            margin-bottom: 15px;
+          }
+          .progress_container {
+            .progress {
+              height: 10px;
+              margin-bottom: 0px;
+            }
+          }
+        }
+
       }
     }
   }
+
 }
+
 .custom-marker {
   padding: 0;
-
   .trainer_marker {
     font-size: 1em;
     padding: 5px;
@@ -184,7 +197,7 @@ body {
     -moz-border-radius: 4px;
   }
 
-  .triangle{
+  .triangle {
     content: '';
     position: absolute;
     border-style: solid;

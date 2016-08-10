@@ -14,7 +14,7 @@ angular.module('pokemonGoWebViewApp')
     var update_location = function (data) {
       $scope.bots[data.account].location_history.push(data.data.current_position);
       $scope.bots[data.account].position = data.data.current_position;
-      if (!$scope.map_center) {
+      if (!$scope.map_center ||  $scope.bots[data.account].follow_on_map) {
         $scope.map_center = data.data.current_position
       }
     };
@@ -30,14 +30,20 @@ angular.module('pokemonGoWebViewApp')
     };
 
     $rootScope.$on('follow_bot_on_map', function (evt, bot) {
-      console.log('Request to follow bot', bot)
+
+      angular.forEach($scope.bots, function(bot){
+        bot.follow_on_map = false;
+      });
+
+      $scope.bots[bot.name].follow_on_map = !$scope.bots[bot.name].follow_on_map;
+      var position = angular.copy(bot.position);
+      $scope.map_center = position;
     });
 
 
     $rootScope.$on('find_bot_on_map', function (evt, bot) {
       console.log('Request to find the following bot', bot);
       var position = angular.copy(bot.position);
-      console.log(position);
       $scope.map_center = position;
     });
 

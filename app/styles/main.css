@@ -118,22 +118,26 @@ body {
   border-radius: 30px;
   box-shadow: 0 6px 12px 0px #757575; }
 
+.percent-blue {
+  color: #337ab7 !important; }
+
+.progress-bar span {
+  text-align: center; }
+
 .side_menu {
   padding-left: 0px; }
-  .side_menu li {
-    list-style-type: none; }
-    .side_menu li .title {
-      color: #fff;
-      text-align: center;
-      background-color: #fff;
-      padding: 2px; }
-    .side_menu li .menu_row {
-      padding-left: 5px;
+  .side_menu .menu_row {
+    border-left: 10px solid; }
+    .side_menu .menu_row .panel {
       background-color: #1e3344; }
-      .side_menu li .menu_row .progress_container {
-        padding-right: 5px;
-        padding-bottom: 5px; }
-        .side_menu li .menu_row .progress_container .progress {
+      .side_menu .menu_row .panel .panel-heading a {
+        background-color: transparent !important; }
+      .side_menu .menu_row .panel .panel-body {
+        padding: 10px; }
+        .side_menu .menu_row .panel .panel-body .stat_pane .inventory_btns {
+          margin-top: 5px;
+          margin-bottom: 15px; }
+        .side_menu .menu_row .panel .panel-body .stat_pane .progress_container .progress {
           height: 10px;
           margin-bottom: 0px; }
 

@@ -1,29 +1,48 @@
-<ul ng-controller="MenuCtrl" class="side_menu">
-    <li ng-repeat="bot in bots">
-        <div class="menu_row">
-            <div class="title" ng-style="{'color': bot.color}">
+<div ng-controller="MenuCtrl">
+    <ul  class="nav navbar-nav side-nav side_menu" id="sidemenu" uib-accordion>
+        <li ng-style="{'border-color': bot.color}"  is-open="status.isCustomHeaderOpen" class="menu_row" ng-repeat="bot in bots">
+            <div uib-accordion-group>
+            <uib-accordion-heading>
                 {{bot.name}}
-            </div>
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isCustomHeaderOpen, 'glyphicon-chevron-right': !status.isCustomHeaderOpen}"></i>
+            </uib-accordion-heading>
+            <!--<a href="javascript:;" data-parent="#sidemenu" data-toggle="collapse" data-target="#{{bot.name}}" class="" nee-->
+            <!--ng-style="{'border-color': bot.color}"><i class="fa fa-fw fa-arrows-v"></i> {{bot.name}} <i class="fa fa-fw fa-caret-down"></i></a>-->
+            <!--<ul id="{{bot.name}}" class="collapse" aria-expanded="false">-->
+            <!--<div class="stat_pane">-->
+
+            <!--</div>-->
+            <!--</ul>-->
+
+            <span>Level: {{bot.player_stats.level}}</span>
+            <span>Exp: {{bot.player_stats.experience}}</span>
             <div class="stat_pane">
-                <span>Level: {{bot.player_stats.level}}</span>
-                <span>Exp: {{bot.player_stats.experience}}</span>
-                <div>
-                    <button class="btn btn-sm btn-small" ng-click="findBot(bot)" ng-disabled="!bot.position">Go to</button>
-                    <button class="btn btn-sm btn-small" ng-click="followBot(bot)" ng-disabled="!bot.position">Follow</button>
-                    <br />
-                    [Items]
-                    [Pokemon]
-                    [Pokedex]
+
+                <button class="btn btn-xs btn-small" ng-click="findBot(bot)" ng-disabled="!bot.position"
+
+                >Go to
+                </button>
+                <button class="btn btn-xs btn-small" ng-click="followBot(bot)" ng-disabled="!bot.position"
+                        ng-class="{'btn-success': bot.follow_on_map}"
+                >Follow
+                </button>
+
+                <div class="inventory_btns">
+                    <button class="btn btn-xs btn-small">Items</button>
+                    <button class="btn btn-xs btn-small">Pokemon</button>
+                    <button class="btn btn-xs btn-small">Pokedex</button>
                 </div>
-                <div class="progress_container">
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                             aria-valuemin="0" aria-valuemax="100" style="width: {{ (bot.player_stats.experience  / bot.player_stats.next_level_xp ) * 100 }}%">
-                            <span class="sr-only">70% Complete</span>
-                        </div>
+            </div>
+            <div class="progress_container">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                         aria-valuemin="0" aria-valuemax="100"
+                         style="width: {{ (bot.player_stats.experience  / bot.player_stats.next_level_xp ) * 100 }}%">
+                        <span ng-class="{'percent-blue': ((bot.player_stats.experience  / bot.player_stats.next_level_xp )*100) < 40 }" >{{ (bot.player_stats.experience  / bot.player_stats.next_level_xp ) * 100 | number:2}}%</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </li>
-</ul>
+            </div>
+        </li>
+    </ul>
+</div>
