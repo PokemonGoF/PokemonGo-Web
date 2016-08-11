@@ -80,7 +80,9 @@
             <div class="nav navbar-nav side-nav" ng-class="{'sidebar_hidden': !sidebar_shown}" ng-include="'views/sidebar.html'">
 
             </div>
-            <div class="sidebar_toggle" ng-click="sidebar_shown = !sidebar_shown" ng-cloak>{{ (sidebar_shown) ? '<<' : '>>'}}</div>
+            <div class="sidebar_toggle" ng-class="{'sidebar_shown': sidebar_shown}" ng-click="sidebar_shown = !sidebar_shown" ng-cloak>
+                <span class="caret"></span>
+            </div>
         </div>
         <!-- /.navbar-collapse -->
     </nav>
@@ -98,18 +100,6 @@
 </div>
 <!-- /#wrapper -->
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-    !function (A, n, g, u, l, a, r) {
-        A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-                    (A[l].q = A[l].q || []).push(arguments)
-                }, A[l].l = +new Date, a = n.createElement(g),
-                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-    }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-</script>
 
 <script src="//maps.google.com/maps/api/js?libraries=visualization,drawing,geometry,places"></script>
 <!-- build:js(.) scripts/vendor.js -->
@@ -126,8 +116,7 @@
 <script src="bower_components/sio-client/socket.io.js"></script>
 <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
 <script src="bower_components/socket.io-client/socket.io.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

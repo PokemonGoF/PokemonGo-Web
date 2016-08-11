@@ -203,4 +203,19 @@ body {
   max-height: 500px;
   overflow-y: scroll; }
 
+.sidebar_toggle .caret {
+  transition: all 1s ease-in-out;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
+.sidebar_toggle.sidebar_shown .caret {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
 /*# sourceMappingURL=main.css.map */

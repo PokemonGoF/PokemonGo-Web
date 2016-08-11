@@ -30,7 +30,7 @@
                     <div class="progress-bar" role="progressbar" aria-valuenow="70"
                          aria-valuemin="0" aria-valuemax="100"
                          style="width: {{ getLevelPercent(bot.player_stats.level ,bot.player_stats.experience ) }}%">
-                        <span ng-class="{'percent-blue': getLevelPercent(bot.player_stats.level ,bot.player_stats.experience ) < 40 }" >{{ getLevelPercent(bot.player_stats.level ,bot.player_stats.experience ) }}%</span>
+                        <span>{{ getLevelPercent(bot.player_stats.level ,bot.player_stats.experience ) }}%</span>
                     </div>
                 </div>
             </div>
