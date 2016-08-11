@@ -9,7 +9,7 @@
 angular.module('pokemonGoWebViewApp')
   .directive('consoleOutput',['BotManager', 'EventService', function (BotManager, EventService) {
     return {
-      templateUrl: '/views/directives/consoleoutput.html',
+      template: '<div id="" class="console"><uib-tabset active="active"><uib-tab index="$index + 1" ng-repeat="bot in bots " heading="{{bot.name}}"><div class="output" auto-scroll><div ng-repeat="(key, line) in buffer[bot.name] track by $index" class="event-{{line.event}}">[{{line.time | date:\'H:m:s\'}}] {{line.msg}}</div></div></uib-tab></uib-tabset></div>',
       restrict: 'A',
       link: function(scope, element){
           $(element).draggable().resizable();
