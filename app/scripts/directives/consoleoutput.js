@@ -19,14 +19,18 @@ angular.module('pokemonGoWebViewApp')
           $scope.buffer = {};
           $scope.bots = BotManager.getBots();
           EventService.on("*",function(event,data) {
-              $scope.$emit('event');
               // console.log('Socket IO Event: ', event);
               // console.log('Socket IO data: ', data);
               if(data.hasOwnProperty('data') && data.data.hasOwnProperty('msg')) {
                   if (!$scope.buffer[data.account]) {
                       $scope.buffer[data.account] = []
                   }
-                  $scope.buffer[data.account].push(data.data.msg);
+                  var event = event.split(':')[0];
+                  $scope.buffer[data.account].push({
+                      msg: data.data.msg,
+                      time: new Date(),
+                      event: event
+                  });
                   $scope.buffer[data.account] = $scope.buffer[data.account].slice(Math.max($scope.buffer.length - 100, 1));
               }
           });

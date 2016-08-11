@@ -230,10 +230,48 @@ body {
 
 .console {
   height: 100%; }
+  .console [active] {
+    height: 100%; }
+    .console [active] .tab-content {
+      height: calc(100% - 40px); }
+      .console [active] .tab-content .tab-pane {
+        height: 100%; }
 
+.console .nav {
+  background-color: #1e3344;
+  border: 0;
+  height: 40px; }
+  .console .nav .uib-tab.active a {
+    background-color: #415f79;
+    color: #fff; }
+  .console .nav .uib-tab {
+    background-color: #1e3344; }
+    .console .nav .uib-tab a, .console .nav .uib-tab a:hover {
+      color: #337ab7;
+      border: 0;
+      border-radius: 0; }
+    .console .nav .uib-tab a:hover {
+      background-color: #1e3344;
+      text-decoration: underline; }
 .console .output {
-  font-size: 10px;
-  height: 120px;
-  overflow-y: scroll; }
+  font-family: arial, "lucida console", sans-serif;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  font-size: 11px;
+  height: 100%;
+  overflow-y: scroll;
+  color: #fff;
+  background: #000; }
+  .console .output .event-bot_exit, .console .output .event-api_error, .console .output .event-config_error, .console .output .event-item_discard_fail, .console .output .event-login_failed, .console .output .event-lucky_egg_error, .console .output .event-move_to_map_pokemon_fail, .console .output .event-no_pokeballs, .console .output .event-pokemon_capture_failed, .console .output .event-pokemon_fled, .console .output .event-pokemon_inventory_full, .console .output .event-pokemon_nickname_invalid, .console .output .event-pokemon_vanished, .console .output .event-softban, .console .output .event-threw_berry_failed
+  .console .output .event-unknown_spin_result, .console .output .event-unset_pokemon_nickname, .console .output .event-vip_pokemon {
+    color: #ff473d; }
+  .console .output .event-bot_start, .console .output .event-egg_hatched, .console .output .event-incubate, .console .output .event-item_discarded, .console .output .event-keep_best_release, .console .output .event-level_up, .console .output .event-level_up_reward, .console .output .event-login_successful, .console .output .event-move_to_map_pokemon_encounter, .console .output .event-next_sleep, .console .output .event-pokemon_evolved, .console .output .event-pokemon_release {
+    color: green; }
+  .console .output .event-egg_already_incubating, .console .output .event-future_pokemon_release, .console .output .event-incubator_already_used, .console .output .event-inventory_full, .console .output .event-location_cache_error, .console .output .event-location_cache_ignored, .console .output .event-next_egg_incubates, .console .output .event-pokemon_appeared, .console .output .event-pokemon_not_in_range, .console .output .event-pokestop_empty, .console .output .event-pokestop_searching_too_often, .console .output .event-skip_evolve {
+    color: yellow; }
+  .console .output .event-pokemon_caught {
+    color: #00daff; }
+  .console .output .event-spun_pokestop {
+    color: cyan; }
 
 /*# sourceMappingURL=main.css.map */
