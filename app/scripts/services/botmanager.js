@@ -108,7 +108,7 @@ angular.module('pokemonGoWebViewApp')
           get_player_info(bot_name);
           $interval(function(){
             get_player_info(bot_name)
-          }, 5000)
+          }, 10000)
         });
         return _bots
       },

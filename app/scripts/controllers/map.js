@@ -63,6 +63,7 @@ angular.module('pokemonGoWebViewApp')
       EventService.on('moving_to_fort:' + bot.name, update_location);
       EventService.on('moving_to_lured_fort:' + bot.name, update_location);
       EventService.on('position_update:' + bot.name, update_location);
+      EventService.on('arrived_at_fort:' + bot.name, update_location);
     })
 
   }]);

@@ -8,7 +8,7 @@
  * Controller of the pokemonGoWebViewApp
  */
 angular.module('pokemonGoWebViewApp')
-  .controller('MenuCtrl', ['$scope', 'NgMap', '$rootScope', 'EventService', 'BotManager', '$uibModal', function ($scope, NgMap, $rootScope, EventService, BotManager, $uibModal) {
+  .controller('MenuCtrl', ['$scope', 'NgMap', '$rootScope', 'EventService', 'BotManager', '$uibModal', 'ToolService', function ($scope, NgMap, $rootScope, EventService, BotManager, $uibModal, ToolService) {
     $scope.bots = BotManager.getBots();
 
     $scope.popup = function (bot, type) {
@@ -26,7 +26,12 @@ angular.module('pokemonGoWebViewApp')
       });
     };
 
-
+    $scope.getLevelPercent = function(level, exp){
+      if(!level || ! exp){
+        return 0
+      }
+      return ToolService.getLevelPercent(level, exp);
+    };
 
     $scope.followBot = function(bot){
       $rootScope.$emit('follow_bot_on_map', bot)
