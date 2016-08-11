@@ -284,3 +284,21 @@ body {
     transform: rotate(90deg);
   }
 }
+.map_console{
+  height: 200px;
+  width: calc(100% - 225px);
+  position: absolute;
+  bottom: 0px;
+  float: left;
+  background-color: #fff;
+  right: 0;
+  overflow: hidden;
+}
+.console{
+  height: 100%;
+}
+.console .output{
+  font-size: 10px;
+  height: 120px;
+  overflow-y: scroll;
+}
