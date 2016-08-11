@@ -357,7 +357,8 @@ module.exports = function (grunt) {
           collapseWhitespace: true,
           conservativeCollapse: true,
           collapseBooleanAttributes: true,
-          removeCommentsFromCDATA: true
+          removeCommentsFromCDATA: true,
+          removeComments: true
         },
         files: [{
           expand: true,
@@ -420,7 +421,21 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
-        }, {
+        },
+          {
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '*.html',
+            'images/{,*/}{,*/}*.*',
+            'config/*.example',
+            'styles/fonts/{,*/}*.*'
+          ]
+        }
+        , {
           expand: true,
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
