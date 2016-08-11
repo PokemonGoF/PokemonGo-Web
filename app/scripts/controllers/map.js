@@ -12,10 +12,13 @@ angular.module('pokemonGoWebViewApp')
 
     $scope.map_center = null;
     var update_location = function (data) {
-      $scope.bots[data.account].location_history.push(data.data.current_position);
-      $scope.bots[data.account].position = data.data.current_position;
-      if (!$scope.map_center ||  $scope.bots[data.account].follow_on_map) {
-        $scope.map_center = data.data.current_position
+      if(data.hasOwnProperty('data') && data.data.hasOwnProperty('current_position')) {
+        $scope.bots[data.account].location_history.push(data.data.current_position);
+        $scope.bots[data.account].position = data.data.current_position;
+
+        if (!$scope.map_center || $scope.bots[data.account].follow_on_map) {
+          $scope.map_center = data.data.current_position
+        }
       }
     };
 
