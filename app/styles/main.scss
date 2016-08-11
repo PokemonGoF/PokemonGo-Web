@@ -225,3 +225,42 @@ body {
     left: 50%;
   }
 }
+
+.item_container{
+  .item{
+    display: inline-block;
+    width: 25%;
+    height: 50px;
+    img{
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+.pokemon_container{
+  .pokemon{
+    text-align: center;
+    .dropdown{
+      position: absolute;
+    }
+    display: inline-block;
+    .greyscale{
+      filter: gray; /* IE6-9 */
+      filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+      -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    }
+    img{
+      height: 75px;
+      width: 75px;
+    }
+  }
+}
+
+.modal{
+  .modal-body{
+
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+}

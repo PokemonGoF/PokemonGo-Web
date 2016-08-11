@@ -20,9 +20,9 @@
                 </button>
 
                 <div class="inventory_btns">
-                    <button class="btn btn-xs btn-small">Items</button>
-                    <button class="btn btn-xs btn-small">Pokemon</button>
-                    <button class="btn btn-xs btn-small">Pokedex</button>
+                    <button class="btn btn-xs btn-small" ng-click="popup(bot, 'Item')">Items</button>
+                    <button class="btn btn-xs btn-small" ng-click="popup(bot, 'Pokebag')">Pokebag</button>
+                    <button class="btn btn-xs btn-small" ng-click="popup(bot, 'Pokedex')">Pokedex</button>
                 </div>
             </div>
             <div class="progress_container">
@@ -37,4 +37,22 @@
             </div>
         </li>
     </ul>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
 </div>
+

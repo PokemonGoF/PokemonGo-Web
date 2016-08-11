@@ -8,8 +8,25 @@
  * Controller of the pokemonGoWebViewApp
  */
 angular.module('pokemonGoWebViewApp')
-  .controller('MenuCtrl', ['$scope', 'NgMap', '$rootScope', 'EventService', 'BotManager', function ($scope, NgMap, $rootScope, EventService, BotManager) {
+  .controller('MenuCtrl', ['$scope', 'NgMap', '$rootScope', 'EventService', 'BotManager', '$uibModal', function ($scope, NgMap, $rootScope, EventService, BotManager, $uibModal) {
     $scope.bots = BotManager.getBots();
+
+    $scope.popup = function (bot, type) {
+      var ctrl = type+'Ctrl'
+      var modalInstance = $uibModal.open({
+        animation: true,
+        templateUrl: 'views/modals/' + type +'.html',
+        controller: ctrl,
+        size: 'lg',
+        resolve: {
+          selectedBot: function () {
+            return bot
+          }
+        }
+      });
+    };
+
+
 
     $scope.followBot = function(bot){
       $rootScope.$emit('follow_bot_on_map', bot)

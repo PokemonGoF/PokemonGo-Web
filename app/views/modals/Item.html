@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <h3 class="modal-title">Showing inventory from {{selected_bot.name}}</h3>
+</div>
+<div class="modal-body">
+    Max items: {{selected_bot.max_item_storage}}
+    <div class="item_container">
+        <div class="item" ng-repeat="item in selected_bot.inventory track by $index" ng-if="item.count">
+            <img ng-src="./images/items/{{item.item_id}}.png" fallback-src="'./items/items/0.png'"/>
+            <span>
+                <span class="title">{{item.name}}</span>
+                <span class="count">{{item.count}}</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-info" type="button" ng-click="cancel()">Close</button>
+</div>

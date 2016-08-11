@@ -28,6 +28,13 @@ angular.module('pokemonGoWebViewApp')
       var bot = data.account;
       var player = data.result.player.player_data;
       var inventory = data.result.inventory.inventory_delta.inventory_items;
+      _bots[bot].candies = [];
+      _bots[bot].pokedex = [];
+      _bots[bot].inventory = [];
+      initialize_pokedex(bot);
+      _bots[bot].eggs = [];
+      _bots[bot].pokemons = [];
+
       angular.forEach(inventory, function(inventory_item){
         inventory_item = inventory_item.inventory_item_data;
         if (inventory_item.hasOwnProperty('pokemon_data')) {
@@ -46,6 +53,7 @@ angular.module('pokemonGoWebViewApp')
           _bots[bot].pokedex[inventory_item.pokedex_entry.pokemon_id].caught = true;
           //$scope.pokedex.push( inventory[i].inventory_item_data );
         } else if (inventory_item.hasOwnProperty('item')) {
+          inventory_item.item.name = ToolService.getItemById(inventory_item.item.item_id);
           _bots[bot].inventory.push(inventory_item.item);
         } else if(inventory_item.hasOwnProperty('player_stats')){
           _bots[bot].player_stats = inventory_item.player_stats

@@ -1,0 +1,37 @@
+<div class="modal-header">
+    <h3 class="modal-title">Showing Pokebag from {{selected_bot.name}}</h3>
+</div>
+<div class="modal-body">
+    {{ selected_bot.pokemons.length }} / {{selected_bot.max_pokemon_storage}}
+    <div class="pokemon_container">
+        <div class="col-xs-2" ng-repeat="pokemon in selected_bot.pokemons track by $index">
+            <img ng-src="./images/pokemon/{{pokemon.pid}}.png" fallback-src="'./items/items/0.png'"/>
+
+                <span uib-dropdown on-toggle="toggled(open)">
+                  <a href id="simple-dropdown" uib-dropdown-toggle class="dropdown">
+                   <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                    <li>
+                      <a href>Power up</a>
+                    </li>
+                      <li>
+                      <a href>Evolve</a>
+                    </li>
+                      <li>
+                      <a href>Transfer</a>
+                    </li>
+                  </ul>
+                </span>
+
+            <div class="pokemon_stats">
+                <div class="name">{{pokemon.name}}</div>
+                <div class="cp">CP {{pokemon.cp}}</div>
+                <div class="iv">IV {{pokemon.iv}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-info" type="button" ng-click="cancel()">Close</button>
+</div>

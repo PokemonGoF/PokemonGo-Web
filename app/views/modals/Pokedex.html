@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h3 class="modal-title">Showing Pokedex from {{selected_bot.name}}</h3>
+</div>
+<div class="modal-body">
+    {{num_caught}} / {{selected_bot.pokedex.length}}
+    <div class="pokemon_container">
+        <div class="col-xs-2 pokemon" ng-repeat="(key, pokemon) in selected_bot.pokedex track by $index" ng-if="key != 0">
+            <img ng-src="./images/pokemon/{{ toThreeDigits(key)}}.png"
+                ng-class="{'greyscale': !pokemon.caught}" uib-tooltip="{{ pokemonById(key) }}" />
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-info" type="button" ng-click="cancel()">Close</button>
+</div>
