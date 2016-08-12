@@ -10,7 +10,7 @@
 angular.module('pokemonGoWebViewApp')
   .service('EventService',['$rootScope', function ($rootScope) {
     // AngularJS will instantiate a singleton by calling "new" on this function
-    var socket = io.connect('http://' + document.domain + ':4000');
+    var socket = io.connect(userInfo.websocketUrl);
 
     var onevent = socket.onevent;
     socket.onevent = function (packet) {

@@ -5,6 +5,7 @@ var userInfo = {
 	userZoom: true,
 	zoom: 16,
 	userFollow: true,
+	websocketUrl: 'http://' + document.domain + ':4000',
 	gMapsAPIKey: "<!- YOUR GOOGLE MAPS KEY -->"
 };
 
