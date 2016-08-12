@@ -17,7 +17,7 @@ angular.module('pokemonGoWebViewApp')
         $scope.bots[data.account].position = data.data.current_position;
 
         if (!$scope.map_center || $scope.bots[data.account].follow_on_map) {
-          $scope.map_center = data.data.current_position
+          $scope.map_center = data.data.current_position;
         }
       }
     };
@@ -25,11 +25,11 @@ angular.module('pokemonGoWebViewApp')
 
     var removePokemonFromMap = function (data) {
       angular.forEach($scope.map_pokemons, function (map_pokemon) {
-        if (map_pokemon.encounter_id == data.data.encounter_id) {
+        if (map_pokemon.encounter_id === data.data.encounter_id) {
           var idx = $scope.map_pokemons.indexOf(map_pokemon);
-          $scope.map_pokemons = $scope.map_pokemons.splice(idx, 0)
+          $scope.map_pokemons = $scope.map_pokemons.splice(idx, 0);
         }
-      })
+      });
     };
 
     $rootScope.$on('follow_bot_on_map', function (evt, bot) {
@@ -67,6 +67,6 @@ angular.module('pokemonGoWebViewApp')
       EventService.on('moving_to_lured_fort:' + bot.name, update_location);
       EventService.on('position_update:' + bot.name, update_location);
       EventService.on('arrived_at_fort:' + bot.name, update_location);
-    })
+    });
 
   }]);

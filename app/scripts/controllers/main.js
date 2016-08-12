@@ -14,7 +14,7 @@ angular.module('pokemonGoWebViewApp')
     console.log('Accounts loaded: ', $scope.bots);
     $scope.maps = [];
     $scope.$on('mapInitialized', function (event, map) {
-      $scope.maps.push(map)
+      $scope.maps.push(map);
     });
 
 

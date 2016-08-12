@@ -7,7 +7,7 @@
  * # autoSizeContainer
  */
 angular.module('pokemonGoWebViewApp')
-  .directive('autoSizeContainer',['$window', '$rootScope', function ($window, $rootScope) {
+  .directive('autoSizeContainer',['$window', function ($window) {
     return {
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
@@ -31,7 +31,7 @@ angular.module('pokemonGoWebViewApp')
           scope.$digest();
         });
 
-        scope.$watch('sidebar_shown', function(newVal, oldVal){
+        scope.$watch('sidebar_shown', function(){
           resize();
         });
       }

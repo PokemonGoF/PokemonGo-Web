@@ -410,14 +410,14 @@ angular.module('pokemonGoWebViewApp')
         return pokemonData[id];
       },
       getLevelPercent: function(level, exp){
-        return Math.round((          ((exp - levelXpArray[level - 1].current_level_xp) / levelXpArray[level - 1].exp_to_next_level) * 100) * 100) / 100
+        return Math.round((          ((exp - levelXpArray[level - 1].current_level_xp) / levelXpArray[level - 1].exp_to_next_level) * 100) * 100) / 100;
       },
       pokemonData: function(){
 
         return pokemonData;
       },
       getItemById: function(id){
-        return itemData[id]
+        return itemData[id];
       }
-    }
+    };
   });

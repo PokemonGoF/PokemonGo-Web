@@ -12,8 +12,8 @@ angular.module('pokemonGoWebViewApp')
     $scope.bots = BotManager.getBots();
 
     $scope.popup = function (bot, type) {
-      var ctrl = type+'Ctrl'
-      var modalInstance = $uibModal.open({
+      var ctrl = type+'Ctrl';
+      $uibModal.open({
         animation: true,
         templateUrl: 'views/modals/' + type +'.html',
         controller: ctrl,
@@ -28,18 +28,18 @@ angular.module('pokemonGoWebViewApp')
 
     $scope.getLevelPercent = function(level, exp){
       if(!level || ! exp){
-        return 0
+        return 0;
       }
       return ToolService.getLevelPercent(level, exp);
     };
 
     $scope.followBot = function(bot){
-      $rootScope.$emit('follow_bot_on_map', bot)
+      $rootScope.$emit('follow_bot_on_map', bot);
     };
 
 
     $scope.findBot = function(bot){
-      $rootScope.$emit('find_bot_on_map', bot)
+      $rootScope.$emit('find_bot_on_map', bot);
     };
 
   }]);

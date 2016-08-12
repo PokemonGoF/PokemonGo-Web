@@ -42,7 +42,7 @@ angular.module('pokemonGoWebViewApp')
               callback.apply(socket, args);
             }
           });
-        })
+        });
       }
     };
   }]);

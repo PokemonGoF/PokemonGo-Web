@@ -56,9 +56,9 @@ angular.module('pokemonGoWebViewApp')
           inventory_item.item.name = ToolService.getItemById(inventory_item.item.item_id);
           _bots[bot].inventory.push(inventory_item.item);
         } else if(inventory_item.hasOwnProperty('player_stats')){
-          _bots[bot].player_stats = inventory_item.player_stats
+          _bots[bot].player_stats = inventory_item.player_stats;
         } else if(inventory_item.hasOwnProperty('egg_incubators')){
-          _bots[bot].egg_incubators = inventory_item.egg_incubators
+          _bots[bot].egg_incubators = inventory_item.egg_incubators;
         }
       });
 
@@ -71,7 +71,7 @@ angular.module('pokemonGoWebViewApp')
       angular.forEach(pokemonData, function (pokemon, pId) {
         _bots[botName].pokedex[pId] = {
           caught: false
-        }
+        };
       });
     };
 
@@ -107,13 +107,13 @@ angular.module('pokemonGoWebViewApp')
           EventService.on('get_player_info:' + bot_name, get_player_info_callback);
           get_player_info(bot_name);
           $interval(function(){
-            get_player_info(bot_name)
-          }, 10000)
+            get_player_info(bot_name);
+          }, 10000);
         });
-        return _bots
+        return _bots;
       },
       getBots: function () {
         return _bots;
       }
-    }
+    };
   }]);

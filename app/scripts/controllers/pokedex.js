@@ -12,8 +12,8 @@ angular.module('pokemonGoWebViewApp')
     $scope.selected_bot = selectedBot;
 
 
-    $scope.num_caught = 0
-    angular.forEach(selectedBot.pokedex, function(pokemon, k){
+    $scope.num_caught = 0;
+    angular.forEach(selectedBot.pokedex, function(pokemon){
       if(pokemon.caught){
         $scope.num_caught++;
       }

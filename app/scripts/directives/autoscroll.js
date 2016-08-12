@@ -12,12 +12,15 @@ angular.module('pokemonGoWebViewApp')
   .directive('autoScroll', function () {
     return {
       restrict: 'A',
+      scope: {
+        autoScroll: '='
+      },
       link: function postLink(scope, element, attrs) {
-          window.setInterval(function() {
-              for(var i = 0; i < $('.console .output').length; i++){
-                  $('.console .output')[i].scrollTop = $('.console .output')[i].scrollHeight;
-              }
-          }, 1000);
+        scope.$watch('autoScroll', function () {
+          for (var i = 0; i < $('.console .output').length; i++) {
+            $('.console .output')[i].scrollTop = $('.console .output')[i].scrollHeight;
+          }
+        });
       }
     };
   });
