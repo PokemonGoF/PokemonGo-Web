@@ -27,26 +27,36 @@ angular.module('pokemonGoWebViewApp')
       angular.forEach($scope.map_pokemons, function (map_pokemon) {
         if (map_pokemon.encounter_id === data.data.encounter_id) {
           var idx = $scope.map_pokemons.indexOf(map_pokemon);
-          $scope.map_pokemons = $scope.map_pokemons.splice(idx, 0);
+          //$scope.map_pokemons = $scope.map_pokemons.splice(idx, 0);
         }
       });
     };
 
     $rootScope.$on('follow_bot_on_map', function (evt, bot) {
-
-      angular.forEach($scope.bots, function(bot){
-        bot.follow_on_map = false;
+      angular.forEach($scope.bots, function(_bot){
+        if(bot.name !== _bot.name){
+          $scope.bots[_bot.name].follow_on_map = false;
+        }
       });
-
       $scope.bots[bot.name].follow_on_map = !$scope.bots[bot.name].follow_on_map;
-      var position = angular.copy(bot.position);
-      $scope.map_center = position;
+      if($scope.bots[bot.name].follow_on_map){
+        $scope.map_center = [0,0];
+        var position = angular.copy(bot.position);
+        $scope.map_center = position;
+      }
     });
 
+    $scope.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key='+ userInfo.gMapsAPIKey +'&libraries=drawing';
+    $scope.info_pokemon = null;
+    $scope.showPokemon = function(evt, pokemon) {
+      $scope.info_pokemon = vm.stores[storeId];
+      $scope.map.showInfoWindow('pokemon', this);
+    };
 
     $rootScope.$on('find_bot_on_map', function (evt, bot) {
       console.log('Request to find the following bot', bot);
       var position = angular.copy(bot.position);
+      $scope.map_center = [0,0];
       $scope.map_center = position;
     });
 

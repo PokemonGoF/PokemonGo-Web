@@ -9,11 +9,12 @@
             <span>Level: {{bot.player_stats.level}}</span>
             <span>Exp: {{bot.player_stats.experience}}</span>
             <div class="stat_pane">
-
+                <!-- @FIXME -->
                 <button class="btn btn-xs btn-small" ng-click="findBot(bot)" ng-disabled="!bot.position"
 
                 >Go to
                 </button>
+                <!-- @FIXME -->
                 <button class="btn btn-xs btn-small" ng-click="followBot(bot)" ng-disabled="!bot.position"
                         ng-class="{'btn-success': bot.follow_on_map}"
                 >Follow
