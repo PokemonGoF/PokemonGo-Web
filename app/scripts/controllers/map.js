@@ -27,7 +27,7 @@ angular.module('pokemonGoWebViewApp')
       angular.forEach($scope.map_pokemons, function (map_pokemon) {
         if (map_pokemon.encounter_id === data.data.encounter_id) {
           var idx = $scope.map_pokemons.indexOf(map_pokemon);
-          //$scope.map_pokemons = $scope.map_pokemons.splice(idx, 0);
+          $scope.map_pokemons = $scope.map_pokemons.splice(idx, 0);
         }
       });
     };
@@ -49,8 +49,8 @@ angular.module('pokemonGoWebViewApp')
     $scope.googleMapsUrl='https://maps.googleapis.com/maps/api/js?key='+ userInfo.gMapsAPIKey +'&libraries=drawing';
     $scope.info_pokemon = null;
     $scope.showPokemon = function(evt, pokemon) {
-      $scope.info_pokemon = vm.stores[storeId];
-      $scope.map.showInfoWindow('pokemon', this);
+      //$scope.info_pokemon = vm.stores[storeId];
+      //$scope.map.showInfoWindow('pokemon', this);
     };
 
     $rootScope.$on('find_bot_on_map', function (evt, bot) {
