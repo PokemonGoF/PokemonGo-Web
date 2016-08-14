@@ -697,13 +697,17 @@ var mapView = {
           var fort = cell.forts[x];
           if (!self.forts[fort.id]) {
             if (fort.type === 1) {
+              var icon = 'image/forts/img_pokestop.png'
+              if(fort.lure_info || fort.lure_expires_timestamp_ms){
+                icon = 'image/forts/img_pokestop_lured.png'
+              }
               self.forts[fort.id] = new google.maps.Marker({
                 map: self.map,
                 position: {
                   lat: parseFloat(fort.latitude),
                   lng: parseFloat(fort.longitude)
                 },
-                icon: 'image/forts/img_pokestop.png'
+                icon: icon
               });
             } else {
               self.forts[fort.id] = new google.maps.Marker({
@@ -825,7 +829,7 @@ var mapView = {
     xhr.open('GET', path, true);
     xhr.send();
   },
-  
+
 /*
   loadJSON: function(path, success, error, successData) {
     $.getJSON({
@@ -840,7 +844,7 @@ var mapView = {
     });
   },
 */
-  
+
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
     var currentDate = new Date();
