@@ -1,19 +1,112 @@
 'use strict';
 
+var socket_io;
+
+var events = {
+        api_error:                         'red',
+		badges:                            'blue',
+        bot_exit:                          'red',
+        bot_start:                         'green',
+        catch_limit:                       'red',
+        catch_log:                         'magenta',
+        config_error:                      'red',
+        egg_already_incubating:            'yellow',
+        egg_hatched:                       'green',
+        evolve_log:                        'magenta',
+        future_pokemon_release:            'yellow',
+        incubate:                          'green',
+        incubator_already_used:            'yellow',
+        inventory_full:                    'yellow',
+        item_discard_fail:                 'red',
+        item_discarded:                    'green',
+        next_force_recycle:                'green',
+        force_recycle:                     'green',
+        keep_best_release:                 'green',
+        level_up:                          'green',
+        level_up_reward:                   'green',
+        location_cache_error:              'yellow',
+        location_cache_ignored:            'yellow',
+        login_failed:                      'red',
+        login_log:                         'magenta',
+        login_successful:                  'green',
+		log_stats:                         'magenta',
+        lucky_egg_error:                   'red',
+        move_to_map_pokemon_encounter:     'green',
+        move_to_map_pokemon_fail:          'red',
+        next_egg_incubates:                'yellow',
+        next_sleep:                        'green',
+        next_random_pause:                 'green',
+        next_random_alive_pause:           'green',
+        no_pokeballs:                      'red',
+		path_lap_end:                      'green',
+        pokemon_appeared:                  'yellow',
+        pokemon_capture_failed:            'red',
+        pokemon_caught:                    'blue',
+        pokemon_evolved:                   'green',
+        pokemon_fled:                      'red',
+        pokemon_inventory_full:            'red',
+        pokemon_nickname_invalid:          'red',
+        pokemon_not_in_range:              'yellow',
+        pokemon_release:                   'green',
+        pokemon_vanished:                  'red',
+        pokestop_empty:                    'yellow',
+        pokestop_log:                      'magenta',
+        pokestop_searching_too_often:      'yellow',
+        rename_pokemon:                    'green',
+        show_best_pokemon:                 'magenta',
+		show_inventory:                    'magenta',
+        skip_evolve:                       'yellow',
+        softban:                           'red',
+        softban_log:                       'magenta',
+        spun_pokestop:                     'cyan',
+        threw_berry_failed:                'red',
+        transfer_log:                      'magenta',
+        unknown_spin_result:               'red',
+        unset_pokemon_nickname:            'red',
+        vip_pokemon:                       'red',
+        arrived_at_cluster:                'white',
+        arrived_at_fort:                   'white',
+        bot_sleep:                         'white',
+        bot_random_pause:                  'white',
+        bot_random_alive_pause:            'white',
+        //catchable_pokemon:                 'white',
+        found_cluster:                     'white',
+        incubate_try:                      'white',
+        load_cached_location:              'white',
+        location_found:                    'white',
+        login_started:                     'white',
+        lured_pokemon_found:               'white',
+        move_to_map_pokemon_move_towards:  'white',
+        move_to_map_pokemon_teleport_to:   'white',
+        move_to_map_pokemon_teleport_back: 'white',
+        move_to_map_pokemon_updated_map:   'white',
+        moving_to_fort:                    'white',
+        moving_to_lured_fort:              'white',
+        //pokemon_catch_rate:                'white',
+        pokemon_evolve_fail:               'white',
+        pokestop_on_cooldown:              'white',
+        pokestop_out_of_range:             'white',
+        polyline_request:                  'white',
+        //position_update:                   'white',
+        path_lap_update:                   'white',
+        set_start_location:                'white',
+        softban_fix:                       'white',
+        softban_fix_done:                  'white',
+        spun_fort:                         'white',
+        threw_berry:                       'white',
+        threw_pokeball:                    'white',
+        used_lucky_egg:                    'white',
+        gained_candy:                      'white',
+        //player_data:                       'white',
+        moving_to_pokemon_throught_fort:   'white'
+}	
+
+socket_io = io.connect('127.0.0.1:7000');
+
+
 $(document).ready(function() {
   mapView.init();
-  var socket = io.connect('http://' + document.domain + ':' + location.port + '/event');
-    socket.on('connect', function() {
-      console.log('connected!');
-    });
-    socket.on('logging', function(msg) {
-      for(var i = 0; i < msg.length; i++) {
-        mapView.log({
-          message: msg[i].output,
-          color: msg[i].color + "-text"
-        });
-      }
-    });
+
 });
 
 var mapView = {
@@ -101,6 +194,18 @@ var mapView = {
     var self = this;
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
+
+for (var k in events){		
+	if (events.hasOwnProperty(k)) {
+		let renk = events[k];
+		socket_io.on(k+':'+self.settings.users[0], function (data) {
+			console.log(data);
+			if(data['data']['msg'] != null){
+				Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+			}
+		});
+	}
+}
 
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
       self.log({
