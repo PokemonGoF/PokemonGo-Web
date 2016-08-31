@@ -541,7 +541,7 @@ var mapView = {
         pkmnImage + '" class="png_img"><br><b>' +
         pkmnName;
       out += '</div>';
-    }
+   }
     
     var nth = 0;
     out = out.replace(/<\/div><div/g, function (match, i, original) {
