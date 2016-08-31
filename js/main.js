@@ -101,7 +101,7 @@ var events = {
         moving_to_pokemon_throught_fort:   'white'
 }	
 
-socket_io = io.connect('127.0.0.1:7000');
+socket_io = io.connect('127.0.0.1:4000');
 
 
 $(document).ready(function() {
