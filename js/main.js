@@ -4,7 +4,7 @@ var socket_io;
 
 var events = {
         api_error:                         'red',
-		badges:                            'blue',
+    badges:                            'blue',
         bot_exit:                          'red',
         bot_start:                         'green',
         catch_limit:                       'red',
@@ -29,7 +29,7 @@ var events = {
         login_failed:                      'red',
         login_log:                         'magenta',
         login_successful:                  'green',
-		log_stats:                         'magenta',
+    log_stats:                         'magenta',
         lucky_egg_error:                   'red',
         move_to_map_pokemon_encounter:     'green',
         move_to_map_pokemon_fail:          'red',
@@ -38,7 +38,7 @@ var events = {
         next_random_pause:                 'green',
         next_random_alive_pause:           'green',
         no_pokeballs:                      'red',
-		path_lap_end:                      'green',
+    path_lap_end:                      'green',
         pokemon_appeared:                  'yellow',
         pokemon_capture_failed:            'red',
         pokemon_caught:                    'blue',
@@ -54,7 +54,7 @@ var events = {
         pokestop_searching_too_often:      'yellow',
         rename_pokemon:                    'green',
         show_best_pokemon:                 'magenta',
-		show_inventory:                    'magenta',
+    show_inventory:                    'magenta',
         skip_evolve:                       'yellow',
         softban:                           'red',
         softban_log:                       'magenta',
@@ -99,7 +99,7 @@ var events = {
         gained_candy:                      'white',
         //player_data:                       'white',
         moving_to_pokemon_throught_fort:   'white'
-}	
+} 
 
 socket_io = io.connect('127.0.0.1:4000');
 
@@ -331,16 +331,16 @@ var mapView = {
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
-for (var k in events){		
-	if (events.hasOwnProperty(k)) {
-		let renk = events[k];
-		socket_io.on(k+':'+self.settings.users[0], function (data) {
-			console.log(data);
-			if(data['data']['msg'] != null){
-				Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
-			}
-		});
-	}
+for (var k in events){    
+  if (events.hasOwnProperty(k)) {
+    let renk = events[k];
+    socket_io.on(k+':'+self.settings.users[0], function (data) {
+      console.log(data);
+      if(data['data']['msg'] != null){
+        Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+      }
+    });
+  }
 }
 
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
@@ -444,6 +444,10 @@ for (var k in events){
       self.sortAndShowPokedex(item.data('sort'), item.parent().parent().data('user-id'));
     });
 
+    $('body').on('click', '.not-pokedex-sort a', function() {
+      var item = $(this);
+      self.sortAndShowNotPokedex(item.data('sort'), item.parent().parent().data('user-id'));
+    });
   },
   initMap: function() {
     var self = this;
@@ -495,7 +499,7 @@ for (var k in events){
           (parseInt(current_user_stats.level, 10) + 1) +
           ': ' +
           (current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) +
-		  ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level +
+      ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level +
           '<br>Pokemon Encountered: ' +
           (current_user_stats.pokemons_encountered || 0) +
           '<br>Pokeballs Thrown: ' +
@@ -573,9 +577,101 @@ for (var k in events){
 
         self.sortAndShowPokedex('id', user_id);
         break;
+      case 5:
+        var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
+        var sortButtons = '<div class="col s12 not-pokedex-sort" dat-user-id="' + user_id + '">Sort : ';
+        sortButtons += '<div class="chip"><a href="#" data-sort="id">ID</a></div>';
+        sortButtons += '<div class="chip"><a href="#" data-sort="name">Name</a></div>';
+        sortButtons += '</div>';
+
+        $('#sortButtons').html(sortButtons);
+        $('#subtitle').html('Not In Pokedex: ' + (151 - pkmnTotal));
+        self.sortAndShowNotPokedex('id', user_id);
+        break;
       default:
         break;
     }
+  },
+  sortAndShowNotPokedex: function (sortOn, user_id) {
+    var self = this,
+      sortedPokemon = [],
+      out = '',
+      user_id = user_id || 0,
+      user = self.user_data[self.settings.users[user_id]];
+
+    if (!user.bagPokemon.length) return;
+
+    var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
+    var arrayNotPokedex = [];
+  
+    for (var i = 0; i < self.pokemonArray.length; i++) {
+      var alreadyHave = false;
+
+      for (var j = 0; j < pkmnTotal; j++) {
+        var id = self.pad_with_zeroes(self.user_data[self.settings.users[user_id]].pokedex[j].inventory_item_data.pokedex_entry.pokemon_id, 3);
+        if (id == self.pokemonArray[i].Number) {
+          alreadyHave = true;
+        }
+      }
+
+      if (!alreadyHave) {
+        arrayNotPokedex.push(self.pokemonArray[i]);
+      }
+    }
+    
+    out = '<div class="items"><div class="row">';
+    for (var i = 0; i < arrayNotPokedex.length; i++) {
+      sortedPokemon.push({
+        'name': arrayNotPokedex[i].Name,
+        'id': arrayNotPokedex[i].Number
+      });
+    }
+
+    switch (sortOn) {
+      case 'name':
+        sortedPokemon.sort(function(a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
+          if (a.cp > b.cp) return -1;
+          if (a.cp < b.cp) return 1;
+          return 0;
+        });
+        break;
+      case 'id':
+        sortedPokemon.sort(function(a, b) {
+          if (a.id < b.id) return -1;
+          if (a.id > b.id) return 1;
+          if (a.cp > b.cp) return -1;
+          if (a.cp < b.cp) return 1;
+          return 0;
+        });
+        break;
+      default:
+        sortedPokemon.sort(function(a, b) {
+          if (a.cp > b.cp) return -1;
+          if (a.cp < b.cp) return 1;
+          return 0;
+        });
+        break;
+    }
+    for (var i = 0; i < sortedPokemon.length; i++) {
+      var pkmnNum = sortedPokemon[i].id,
+        pkmnImage = self.pad_with_zeroes(pkmnNum, 3) + '.png',
+        pkmnName = self.pokemonArray[pkmnNum - 1].Name;
+
+      out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
+        pkmnImage + '" class="png_img"><br><b>' +
+        pkmnName;
+      out += '</div>';
+   }
+    
+    var nth = 0;
+    out = out.replace(/<\/div><div/g, function (match, i, original) {
+      nth++;
+      return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
+    });
+    $('#subcontent').html(out);
+    $('.dropdown-button').dropdown();
   },
   buildTrainerList: function() {
     var self = this,
@@ -592,6 +688,7 @@ for (var k in events){
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tItems">Items</a></li><br>\
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tPokemon">Pokemon</a></li><br>\
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tPokedex">Pokedex</a></li><br>\
+                       <li><a class="bot-' + i + ' waves-effect waves-light btn tNotPokedex">Not</a></li><br>\
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tFind">Find</a></li>\
                    </ul>\
                </div>\
