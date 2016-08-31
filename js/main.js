@@ -699,7 +699,7 @@ for (var k in events){
   invSuccess: function(data, user_index) {
     var self = mapView,
       userData = self.user_data[self.settings.users[user_index]],
-      bagCandy = self.filter(data, 'pokemon_family'),
+      bagCandy = self.filter(data, 'candy'),
       bagItems = self.filter(data, 'item'),
       bagPokemon = self.filter(data, 'pokemon_data'),
       pokedex = self.filter(data, 'pokedex_entry'),
