@@ -524,12 +524,13 @@ for (var k in events){
         break;
       case 2:
         var current_user_bag_items = self.user_data[self.settings.users[user_id]].bagItems;
-        $('#subtitle').html(current_user_bag_items.length + " item" + (current_user_bag_items.length !== 1 ? "s" : "") + " in Bag");
 
         $('#sortButtons').html('');
 
         out = '<div class="items"><div class="row">';
+        var bagItemCount = 0;
         for (var i = 0; i < current_user_bag_items.length; i++) {
+          bagItemCount += current_user_bag_items[i].inventory_item_data.item.count;
           out += '<div class="col s12 m6 l3 center" style="float: left"><img src="image/items/' +
             current_user_bag_items[i].inventory_item_data.item.item_id +
             '.png" class="item_img"><br><b>' +
@@ -544,6 +545,7 @@ for (var k in events){
           nth++;
           return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
         });
+        $('#subtitle').html(bagItemCount + " item" + (bagItemCount !== 1 ? "s" : "") + " in Bag");
         $('#subcontent').html(out);
         break;
       case 3:
