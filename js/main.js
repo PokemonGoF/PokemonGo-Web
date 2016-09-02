@@ -3,103 +3,103 @@
 var socket_io;
 
 var events = {
-        api_error:                         'red',
-		badges:                            'blue',
-        bot_exit:                          'red',
-        bot_start:                         'green',
-        catch_limit:                       'red',
-        catch_log:                         'magenta',
-        config_error:                      'red',
-        egg_already_incubating:            'yellow',
-        egg_hatched:                       'green',
-        evolve_log:                        'magenta',
-        future_pokemon_release:            'yellow',
-        incubate:                          'green',
-        incubator_already_used:            'yellow',
-        inventory_full:                    'yellow',
-        item_discard_fail:                 'red',
-        item_discarded:                    'green',
-        next_force_recycle:                'green',
-        force_recycle:                     'green',
-        keep_best_release:                 'green',
-        level_up:                          'green',
-        level_up_reward:                   'green',
-        location_cache_error:              'yellow',
-        location_cache_ignored:            'yellow',
-        login_failed:                      'red',
-        login_log:                         'magenta',
-        login_successful:                  'green',
-		log_stats:                         'magenta',
-        lucky_egg_error:                   'red',
-        move_to_map_pokemon_encounter:     'green',
-        move_to_map_pokemon_fail:          'red',
-        next_egg_incubates:                'yellow',
-        next_sleep:                        'green',
-        next_random_pause:                 'green',
-        next_random_alive_pause:           'green',
-        no_pokeballs:                      'red',
-		path_lap_end:                      'green',
-        pokemon_appeared:                  'yellow',
-        pokemon_capture_failed:            'red',
-        pokemon_caught:                    'blue',
-        pokemon_evolved:                   'green',
-        pokemon_fled:                      'red',
-        pokemon_inventory_full:            'red',
-        pokemon_nickname_invalid:          'red',
-        pokemon_not_in_range:              'yellow',
-        pokemon_release:                   'green',
-        pokemon_vanished:                  'red',
-        pokestop_empty:                    'yellow',
-        pokestop_log:                      'magenta',
-        pokestop_searching_too_often:      'yellow',
-        rename_pokemon:                    'green',
-        show_best_pokemon:                 'magenta',
-		show_inventory:                    'magenta',
-        skip_evolve:                       'yellow',
-        softban:                           'red',
-        softban_log:                       'magenta',
-        spun_pokestop:                     'cyan',
-        threw_berry_failed:                'red',
-        transfer_log:                      'magenta',
-        unknown_spin_result:               'red',
-        unset_pokemon_nickname:            'red',
-        vip_pokemon:                       'red',
-        arrived_at_cluster:                'white',
-        arrived_at_fort:                   'white',
-        bot_sleep:                         'white',
-        bot_random_pause:                  'white',
-        bot_random_alive_pause:            'white',
-        //catchable_pokemon:                 'white',
-        found_cluster:                     'white',
-        incubate_try:                      'white',
-        load_cached_location:              'white',
-        location_found:                    'white',
-        login_started:                     'white',
-        lured_pokemon_found:               'white',
-        move_to_map_pokemon_move_towards:  'white',
-        move_to_map_pokemon_teleport_to:   'white',
-        move_to_map_pokemon_teleport_back: 'white',
-        move_to_map_pokemon_updated_map:   'white',
-        moving_to_fort:                    'white',
-        moving_to_lured_fort:              'white',
-        //pokemon_catch_rate:                'white',
-        pokemon_evolve_fail:               'white',
-        pokestop_on_cooldown:              'white',
-        pokestop_out_of_range:             'white',
-        polyline_request:                  'white',
-        //position_update:                   'white',
-        path_lap_update:                   'white',
-        set_start_location:                'white',
-        softban_fix:                       'white',
-        softban_fix_done:                  'white',
-        spun_fort:                         'white',
-        threw_berry:                       'white',
-        threw_pokeball:                    'white',
-        used_lucky_egg:                    'white',
-        gained_candy:                      'white',
-        //player_data:                       'white',
-        moving_to_pokemon_throught_fort:   'white'
-}	
+	api_error:                         'red',
+	badges:                            'blue',
+	bot_exit:                          'red',
+	bot_start:                         'green',
+	catch_limit:                       'red',
+	catch_log:                         'magenta',
+	config_error:                      'red',
+	egg_already_incubating:            'yellow',
+	egg_hatched:                       'green',
+	evolve_log:                        'magenta',
+	future_pokemon_release:            'yellow',
+	incubate:                          'green',
+	incubator_already_used:            'yellow',
+	inventory_full:                    'yellow',
+	item_discard_fail:                 'red',
+	item_discarded:                    'green',
+	next_force_recycle:                'green',
+	force_recycle:                     'green',
+	keep_best_release:                 'green',
+	level_up:                          'green',
+	level_up_reward:                   'green',
+	location_cache_error:              'yellow',
+	location_cache_ignored:            'yellow',
+	login_failed:                      'red',
+	login_log:                         'magenta',
+	login_successful:                  'green',
+	log_stats:                         'magenta',
+	lucky_egg_error:                   'red',
+	move_to_map_pokemon_encounter:     'green',
+	move_to_map_pokemon_fail:          'red',
+	next_egg_incubates:                'yellow',
+	next_sleep:                        'green',
+	next_random_pause:                 'green',
+	next_random_alive_pause:           'green',
+	no_pokeballs:                      'red',
+	path_lap_end:                      'green',
+	pokemon_appeared:                  'yellow',
+	pokemon_capture_failed:            'red',
+	pokemon_caught:                    'blue',
+	pokemon_evolved:                   'green',
+	pokemon_fled:                      'red',
+	pokemon_inventory_full:            'red',
+	pokemon_nickname_invalid:          'red',
+	pokemon_not_in_range:              'yellow',
+	pokemon_release:                   'green',
+	pokemon_vanished:                  'red',
+	pokestop_empty:                    'yellow',
+	pokestop_log:                      'magenta',
+	pokestop_searching_too_often:      'yellow',
+	rename_pokemon:                    'green',
+	show_best_pokemon:                 'magenta',
+	show_inventory:                    'magenta',
+	skip_evolve:                       'yellow',
+	softban:                           'red',
+	softban_log:                       'magenta',
+	spun_pokestop:                     'cyan',
+	threw_berry_failed:                'red',
+	transfer_log:                      'magenta',
+	unknown_spin_result:               'red',
+	unset_pokemon_nickname:            'red',
+	vip_pokemon:                       'red',
+	arrived_at_cluster:                'white',
+	arrived_at_fort:                   'white',
+	bot_sleep:                         'white',
+	bot_random_pause:                  'white',
+	bot_random_alive_pause:            'white',
+	//catchable_pokemon:                 'white',
+	found_cluster:                     'white',
+	incubate_try:                      'white',
+	load_cached_location:              'white',
+	location_found:                    'white',
+	login_started:                     'white',
+	lured_pokemon_found:               'white',
+	move_to_map_pokemon_move_towards:  'white',
+	move_to_map_pokemon_teleport_to:   'white',
+	move_to_map_pokemon_teleport_back: 'white',
+	move_to_map_pokemon_updated_map:   'white',
+	moving_to_fort:                    'white',
+	moving_to_lured_fort:              'white',
+	//pokemon_catch_rate:                'white',
+	pokemon_evolve_fail:               'white',
+	pokestop_on_cooldown:              'white',
+	pokestop_out_of_range:             'white',
+	polyline_request:                  'white',
+	//position_update:                   'white',
+	path_lap_update:                   'white',
+	set_start_location:                'white',
+	softban_fix:                       'white',
+	softban_fix_done:                  'white',
+	spun_fort:                         'white',
+	threw_berry:                       'white',
+	threw_pokeball:                    'white',
+	used_lucky_egg:                    'white',
+	gained_candy:                      'white',
+	//player_data:                       'white',
+	moving_to_pokemon_throught_fort:   'white'
+} 
 
 socket_io = io.connect('127.0.0.1:4000');
 
@@ -331,16 +331,16 @@ var mapView = {
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
-for (var k in events){		
-	if (events.hasOwnProperty(k)) {
-		let renk = events[k];
-		socket_io.on(k+':'+self.settings.users[0], function (data) {
-			console.log(data);
-			if(data['data']['msg'] != null){
-				Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
-			}
-		});
-	}
+for (var k in events){    
+  if (events.hasOwnProperty(k)) {
+    let renk = events[k];
+    socket_io.on(k+':'+self.settings.users[0], function (data) {
+      console.log(data);
+      if(data['data']['msg'] != null){
+        Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+      }
+    });
+  }
 }
 
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
@@ -444,6 +444,10 @@ for (var k in events){
       self.sortAndShowPokedex(item.data('sort'), item.parent().parent().data('user-id'));
     });
 
+    $('body').on('click', '.not-pokedex-sort a', function() {
+      var item = $(this);
+      self.sortAndShowNotPokedex(item.data('sort'), item.parent().parent().data('user-id'));
+    });
   },
   initMap: function() {
     var self = this;
@@ -495,7 +499,7 @@ for (var k in events){
           (parseInt(current_user_stats.level, 10) + 1) +
           ': ' +
           (current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) +
-		  ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level +
+      ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level +
           '<br>Pokemon Encountered: ' +
           (current_user_stats.pokemons_encountered || 0) +
           '<br>Pokeballs Thrown: ' +
@@ -520,12 +524,13 @@ for (var k in events){
         break;
       case 2:
         var current_user_bag_items = self.user_data[self.settings.users[user_id]].bagItems;
-        $('#subtitle').html(current_user_bag_items.length + " item" + (current_user_bag_items.length !== 1 ? "s" : "") + " in Bag");
 
         $('#sortButtons').html('');
 
         out = '<div class="items"><div class="row">';
+        var bagItemCount = 0;
         for (var i = 0; i < current_user_bag_items.length; i++) {
+          bagItemCount += current_user_bag_items[i].inventory_item_data.item.count;
           out += '<div class="col s12 m6 l3 center" style="float: left"><img src="image/items/' +
             current_user_bag_items[i].inventory_item_data.item.item_id +
             '.png" class="item_img"><br><b>' +
@@ -540,6 +545,7 @@ for (var k in events){
           nth++;
           return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
         });
+        $('#subtitle').html(bagItemCount + " item" + (bagItemCount !== 1 ? "s" : "") + " in Bag");
         $('#subcontent').html(out);
         break;
       case 3:
@@ -551,6 +557,7 @@ for (var k in events){
         sortButtons += '<div class="chip"><a href="#" data-sort="iv">IV</a></div>';
         sortButtons += '<div class="chip"><a href="#" data-sort="name">Name</a></div>';
         sortButtons += '<div class="chip"><a href="#" data-sort="id">ID</a></div>';
+        sortButtons += '<div class="chip"><a href="#" data-sort="candy">Candy</a></div>';
         sortButtons += '<div class="chip"><a href="#" data-sort="time">Time</a></div>';
         sortButtons += '</div>';
 
@@ -573,9 +580,101 @@ for (var k in events){
 
         self.sortAndShowPokedex('id', user_id);
         break;
+      case 5:
+        var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
+        var sortButtons = '<div class="col s12 not-pokedex-sort" dat-user-id="' + user_id + '">Sort : ';
+        sortButtons += '<div class="chip"><a href="#" data-sort="id">ID</a></div>';
+        sortButtons += '<div class="chip"><a href="#" data-sort="name">Name</a></div>';
+        sortButtons += '</div>';
+
+        $('#sortButtons').html(sortButtons);
+        $('#subtitle').html('Not In Pokedex: ' + (151 - pkmnTotal));
+        self.sortAndShowNotPokedex('id', user_id);
+        break;
       default:
         break;
     }
+  },
+  sortAndShowNotPokedex: function (sortOn, user_id) {
+    var self = this,
+      sortedPokemon = [],
+      out = '',
+      user_id = user_id || 0,
+      user = self.user_data[self.settings.users[user_id]];
+
+    if (!user.bagPokemon.length) return;
+
+    var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
+    var arrayNotPokedex = [];
+  
+    for (var i = 0; i < self.pokemonArray.length; i++) {
+      var alreadyHave = false;
+
+      for (var j = 0; j < pkmnTotal; j++) {
+        var id = self.pad_with_zeroes(self.user_data[self.settings.users[user_id]].pokedex[j].inventory_item_data.pokedex_entry.pokemon_id, 3);
+        if (id == self.pokemonArray[i].Number) {
+          alreadyHave = true;
+        }
+      }
+
+      if (!alreadyHave) {
+        arrayNotPokedex.push(self.pokemonArray[i]);
+      }
+    }
+    
+    out = '<div class="items"><div class="row">';
+    for (var i = 0; i < arrayNotPokedex.length; i++) {
+      sortedPokemon.push({
+        'name': arrayNotPokedex[i].Name,
+        'id': arrayNotPokedex[i].Number
+      });
+    }
+
+    switch (sortOn) {
+      case 'name':
+        sortedPokemon.sort(function(a, b) {
+          if (a.name < b.name) return -1;
+          if (a.name > b.name) return 1;
+          if (a.cp > b.cp) return -1;
+          if (a.cp < b.cp) return 1;
+          return 0;
+        });
+        break;
+      case 'id':
+        sortedPokemon.sort(function(a, b) {
+          if (a.id < b.id) return -1;
+          if (a.id > b.id) return 1;
+          if (a.cp > b.cp) return -1;
+          if (a.cp < b.cp) return 1;
+          return 0;
+        });
+        break;
+      default:
+        sortedPokemon.sort(function(a, b) {
+          if (a.cp > b.cp) return -1;
+          if (a.cp < b.cp) return 1;
+          return 0;
+        });
+        break;
+    }
+    for (var i = 0; i < sortedPokemon.length; i++) {
+      var pkmnNum = sortedPokemon[i].id,
+        pkmnImage = self.pad_with_zeroes(pkmnNum, 3) + '.png',
+        pkmnName = self.pokemonArray[pkmnNum - 1].Name;
+
+      out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
+        pkmnImage + '" class="png_img"><br><b>' +
+        pkmnName;
+      out += '</div>';
+   }
+    
+    var nth = 0;
+    out = out.replace(/<\/div><div/g, function (match, i, original) {
+      nth++;
+      return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
+    });
+    $('#subcontent').html(out);
+    $('.dropdown-button').dropdown();
   },
   buildTrainerList: function() {
     var self = this,
@@ -592,6 +691,7 @@ for (var k in events){
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tItems">Items</a></li><br>\
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tPokemon">Pokemon</a></li><br>\
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tPokedex">Pokedex</a></li><br>\
+                       <li><a class="bot-' + i + ' waves-effect waves-light btn tNotPokedex">Not</a></li><br>\
                        <li><a class="bot-' + i + ' waves-effect waves-light btn tFind">Find</a></li>\
                    </ul>\
                </div>\
@@ -699,7 +799,7 @@ for (var k in events){
   invSuccess: function(data, user_index) {
     var self = mapView,
       userData = self.user_data[self.settings.users[user_index]],
-      bagCandy = self.filter(data, 'pokemon_family'),
+      bagCandy = self.filter(data, 'candy'),
       bagItems = self.filter(data, 'item'),
       bagPokemon = self.filter(data, 'pokemon_data'),
       pokedex = self.filter(data, 'pokedex_entry'),
@@ -751,19 +851,26 @@ for (var k in events){
         pkmIV = ((pkmIVA + pkmIVD + pkmIVS) / 45.0).toFixed(2),
         move1ID = pokemonData.move_1 || 0,
         move2ID = pokemonData.move_2 || 0,
-        pkmTime = pokemonData.creation_time_ms || 0;
+        pkmTime = pokemonData.creation_time_ms || 0,
+		pkmUID = pokemonData.id,
+        pkmHP = pokemonData.stamina || 0,
+        pkmMHP = pokemonData.stamina_max || 0;
 
       sortedPokemon.push({
         "name": pkmnName,
         "id": pkmID,
+        "unique_id": pkmUID,
         "cp": pkmCP,
         "iv": pkmIV,
         "attack": pkmIVA,
         "defense": pkmIVD,
         "stamina": pkmIVS,
+        "health": pkmHP,
+        "max_health": pkmMHP,
+        "creation_time": pkmTime,
+        'candy': self.getCandy(pkmID, user_id),
         "move1": move1ID,
-        "move2": move2ID,
-        "creation_time": pkmTime
+        "move2": move2ID
       });
     }
     switch (sortOn) {
@@ -792,6 +899,13 @@ for (var k in events){
           return 0;
         });
         break;
+		case 'candy':
+			sortedPokemon.sort(function(a, b) {
+				if (a.candy > b.candy) return -1;
+				if (a.candy < b.candy) return 1;
+				return 0;
+			});
+		break;
       case 'iv':
         sortedPokemon.sort(function(a, b) {
           if (a.iv > b.iv) return -1;
@@ -865,7 +979,7 @@ for (var k in events){
     out = '<div class="items"><div class="row">';
     for (var i = 0; i < user.pokedex.length; i++) {
       var pokedex_entry = user.pokedex[i].inventory_item_data.pokedex_entry,
-        pkmID = pokedex_entry.pokedex_entry_number,
+        pkmID = pokedex_entry.pokemon_id,
         pkmnName = self.pokemonArray[pkmID - 1].Name,
         pkmEnc = pokedex_entry.times_encountered,
         pkmCap = pokedex_entry.times_captured;
@@ -946,13 +1060,17 @@ for (var k in events){
           var fort = cell.forts[x];
           if (!self.forts[fort.id]) {
             if (fort.type === 1) {
+              var icon = 'image/forts/img_pokestop.png'
+              if(fort.lure_info || fort.lure_expires_timestamp_ms){
+                icon = 'image/forts/img_pokestop_lured.png'
+              }
               self.forts[fort.id] = new google.maps.Marker({
                 map: self.map,
                 position: {
                   lat: parseFloat(fort.latitude),
                   lng: parseFloat(fort.longitude)
                 },
-                icon: 'image/forts/img_pokestop.png'
+                icon: icon
               });
             } else {
               self.forts[fort.id] = new google.maps.Marker({
@@ -1074,7 +1192,7 @@ for (var k in events){
     xhr.open('GET', path, true);
     xhr.send();
   },
-  
+
 /*
   loadJSON: function(path, success, error, successData) {
     $.getJSON({
@@ -1089,7 +1207,7 @@ for (var k in events){
     });
   },
 */
-  
+
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
     var currentDate = new Date();
