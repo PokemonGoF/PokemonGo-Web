@@ -333,7 +333,7 @@ var mapView = {
 
 for (var k in events){    
   if (events.hasOwnProperty(k)) {
-    let renk = events[k];
+    var renk = events[k];
     socket_io.on(k+':'+self.settings.users[0], function (data) {
       console.log(data);
       if(data['data']['msg'] != null){
