@@ -372,7 +372,7 @@ for (var k in events){
     var self = this;
     $('#switchPan').prop('checked', self.settings.userFollow);
     $('#switchZoom').prop('checked', self.settings.userZoom);
-    $('#strokeOn').prop('checked', false);
+    $('#strokeOn').prop('checked',  self.settings.userPath);
 
     $('#switchPan').change(function() {
       if (this.checked) {
