@@ -99,7 +99,7 @@ var events = {
 	gained_candy:                      'white',
 	//player_data:                       'white',
 	moving_to_pokemon_throught_fort:   'white'
-} 
+}
 
 socket_io = io.connect('127.0.0.1:4000');
 
@@ -331,7 +331,7 @@ var mapView = {
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
-for (var k in events){    
+for (var k in events){
   if (events.hasOwnProperty(k)) {
     let renk = events[k];
     socket_io.on(k+':'+self.settings.users[0], function (data) {
@@ -347,13 +347,13 @@ for (var k in events){
       self.log({
         message: 'Loading Data..'
       });
-      self.loadJSON('data/pokemondata.json', function(data, successData) {
+      self.loadJSON('data/pokemondata.json?'+Date.now(), function(data, successData) {
         self.pokemonArray = data;
       }, self.errorFunc, 'pokemonData');
-      self.loadJSON('data/pokemoncandy.json', function(data, successData) {
+      self.loadJSON('data/pokemoncandy.json?'+Date.now(), function(data, successData) {
         self.pokemoncandyArray = data;
       }, self.errorFunc, 'pokemonCandy');
-      self.loadJSON('data/levelXp.json', function(data, successData) {
+      self.loadJSON('data/levelXp.json?'+Date.now(), function(data, successData) {
         self.levelXpArray = data;
       }, self.errorFunc, 'levelXp');
       for (var i = 0; i < self.settings.users.length; i++) {
@@ -467,13 +467,13 @@ for (var k in events){
   addCatchable: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('catchable-' + self.settings.users[i] + '.json', self.catchSuccess, self.errorFunc, i);
+      self.loadJSON('catchable-' + self.settings.users[i] + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
     }
   },
   addInventory: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('inventory-' + self.settings.users[i] + '.json', self.invSuccess, self.errorFunc, i);
+      self.loadJSON('inventory-' + self.settings.users[i] + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
     }
   },
   buildMenu: function(user_id, menu) {
@@ -606,7 +606,7 @@ for (var k in events){
 
     var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
     var arrayNotPokedex = [];
-  
+
     for (var i = 0; i < self.pokemonArray.length; i++) {
       var alreadyHave = false;
 
@@ -621,7 +621,7 @@ for (var k in events){
         arrayNotPokedex.push(self.pokemonArray[i]);
       }
     }
-    
+
     out = '<div class="items"><div class="row">';
     for (var i = 0; i < arrayNotPokedex.length; i++) {
       sortedPokemon.push({
@@ -667,7 +667,7 @@ for (var k in events){
         pkmnName;
       out += '</div>';
    }
-    
+
     var nth = 0;
     out = out.replace(/<\/div><div/g, function (match, i, original) {
       nth++;
@@ -822,7 +822,7 @@ for (var k in events){
     var self = mapView;
 
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json', self.trainerFunc, self.errorFunc, i);
+      self.loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
   sortAndShowBagPokemon: function(sortOn, user_id) {
@@ -954,7 +954,7 @@ for (var k in events){
         '<br>Candy: ' +
         candyNum +
         '<br>Moves: ' +
-        self.fastMoves[move1ID] + ', ' + self.slowMoves[move2ID] +   
+        self.fastMoves[move1ID] + ', ' + self.slowMoves[move2ID] +
         '</div>';
     }
     // Add number of eggs
@@ -1173,7 +1173,7 @@ for (var k in events){
   updateTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json', self.trainerFunc, self.errorFunc, i);
+      self.loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
   loadJSON: function(path, success, error, successData) {
