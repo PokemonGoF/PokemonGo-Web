@@ -1181,7 +1181,7 @@ for (var k in events){
           path: self.pathcoords[self.settings.users[user_index]],
           geodisc: true,
           strokeColor: self.pathColors[user_index],
-          strokeOpacity: 0.0,
+          strokeOpacity: self.settings.userPath ? 1.0 : 0.0,
           strokeWeight: 2
         });
       } else {
