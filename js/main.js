@@ -868,6 +868,7 @@ for (var k in events){
       var pokemonData = user.bagPokemon[i].inventory_item_data.pokemon_data,
         pkmID = pokemonData.pokemon_id,
         pkmnName = self.pokemonArray[pkmID - 1].Name,
+        pkmLvl = pokemonData.level || 0,
         pkmCP = pokemonData.cp,
         pkmIVA = pokemonData.individual_attack || 0,
         pkmIVD = pokemonData.individual_defense || 0,
@@ -884,6 +885,7 @@ for (var k in events){
         "name": pkmnName,
         "id": pkmID,
         "unique_id": pkmUID,
+        "lvl": pkmLvl,
         "cp": pkmCP,
         "iv": pkmIV,
         "attack": pkmIVA,
@@ -956,6 +958,7 @@ for (var k in events){
       var pkmnNum = sortedPokemon[i].id,
         pkmnImage = self.pad_with_zeroes(pkmnNum, 3) + '.png',
         pkmnName = self.pokemonArray[pkmnNum - 1].Name,
+        pkmnLvl = sortedPokemon[i].lvl,
         pkmnCP = sortedPokemon[i].cp,
         pkmnIV = sortedPokemon[i].iv,
         pkmnIVA = sortedPokemon[i].attack,
@@ -968,7 +971,7 @@ for (var k in events){
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
         pkmnImage +
         '" class="png_img"><br><b>' +
-        pkmnName +
+        pkmnName + " [ Lv." + pkmnLvl + " ]" +
         '</b><br>' +
         pkmnCP +
         '<br>IV: ' +
