@@ -363,6 +363,7 @@ for (var k in events){
         self.pathcoords[user] = [];
       }
       self.initMap();
+      self.map.setZoom(self.settings.zoom);
       self.log({
         message: 'Data Loaded!'
       });
