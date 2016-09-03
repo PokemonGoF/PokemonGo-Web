@@ -365,6 +365,7 @@ for (var k in events){
       self.log({
         message: 'Data Loaded!'
       });
+      socket.init(socket_io, self, userInfo['users']);
     });
   },
   bindUi: function() {
@@ -388,9 +389,11 @@ for (var k in events){
         self.settings.userZoom = false;
       }
     });
+    self.settings.strokeOpacity = this.checked ? 1.0:0.0;
 
     $('#strokeOn').change(function() {
       for (var i = 0; i < self.settings.users.length; i++) {
+        self.settings.strokeOpacity = this.checked ? 1.0:0.0;
         self.user_data[self.settings.users[i]].trainerPath.setOptions({
           strokeOpacity: this.checked ? 1.0 : 0.0
         });
@@ -460,7 +463,7 @@ for (var k in events){
     });
     self.placeTrainer();
     self.addCatchable();
-    setInterval(self.updateTrainer, 1000);
+    //setInterval(self.updateTrainer, 1000);
     setInterval(self.addCatchable, 1000);
     setInterval(self.addInventory, 5000);
   },
