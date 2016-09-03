@@ -363,6 +363,7 @@ for (var k in events){
         self.pathcoords[user] = [];
       }
       self.initMap();
+      self.map.setZoom(self.settings.zoom);
       self.log({
         message: 'Data Loaded!'
       });
@@ -372,7 +373,7 @@ for (var k in events){
     var self = this;
     $('#switchPan').prop('checked', self.settings.userFollow);
     $('#switchZoom').prop('checked', self.settings.userZoom);
-    $('#strokeOn').prop('checked', false);
+    $('#strokeOn').prop('checked',  self.settings.userPath);
 
     $('#switchPan').change(function() {
       if (this.checked) {
@@ -1180,7 +1181,7 @@ for (var k in events){
           path: self.pathcoords[self.settings.users[user_index]],
           geodisc: true,
           strokeColor: self.pathColors[user_index],
-          strokeOpacity: 0.0,
+          strokeOpacity: self.settings.userPath ? 1.0 : 0.0,
           strokeWeight: 2
         });
       } else {
