@@ -336,7 +336,7 @@ for (var k in events){
   if (events.hasOwnProperty(k)) {
     let renk = events[k];
     socket_io.on(k+':'+self.settings.users[0], function (data) {
-      console.log(data);
+      //console.log(data);
       if(data['data']['msg'] != null){
         Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
       }
