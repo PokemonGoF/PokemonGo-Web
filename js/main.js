@@ -1086,23 +1086,23 @@ for (var k in events){
       if (data.cells[i].forts != undefined) {
         for (var x = 0; x < data.cells[i].forts.length; x++) {
           var fort = cell.forts[x],
-			  icon = 'image/forts/img_pokestop.png';
-		  if (fort.type === 1) {
-		    if(fort.active_fort_modifier && (fort.active_fort_modifier == 501)){
-			  icon = 'image/forts/img_pokestop_lured.png';
-		    }
-		  } else {
-		    icon = 'image/forts/' + self.teams[(fort.owned_by_team || 0)] + '.png';
-		  }
+	      icon = 'image/forts/img_pokestop.png';
+	  if (fort.type === 1) {
+	     if(fort.active_fort_modifier && (fort.active_fort_modifier == 501)){
+		icon = 'image/forts/img_pokestop_lured.png';
+	     }
+	  } else {
+	     icon = 'image/forts/' + self.teams[(fort.owned_by_team || 0)] + '.png';
+	  }
           if (!self.forts[fort.id]) {
-			self.forts[fort.id] = new google.maps.Marker({
-			  map: self.map,
-			  position: {
-			    lat: parseFloat(fort.latitude),
-			    lng: parseFloat(fort.longitude)
-			  },
-			  icon: icon
-			});
+	     self.forts[fort.id] = new google.maps.Marker({
+	     	map: self.map,
+		position: {
+		  lat: parseFloat(fort.latitude),
+		  lng: parseFloat(fort.longitude)
+		},
+		icon: icon
+	    });
             var fortPoints = '',
               fortTeam = '',
               fortType = 'PokeStop',
@@ -1124,8 +1124,8 @@ for (var k in events){
               };
             })(self.forts[fort.id], contentString, self.info_windows[fort.id]));
           } else {
-			  self.forts[fort.id].setIcon(icon);
-		  }
+	    self.forts[fort.id].setIcon(icon);
+	  }
         }
       }
     }
