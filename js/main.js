@@ -1086,34 +1086,34 @@ for (var k in events){
       if (data.cells[i].forts != undefined) {
         for (var x = 0; x < data.cells[i].forts.length; x++) {
           var fort = cell.forts[x],
-	      icon = 'image/forts/img_pokestop.png';
-	  if (fort.type === 1) {
-	     if(fort.active_fort_modifier && (fort.active_fort_modifier == 501)){
-		icon = 'image/forts/img_pokestop_lured.png';
-	     }
-	  } else {
-	     icon = 'image/forts/' + self.teams[(fort.owned_by_team || 0)] + '.png';
-	  }
-          if (!self.forts[fort.id]) {
-	     self.forts[fort.id] = new google.maps.Marker({
-	     	map: self.map,
-		position: {
-		  lat: parseFloat(fort.latitude),
-		  lng: parseFloat(fort.longitude)
-		},
-		icon: icon
-	    });
-            var fortPoints = '',
+	      icon = 'image/forts/img_pokestop.png',
+	      fortPoints = '',
               fortTeam = '',
               fortType = 'PokeStop',
               pokemonGuard = '';
+	  if (fort.type === 1) {
+	    if(fort.active_fort_modifier && (fort.active_fort_modifier == 501)){
+	        icon = 'image/forts/img_pokestop_lured.png';
+	    }
+	  } else {
+	    icon = 'image/forts/' + self.teams[(fort.owned_by_team || 0)] + '.png';
+            fortType = 'Gym';
             if (fort.guard_pokemon_id != undefined) {
               fortPoints = 'Points: ' + fort.gym_points;
               fortTeam = 'Team: ' + self.teams[fort.owned_by_team] + '<br>';
-              fortType = 'Gym';
               pokemonGuard = 'Guard Pokemon: ' + (self.pokemonArray[fort.guard_pokemon_id - 1].Name || "None") + '<br>';
             }
-            var contentString = 'Id: ' + fort.id + '<br>Type: ' + fortType + '<br>' + pokemonGuard + fortPoints;
+	  }
+          var contentString = 'Id: ' + fort.id + '<br>Type: ' + fortType + '<br>' + fortTeam + pokemonGuard + fortPoints;
+          if (!self.forts[fort.id]) {
+	    self.forts[fort.id] = new google.maps.Marker({
+	      map: self.map,
+	      position: {
+	      	lat: parseFloat(fort.latitude),
+	      	lng: parseFloat(fort.longitude)
+	      },
+	      icon: icon
+	    });
             self.info_windows[fort.id] = new google.maps.InfoWindow({
               content: contentString
             });
@@ -1124,8 +1124,9 @@ for (var k in events){
               };
             })(self.forts[fort.id], contentString, self.info_windows[fort.id]));
           } else {
-	    self.forts[fort.id].setIcon(icon);
-	  }
+            self.forts[fort.id].setIcon(icon);
+            self.info_windows[fort.id].setContent(contentString);
+          }
         }
       }
     }
