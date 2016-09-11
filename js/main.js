@@ -919,7 +919,6 @@ var mapView = {
 
       sortedPokedex[pkmID-1].cap = pkmCap;
       sortedPokedex[pkmID-1].enc = pkmEnc;
-      sortedPokedex[pkmID-1].candy = self.getCandy(pkmID, user_id);
     }
     switch (sortOn) {
       case 'id':
@@ -950,7 +949,7 @@ var mapView = {
         pkmnName = sortedPokedex[i].Name,
         pkmnEnc = sortedPokedex[i].enc,
         pkmnCap = sortedPokedex[i].cap,
-        candyNum = self.getCandy(parseInt(pkmnNum), user_id);
+        candyNum = self.getCandy(parseInt(pkmnNum), user_id) || 0;
 
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
         pkmnImage +
