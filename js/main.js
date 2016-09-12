@@ -332,6 +332,7 @@ var mapView = {
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
+    /*
     for (var k in events){
       if (events.hasOwnProperty(k)) {
         let renk = events[k];
@@ -343,25 +344,29 @@ var mapView = {
         });
       }
     }
+    */
 
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
         self.log({
           message: 'Loading Data..'
         });
-        self.loadJSON('data/pokemondata.json?'+Date.now(), function(data, successData) {
+
+        loadJSON('data/pokemondata.json?'+Date.now(), function(data, successData) {
           self.pokemonArray = data;
         }, self.errorFunc, 'pokemonData');
-        self.loadJSON('data/pokemoncandy.json?'+Date.now(), function(data, successData) {
+        loadJSON('data/pokemoncandy.json?'+Date.now(), function(data, successData) {
           self.pokemoncandyArray = data;
         }, self.errorFunc, 'pokemonCandy');
-        self.loadJSON('data/levelXp.json?'+Date.now(), function(data, successData) {
+        loadJSON('data/levelXp.json?'+Date.now(), function(data, successData) {
           self.levelXpArray = data;
         }, self.errorFunc, 'levelXp');
+
         for (var i = 0; i < self.settings.users.length; i++) {
           var user = self.settings.users[i];
           self.user_data[user] = {};
           self.pathcoords[user] = [];
         }
+
         self.initMap();
         self.map.setZoom(self.settings.zoom);
         self.log({
@@ -464,13 +469,13 @@ var mapView = {
   addCatchable: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('catchable-' + self.settings.users[i] + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
+      loadJSON('catchable-' + self.settings.users[i] + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
     }
   },
   addInventory: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('inventory-' + self.settings.users[i] + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
+      loadJSON('inventory-' + self.settings.users[i] + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
     }
   },
   buildMenu: function(user_id, menu) {
@@ -749,7 +754,7 @@ var mapView = {
     var self = mapView;
 
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
   sortAndShowBagPokemon: function(sortOn, user_id) {
@@ -1094,41 +1099,9 @@ var mapView = {
   updateTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
-  loadJSON: function(path, success, error, successData) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          if (success)
-            success(JSON.parse(xhr.responseText.replace(/\bNaN\b/g, 'null')), successData);
-        } else {
-          if (error)
-            error(xhr);
-        }
-      }
-    };
-    xhr.open('GET', path, true);
-    xhr.send();
-  },
-
-  /*
-     loadJSON: function(path, success, error, successData) {
-     $.getJSON({
-     url: path + "?" + Date.now()
-     }).done(function(data) {
-     if(data !== undefined) {
-     success(data, successData);
-     console.log(data);
-     } else {
-     error(data);
-     }
-     });
-     },
-     */
-
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
     var currentDate = new Date();
