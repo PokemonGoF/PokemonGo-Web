@@ -158,38 +158,6 @@ var mapView = {
   user_data: {},
   user_xps: {},
   pathcoords: {},
-  itemsArray: {
-    '0': 'Unknown',
-    '1': 'Pokeball',
-    '2': 'Greatball',
-    '3': 'Ultraball',
-    '4': 'Masterball',
-    '101': 'Potion',
-    '102': 'Super Potion',
-    '103': 'Hyper Potion',
-    '104': 'Max Potion',
-    '201': 'Revive',
-    '202': 'Max Revive',
-    '301': 'Lucky Egg',
-    '401': 'Incense',
-    '402': 'Spicy Incense',
-    '403': 'Cool Incense',
-    '404': 'Floral Incense',
-    '501': 'Lure Module',
-    '602': 'X Attack',
-    '603': 'X Defense',
-    '604': 'X Miracle',
-    '701': 'Razz Berry',
-    '702': 'Bluk Berry',
-    '703': 'Nanab Berry',
-    '704': 'Wepar Berry',
-    '705': 'Pinap Berry',
-    '801': 'Special Camera',
-    '901': 'Incubator (Unlimited)',
-    '902': 'Incubator',
-    '1001': 'Pokemon Storage Upgrade',
-    '1002': 'Item Storage Upgrade'
-  },
   settings: {},
   init: function() {
     var self = this;
@@ -227,6 +195,9 @@ var mapView = {
             self.moveList[move.id] = move;
           });
         }, self.errorFunc, 'moveList');
+        loadJSON('data/items.json?'+Date.now(), function(data, successData) {
+          self.itemsArray = data;
+        }, self.errorFunc, 'itemsArray');
 
         for (var i = 0; i < self.settings.users.length; i++) {
           var user = self.settings.users[i];
