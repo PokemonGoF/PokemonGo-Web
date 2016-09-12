@@ -158,174 +158,6 @@ var mapView = {
   user_data: {},
   user_xps: {},
   pathcoords: {},
-  slowMoves: {
-    32: "Stone Edge",
-    28: "Cross Chop",
-    83: "Dragon Claw",
-    40: "Blizzard",
-    131: "Body Slam",
-    22: "Megahorn",
-    122: "Hurricane",
-    116: "Solar Beam",
-    103: "Fire Blast",
-    14: "Hyper Beam",
-    31: "Earthquake",
-    118: "Power Whip",
-    107: "Hydro Pump",
-    117: "Leaf Blade",
-    78: "Thunder",
-    123: "Brick Break",
-    92: "Gunk Shot",
-    90: "Sludge Bomb",
-    42: "Heat Wave",
-    87: "Moonblast",
-    91: "Sludge Wave",
-    79: "Thunderbolt",
-    47: "Petal Blizzard",
-    89: "Cross Poison",
-    108: "Psychic",
-    58: "Aqua Tail",
-    24: "Flamethrower",
-    88: "Play Rough",
-    82: "Dragon Pulse",
-    39: "Ice Beam",
-    49: "Bug Buzz",
-    46: "Drill Run",
-    59: "Seed Bomb",
-    77: "Thunder Punch",
-    100: "X Scissor",
-    129: "Hyper Fang",
-    64: "Rock Slide",
-    94: "Bone Club",
-    36: "Flash Cannon",
-    74: "Iron Head",
-    38: "Drill Peck",
-    60: "Psyshock",
-    70: "Shadow Ball",
-    99: "Signal Beam",
-    115: "Fire Punch",
-    54: "Submission",
-    102: "Flame Burst",
-    127: "Stomp",
-    35: "Discharge",
-    65: "Power Gem",
-    106: "Scald",
-    109: "Psystrike",
-    56: "Low Sweep",
-    51: "Night Slash",
-    86: "Dazzling Gleam",
-    16: "Dark Pulse",
-    33: "Ice Punch",
-    26: "Dig",
-    20: "Vice Grip",
-    18: "Sludge",
-    96: "Mud Bomb",
-    126: "Horn Attack",
-    121: "Air Cutter",
-    132: "Rest",
-    72: "Magnet Bomb",
-    57: "Aqua Jet",
-    105: "Water Pulse",
-    30: "Psybeam",
-    63: "Rock Tomb",
-    50: "Poison Fang",
-    104: "Brine",
-    45: "Aerial Ace",
-    53: "Bubble Beam",
-    95: "Bulldoze",
-    125: "Swift",
-    62: "Ancient Power",
-    114: "Giga Drain",
-    69: "Ominous Wind",
-    67: "Shadow Punch",
-    80: "Twister",
-    85: "Draining Kiss",
-    21: "Flame Wheel",
-    133: "Struggle",
-    101: "Flame Charge",
-    34: "Heart Stamp",
-    75: "Parabolic Charge",
-    111: "Icy Wind",
-    84: "Disarming Voice",
-    13: "Wrap",
-    66: "Shadow Sneak",
-    48: "Mega Drain"
-  },
-  fastMoves: {
-    222: "Pound",
-    228: "Metal Claw",
-    226: "Psycho Cut",
-    210: "Wing Attack",
-    202: "Bite",
-    204: "Dragon Breath",
-    220: "Scratch",
-    230: "Water Gun",
-    240: "Fire Fang",
-    213: "Shadow Claw",
-    238: "Feint Attack",
-    224: "Poison Jab",
-    234: "Zen Headbutt",
-    239: "Steel Wing",
-    201: "Bug Bite",
-    218: "Frost Breath",
-    233: "Mud Slap",
-    216: "Mud Shot",
-    221: "Tackle",
-    237: "Bubble",
-    214: "Vine Whip",
-    217: "Ice Shard",
-    241: "Rock Smash",
-    223: "Cut",
-    236: "Poison Sting",
-    215: "Razor Leaf",
-    212: "Lick",
-    206: "Spark",
-    203: "Sucker Punch",
-    235: "Confusion",
-    225: "Acid",
-    209: "Ember",
-    227: "Rock Throw",
-    211: "Peck",
-    207: "Low Kick",
-    205: "Thunder Shock",
-    229: "Bullet Punch",
-    219: "Quick Attack",
-    200: "Fury Cutter",
-    208: "Karate Chop",
-    231: "Splash"
-  },
-  itemsArray: {
-    '0': 'Unknown',
-    '1': 'Pokeball',
-    '2': 'Greatball',
-    '3': 'Ultraball',
-    '4': 'Masterball',
-    '101': 'Potion',
-    '102': 'Super Potion',
-    '103': 'Hyper Potion',
-    '104': 'Max Potion',
-    '201': 'Revive',
-    '202': 'Max Revive',
-    '301': 'Lucky Egg',
-    '401': 'Incense',
-    '402': 'Spicy Incense',
-    '403': 'Cool Incense',
-    '404': 'Floral Incense',
-    '501': 'Lure Module',
-    '602': 'X Attack',
-    '603': 'X Defense',
-    '604': 'X Miracle',
-    '701': 'Razz Berry',
-    '702': 'Bluk Berry',
-    '703': 'Nanab Berry',
-    '704': 'Wepar Berry',
-    '705': 'Pinap Berry',
-    '801': 'Special Camera',
-    '901': 'Incubator (Unlimited)',
-    '902': 'Incubator',
-    '1001': 'Pokemon Storage Upgrade',
-    '1002': 'Item Storage Upgrade'
-  },
   settings: {},
   init: function() {
     var self = this;
@@ -343,25 +175,36 @@ var mapView = {
         });
       }
     }
-
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
         self.log({
           message: 'Loading Data..'
         });
-        self.loadJSON('data/pokemondata.json?'+Date.now(), function(data, successData) {
+
+        loadJSON('data/pokemondata.json?'+Date.now(), function(data, successData) {
           self.pokemonArray = data;
         }, self.errorFunc, 'pokemonData');
-        self.loadJSON('data/pokemoncandy.json?'+Date.now(), function(data, successData) {
+        loadJSON('data/pokemoncandy.json?'+Date.now(), function(data, successData) {
           self.pokemoncandyArray = data;
         }, self.errorFunc, 'pokemonCandy');
-        self.loadJSON('data/levelXp.json?'+Date.now(), function(data, successData) {
+        loadJSON('data/levelXp.json?'+Date.now(), function(data, successData) {
           self.levelXpArray = data;
         }, self.errorFunc, 'levelXp');
+        loadJSON('data/moves.json?'+Date.now(), function(data, successData) {
+          self.moveList = {};
+          data.map(move => {
+            self.moveList[move.id] = move;
+          });
+        }, self.errorFunc, 'moveList');
+        loadJSON('data/items.json?'+Date.now(), function(data, successData) {
+          self.itemsArray = data;
+        }, self.errorFunc, 'itemsArray');
+
         for (var i = 0; i < self.settings.users.length; i++) {
           var user = self.settings.users[i];
           self.user_data[user] = {};
           self.pathcoords[user] = [];
         }
+
         self.initMap();
         self.map.setZoom(self.settings.zoom);
         self.log({
@@ -464,13 +307,13 @@ var mapView = {
   addCatchable: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('catchable-' + self.settings.users[i] + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
+      loadJSON('catchable-' + self.settings.users[i] + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
     }
   },
   addInventory: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('inventory-' + self.settings.users[i] + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
+      loadJSON('inventory-' + self.settings.users[i] + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
     }
   },
   buildMenu: function(user_id, menu) {
@@ -749,7 +592,7 @@ var mapView = {
     var self = mapView;
 
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
   sortAndShowBagPokemon: function(sortOn, user_id) {
@@ -872,19 +715,14 @@ var mapView = {
         candyNum = self.getCandy(pkmnNum, user_id);
 
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
-        pkmnImage +
-        '" class="png_img"><br><b>' +
-        pkmnName + " [ Lv." + pkmnLvl + " ]" +
-        '</b><br>' +
-        pkmnCP +
-        '<br>IV: ' +
-        pkmnIV +
-        '<br>A/D/S:' +
-        pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
-        '<br>Candy: ' +
-        candyNum +
-        '<br>Moves: ' +
-        self.fastMoves[move1ID] + ', ' + self.slowMoves[move2ID] +
+        pkmnImage + '" class="png_img"></br><b>' +
+        pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b>' +
+        '<br/><b>CP: </b>' + pkmnCP + 
+        '<br/><b>IV: </b>' + pkmnIV +
+        '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
+        '<br><b>Candy: </b>' + candyNum +
+        '<br/><b>Moves:</b><br/>' +
+        self.moveList[move1ID].name + '<br/>' + self.moveList[move2ID].name +
         '</div>';
     }
     // Add number of eggs
@@ -1094,41 +932,9 @@ var mapView = {
   updateTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      self.loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
-  loadJSON: function(path, success, error, successData) {
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function() {
-      if (xhr.readyState === XMLHttpRequest.DONE) {
-        if (xhr.status === 200) {
-          if (success)
-            success(JSON.parse(xhr.responseText.replace(/\bNaN\b/g, 'null')), successData);
-        } else {
-          if (error)
-            error(xhr);
-        }
-      }
-    };
-    xhr.open('GET', path, true);
-    xhr.send();
-  },
-
-  /*
-     loadJSON: function(path, success, error, successData) {
-     $.getJSON({
-     url: path + "?" + Date.now()
-     }).done(function(data) {
-     if(data !== undefined) {
-     success(data, successData);
-     console.log(data);
-     } else {
-     error(data);
-     }
-     });
-     },
-     */
-
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
     var currentDate = new Date();
