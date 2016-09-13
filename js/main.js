@@ -178,7 +178,7 @@ var mapView = {
               if (data['event'] == 'vip_pokemon') {
                 timeOut = 8000;
               }
-              bgColor = (/(yellow|cyan)/.test(renk)) ? '#323232' : '#dadada';
+              bgColor = (/(yellow|cyan)/.test(renk)) ? '#323232' : '#dedede';
               self.log({
                 message: "<span style='color: " + renk + "'>[" + data['account'] + "] " + data['data']['msg'] + "</span>",
                 timeout: timeOut,
