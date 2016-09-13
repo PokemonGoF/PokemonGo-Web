@@ -178,7 +178,7 @@ var mapView = {
               if (data['event'] == 'vip_pokemon') {
                 timeOut = 8000;
               }
-              bgColor = (/(yellow|cyan)/.test(renk)) ? '#323232' : '';
+              bgColor = (/(yellow|cyan)/.test(renk)) ? '#323232' : '#dadada';
               self.log({
                 message: "<span style='color: " + renk + "'>[" + data['account'] + "] " + data['data']['msg'] + "</span>",
                 timeout: timeOut,
@@ -1012,7 +1012,7 @@ var mapView = {
     }
     var currentDate = new Date();
     var time = ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + (currentDate.getMinutes())).slice(-2);
-    $("#logs-panel .card-content").prepend("<div class='log-item'>\
+    $("#logs-output").prepend("<div class='log-item'>\
         <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
       Materialize.toast(log_object.message, timeout);
