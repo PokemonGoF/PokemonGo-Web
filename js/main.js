@@ -161,6 +161,10 @@ var mapView = {
   settings: {},
   init: function() {
     var self = this;
+    var prevMsg = '';
+    var timeOut = 5000;
+    var bgColor = '';
+    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates)/;
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
@@ -169,8 +173,20 @@ var mapView = {
         let renk = events[k];
         socket_io.on(k+':'+self.settings.users[0], function (data) {
           //console.log(data);
-          if(data['data']['msg'] != null){
-            Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+          if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
+            if (logThis.test(data['event'])) {
+              if (data['event'] == 'vip_pokemon') {
+                timeOut = 8000;
+              }
+              bgColor = (renk == 'yellow') ? '#323232' : '';
+              self.log({
+                message: "<span style='color: " + renk + "'>[" + data['account'] + "] " + data['data']['msg'] + "</span>",
+                timeout: timeOut,
+                bgcolor: bgColor
+              });
+            }
+            //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+            prevMsg = data['data']['msg'];
           }
         });
       }
@@ -474,7 +490,7 @@ var mapView = {
           poke_name = self.pokemonArray[data.pokemon_id - 1].Name;
           self.log({
             message: "[" + self.settings.users[user_index] + "] " + poke_name + " appeared",
-            color: "green-text"
+            color: "green"
           });
           user.catchables[data.spawnpoint_id] = new google.maps.Marker({
             map: self.map,
@@ -568,6 +584,7 @@ var mapView = {
     userData.bagPokemon = bagPokemon;
     userData.pokedex = pokedex;
     userData.stats = stats;
+    userData.eggs = self.filter(data, 'egg_incubators');
     self.user_data[self.settings.users[user_index]] = userData;
 
     if (!(user_index in self.user_xps)) {
@@ -598,6 +615,9 @@ var mapView = {
   sortAndShowBagPokemon: function(sortOn, user_id) {
     var self = this,
     eggs = 0,
+    eggs10 = 0,
+    eggs5 = 0,
+    eggs2 = 0,
     sortedPokemon = [],
     out = '',
     user = self.user_data[self.settings.users[user_id]],
@@ -608,6 +628,13 @@ var mapView = {
     out = '<div class="items"><div class="row">';
     for (var i = 0; i < user.bagPokemon.length; i++) {
       if (user.bagPokemon[i].inventory_item_data.pokemon_data.is_egg) {
+        if (user.bagPokemon[i].inventory_item_data.pokemon_data.egg_km_walked_target == 10) {
+          eggs10++;
+        } else if (user.bagPokemon[i].inventory_item_data.pokemon_data.egg_km_walked_target == 5) {
+          eggs5++;
+        } else {
+          eggs2++;
+        }
         eggs++;
         continue;
       }
@@ -710,24 +737,58 @@ var mapView = {
         pkmnIVA = sortedPokemon[i].attack,
         pkmnIVD = sortedPokemon[i].defense,
         pkmnIVS = sortedPokemon[i].stamina,
+        pkmnHP = sortedPokemon[i].health,
+        pkmnMHP = sortedPokemon[i].max_health,
         move1ID = sortedPokemon[i].move1,
         move2ID = sortedPokemon[i].move2,
+        pkmnUnique = sortedPokemon[i].unique_id,
         candyNum = self.getCandy(pkmnNum, user_id);
 
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
         pkmnImage + '" class="png_img"></br><b>' +
         pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b>' +
+        '</b><br><div class="progress pkmn-progress pkmn-' + pkmnNum + '" style="margin: 0.25rem auto; width: 70%;"> <div class="determinate pkmn-' + pkmnNum + '" style="width: ' + (pkmnHP / pkmnMHP) * 100 +'%"></div> </div>' +
+        '<b>HP:</b> ' + pkmnHP + ' / ' + pkmnMHP +
         '<br/><b>CP: </b>' + pkmnCP + 
-        '<br/><b>IV: </b>' + pkmnIV +
+        '<br/><b>IV: </b>' + (pkmnIV >= 0.8 ? '<span style="color: #039be5">' + pkmnIV + '</span>' : pkmnIV) +
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
-        '<br/><b>Moves:</b><br/>' +
-        self.moveList[move1ID].name + '<br/>' + self.moveList[move2ID].name +
-        '</div>';
+        '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
+        self.moveList[move1ID].name + ' [' + self.moveList[move1ID].damage + ']' + '<br/>' + self.moveList[move2ID].name + ' [' + self.moveList[move2ID].damage + ']' +
+        '</span></div>';
     }
     // Add number of eggs
-    out += '<div class="col s12 m4 l3 center" style="float: left;"><img src="image/pokemon/Egg.png" class="png_img"><br><b>You have ' + eggs + ' egg' + (eggs !== 1 ? "s" : "") + '</div>';
-    out += '</div></div>';
+    out += '<div class="col s12 m4 l3 center" style="float: left;"><img src="image/pokemon/Egg.png" class="png_img"><br><b>You have ' + eggs + ' egg' + (eggs !== 1 ? "s" : "") + '</b><br>';
+    if (eggs10 > 0) {
+      out += '<b>10km:</b> ' + eggs10 + ' egg' + (eggs10 !== 1 ? "s" : "") + '<br>';
+    }
+    if (eggs5 > 0) {
+      out += '<b>5km:</b> ' + eggs5 + ' egg' + (eggs5 !== 1 ? "s" : "") + '<br>';
+    }
+    if (eggs2 > 0) {
+      out += '<b>2km:</b> ' + eggs2 + ' egg' + (eggs2 !== 1 ? "s" : "");
+    }
+    out += '</div>';
+    var incubators = user.eggs[0].inventory_item_data.egg_incubators.egg_incubator;
+    for(var b=0; b<incubators.length; b++) {
+      var incubator = incubators[b];
+      if (!incubator.item_id) {
+        incubator = incubators[0];
+      }
+      var current_user_stats = self.user_data[self.settings.users[user_id]].stats[0].inventory_item_data.player_stats;
+      var totalToWalk  = incubator.target_km_walked - incubator.start_km_walked;
+      var kmsLeft = incubator.target_km_walked - current_user_stats.km_walked;
+      var walked = totalToWalk - kmsLeft;
+      var eggString = (parseFloat(walked).toFixed(2) || 0) + "/" + (parseFloat(totalToWalk).toFixed(1) || 0) + " km";
+      var img = 'EggIncubator';
+      if (incubator.item_id == 901) {
+        img = 'EggIncubatorUnlimited';
+      }
+      out += '<div class="col s12 m4 l3 center" style="float: left;"><img src="image/items/' + img + '.png" class="png_img"><br>';
+      out += '<b>' + eggString + '</b>';
+      out += '</div>';
+    }
+    out += '</div>';
     var nth = 0;
     out = out.replace(/<\/div><div/g, function (match, i, original) {
       nth++;
@@ -887,7 +948,7 @@ var mapView = {
       self.addInventory();
       self.log({
         message: "Trainer loaded: " + self.settings.users[user_index],
-        color: "blue-text"
+        color: "blue"
       });
       var randomSex = Math.floor(Math.random() * 1);
       self.user_data[self.settings.users[user_index]].marker = new google.maps.Marker({
@@ -937,12 +998,24 @@ var mapView = {
   },
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
+    var timeout = log_object.timeout
+    var logColor = '';
+    var logBGColor = '';
+    if (typeof timeout == 'undefined') {
+      timeout = 3000;
+    }
+    if (typeof log_object.color !== 'undefined' && log_object.color != '') {
+      logColor = 'color: ' + log_object.color + ';';
+    }
+    if (typeof log_object.bgcolor !== 'undefined' && log_object.bgcolor != '') {
+      logBGColor = 'background-color: ' + log_object.bgcolor + ';';
+    }
     var currentDate = new Date();
     var time = ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + (currentDate.getMinutes())).slice(-2);
     $("#logs-panel .card-content").append("<div class='log-item'>\
-        <span class='log-date'>" + time + "</span><p class='" + log_object.color + "'>" + log_object.message + "</p></div>");
+        <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
-      Materialize.toast(log_object.message, 3000);
+      Materialize.toast(log_object.message, timeout);
     }
   }
 };
