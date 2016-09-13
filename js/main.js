@@ -164,7 +164,7 @@ var mapView = {
     var prevMsg = '';
     var timeOut = 5000;
     var bgColor = '';
-    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates)/;
+    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop)/;
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
@@ -178,7 +178,7 @@ var mapView = {
               if (data['event'] == 'vip_pokemon') {
                 timeOut = 8000;
               }
-              bgColor = (renk == 'yellow') ? '#323232' : '';
+              bgColor = (/(yellow|cyan)/.test(renk)) ? '#323232' : '';
               self.log({
                 message: "<span style='color: " + renk + "'>[" + data['account'] + "] " + data['data']['msg'] + "</span>",
                 timeout: timeOut,
@@ -1012,7 +1012,7 @@ var mapView = {
     }
     var currentDate = new Date();
     var time = ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + (currentDate.getMinutes())).slice(-2);
-    $("#logs-panel .card-content").append("<div class='log-item'>\
+    $("#logs-panel .card-content").prepend("<div class='log-item'>\
         <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
       Materialize.toast(log_object.message, timeout);
