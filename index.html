@@ -88,7 +88,11 @@
     <div id="logs-panel">
       <div class="card white">
         <div class="card-content black-text">
-          <b>Logs</b>
+          <div style="position: fixed; width: 605px; margin-top: -10px; padding-top: 10px;" class="white">
+            <b>Logs</b>
+            <hr style="margin-bottom: 0;" />
+          </div>
+          <div id="logs-output" style="padding-top: 35px;"></div>
         </div>
       </div>
     </div>
@@ -96,6 +100,7 @@
     <div id="map"></div>
     <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
     <script type="text/javascript" src="config/userdata.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
