@@ -1,10 +1,14 @@
- // MUST CONFIGURE THE USER ARRAY AND GOOGLE MAPS API KEY.
- // YOU CAN GET A KEY HERE: https://developers.google.com/maps/documentation/javascript/get-api-key
- var userInfo = {
- 	users: ["username"],
- 	userZoom: false,
- 	userPath: true,
- 	zoom: 16,
- 	userFollow: true,
- 	gMapsAPIKey: "YOUR_API_KEY_HERE"
- }; 
+// MUST CONFIGURE THE USER ARRAY AND GOOGLE MAPS API KEY.
+// YOU CAN GET A KEY HERE: https://developers.google.com/maps/documentation/javascript/get-api-key
+var userInfo = {
+	users: ["username"],
+	userZoom: true,
+	zoom: 16,
+	userFollow: true,
+	gMapsAPIKey: "YOUR_API_KEY_HERE"
+//milliseconds
+var dataUpdates = {
+    updateTrainer: 1000,
+    addCatchable: 1000,
+    addInventory: 5000
+};
