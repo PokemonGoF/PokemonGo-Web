@@ -312,6 +312,10 @@ var mapView = {
       $('#submenu').toggle();
     });
 
+    $('body').on('click', '#close-logs', function() {
+      $('#logs-panel').toggle();
+    });
+
     $('body').on('click', '.tFind', function() {
       self.findBot($(this).closest('ul').data('user-id'));
     });

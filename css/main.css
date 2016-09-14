@@ -35,6 +35,12 @@ html, body {
   cursor: pointer;
   line-height: 48px;
 }
+#close-logs {
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 18px;
+}
 .items {
   overflow-y: scroll;
   overflow-x: hidden;
