@@ -164,7 +164,7 @@ var mapView = {
     var prevMsg = '';
     var timeOut = 5000;
     var bgColor = '';
-    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop)/;
+    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full)/;
     self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
@@ -178,7 +178,7 @@ var mapView = {
               if (data['event'] == 'vip_pokemon') {
                 timeOut = 8000;
               }
-              bgColor = (/(yellow|cyan)/.test(renk)) ? '#323232' : '#dedede';
+              bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
               self.log({
                 message: "<span style='color: " + renk + "'>[" + data['account'] + "] " + data['data']['msg'] + "</span>",
                 timeout: timeOut,
@@ -754,7 +754,7 @@ var mapView = {
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
-        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.moveList[move1ID].type + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage + '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2) + '">' + self.moveList[move1ID].name + ' [' + self.moveList[move1ID].damage + ']</span>' + '<br/>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.moveList[move1ID].type + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage + '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2) + '">' + self.moveList[move1ID].name + ' [' + self.moveList[move1ID].damage + ']</span><br>' +
         '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.moveList[move2ID].type + '<br><b>Damage:</b> ' + self.moveList[move2ID].damage + '<br><b>Energy Used:</b> ' + self.moveList[move2ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move2ID].dps).toFixed(2) + '">' + self.moveList[move2ID].name + ' [' + self.moveList[move2ID].damage + ']</span>' +
         '</span></div>';
     }
