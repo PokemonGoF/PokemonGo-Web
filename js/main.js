@@ -744,7 +744,7 @@ var mapView = {
         pkmnUnique = sortedPokemon[i].unique_id,
         candyNum = self.getCandy(pkmnNum, user_id);
 
-      out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
+      out += '<div class="col s12 m6 l3 center" data-uniqueid="'+pkmnUnique+'"><img src="image/pokemon/' +
         pkmnImage + '" class="png_img"></br><b>' +
         pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b>' +
         '</b><br><div class="progress pkmn-progress pkmn-' + pkmnNum + '" style="margin: 0.25rem auto; width: 70%;"> <div class="determinate pkmn-' + pkmnNum + '" style="width: ' + (pkmnHP / pkmnMHP) * 100 +'%"></div> </div>' +
@@ -754,7 +754,8 @@ var mapView = {
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
-        self.moveList[move1ID].name + ' [' + self.moveList[move1ID].damage + ']' + '<br/>' + self.moveList[move2ID].name + ' [' + self.moveList[move2ID].damage + ']' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.moveList[move1ID].type + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage + '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2) + '">' + self.moveList[move1ID].name + ' [' + self.moveList[move1ID].damage + ']</span>' + '<br/>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.moveList[move2ID].type + '<br><b>Damage:</b> ' + self.moveList[move2ID].damage + '<br><b>Energy Used:</b> ' + self.moveList[move2ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move2ID].dps).toFixed(2) + '">' + self.moveList[move2ID].name + ' [' + self.moveList[move2ID].damage + ']</span>' +
         '</span></div>';
     }
     // Add number of eggs
@@ -795,6 +796,7 @@ var mapView = {
       return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
     });
     $('#subcontent').html(out);
+    $('.tooltipped').tooltip({delay: 50, html: true});
   },
   sortAndShowPokedex: function(sortOn, user_id) {
     var self = this,
