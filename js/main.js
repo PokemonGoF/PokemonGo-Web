@@ -191,10 +191,11 @@ var mapView = {
 
     for (var k in events){
       if (events.hasOwnProperty(k)) {
-        let renk = events[k];
+        //let renk = events[k];
         socket_io.on(k+':'+self.settings.users[0], function (data) {
           //console.log(data);
           if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
+            var renk = events[data['event']];
             if (logThis.test(data['event'])) {
               if (data['event'] == 'vip_pokemon') {
                 timeOut = 8000;
