@@ -684,6 +684,7 @@ var mapView = {
       if (typeof self.pokemonArray[pkmID - 1].TypeII !== 'undefined') {
         pkmTypeII = self.pokemonArray[pkmID - 1].TypeII[0];
       }
+      var pkmWeakness = self.pokemonArray[pkmID - 1].Weaknesses;
 
       sortedPokemon.push({
         "name": pkmnName,
@@ -702,7 +703,8 @@ var mapView = {
         "move1": move1ID,
         "move2": move2ID,
         "type1": pkmTypeI,
-        "type2": pkmTypeII
+        "type2": pkmTypeII,
+        "weakness": pkmWeakness
       });
     }
     switch (sortOn) {
@@ -777,11 +779,18 @@ var mapView = {
         pkmnUnique = sortedPokemon[i].unique_id,
         pkmnTypeI = sortedPokemon[i].type1,
         pkmnTypeII = sortedPokemon[i].type2,
+        pkmnWeakness = sortedPokemon[i].weakness,
         candyNum = self.getCandy(pkmnNum, user_id);
 
+      var outWeakness = '<b>Weaknesses:</b><br>',
+        newLine = '';
+      for (var x = 0; x < pkmnWeakness.length; x++) {
+        outWeakness += '<span class=\'move-type\' style=\'background-color:' + moveTypes[pkmnWeakness[x].toLowerCase()] + ';\'>' + pkmnWeakness[x] + '</span>' + newLine;
+      }
+
       out += '<div class="col s12 m6 l3 center" data-uniqueid="'+pkmnUnique+'"><img src="image/pokemon/' +
-        pkmnImage + '" class="png_img"></br><b>' +
-        pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b>' +
+        pkmnImage + '" class="png_img"></br><span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
+        pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b></span>' +
         '<br><span class=\'move-type\' style=\'background-color:' + moveTypes[pkmnTypeI.toLowerCase()] + ';\'>' + pkmnTypeI + '</span>';
         if (pkmnTypeII != '') {
           out += '<span class=\'move-type\' style=\'background-color:' + moveTypes[pkmnTypeII.toLowerCase()] + ';\'>' + pkmnTypeII + '</span>';
@@ -793,8 +802,8 @@ var mapView = {
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
-        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> <span class=\'move-type\' style=\'background-color:' + moveTypes[self.moveList[move1ID].type.toLowerCase()] + ';\'>' + self.moveList[move1ID].type + '</span><br><b>Damage:</b> ' + self.moveList[move1ID].damage + '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2) + '">' + self.moveList[move1ID].name + ' [ ' + self.moveList[move1ID].damage + ' ]</span><br>' +
-        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> <span class=\'move-type\' style=\'background-color:' + moveTypes[self.moveList[move2ID].type.toLowerCase()] + ';\'>' + self.moveList[move2ID].type + '</span><br><b>Damage:</b> ' + self.moveList[move2ID].damage + '<br><b>Energy Used:</b> ' + self.moveList[move2ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move2ID].dps).toFixed(2) + '">' + self.moveList[move2ID].name + ' [ ' + self.moveList[move2ID].damage + ' ]</span>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> <span class=\'move-type\' style=\'background-color:' + moveTypes[self.moveList[move1ID].type.toLowerCase()] + ';\'>' + self.moveList[move1ID].type + '</span><br><b>Damage:</b> ' + self.moveList[move1ID].damage + '<br><b>STAB:</b> ' + (self.moveList[move1ID].damage * 1.25) + '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2) + '">' + self.moveList[move1ID].name + ' [ ' + self.moveList[move1ID].damage + ' ]</span><br>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> <span class=\'move-type\' style=\'background-color:' + moveTypes[self.moveList[move2ID].type.toLowerCase()] + ';\'>' + self.moveList[move2ID].type + '</span><br><b>Damage:</b> ' + self.moveList[move2ID].damage + '<br><b>STAB:</b> ' + (self.moveList[move2ID].damage * 1.25) + '<br><b>Energy Used:</b> ' + self.moveList[move2ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move2ID].dps).toFixed(2) + '">' + self.moveList[move2ID].name + ' [ ' + self.moveList[move2ID].damage + ' ]</span>' +
         '</span></div>';
     }
     // Add number of eggs
