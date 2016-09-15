@@ -35,6 +35,12 @@ html, body {
   cursor: pointer;
   line-height: 48px;
 }
+#close-logs {
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 18px;
+}
 .items {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -267,4 +273,22 @@ html, body {
 span.tooltipped:hover {
   font-weight: bold;
   color: #039be5;
+}
+span.move-type {
+  padding: 2px 5px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 1px 1px #000;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: default;
+  margin: 0 2px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
