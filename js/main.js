@@ -804,17 +804,17 @@ var mapView = {
           out += self.getType(pkmnTypeII);
         }
 
-      var move1STAB = self.moveList[move1ID].damage;
-      var move2STAB = self.moveList[move2ID].damage;
-      var move1DPSwSTAB = parseFloat(move1STAB / (self.moveList[move1ID].duration / 1000)).toFixed(2);
-      var move2DPSwSTAB = parseFloat(move2STAB / (self.moveList[move2ID].duration / 1000)).toFixed(2);
+      var move1STAB = '';
+      var move2STAB = '';
+      var move1DPSwSTAB = '';
+      var move2DPSwSTAB = '';
       if (self.moveList[move1ID].type.toLowerCase() == pkmnTypeI.toLowerCase() || self.moveList[move1ID].type.toLowerCase() == pkmnTypeII.toLowerCase()) {
         move1STAB = (self.moveList[move1ID].damage * 1.25);
-        move1DPSwSTAB = parseFloat(move1STAB / (self.moveList[move1ID].duration / 1000)).toFixed(2);
+        move1DPSwSTAB = parseFloat(move1STAB / parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2)).toFixed(2);
       }
       if (self.moveList[move2ID].type.toLowerCase() == pkmnTypeI.toLowerCase() || self.moveList[move2ID].type.toLowerCase() == pkmnTypeII.toLowerCase()) {
         move2STAB = (self.moveList[move2ID].damage * 1.25);
-        move2DPSwSTAB = parseFloat(move2STAB / (self.moveList[move2ID].duration / 1000)).toFixed(2);
+        move2DPSwSTAB = parseFloat(move2STAB / parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2)).toFixed(2);
       }
 
       out += '<br><div class="progress pkmn-progress pkmn-' + pkmnNum + '" style="margin: 0.25rem auto; width: 70%;"> <div class="determinate pkmn-' + pkmnNum + '" style="width: ' + (pkmnHP / pkmnMHP) * 100 +'%"></div> </div>' +
@@ -824,8 +824,24 @@ var mapView = {
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
-        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move1ID].type) + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage + '<br><b>STAB:</b> ' + move1STAB + '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2) + '<br><b>DPS (w/STAB):</b> ' + move1DPSwSTAB + '">' + self.moveList[move1ID].name + ' [ ' + self.moveList[move1ID].damage + ' ]</span><br>' +
-        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move2ID].type) + '<br><b>Damage:</b> ' + self.moveList[move2ID].damage + '<br><b>STAB:</b> ' + move2STAB + '<br><b>Energy Used:</b> ' + self.moveList[move2ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move2ID].dps).toFixed(2) + '<br><b>DPS (w/STAB):</b> ' + move2DPSwSTAB + '">' + self.moveList[move2ID].name + ' [ ' + self.moveList[move2ID].damage + ' ]</span>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move1ID].type) + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage;
+      if (move1STAB != '') {
+        out += '<br><b>STAB:</b> ' + move1STAB;
+      }
+      out += '<br><b>Energy Gained:</b> ' + self.moveList[move1ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move1ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move1ID].dps).toFixed(2);
+      if (move1DPSwSTAB != '') {
+        out += '<br><b>DPS (w/STAB):</b> ' + move1DPSwSTAB;
+      }
+      out += '">' + self.moveList[move1ID].name + ' [ ' + self.moveList[move1ID].damage + ' ]</span><br>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move2ID].type) + '<br><b>Damage:</b> ' + self.moveList[move2ID].damage;
+      if (move2STAB != '') {
+        out += '<br><b>STAB:</b> ' + move2STAB;
+      }
+      out += '<br><b>Energy Used:</b> ' + self.moveList[move2ID].energy + '<br><b>Cooldown:</b> ' + parseFloat(self.moveList[move2ID].duration / 1000).toFixed(2) + 's<br><b>DPS:</b> ' + parseFloat(self.moveList[move2ID].dps).toFixed(2);
+      if (move2DPSwSTAB != '') {
+        out += '<br><b>DPS (w/STAB):</b> ' + move2DPSwSTAB;
+      }
+      out += '">' + self.moveList[move2ID].name + ' [ ' + self.moveList[move2ID].damage + ' ]</span>' +
         '</span></div>';
     }
     // Add number of eggs
