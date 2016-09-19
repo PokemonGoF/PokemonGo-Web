@@ -1,6 +1,6 @@
 'use strict';
 
-var socket_io;
+var socket_io = [];
 
 var events = {
   api_error:                         'red',
@@ -122,10 +122,12 @@ var moveTypes = {
   fighting:                          '#C02038'
 }
 
-socket_io = io.connect('127.0.0.1:4000');
-
-
 $(document).ready(function() {
+  mapView.initSettings();
+  for (var i = 0; i < mapView.settings.users.length; i++) {
+    socket_io[i] = io.connect(mapView.settings.users[i].socketAddress);
+  }
+
   mapView.init();
 
 });
@@ -133,6 +135,7 @@ $(document).ready(function() {
 var mapView = {
   map: [],
   user_index: 0,
+  currentUserId: 0,
   emptyDex: [],
   forts: [],
   info_windows: [],
@@ -185,32 +188,47 @@ var mapView = {
     var prevMsg = '';
     var timeOut = 5000;
     var bgColor = '';
+    var thisBot = [];
     var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full)/;
-    self.settings = $.extend(true, self.settings, userInfo);
+    //self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
     for (var k in events){
       if (events.hasOwnProperty(k)) {
         //let renk = events[k];
-        socket_io.on(k+':'+self.settings.users[0], function (data) {
-          //console.log(data);
-          if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
-            var renk = events[data['event']];
-            if (logThis.test(data['event'])) {
-              if (data['event'] == 'vip_pokemon') {
-                timeOut = 8000;
+        for (var i = 0; i < self.settings.users.length; i++) {
+          thisBot[self.settings.users[i].username] = i;
+          if (typeof socket_io[i] !== 'undefined') {
+            socket_io[i].on(k+':'+self.settings.users[i].username, function (data) {
+              //console.log(data);
+              if (data['event'] == 'log_stats') {
+                $.each($("div.bot-name"), function (idx, botDiv) {
+                  if ($(botDiv).data("bot-id") == data['account']) {
+                    $(botDiv).text(data['data']['stats_raw']['username']);
+                  }
+                });
               }
-              bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
-              self.log({
-                message: "<span style='color: " + renk + "'>[" + data['account'] + "] " + data['data']['msg'] + "</span>",
-                timeout: timeOut,
-                bgcolor: bgColor
-              });
-            }
-            //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
-            prevMsg = data['data']['msg'];
+              if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
+                var renk = events[data['event']];
+                if (logThis.test(data['event'])) {
+                  if (data['event'] == 'vip_pokemon') {
+                    timeOut = 8000;
+                  }
+
+                  bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
+                  var thisDiv = $("div.bot-name")[thisBot[data['account']]];
+                  self.log({
+                    message: "<span style='color: " + renk + "'>[<b>" + $(thisDiv)[0].innerText + "</b>] " + data['data']['msg'] + "</span>",
+                    timeout: timeOut,
+                    bgcolor: bgColor
+                  });
+                }
+                //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+                prevMsg = data['data']['msg'];
+              }
+            });
           }
-        });
+        }
       }
     }
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
@@ -238,7 +256,7 @@ var mapView = {
         }, self.errorFunc, 'itemsArray');
 
         for (var i = 0; i < self.settings.users.length; i++) {
-          var user = self.settings.users[i];
+          var user = self.settings.users[i].username;
           self.user_data[user] = {};
           self.pathcoords[user] = [];
         }
@@ -274,7 +292,7 @@ var mapView = {
 
     $('#strokeOn').change(function() {
       for (var i = 0; i < self.settings.users.length; i++) {
-        self.user_data[self.settings.users[i]].trainerPath.setOptions({
+        self.user_data[self.settings.users[i].username].trainerPath.setOptions({
           strokeOpacity: this.checked ? 1.0 : 0.0
         });
       }
@@ -295,16 +313,15 @@ var mapView = {
     });
 
     // Bots list and menus
-    var submenuIndex = 0,
-    currentUserId;
+    var submenuIndex = 0;
     $('body').on('click', ".bot-user .bot-items .btn:not(.tFind)", function() {
       var itemIndex = $(this).parent().parent().find('.btn').index($(this)) + 1,
       userId = $(this).closest('ul').data('user-id');
-      if ($('#submenu').is(':visible') && itemIndex == submenuIndex && currentUserId == userId) {
+      if ($('#submenu').is(':visible') && itemIndex == submenuIndex && self.currentUserId == userId) {
         $('#submenu').toggle();
       } else {
         submenuIndex = itemIndex;
-        currentUserId = userId;
+        self.currentUserId = userId;
         self.buildMenu(userId, itemIndex);
       }
     });
@@ -346,16 +363,20 @@ var mapView = {
     setInterval(self.addCatchable, 1000);
     setInterval(self.addInventory, 5000);
   },
+  initSettings: function() {
+    var self = mapView;
+    self.settings = $.extend(true, self.settings, userInfo);
+  },
   addCatchable: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('catchable-' + self.settings.users[i] + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
+      loadJSON('catchable-' + self.settings.users[i].username + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
     }
   },
   addInventory: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('inventory-' + self.settings.users[i] + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
+      loadJSON('inventory-' + self.settings.users[i].username + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
     }
   },
   buildMenu: function(user_id, menu) {
@@ -364,7 +385,7 @@ var mapView = {
     $("#submenu").show();
     switch (menu) {
       case 1:
-        var current_user_stats = self.user_data[self.settings.users[user_id]].stats[0].inventory_item_data.player_stats;
+        var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
         $('#subtitle').html('Trainer Info');
         $('#sortButtons').html('');
 
@@ -380,7 +401,7 @@ var mapView = {
         }
 
         out += '<div class="row"><div class="col s12"><h5>' +
-          self.settings.users[user_id] +
+          $("div.bot-name")[user_id].textContent +
           '</h5><br>Level: ' +
           current_user_stats.level +
           '<br><div class="progress botbar-' + user_id + '" style="height: 10px"> <div class="determinate bot-' + user_id + '" style="width: '+
@@ -417,7 +438,7 @@ var mapView = {
         $('#subcontent').html(out);
         break;
       case 2:
-        var current_user_bag_items = self.user_data[self.settings.users[user_id]].bagItems;
+        var current_user_bag_items = self.user_data[self.settings.users[user_id].username].bagItems;
 
         $('#sortButtons').html('');
 
@@ -443,7 +464,7 @@ var mapView = {
         $('#subcontent').html(out);
         break;
       case 3:
-        var pkmnTotal = self.user_data[self.settings.users[user_id]].bagPokemon.length;
+        var pkmnTotal = self.user_data[self.settings.users[user_id].username].bagPokemon.length;
         $('#subtitle').html(pkmnTotal + " Pokemon");
 
         var sortButtons = '<div class="col s12 pokemon-sort" data-user-id="' + user_id + '">Sort : ';
@@ -460,7 +481,7 @@ var mapView = {
         self.sortAndShowBagPokemon('cp', user_id);
         break;
       case 4:
-        var pkmnTotal = self.user_data[self.settings.users[user_id]].pokedex.length;
+        var pkmnTotal = self.user_data[self.settings.users[user_id].username].pokedex.length;
         $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 151');
 
         var sortButtons = '<div class="col s12 pokedex-sort" dat-user-id="' + user_id + '">Sort : ';
@@ -486,7 +507,7 @@ var mapView = {
 
     for (var i = 0; i < users.length; i++) {
       var content = '<li class="bot-user">\
-                    <div class="collapsible-header bot-name">{0}</div>\
+                    <div class="collapsible-header bot-name" data-bot-id="{0}">{0}</div>\
                     <div class="collapsible-body">\
                     <ul class="bot-items" data-user-id="{1}">\
                     <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
@@ -497,7 +518,7 @@ var mapView = {
                     </ul>\
                     </div>\
                     </li>';
-      out += content.format(users[i], i);
+      out += content.format(users[i].username, i);
     }
     out += "</ul></div>";
     $('#trainers').html(out);
@@ -505,7 +526,7 @@ var mapView = {
   },
   catchSuccess: function(data, user_index) {
     var self = mapView,
-    user = self.user_data[self.settings.users[user_index]],
+    user = self.user_data[self.settings.users[user_index].username],
     poke_name = '';
     if (data !== undefined && Object.keys(data).length > 0) {
       if (user.catchables === undefined) {
@@ -515,7 +536,7 @@ var mapView = {
         if (user.catchables.hasOwnProperty(data.spawnpoint_id) === false) {
           poke_name = self.pokemonArray[data.pokemon_id - 1].Name;
           self.log({
-            message: "[" + self.settings.users[user_index] + "] " + poke_name + " appeared",
+            message: "[" + self.settings.users[user_index].username + "] " + poke_name + " appeared",
             color: "green"
           });
           user.catchables[data.spawnpoint_id] = new google.maps.Marker({
@@ -555,7 +576,7 @@ var mapView = {
     } else {
       if (user.catchables !== undefined && Object.keys(user.catchables).length > 0) {
         self.log({
-          message: "[" + self.settings.users[user_index] + "] " + poke_name + " has been caught or fled"
+          message: "[" + self.settings.users[user_index].username + "] " + poke_name + " has been caught or fled"
         });
         for (var key in user.catchables) {
           user.catchables[key].setMap(null);
@@ -578,7 +599,8 @@ var mapView = {
   },
   findBot: function(user_index) {
     var self = this,
-    coords = self.pathcoords[self.settings.users[user_index]][self.pathcoords[self.settings.users[user_index]].length - 1];
+    coords = self.pathcoords[self.settings.users[user_index].username][self.pathcoords[self.settings.users[user_index].username].length - 1];
+    self.currentUserId = user_index;
 
     self.map.setZoom(self.settings.zoom);
     self.map.panTo({
@@ -588,7 +610,7 @@ var mapView = {
   },
   getCandy: function(p_num, user_id) {
     var self = this,
-    user = self.user_data[self.settings.users[user_id]];
+    user = self.user_data[self.settings.users[user_id].username];
 
     for (var i = 0; i < user.bagCandy.length; i++) {
       var checkCandy = user.bagCandy[i].inventory_item_data.candy.family_id;
@@ -606,7 +628,7 @@ var mapView = {
   },
   invSuccess: function(data, user_index) {
     var self = mapView,
-    userData = self.user_data[self.settings.users[user_index]],
+    userData = self.user_data[self.settings.users[user_index].username],
     bagCandy = self.filter(data, 'candy'),
     bagItems = self.filter(data, 'item'),
     bagPokemon = self.filter(data, 'pokemon_data'),
@@ -618,7 +640,7 @@ var mapView = {
     userData.pokedex = pokedex;
     userData.stats = stats;
     userData.eggs = self.filter(data, 'egg_incubators');
-    self.user_data[self.settings.users[user_index]] = userData;
+    self.user_data[self.settings.users[user_index].username] = userData;
 
     if (!(user_index in self.user_xps)) {
       self.user_xps[user_index] = [];
@@ -642,7 +664,7 @@ var mapView = {
     var self = mapView;
 
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
   sortAndShowBagPokemon: function(sortOn, user_id) {
@@ -653,7 +675,7 @@ var mapView = {
     eggs2 = 0,
     sortedPokemon = [],
     out = '',
-    user = self.user_data[self.settings.users[user_id]],
+    user = self.user_data[self.settings.users[user_id].username],
     user_id = user_id || 0;
 
     if (!user.bagPokemon.length) return;
@@ -862,7 +884,7 @@ var mapView = {
       if (!incubator.item_id) {
         incubator = incubators[0];
       }
-      var current_user_stats = self.user_data[self.settings.users[user_id]].stats[0].inventory_item_data.player_stats;
+      var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
       var totalToWalk  = incubator.target_km_walked - incubator.start_km_walked;
       var kmsLeft = incubator.target_km_walked - current_user_stats.km_walked;
       var walked = totalToWalk - kmsLeft;
@@ -895,7 +917,7 @@ var mapView = {
     out = '',
     sortedPokedex = [],
     user_id = (user_id || 0),
-    user = self.user_data[self.settings.users[user_id]];
+    user = self.user_data[self.settings.users[user_id].username];
 
     sortedPokedex = self.pokemonArray.slice().map(pokemon => {
       pokemon.enc = 0;
@@ -970,7 +992,7 @@ var mapView = {
   },
   trainerFunc: function(data, user_index) {
     var self = mapView,
-    coords = self.pathcoords[self.settings.users[user_index]][self.pathcoords[self.settings.users[user_index]].length - 1];
+    coords = self.pathcoords[self.settings.users[user_index].username][self.pathcoords[self.settings.users[user_index].username].length - 1];
     for (var i = 0; i < data.cells.length; i++) {
       var cell = data.cells[i];
       if (data.cells[i].forts != undefined) {
@@ -1025,27 +1047,27 @@ var mapView = {
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       }];
-      if (tempcoords.lat != coords.lat && tempcoords.lng != coords.lng || self.pathcoords[self.settings.users[user_index]].length === 1) {
-        self.pathcoords[self.settings.users[user_index]].push({
+      if (tempcoords.lat != coords.lat && tempcoords.lng != coords.lng || self.pathcoords[self.settings.users[user_index].username].length === 1) {
+        self.pathcoords[self.settings.users[user_index].username].push({
           lat: parseFloat(data.lat),
           lng: parseFloat(data.lng)
         });
       }
     } else {
-      self.pathcoords[self.settings.users[user_index]].push({
+      self.pathcoords[self.settings.users[user_index].username].push({
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       });
     }
-    if (self.user_data[self.settings.users[user_index]].hasOwnProperty('marker') === false) {
+    if (self.user_data[self.settings.users[user_index].username].hasOwnProperty('marker') === false) {
       self.buildTrainerList();
       self.addInventory();
       self.log({
-        message: "Trainer loaded: " + self.settings.users[user_index],
+        message: "Trainer loaded: " + self.settings.users[user_index].username,
         color: "blue"
       });
       var randomSex = Math.floor(Math.random() * 1);
-      self.user_data[self.settings.users[user_index]].marker = new google.maps.Marker({
+      self.user_data[self.settings.users[user_index].username].marker = new google.maps.Marker({
         map: self.map,
         position: {
           lat: parseFloat(data.lat),
@@ -1053,31 +1075,31 @@ var mapView = {
         },
         icon: 'image/trainer/' + self.trainerSex[randomSex] + Math.floor(Math.random() * self.numTrainers[randomSex]) + '.png',
         zIndex: 2,
-        label: self.settings.users[user_index],
+        label: self.settings.users[user_index].username,
         clickable: false
       });
     } else {
-      self.user_data[self.settings.users[user_index]].marker.setPosition({
+      self.user_data[self.settings.users[user_index].username].marker.setPosition({
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
       });
-      if (self.pathcoords[self.settings.users[user_index]].length === 2) {
-        self.user_data[self.settings.users[user_index]].trainerPath = new google.maps.Polyline({
+      if (self.pathcoords[self.settings.users[user_index].username].length === 2) {
+        self.user_data[self.settings.users[user_index].username].trainerPath = new google.maps.Polyline({
           map: self.map,
-          path: self.pathcoords[self.settings.users[user_index]],
+          path: self.pathcoords[self.settings.users[user_index].username],
           geodisc: true,
           strokeColor: self.pathColors[user_index],
           strokeOpacity: self.settings.userPath ? 1.0 : 0.0,
           strokeWeight: 2
         });
       } else {
-        self.user_data[self.settings.users[user_index]].trainerPath.setPath(self.pathcoords[self.settings.users[user_index]]);
+        self.user_data[self.settings.users[user_index].username].trainerPath.setPath(self.pathcoords[self.settings.users[user_index].username]);
       }
     }
     if (self.settings.users.length === 1 && self.settings.userZoom === true) {
       self.map.setZoom(self.settings.zoom);
     }
-    if (self.settings.users.length === 1 && self.settings.userFollow === true) {
+    if (self.settings.users.length > 0 && self.settings.userFollow === true) {
       self.map.panTo({
         lat: parseFloat(data.lat),
         lng: parseFloat(data.lng)
@@ -1087,7 +1109,8 @@ var mapView = {
   updateTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('location-' + self.settings.users[i] + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      if (self.currentUserId != i) continue;
+      loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
     }
   },
   // Adds events to log panel and if it's closed sends Toast
