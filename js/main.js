@@ -122,7 +122,7 @@ var moveTypes = {
   fighting:                          '#C02038'
 }
 
-socket_io = io.connect('127.0.0.1:4000');
+socket_io = io.connect(window.location.hostname+':4000');
 
 
 $(document).ready(function() {
