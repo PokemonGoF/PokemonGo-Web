@@ -6,5 +6,6 @@
  	userPath: true,
  	zoom: 16,
  	userFollow: true,
+    socketAddress: '0.0.0.0:4000',
  	gMapsAPIKey: "YOUR_API_KEY_HERE"
- }; 
+ };
