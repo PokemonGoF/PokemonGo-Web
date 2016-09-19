@@ -129,7 +129,6 @@ $(document).ready(function() {
   }
 
   mapView.init();
-
 });
 
 var mapView = {
@@ -534,11 +533,11 @@ var mapView = {
       }
       if (data.latitude !== undefined) {
         if (user.catchables.hasOwnProperty(data.spawnpoint_id) === false) {
-          poke_name = self.pokemonArray[data.pokemon_id - 1].Name;
-          self.log({
-            message: "[" + self.settings.users[user_index].username + "] " + poke_name + " appeared",
-            color: "green"
-          });
+          //poke_name = self.pokemonArray[data.pokemon_id - 1].Name;
+          //self.log({
+          //  message: "[" + self.settings.users[user_index].username + "] " + poke_name + " appeared",
+          //  color: "green"
+          //});
           user.catchables[data.spawnpoint_id] = new google.maps.Marker({
             map: self.map,
             position: {
@@ -575,9 +574,9 @@ var mapView = {
       }
     } else {
       if (user.catchables !== undefined && Object.keys(user.catchables).length > 0) {
-        self.log({
-          message: "[" + self.settings.users[user_index].username + "] " + poke_name + " has been caught or fled"
-        });
+        //self.log({
+        //  message: "[" + self.settings.users[user_index].username + "] " + poke_name + " has been caught or fled"
+        //});
         for (var key in user.catchables) {
           user.catchables[key].setMap(null);
         }
@@ -841,7 +840,7 @@ var mapView = {
 
       out += '<br><div class="progress pkmn-progress pkmn-' + pkmnNum + '" style="margin: 0.25rem auto; width: 70%;"> <div class="determinate pkmn-' + pkmnNum + '" style="width: ' + (pkmnHP / pkmnMHP) * 100 +'%"></div> </div>' +
         '<b>HP:</b> ' + pkmnHP + ' / ' + pkmnMHP +
-        '<br/><b>CP: </b>' + pkmnCP + 
+        '<br/><b>CP: </b>' + pkmnCP +
         '<br/><b>IV: </b>' + (pkmnIV >= 0.8 ? '<span style="color: #039be5">' + pkmnIV + '</span>' : pkmnIV) +
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
@@ -1096,7 +1095,7 @@ var mapView = {
         self.user_data[self.settings.users[user_index].username].trainerPath.setPath(self.pathcoords[self.settings.users[user_index].username]);
       }
     }
-    if (self.settings.users.length === 1 && self.settings.userZoom === true) {
+    if (self.settings.users.length > 0 && self.settings.userZoom === true) {
       self.map.setZoom(self.settings.zoom);
     }
     if (self.settings.users.length > 0 && self.settings.userFollow === true) {
