@@ -122,7 +122,7 @@ var moveTypes = {
   fighting:                          '#C02038'
 }
 
-socket_io = io.connect('127.0.0.1:4000');
+socket_io = io.connect(userInfo.socketAddress);
 
 
 $(document).ready(function() {
@@ -819,7 +819,7 @@ var mapView = {
 
       out += '<br><div class="progress pkmn-progress pkmn-' + pkmnNum + '" style="margin: 0.25rem auto; width: 70%;"> <div class="determinate pkmn-' + pkmnNum + '" style="width: ' + (pkmnHP / pkmnMHP) * 100 +'%"></div> </div>' +
         '<b>HP:</b> ' + pkmnHP + ' / ' + pkmnMHP +
-        '<br/><b>CP: </b>' + pkmnCP + 
+        '<br/><b>CP: </b>' + pkmnCP +
         '<br/><b>IV: </b>' + (pkmnIV >= 0.8 ? '<span style="color: #039be5">' + pkmnIV + '</span>' : pkmnIV) +
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
