@@ -1,11 +1,18 @@
  // MUST CONFIGURE THE USER ARRAY AND GOOGLE MAPS API KEY.
  // YOU CAN GET A KEY HERE: https://developers.google.com/maps/documentation/javascript/get-api-key
  var userInfo = {
- 	users: ["username"],
+ 	users: [{
+            enable: true,
+ 	    username: "username1",
+ 	    socketAddress: "0.0.0.0:4000"
+ 	},{
+            enable: false,
+ 	    username: "username2",
+ 	    socketAddress: "0.0.0.0:5000"
+ 	}],
  	userZoom: false,
  	userPath: true,
  	zoom: 16,
  	userFollow: true,
-    socketAddress: '0.0.0.0:4000',
  	gMapsAPIKey: "YOUR_API_KEY_HERE"
  };
