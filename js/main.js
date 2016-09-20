@@ -125,7 +125,9 @@ var moveTypes = {
 $(document).ready(function() {
   mapView.initSettings();
   for (var i = 0; i < mapView.settings.users.length; i++) {
-    socket_io[i] = io.connect(mapView.settings.users[i].socketAddress);
+    if (mapView.settings.users[i].enable) {
+      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress);
+    }
   }
 
   mapView.init();
@@ -187,7 +189,6 @@ var mapView = {
     var prevMsg = '';
     var timeOut = 5000;
     var bgColor = '';
-    var thisBot = [];
     var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full)/;
     //self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
@@ -196,16 +197,11 @@ var mapView = {
       if (events.hasOwnProperty(k)) {
         //let renk = events[k];
         for (var i = 0; i < self.settings.users.length; i++) {
-          thisBot[self.settings.users[i].username] = i;
           if (typeof socket_io[i] !== 'undefined') {
             socket_io[i].on(k+':'+self.settings.users[i].username, function (data) {
               //console.log(data);
               if (data['event'] == 'log_stats') {
-                $.each($("div.bot-name"), function (idx, botDiv) {
-                  if ($(botDiv).data("bot-id") == data['account']) {
-                    $(botDiv).text(data['data']['stats_raw']['username']);
-                  }
-                });
+                $("div").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
               }
               if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
                 var renk = events[data['event']];
@@ -215,9 +211,9 @@ var mapView = {
                   }
 
                   bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
-                  var thisDiv = $("div.bot-name")[thisBot[data['account']]];
+                  var thisBot = $("div").find("[data-bot-id='" + data['account'] + "']").html();
                   self.log({
-                    message: "<span style='color: " + renk + "'>[<b>" + $(thisDiv)[0].innerText + "</b>] " + data['data']['msg'] + "</span>",
+                    message: "<span style='color: " + renk + "'>[ <b>" + thisBot + "</b> ] " + data['data']['msg'] + "</span>",
                     timeout: timeOut,
                     bgcolor: bgColor
                   });
@@ -255,9 +251,11 @@ var mapView = {
         }, self.errorFunc, 'itemsArray');
 
         for (var i = 0; i < self.settings.users.length; i++) {
-          var user = self.settings.users[i].username;
-          self.user_data[user] = {};
-          self.pathcoords[user] = [];
+          if (self.settings.users[i].enable) {
+            var user = self.settings.users[i].username;
+            self.user_data[user] = {};
+            self.pathcoords[user] = [];
+          }
         }
 
         self.initMap();
@@ -291,9 +289,11 @@ var mapView = {
 
     $('#strokeOn').change(function() {
       for (var i = 0; i < self.settings.users.length; i++) {
-        self.user_data[self.settings.users[i].username].trainerPath.setOptions({
-          strokeOpacity: this.checked ? 1.0 : 0.0
-        });
+        if (self.settings.users[i].enable) {
+          self.user_data[self.settings.users[i].username].trainerPath.setOptions({
+            strokeOpacity: this.checked ? 1.0 : 0.0
+          });
+        }
       }
     });
 
@@ -369,13 +369,17 @@ var mapView = {
   addCatchable: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('catchable-' + self.settings.users[i].username + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
+      if (self.settings.users[i].enable) {
+        loadJSON('catchable-' + self.settings.users[i].username + '.json?'+Date.now(), self.catchSuccess, self.errorFunc, i);
+      }
     }
   },
   addInventory: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('inventory-' + self.settings.users[i].username + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
+      if (self.settings.users[i].enable) {
+        loadJSON('inventory-' + self.settings.users[i].username + '.json?'+Date.now(), self.invSuccess, self.errorFunc, i);
+      }
     }
   },
   buildMenu: function(user_id, menu) {
@@ -400,7 +404,7 @@ var mapView = {
         }
 
         out += '<div class="row"><div class="col s12"><h5>' +
-          $("div.bot-name")[user_id].textContent +
+          $("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html() +
           '</h5><br>Level: ' +
           current_user_stats.level +
           '<br><div class="progress botbar-' + user_id + '" style="height: 10px"> <div class="determinate bot-' + user_id + '" style="width: '+
@@ -505,19 +509,21 @@ var mapView = {
               <li><div class="collapsible-title"><i class="material-icons">people</i>Bots</div></li>';
 
     for (var i = 0; i < users.length; i++) {
-      var content = '<li class="bot-user">\
-                    <div class="collapsible-header bot-name" data-bot-id="{0}">{0}</div>\
-                    <div class="collapsible-body">\
-                    <ul class="bot-items" data-user-id="{1}">\
-                    <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
-                    <li><a class="bot-' + i + ' waves-effect waves-light btn tItems">Items</a></li><br>\
-                    <li><a class="bot-' + i + ' waves-effect waves-light btn tPokemon">Pokemon</a></li><br>\
-                    <li><a class="bot-' + i + ' waves-effect waves-light btn tPokedex">Pokedex</a></li><br>\
-                    <li><a class="bot-' + i + ' waves-effect waves-light btn tFind">Find</a></li>\
-                    </ul>\
-                    </div>\
-                    </li>';
-      out += content.format(users[i].username, i);
+      if (users[i].enable) {
+        var content = '<li class="bot-user">\
+                      <div class="collapsible-header bot-name" data-bot-id="{0}">{0}</div>\
+                      <div class="collapsible-body">\
+                      <ul class="bot-items" data-user-id="{1}">\
+                      <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
+                      <li><a class="bot-' + i + ' waves-effect waves-light btn tItems">Items</a></li><br>\
+                      <li><a class="bot-' + i + ' waves-effect waves-light btn tPokemon">Pokemon</a></li><br>\
+                      <li><a class="bot-' + i + ' waves-effect waves-light btn tPokedex">Pokedex</a></li><br>\
+                      <li><a class="bot-' + i + ' waves-effect waves-light btn tFind">Find</a></li>\
+                      </ul>\
+                      </div>\
+                      </li>';
+        out += content.format(users[i].username, i);
+      }
     }
     out += "</ul></div>";
     $('#trainers').html(out);
@@ -663,7 +669,9 @@ var mapView = {
     var self = mapView;
 
     for (var i = 0; i < self.settings.users.length; i++) {
-      loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      if (self.settings.users[i].enable) {
+      	loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      }
     }
   },
   sortAndShowBagPokemon: function(sortOn, user_id) {
@@ -706,14 +714,23 @@ var mapView = {
       pkmTime = pokemonData.creation_time_ms || 0,
       pkmUID = pokemonData.id,
       pkmHP = pokemonData.stamina || 0,
-      pkmMHP = pokemonData.stamina_max || 0;
+      pkmMHP = pokemonData.stamina_max || 0,
+      pkmCPMultiplier = pokemonData.cp_multiplier;
 
       var pkmTypeI = self.pokemonArray[pkmID - 1].TypeI[0],
       pkmTypeII = '';
       if (typeof self.pokemonArray[pkmID - 1].TypeII !== 'undefined') {
         pkmTypeII = self.pokemonArray[pkmID - 1].TypeII[0];
       }
-      var pkmWeakness = self.pokemonArray[pkmID - 1].Weaknesses;
+      var pkmWeakness = self.pokemonArray[pkmID - 1].Weaknesses,
+      pkmBaseAttack = self.pokemonArray[pkmID - 1].BaseAttack,
+      pkmBaseDefense = self.pokemonArray[pkmID - 1].BaseDefense,
+      pkmBaseStamina = self.pokemonArray[pkmID - 1].BaseStamina;
+
+      var worst_cp = self.calc_cp(pkmBaseAttack, pkmBaseDefense, pkmBaseStamina, 0, 0, 0, pkmCPMultiplier),
+      perfect_cp = self.calc_cp(pkmBaseAttack, pkmBaseDefense, pkmBaseStamina, 15, 15, 15, pkmCPMultiplier),
+      current_cp = self.calc_cp(pkmBaseAttack, pkmBaseDefense, pkmBaseStamina, pkmIVA, pkmIVD, pkmIVS, pkmCPMultiplier),
+      pkmIVCP = ((current_cp - worst_cp) / (perfect_cp - worst_cp)).toFixed(2);
 
       sortedPokemon.push({
         "name": pkmnName,
@@ -722,6 +739,7 @@ var mapView = {
         "lvl": pkmLvl,
         "cp": pkmCP,
         "iv": pkmIV,
+        "ivcp": pkmIVCP,
         "attack": pkmIVA,
         "defense": pkmIVD,
         "stamina": pkmIVS,
@@ -1109,8 +1127,17 @@ var mapView = {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
       if (self.currentUserId != i) continue;
-      loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      if (self.settings.users[i].enable) {
+        loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
+      }
     }
+  },
+  calc_cp: function(base_attack, base_defense, base_stamina, iv_attack, iv_defense, iv_stamina, cp_multiplier) {
+    var bAttack = (base_attack + iv_attack),
+    bDefense = (base_defense + iv_defense) ** 0.5,
+    bStamina = (base_stamina + iv_stamina) ** 0.5,
+    cpMulti = (cp_multiplier ** 2);
+    return (bAttack * bDefense * bStamina * cpMulti / 10);
   },
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {

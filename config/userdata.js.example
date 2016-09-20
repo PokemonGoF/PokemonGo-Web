@@ -2,8 +2,13 @@
  // YOU CAN GET A KEY HERE: https://developers.google.com/maps/documentation/javascript/get-api-key
  var userInfo = {
  	users: [{
- 	    username: "username",
+            enable: true,
+ 	    username: "username1",
  	    socketAddress: "0.0.0.0:4000"
+ 	},{
+            enable: false,
+ 	    username: "username2",
+ 	    socketAddress: "0.0.0.0:5000"
  	}],
  	userZoom: false,
  	userPath: true,
