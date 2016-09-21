@@ -1136,7 +1136,7 @@ var mapView = {
     var bAttack = (base_attack + iv_attack),
     bDefense = Math.sqrt(base_defense + iv_defense),
     bStamina = Math.sqrt(base_stamina + iv_stamina),
-    cpMulti = Math.sqrt(cp_multiplier);
+    cpMulti = Math.pow(cp_multiplier, 2);
     return (bAttack * bDefense * bStamina * cpMulti / 10);
   },
   // Adds events to log panel and if it's closed sends Toast
