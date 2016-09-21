@@ -1,7 +1,7 @@
 function loadJSON(path, success, error, successData) {
   var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = _ => {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         if (success)
