@@ -1134,9 +1134,9 @@ var mapView = {
   },
   calc_cp: function(base_attack, base_defense, base_stamina, iv_attack, iv_defense, iv_stamina, cp_multiplier) {
     var bAttack = (base_attack + iv_attack),
-    bDefense = (base_defense + iv_defense) ** 0.5,
-    bStamina = (base_stamina + iv_stamina) ** 0.5,
-    cpMulti = (cp_multiplier ** 2);
+    bDefense = Math.sqrt(base_defense + iv_defense),
+    bStamina = Math.sqrt(base_stamina + iv_stamina),
+    cpMulti = Math.sqrt(cp_multiplier);
     return (bAttack * bDefense * bStamina * cpMulti / 10);
   },
   // Adds events to log panel and if it's closed sends Toast
