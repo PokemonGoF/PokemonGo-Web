@@ -370,7 +370,7 @@ var mapView = {
     self.addCatchable();
     setInterval(self.updateTrainer, 1000);
     setInterval(self.addCatchable, 1000);
-    setInterval(self.addInventory, 10000);
+    setInterval(self.addInventory, 5000);
   },
   initSettings: function() {
     var self = mapView;
