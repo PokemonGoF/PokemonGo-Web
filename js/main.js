@@ -7,6 +7,16 @@ var events = {
   badges:                            'blue',
   bot_exit:                          'red',
   bot_start:                         'green',
+  buddy_candy_earned:                'green',
+  buddy_candy_fail:                  'red',
+  buddy_keep_active:                 'red',
+  buddy_next_reward:                 'yellow',
+  buddy_not_available:               'red',
+  buddy_pokemon:                     'magenta',
+  buddy_update:                      'blue',
+  buddy_update_fail:                 'red',
+  buddy_reward:                      'green',
+  buddy_walked:                      'yellow',
   catch_limit:                       'red',
   catch_log:                         'magenta',
   config_error:                      'red',
@@ -189,7 +199,7 @@ var mapView = {
     var prevMsg = '';
     var timeOut = 5000;
     var bgColor = '';
-    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full)/;
+    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full|buddy_next_reward|buddy_candy_earned|buddy_pokemon|buddy_update|buddy_reward|buddy_walked)/;
     //self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
@@ -360,7 +370,7 @@ var mapView = {
     self.addCatchable();
     setInterval(self.updateTrainer, 1000);
     setInterval(self.addCatchable, 1000);
-    setInterval(self.addInventory, 5000);
+    setInterval(self.addInventory, 10000);
   },
   initSettings: function() {
     var self = mapView;
@@ -1019,6 +1029,7 @@ var mapView = {
             fortPoints = '',
             fortTeam = '',
             fortType = 'PokeStop',
+            guardName = '',
             pokemonGuard = '';
           if (fort.type === 1) {
             if(fort.active_fort_modifier && (fort.active_fort_modifier == 501)){
@@ -1030,7 +1041,10 @@ var mapView = {
             if (fort.guard_pokemon_id != undefined) {
               fortPoints = 'Points: ' + fort.gym_points;
               fortTeam = 'Team: ' + self.teams[fort.owned_by_team] + '<br>';
-              pokemonGuard = 'Guard Pokemon: ' + (self.pokemonArray[fort.guard_pokemon_id - 1].Name || "None") + '<br>';
+              if (typeof self.pokemonArray[fort.guard_pokemon_id - 1] !== 'undefined') {
+                guardName = self.pokemonArray[fort.guard_pokemon_id - 1].Name;
+              }
+              pokemonGuard = 'Guard Pokemon: ' + (guardName || "None") + '<br>';
             }
           }
           var contentString = 'Id: ' + fort.id + '<br>Type: ' + fortType + '<br>' + fortTeam + pokemonGuard + fortPoints;
