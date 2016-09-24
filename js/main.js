@@ -134,9 +134,41 @@ var moveTypes = {
 
 $(document).ready(function() {
   mapView.initSettings();
+  var retry_time = 30,
+  retry_id;
   for (var i = 0; i < mapView.settings.users.length; i++) {
-    if (mapView.settings.users[i].enable) {
-      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress);
+    if (mapView.settings.users[i].enable && mapView.settings.users[i].enableSocket) {
+      retry_id = i;
+      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress, {
+        'reconnectionAttempts': 5
+      });
+
+      socket_io[i].on('connect', function(event) {
+        var thisSocket = this;
+        mapView.log({
+          message: "<span style='color: green;'><b>Connected to '" + thisSocket.io.uri + "'...</b></span>",
+          timeout: 3000
+        });
+      });
+
+      socket_io[i].on('disconnect', function(event) {
+        var thisSocket = this;
+        mapView.log({
+          message: "<span style='color: red;'><b>Disconnected from '" + thisSocket.io.uri + "'... Trying to reconnect, please wait...</b></span>",
+          timeout: 3000
+        });
+      });
+
+      socket_io[i].on('reconnect_failed', function(event) {
+        var thisSocket = this;
+        mapView.log({
+          message: "<span style='color: red;'><b>Connecting to '" + thisSocket.io.uri + "' failed. Retrying after " + retry_time + " seconds.</b></span>",
+          timeout: 3000
+        });
+        setTimeout(function() {
+          mapView.reconnectSocket(thisSocket);
+        }, retry_time * 1000);
+      });
     }
   }
 
@@ -1152,6 +1184,16 @@ var mapView = {
     bStamina = Math.sqrt(base_stamina + iv_stamina),
     cpMulti = Math.pow(cp_multiplier, 2);
     return (bAttack * bDefense * bStamina * cpMulti / 10);
+  },
+  reconnectSocket: function(user_socket) {
+    var self = mapView;
+    self.log({
+      message: "<span style='color: blue;'><b>Reconnecting to " + user_socket.io.uri + "...</b></span>",
+      timeout: 3000
+    });
+    user_socket.connect({
+      'reconnectionAttempts': 5
+    });
   },
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
