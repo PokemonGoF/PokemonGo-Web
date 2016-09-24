@@ -604,10 +604,12 @@ var mapView = {
             self.map.setZoom(self.settings.zoom);
           }
           if (self.settings.userFollow === true) {
-            self.map.panTo({
-              lat: parseFloat(data.latitude),
-              lng: parseFloat(data.longitude)
-            });
+            if (self.currentUserId == user_index) {
+              self.map.panTo({
+                lat: parseFloat(data.latitude),
+                lng: parseFloat(data.longitude)
+              });
+            }
           }
         } else {
           user.catchables[data.spawnpoint_id].setPosition({
@@ -1163,16 +1165,17 @@ var mapView = {
       self.map.setZoom(self.settings.zoom);
     }
     if (self.settings.users.length > 0 && self.settings.userFollow === true) {
-      self.map.panTo({
-        lat: parseFloat(data.lat),
-        lng: parseFloat(data.lng)
-      });
+      if (self.currentUserId == user_index) {
+        self.map.panTo({
+          lat: parseFloat(data.lat),
+          lng: parseFloat(data.lng)
+        });
+      }
     }
   },
   updateTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      if (self.currentUserId != i) continue;
       if (self.settings.users[i].enable) {
         loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
       }
