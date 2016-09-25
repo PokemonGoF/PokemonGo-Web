@@ -226,6 +226,7 @@ var mapView = {
   user_xps: {},
   pathcoords: {},
   settings: {},
+  logCount: 0,
   init: function() {
     var self = this;
     var prevMsg = '';
@@ -1200,6 +1201,7 @@ var mapView = {
   },
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
+    var self = mapView;
     var timeout = log_object.timeout
     var logColor = '';
     var logBGColor = '';
@@ -1218,6 +1220,11 @@ var mapView = {
         <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
       Materialize.toast(log_object.message, timeout);
+    }
+
+    self.logCount = $(".log-item").length;
+    if (self.logCount > 100) {
+      $(".log-item:last-child").remove();
     }
   }
 };
