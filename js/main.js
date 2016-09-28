@@ -427,7 +427,9 @@ var mapView = {
             if (playerstat == 'pokemon_caught_by_type'){
                 current_value = current_value[self.badgesArray[i]['Pokemontype']];
             } else if (playerstat == 'pikachu_caught') {
-                current_value = self.user_data[self.settings.users[user_id]].pokedex[20].inventory_item_data.pokedex_entry.times_captured;
+                current_value = self.user_data[self.settings.users[user_id]].pokedex.filter(function ( obj ) {
+                    return obj.inventory_item_data.pokedex_entry.pokemon_id === 25; 
+                })[0].inventory_item_data.pokedex_entry.times_captured;
             }
             current_value = +(parseFloat((typeof current_value === 'undefined') ? 0 : current_value).toFixed(2))
 
