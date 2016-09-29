@@ -4,11 +4,13 @@
  	users: [{
             enable: true,
  	    username: "username1",
- 	    socketAddress: "0.0.0.0:4000"
+ 	    socketAddress: "0.0.0.0:4000",
+ 	    enableSocket: true
  	},{
             enable: false,
  	    username: "username2",
- 	    socketAddress: "0.0.0.0:5000"
+ 	    socketAddress: "0.0.0.0:5000",
+ 	    enableSocket: false
  	}],
  	userZoom: false,
  	userPath: true,

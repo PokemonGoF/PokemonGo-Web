@@ -7,6 +7,16 @@ var events = {
   badges:                            'blue',
   bot_exit:                          'red',
   bot_start:                         'green',
+  buddy_candy_earned:                'green',
+  buddy_candy_fail:                  'red',
+  buddy_keep_active:                 'red',
+  buddy_next_reward:                 'yellow',
+  buddy_not_available:               'red',
+  buddy_pokemon:                     'magenta',
+  buddy_update:                      'blue',
+  buddy_update_fail:                 'red',
+  buddy_reward:                      'green',
+  buddy_walked:                      'yellow',
   catch_limit:                       'red',
   catch_log:                         'magenta',
   config_error:                      'red',
@@ -124,9 +134,41 @@ var moveTypes = {
 
 $(document).ready(function() {
   mapView.initSettings();
+  var retry_time = 30,
+  retry_id;
   for (var i = 0; i < mapView.settings.users.length; i++) {
-    if (mapView.settings.users[i].enable) {
-      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress);
+    if (mapView.settings.users[i].enable && mapView.settings.users[i].enableSocket) {
+      retry_id = i;
+      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress, {
+        'reconnectionAttempts': 5
+      });
+
+      socket_io[i].on('connect', function(event) {
+        var thisSocket = this;
+        mapView.log({
+          message: "<span style='color: green;'><b>Connected to '" + thisSocket.io.uri + "'...</b></span>",
+          timeout: 3000
+        });
+      });
+
+      socket_io[i].on('disconnect', function(event) {
+        var thisSocket = this;
+        mapView.log({
+          message: "<span style='color: red;'><b>Disconnected from '" + thisSocket.io.uri + "'... Trying to reconnect, please wait...</b></span>",
+          timeout: 3000
+        });
+      });
+
+      socket_io[i].on('reconnect_failed', function(event) {
+        var thisSocket = this;
+        mapView.log({
+          message: "<span style='color: red;'><b>Connecting to '" + thisSocket.io.uri + "' failed. Retrying after " + retry_time + " seconds.</b></span>",
+          timeout: 3000
+        });
+        setTimeout(function() {
+          mapView.reconnectSocket(thisSocket);
+        }, retry_time * 1000);
+      });
     }
   }
 
@@ -184,12 +226,13 @@ var mapView = {
   user_xps: {},
   pathcoords: {},
   settings: {},
+  logCount: 0,
   init: function() {
     var self = this;
     var prevMsg = '';
     var timeOut = 5000;
     var bgColor = '';
-    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full)/;
+    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full|buddy_next_reward|buddy_candy_earned|buddy_pokemon|buddy_update|buddy_reward|buddy_walked)/;
     //self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
@@ -562,10 +605,12 @@ var mapView = {
             self.map.setZoom(self.settings.zoom);
           }
           if (self.settings.userFollow === true) {
-            self.map.panTo({
-              lat: parseFloat(data.latitude),
-              lng: parseFloat(data.longitude)
-            });
+            if (self.currentUserId == user_index) {
+              self.map.panTo({
+                lat: parseFloat(data.latitude),
+                lng: parseFloat(data.longitude)
+              });
+            }
           }
         } else {
           user.catchables[data.spawnpoint_id].setPosition({
@@ -1019,6 +1064,7 @@ var mapView = {
             fortPoints = '',
             fortTeam = '',
             fortType = 'PokeStop',
+            guardName = '',
             pokemonGuard = '';
           if (fort.type === 1) {
             if(fort.active_fort_modifier && (fort.active_fort_modifier == 501)){
@@ -1030,7 +1076,10 @@ var mapView = {
             if (fort.guard_pokemon_id != undefined) {
               fortPoints = 'Points: ' + fort.gym_points;
               fortTeam = 'Team: ' + self.teams[fort.owned_by_team] + '<br>';
-              pokemonGuard = 'Guard Pokemon: ' + (self.pokemonArray[fort.guard_pokemon_id - 1].Name || "None") + '<br>';
+              if (typeof self.pokemonArray[fort.guard_pokemon_id - 1] !== 'undefined') {
+                guardName = self.pokemonArray[fort.guard_pokemon_id - 1].Name;
+              }
+              pokemonGuard = 'Guard Pokemon: ' + (guardName || "None") + '<br>';
             }
           }
           var contentString = 'Id: ' + fort.id + '<br>Type: ' + fortType + '<br>' + fortTeam + pokemonGuard + fortPoints;
@@ -1117,16 +1166,17 @@ var mapView = {
       self.map.setZoom(self.settings.zoom);
     }
     if (self.settings.users.length > 0 && self.settings.userFollow === true) {
-      self.map.panTo({
-        lat: parseFloat(data.lat),
-        lng: parseFloat(data.lng)
-      });
+      if (self.currentUserId == user_index) {
+        self.map.panTo({
+          lat: parseFloat(data.lat),
+          lng: parseFloat(data.lng)
+        });
+      }
     }
   },
   updateTrainer: function() {
     var self = mapView;
     for (var i = 0; i < self.settings.users.length; i++) {
-      if (self.currentUserId != i) continue;
       if (self.settings.users[i].enable) {
         loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
       }
@@ -1139,8 +1189,19 @@ var mapView = {
     cpMulti = Math.pow(cp_multiplier, 2);
     return (bAttack * bDefense * bStamina * cpMulti / 10);
   },
+  reconnectSocket: function(user_socket) {
+    var self = mapView;
+    self.log({
+      message: "<span style='color: blue;'><b>Reconnecting to " + user_socket.io.uri + "...</b></span>",
+      timeout: 3000
+    });
+    user_socket.connect({
+      'reconnectionAttempts': 5
+    });
+  },
   // Adds events to log panel and if it's closed sends Toast
   log: function(log_object) {
+    var self = mapView;
     var timeout = log_object.timeout
     var logColor = '';
     var logBGColor = '';
@@ -1159,6 +1220,11 @@ var mapView = {
         <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
       Materialize.toast(log_object.message, timeout);
+    }
+
+    self.logCount = $(".log-item").length;
+    if (self.logCount > 100) {
+      $(".log-item:last-child").remove();
     }
   }
 };
