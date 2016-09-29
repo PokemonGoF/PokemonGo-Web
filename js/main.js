@@ -220,6 +220,7 @@ var mapView = {
   pokedex: {},
   pokemonArray: {},
   pokemoncandyArray: {},
+  badgesArray: {},
   levelXpArray: {},
   stats: {},
   user_data: {},
@@ -280,6 +281,9 @@ var mapView = {
         loadJSON('data/pokemoncandy.json?'+Date.now(), function(data, successData) {
           self.pokemoncandyArray = data;
         }, self.errorFunc, 'pokemonCandy');
+        loadJSON('data/badges.json?'+Date.now(), function(data, successData) {
+          self.badgesArray = data;
+        }, self.errorFunc, 'badges');
         loadJSON('data/levelXp.json?'+Date.now(), function(data, successData) {
           self.levelXpArray = data;
         }, self.errorFunc, 'levelXp');
@@ -432,7 +436,7 @@ var mapView = {
     switch (menu) {
       case 1:
         var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
-        $('#subtitle').html('Trainer Info');
+        $('#subtitle').html($("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
         $('#sortButtons').html('');
 
         var xps = '';
@@ -441,45 +445,61 @@ var mapView = {
           var xp_last = self.user_xps[user_id][self.user_xps[user_id].length-1];
           var d_xp = xp_last.xp - xp_first.xp;
           var d_t = xp_last.t - xp_first.t;
-          if (d_t > 0) {
-            xps = '<br>XP/H: '+(Math.round(360000*d_xp/d_t)/100)+ ' (earned '+d_xp+' XP in last '+Math.round(d_t)+' s) ';
-          }
+          xps = 'XP/H: ' + (Math.round(360000 * d_xp / d_t) / 100 || 0) + ' (earned ' + d_xp + ' XP in last ' + Math.round(d_t) + ' s)';
         }
 
-        out += '<div class="row"><div class="col s12"><h5>' +
-          $("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html() +
-          '</h5><br>Level: ' +
-          current_user_stats.level +
-          '<br><div class="progress botbar-' + user_id + '" style="height: 10px"> <div class="determinate bot-' + user_id + '" style="width: '+
+        out += '<div class="trainerinfo col s12">' +
+          'Level: ' + current_user_stats.level + '<br>' +
+          'Exp to Lvl ' + (parseInt(current_user_stats.level, 10) + 1) + ': ' + 
+          (current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) +
+          ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level + '<br>' +
+          'Total Exp: ' + current_user_stats.experience + '<br>' + 
+          xps + '<br>' +
+          '<div class="progress botbar-' + user_id + '" style="height: 10px"> <div class="determinate bot-' + user_id + '" style="width: '+
           ((current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) /
            self.levelXpArray[current_user_stats.level - 1].exp_to_next_level) * 100 +
-          '%"></div></div>Total Exp: ' +
-          current_user_stats.experience +
-          xps +
-          '<br>Exp to Lvl ' +
-          (parseInt(current_user_stats.level, 10) + 1) +
-          ': ' +
-          (current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) +
-          ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level +
-          '<br>Pokemon Encountered: ' +
-          (current_user_stats.pokemons_encountered || 0) +
-          '<br>Pokeballs Thrown: ' +
-          (current_user_stats.pokeballs_thrown || 0) +
-          '<br>Pokemon Caught: ' +
-          (current_user_stats.pokemons_captured || 0) +
-          '<br>Small Ratata Caught: ' +
-          (current_user_stats.small_rattata_caught || 0) +
-          '<br>Pokemon Evolved: ' +
-          (current_user_stats.evolutions || 0) +
-          '<br>Eggs Hatched: ' +
-          (current_user_stats.eggs_hatched || 0) +
-          '<br>Unique Pokedex Entries: ' +
-          (current_user_stats.unique_pokedex_entries || 0) +
-          '<br>PokeStops Visited: ' +
-          (current_user_stats.poke_stop_visits || 0) +
-          '<br>Kilometers Walked: ' +
-          (parseFloat(current_user_stats.km_walked).toFixed(2) || 0) +
-          '</div></div>';
+          '%"></div>';
+        
+        for (var i = 0; i < self.badgesArray.length; i++) {
+            if (self.badgesArray[i]['disabled'] == 'true'){
+                continue;
+            }
+
+            var playerstat = self.badgesArray[i]['Playerstat'];
+            var current_value = 0;
+            if (playerstat == 'pokemon_caught_by_type' && typeof current_user_stats[playerstat] !== 'undefined'){
+                current_value = current_user_stats[playerstat][self.badgesArray[i]['Pokemontype']];
+            } else if (playerstat == 'pikachu_caught') {
+                var pikachu_entry = self.user_data[self.settings.users[user_id].username].pokedex.filter(function ( obj ) {
+                    return obj.inventory_item_data.pokedex_entry.pokemon_id === 25;
+                });
+                if (pikachu_entry.length === 1){
+                    current_value = pikachu_entry[0].inventory_item_data.pokedex_entry.times_captured;
+                }
+            } else {
+                current_value = current_user_stats[playerstat];
+            }
+            current_value = +(parseFloat((typeof current_value === 'undefined') ? 0 : current_value).toFixed(2))
+
+            var thresholds = self.badgesArray[i]['Thresholds'];
+            var current_goal = 0;
+            for (var j = 0; j < thresholds.length; j++) {
+                current_goal = j;
+                if(current_value < thresholds[j]){
+                    break;
+                }
+            }
+            out += '<div class="badge col s12 m6 l3 center">' +
+              '<img src="image/trainer/b' + (current_value >= thresholds[2] ? 3 : current_goal) + '.png" class="item_img"><br>' +
+              '<b>' + self.badgesArray[i]['Name'] + '</b><br>' +
+              self.badgesArray[i]['Description'] + '<br>' +
+              current_value + ' / ' + thresholds[current_goal] + '</div>';
+        }
+
+        var nth = 0;
+        out = out.replace(/<\/div><div/g, function (match, i, original) {
+        return (nth++ % 4 === 0) ? '</div></div><div class="row"><div' : match;
+        });
 
         $('#subcontent').html(out);
         break;
