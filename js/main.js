@@ -134,41 +134,11 @@ var moveTypes = {
 
 $(document).ready(function() {
   mapView.initSettings();
-  var retry_time = 30,
-  retry_id;
+  var retry_id;
   for (var i = 0; i < mapView.settings.users.length; i++) {
     if (mapView.settings.users[i].enable && mapView.settings.users[i].enableSocket) {
       retry_id = i;
-      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress, {
-        'reconnectionAttempts': 5
-      });
-
-      socket_io[i].on('connect', function(event) {
-        var thisSocket = this;
-        mapView.log({
-          message: "<span style='color: green;'><b>Connected to '" + thisSocket.io.uri + "'...</b></span>",
-          timeout: 3000
-        });
-      });
-
-      socket_io[i].on('disconnect', function(event) {
-        var thisSocket = this;
-        mapView.log({
-          message: "<span style='color: red;'><b>Disconnected from '" + thisSocket.io.uri + "'... Trying to reconnect, please wait...</b></span>",
-          timeout: 3000
-        });
-      });
-
-      socket_io[i].on('reconnect_failed', function(event) {
-        var thisSocket = this;
-        mapView.log({
-          message: "<span style='color: red;'><b>Connecting to '" + thisSocket.io.uri + "' failed. Retrying after " + retry_time + " seconds.</b></span>",
-          timeout: 3000
-        });
-        setTimeout(function() {
-          mapView.reconnectSocket(thisSocket);
-        }, retry_time * 1000);
-      });
+      mapView.initSockets(i);
     }
   }
 
@@ -229,46 +199,9 @@ var mapView = {
   logCount: 0,
   init: function() {
     var self = this;
-    var prevMsg = '';
-    var timeOut = 5000;
-    var bgColor = '';
-    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full|buddy_next_reward|buddy_candy_earned|buddy_pokemon|buddy_update|buddy_reward|buddy_walked)/;
     //self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
-    for (var k in events){
-      if (events.hasOwnProperty(k)) {
-        //let renk = events[k];
-        for (var i = 0; i < self.settings.users.length; i++) {
-          if (typeof socket_io[i] !== 'undefined') {
-            socket_io[i].on(k+':'+self.settings.users[i].username, function (data) {
-              //console.log(data);
-              if (data['event'] == 'log_stats') {
-                $("div").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
-              }
-              if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
-                var renk = events[data['event']];
-                if (logThis.test(data['event'])) {
-                  if (data['event'] == 'vip_pokemon') {
-                    timeOut = 8000;
-                  }
-
-                  bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
-                  var thisBot = $("div").find("[data-bot-id='" + data['account'] + "']").html();
-                  self.log({
-                    message: "<span style='color: " + renk + "'>[ <b>" + thisBot + "</b> ] " + data['data']['msg'] + "</span>",
-                    timeout: timeOut,
-                    bgcolor: bgColor
-                  });
-                }
-                //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
-                prevMsg = data['data']['msg'];
-              }
-            });
-          }
-        }
-      }
-    }
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
         self.log({
           message: 'Loading Data..'
@@ -389,6 +322,26 @@ var mapView = {
       var item = $(this);
       self.sortAndShowPokedex(item.data('sort'), item.parent().parent().data('user-id'));
     });
+
+    // Binding toggle for socket connections
+    $('body').on('click', '.toggle-connection', function() {
+      var item = $(this),
+      user_index = item.val();
+
+      self.settings.users[user_index].enableSocket = item.is(':checked');
+
+      if (self.settings.users[user_index].enableSocket) {
+        if (typeof socket_io[user_index] === 'undefined') {
+          self.initSockets(user_index);
+        } else {
+          socket_io[user_index].connect();
+        }
+      } else {
+        if (typeof socket_io[user_index] !== 'undefined') {
+          socket_io[user_index].disconnect();
+        }
+      }
+    });
   },
   initMap: function() {
     var self = this;
@@ -406,8 +359,79 @@ var mapView = {
     setInterval(self.addInventory, 5000);
   },
   initSettings: function() {
-    var self = mapView;
+    var self = this;
     self.settings = $.extend(true, self.settings, userInfo);
+  },
+  initSockets: function(user_index) {
+    var self = this,
+    retry_time = 30,
+    prevMsg = '',
+    timeOut = 5000,
+    bgColor = '',
+    logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full|buddy_next_reward|buddy_candy_earned|buddy_pokemon|buddy_update|buddy_reward|buddy_walked)/;
+
+    socket_io[user_index] = io.connect(self.settings.users[user_index].socketAddress, {
+      'reconnectionAttempts': 5
+    });
+
+    socket_io[user_index].on('connect', function(event) {
+      var thisSocket = this;
+      self.log({
+        message: "<span style='color: green;'><b>Connected to '" + thisSocket.io.uri + "'...</b></span>",
+        timeout: 3000
+      });
+    });
+
+    socket_io[user_index].on('disconnect', function(event) {
+      var thisSocket = this;
+      self.log({
+        message: "<span style='color: red;'><b>Disconnected from '" + thisSocket.io.uri + "'... Trying to reconnect, please wait...</b></span>",
+        timeout: 3000
+      });
+    });
+
+    socket_io[user_index].on('reconnect_failed', function(event) {
+      var thisSocket = this;
+      self.log({
+        message: "<span style='color: red;'><b>Connecting to '" + thisSocket.io.uri + "' failed. Retrying after " + retry_time + " seconds.</b></span>",
+        timeout: 3000
+      });
+      setTimeout(function() {
+        self.reconnectSocket(thisSocket);
+      }, retry_time * 1000);
+    });
+
+    for (var k in events){
+      if (events.hasOwnProperty(k)) {
+        //let renk = events[k];
+        if (typeof socket_io[user_index] !== 'undefined') {
+          socket_io[user_index].on(k+':'+self.settings.users[user_index].username, function (data) {
+            //console.log(data);
+            if (data['event'] == 'log_stats') {
+              $("div").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
+            }
+            if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
+              var renk = events[data['event']];
+              if (logThis.test(data['event'])) {
+                if (data['event'] == 'vip_pokemon') {
+                  timeOut = 8000;
+                }
+
+                bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
+                var thisBot = $("div").find("[data-bot-id='" + data['account'] + "']").html();
+                self.log({
+                  message: "<span style='color: " + renk + "'>[ <b>" + thisBot + "</b> ] " + data['data']['msg'] + "</span>",
+                  timeout: timeOut,
+                  bgcolor: bgColor
+                });
+              }
+              //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+              prevMsg = data['data']['msg'];
+            }
+          });
+        }
+      }
+    }
   },
   addCatchable: function() {
     var self = mapView;
@@ -553,8 +577,13 @@ var mapView = {
 
     for (var i = 0; i < users.length; i++) {
       if (users[i].enable) {
+        var socketEnabled = (users[i].enableSocket) ? ' checked' : '';
         var content = '<li class="bot-user">\
-                      <div class="collapsible-header bot-name" data-bot-id="{0}">{0}</div>\
+                      <div class="collapsible-header bot-name">\
+                      <span class="right tooltipped" data-position="bottom" data-tooltip="Enable/disable web socket connection">\
+                      <input class="toggle-connection" type="checkbox" id="check_{1}" value="{1}"' + socketEnabled + ' />\
+                      <label for="check_{1}" style="padding-left: 15px; margin-left: 5px;">&nbsp</label></span>\
+                      <span data-bot-id="{0}">{0}</span></div>\
                       <div class="collapsible-body">\
                       <ul class="bot-items" data-user-id="{1}">\
                       <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
@@ -571,6 +600,7 @@ var mapView = {
     out += "</ul></div>";
     $('#trainers').html(out);
     $('.collapsible').collapsible();
+    $('.tooltipped').tooltip({delay: 50, html: true});
   },
   catchSuccess: function(data, user_index) {
     var self = mapView,
