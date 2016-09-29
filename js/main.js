@@ -550,7 +550,6 @@ var mapView = {
         sortButtons += '<a class="chip" href="#" data-sort="candy">Candy</a>';
         sortButtons += '<a class="chip" href="#" data-sort="time">Time</a>';
         sortButtons += '</div>';
-        
         $('#sortButtons').html(sortButtons);
 
         self.sortAndShowBagPokemon(user_id);
