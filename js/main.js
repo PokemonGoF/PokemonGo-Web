@@ -412,7 +412,7 @@ var mapView = {
           socket_io[user_index].on(k+':'+self.settings.users[user_index].username, function (data) {
             //console.log(data);
             if (data['event'] == 'log_stats') {
-              $("span").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
+              $("div.bot-name").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
             }
             if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
               var renk = events[data['event']];
@@ -422,7 +422,7 @@ var mapView = {
                 }
 
                 bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
-                var thisBot = $("span").find("[data-bot-id='" + data['account'] + "']").html();
+                var thisBot = $("div.bot-name").find("[data-bot-id='" + data['account'] + "']").html();
                 self.log({
                   message: "<span style='color: " + renk + "'>[ <b>" + thisBot + "</b> ] " + data['data']['msg'] + "</span>",
                   timeout: timeOut,
@@ -460,7 +460,7 @@ var mapView = {
     switch (menu) {
       case 1:
         var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
-        $('#subtitle').html($("span").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
+        $('#subtitle').html($("div.bot-name").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
         $('#sortButtons').html('');
 
         var xps = '';
