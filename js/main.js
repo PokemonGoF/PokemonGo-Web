@@ -393,7 +393,7 @@ var mapView = {
     switch (menu) {
       case 1:
         var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
-        $('#subtitle').html(self.settings.users[user_id].username);
+        $('#subtitle').html($("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
         $('#sortButtons').html('');
 
         var xps = '';
