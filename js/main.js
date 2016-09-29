@@ -391,7 +391,7 @@ var mapView = {
       $(item).parent().find('a').not(item).removeClass('selected');
       self.sortAndShowBagPokemon(item.parent().data('user-id'));
     });
-    $('body').on('click', '.pokedex-sort a, .pokedex-toggle a', function() {
+    $('body').on('click', '.pokedex-sort a, .pokedex-filter a', function() {
       var item = $(this);
       $(item).toggleClass('selected');
       $(item).parent().find('a').not(item).removeClass('selected');
@@ -455,16 +455,16 @@ var mapView = {
 
         out += '<div class="trainerinfo col s12">' +
           'Level: ' + current_user_stats.level + '<br>' +
-          'Exp to Lvl ' + (parseInt(current_user_stats.level, 10) + 1) + ': ' + 
+          'Exp to Lvl ' + (parseInt(current_user_stats.level, 10) + 1) + ': ' +
           (current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) +
           ' / ' + self.levelXpArray[current_user_stats.level - 1].exp_to_next_level + '<br>' +
-          'Total Exp: ' + current_user_stats.experience + '<br>' + 
+          'Total Exp: ' + current_user_stats.experience + '<br>' +
           xps + '<br>' +
           '<div class="progress botbar-' + user_id + '" style="height: 10px"> <div class="determinate bot-' + user_id + '" style="width: '+
           ((current_user_stats.experience - self.levelXpArray[current_user_stats.level - 1].current_level_xp) /
            self.levelXpArray[current_user_stats.level - 1].exp_to_next_level) * 100 +
           '%"></div>';
-        
+
         for (var i = 0; i < self.badgesArray.length; i++) {
             if (self.badgesArray[i]['disabled'] == 'true'){
                 continue;
@@ -538,7 +538,7 @@ var mapView = {
       case 3:
         var pkmnTotal = self.user_data[self.settings.users[user_id].username].bagPokemon.length;
         $('#subtitle').html(pkmnTotal + " Pokemon");
-        
+
         $('#sortButtons').html('');
         $('#toggleButtons').html('');
 
@@ -558,19 +558,21 @@ var mapView = {
         var pkmnTotal = self.user_data[self.settings.users[user_id].username].pokedex.length;
         $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 151');
 
-        var sortButtons = '<div class="pokedex-sort chips" data-user-id="' + user_id + '">Sort : ';
+        var sortButtons = '<div class="pokedex-sort chips" data-user-id="' + user_id + '">Sort: ';
         sortButtons += '<a class="chip selected" href="#" data-sort="id">ID</a>';
         sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
         sortButtons += '<a class="chip" href="#" data-sort="enc">Seen</a>';
         sortButtons += '<a class="chip" href="#" data-sort="cap">Caught</a>';
         sortButtons += '</div>';
         $('#sortButtons').html(sortButtons);
-        
-        var toggleButtons = '<div class="pokedex-toggle chips" data-user-id="' + user_id + '">Toggle : ';
-        toggleButtons += '<a class="chip" href="#" data-toggle="enc">Seen</a>';
-        toggleButtons += '<a class="chip" href="#" data-toggle="cap">Caught</a>';
-        toggleButtons += '</div>';
-        $('#toggleButtons').html(toggleButtons);
+
+        var filterButtons = '<div class="pokedex-filter chips" data-user-id="' + user_id + '">Filter: ';
+        filterButtons += '<a class="chip" href="#" data-filter="seen">Seen</a>';
+        filterButtons += '<a class="chip" href="#" data-filter="unseen">Unseen</a>';
+        filterButtons += '<a class="chip" href="#" data-filter="caught">Caught</a>';
+        filterButtons += '<a class="chip" href="#" data-filter="uncaught">Uncaught</a>';
+        filterButtons += '</div>';
+        $('#filterButtons').html(filterButtons);
 
         self.sortAndShowPokedex(user_id);
         break;
@@ -1059,17 +1061,24 @@ var mapView = {
         });
         break;
     }
+    var filtered = 0,
+    filter = $(".pokedex-filter a.selected").data("filter"),
+    pkmnTotal = 151;
+    if ($(".pokedex-filter a.selected").length === 0){
+        pkmnTotal = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats.unique_pokedex_entries;
+    }
     for (var i = 0; i < sortedPokedex.length; i++) {
-      if (sortedPokedex[i][$(".pokedex-toggle a.selected").data("toggle")] === 0){
-        continue;
-      }
-        
       var pkmnNum = sortedPokedex[i].Number,
         pkmnImage = pkmnNum + '.png',
         pkmnName = sortedPokedex[i].Name,
         pkmnEnc = sortedPokedex[i].enc,
         pkmnCap = sortedPokedex[i].cap,
         candyNum = self.getCandy(parseInt(pkmnNum), user_id) || 0;
+
+      if ((filter === 'seen' && pkmnEnc === 0) || (filter === 'unseen' && pkmnEnc > 0) || (filter === 'caught' && pkmnCap === 0) || (filter === 'uncaught' && pkmnCap > 0)){
+        filtered++;
+        continue;
+      }
 
       out += '<div class="col s12 m6 l3 center"><img src="image/pokemon/' +
         pkmnImage +
@@ -1094,6 +1103,7 @@ var mapView = {
       return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
     });
     $('#subcontent').html(out);
+    $('#subtitle').html('Pokedex ' + (pkmnTotal - filtered) + ' / 151');
   },
   trainerFunc: function(data, user_index) {
     var self = mapView,
