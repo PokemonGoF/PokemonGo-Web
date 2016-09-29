@@ -423,13 +423,18 @@ var mapView = {
             }
 
             var playerstat = self.badgesArray[i]['Playerstat'];
-            var current_value = current_user_stats[playerstat];
-            if (playerstat == 'pokemon_caught_by_type'){
-                current_value = current_value[self.badgesArray[i]['Pokemontype']];
+            var current_value = 0;
+            if (playerstat == 'pokemon_caught_by_type' && typeof current_user_stats[playerstat] !== 'undefined'){
+                current_value = current_user_stats[playerstat][self.badgesArray[i]['Pokemontype']];
             } else if (playerstat == 'pikachu_caught') {
-                current_value = self.user_data[self.settings.users[user_id].username].pokedex.filter(function ( obj ) {
+                var pikachu_entry = self.user_data[self.settings.users[user_id].username].pokedex.filter(function ( obj ) {
                     return obj.inventory_item_data.pokedex_entry.pokemon_id === 25;
-                })[0].inventory_item_data.pokedex_entry.times_captured;
+                });
+                if (pikachu_entry.length === 1){
+                    current_value = pikachu_entry[0].inventory_item_data.pokedex_entry.times_captured;
+                }
+            } else {
+                current_value = current_user_stats[playerstat];
             }
             current_value = +(parseFloat((typeof current_value === 'undefined') ? 0 : current_value).toFixed(2))
 
