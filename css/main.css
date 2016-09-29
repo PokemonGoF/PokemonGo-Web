@@ -29,6 +29,9 @@ html, body {
 #sortButtons .chip {
   margin-right: 3px;
 }
+.chips{
+    border-bottom: none;
+}
 #close {
   float: right;
   font-size: 32px;

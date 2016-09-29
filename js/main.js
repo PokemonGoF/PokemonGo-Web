@@ -387,11 +387,15 @@ var mapView = {
     // Binding sorts
     $('body').on('click', '.pokemon-sort a', function() {
       var item = $(this);
-      self.sortAndShowBagPokemon(item.data('sort'), item.parent().parent().data('user-id'));
+      $(item).addClass('selected');
+      $(item).parent().find('a').not(item).removeClass('selected');
+      self.sortAndShowBagPokemon(item.parent().data('user-id'));
     });
-    $('body').on('click', '.pokedex-sort a', function() {
+    $('body').on('click', '.pokedex-sort a, .pokedex-toggle a', function() {
       var item = $(this);
-      self.sortAndShowPokedex(item.data('sort'), item.parent().parent().data('user-id'));
+      $(item).toggleClass('selected');
+      $(item).parent().find('a').not(item).removeClass('selected');
+      self.sortAndShowPokedex(item.parent().data('user-id'));
     });
   },
   initMap: function() {
@@ -438,6 +442,7 @@ var mapView = {
         var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
         $('#subtitle').html($("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
         $('#sortButtons').html('');
+        $('#toggleButtons').html('');
 
         var xps = '';
         if ((user_id in self.user_xps) && self.user_xps[user_id].length) {
@@ -507,6 +512,7 @@ var mapView = {
         var current_user_bag_items = self.user_data[self.settings.users[user_id].username].bagItems;
 
         $('#sortButtons').html('');
+        $('#toggleButtons').html('');
 
         out = '<div class="items"><div class="row">';
         var bagItemCount = 0;
@@ -532,34 +538,42 @@ var mapView = {
       case 3:
         var pkmnTotal = self.user_data[self.settings.users[user_id].username].bagPokemon.length;
         $('#subtitle').html(pkmnTotal + " Pokemon");
+        
+        $('#sortButtons').html('');
+        $('#toggleButtons').html('');
 
-        var sortButtons = '<div class="col s12 pokemon-sort" data-user-id="' + user_id + '">Sort : ';
-        sortButtons += '<div class="chip"><a href="#" data-sort="cp">CP</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="iv">IV</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="name">Name</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="id">ID</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="candy">Candy</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="time">Time</a></div>';
+        var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort : ';
+        sortButtons += '<a class="chip selected" href="#" data-sort="cp">CP</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="iv">IV</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="id">ID</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="candy">Candy</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="time">Time</a>';
         sortButtons += '</div>';
-
+        
         $('#sortButtons').html(sortButtons);
 
-        self.sortAndShowBagPokemon('cp', user_id);
+        self.sortAndShowBagPokemon(user_id);
         break;
       case 4:
         var pkmnTotal = self.user_data[self.settings.users[user_id].username].pokedex.length;
         $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 151');
 
-        var sortButtons = '<div class="col s12 pokedex-sort" dat-user-id="' + user_id + '">Sort : ';
-        sortButtons += '<div class="chip"><a href="#" data-sort="id">ID</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="name">Name</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="enc">Seen</a></div>';
-        sortButtons += '<div class="chip"><a href="#" data-sort="cap">Caught</a></div>';
+        var sortButtons = '<div class="pokedex-sort chips" data-user-id="' + user_id + '">Sort : ';
+        sortButtons += '<a class="chip selected" href="#" data-sort="id">ID</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="enc">Seen</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="cap">Caught</a>';
         sortButtons += '</div>';
-
         $('#sortButtons').html(sortButtons);
+        
+        var toggleButtons = '<div class="pokedex-toggle chips" data-user-id="' + user_id + '">Toggle : ';
+        toggleButtons += '<a class="chip" href="#" data-toggle="enc">Seen</a>';
+        toggleButtons += '<a class="chip" href="#" data-toggle="cap">Caught</a>';
+        toggleButtons += '</div>';
+        $('#toggleButtons').html(toggleButtons);
 
-        self.sortAndShowPokedex('id', user_id);
+        self.sortAndShowPokedex(user_id);
         break;
       default:
         break;
@@ -739,7 +753,7 @@ var mapView = {
       }
     }
   },
-  sortAndShowBagPokemon: function(sortOn, user_id) {
+  sortAndShowBagPokemon: function(user_id) {
     var self = this,
     eggs = 0,
     eggs10 = 0,
@@ -819,7 +833,7 @@ var mapView = {
         "weakness": pkmWeakness
       });
     }
-    switch (sortOn) {
+    switch ($(".pokemon-sort a.selected").data("sort")) {
       case 'name':
         sortedPokemon.sort(function(a, b) {
           if (a.name < b.name) return -1;
@@ -994,7 +1008,7 @@ var mapView = {
     $('#subcontent').html(out);
     $('.tooltipped').tooltip({delay: 50, html: true});
   },
-  sortAndShowPokedex: function(sortOn, user_id) {
+  sortAndShowPokedex: function(user_id) {
     var self = this,
     out = '',
     sortedPokedex = [],
@@ -1017,7 +1031,7 @@ var mapView = {
       sortedPokedex[pkmID-1].cap = pkmCap;
       sortedPokedex[pkmID-1].enc = pkmEnc;
     }
-    switch (sortOn) {
+    switch ($(".pokedex-sort a.selected").data("sort")) {
       case 'id':
         sortedPokedex.sort((a, b) => {
           return a.Number - b.Number;
@@ -1039,8 +1053,18 @@ var mapView = {
         sortedPokedex.sort((a, b) => {
           return b.cap - a.cap;
         });
+        break;
+      default:
+        sortedPokedex.sort((a, b) => {
+          return a.Number - b.Number;
+        });
+        break;
     }
     for (var i = 0; i < sortedPokedex.length; i++) {
+      if (sortedPokedex[i][$(".pokedex-toggle a.selected").data("toggle")] === 0){
+        continue;
+      }
+        
       var pkmnNum = sortedPokedex[i].Number,
         pkmnImage = pkmnNum + '.png',
         pkmnName = sortedPokedex[i].Name,
