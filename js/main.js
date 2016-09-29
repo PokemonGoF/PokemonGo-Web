@@ -363,11 +363,11 @@ var mapView = {
     setInterval(self.addInventory, 5000);
   },
   initSettings: function() {
-    var self = this;
+    var self = mapView;
     self.settings = $.extend(true, self.settings, userInfo);
   },
   initSockets: function(user_index) {
-    var self = this,
+    var self = mapView,
     retry_time = 30,
     prevMsg = '',
     timeOut = 5000,
@@ -810,7 +810,8 @@ var mapView = {
       pkmUID = pokemonData.id,
       pkmHP = pokemonData.stamina || 0,
       pkmMHP = pokemonData.stamina_max || 0,
-      pkmCPMultiplier = pokemonData.cp_multiplier;
+      pkmCPMultiplier = pokemonData.cp_multiplier,
+      pkmFavorite = pokemonData.favorite || 0;
 
       var pkmTypeI = self.pokemonArray[pkmID - 1].TypeI[0],
       pkmTypeII = '';
@@ -846,7 +847,8 @@ var mapView = {
         "move2": move2ID,
         "type1": pkmTypeI,
         "type2": pkmTypeII,
-        "weakness": pkmWeakness
+        "weakness": pkmWeakness,
+        "favorite": pkmFavorite
       });
     }
     switch (sortOn) {
@@ -930,8 +932,12 @@ var mapView = {
         outWeakness += self.getType(pkmnWeakness[x]) + newLine;
       }
 
-      out += '<div class="col s12 m6 l3 center" data-uniqueid="'+pkmnUnique+'"><img src="image/pokemon/' +
-        pkmnImage + '" class="png_img"></br><span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
+      out += '<div class="col s12 m6 l3 center" data-uniqueid="'+pkmnUnique+'" style="position: relative;">';
+      if (sortedPokemon[i].favorite) {
+        out += '<span class="favorite"><img src="image/trainer/favorite.png"></span>';
+      }
+      out += '<img src="image/pokemon/' + pkmnImage + '" class="png_img"></br>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
         pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b></span>' +
         '<br>' + self.getType(pkmnTypeI);
         if (pkmnTypeII != '') {
