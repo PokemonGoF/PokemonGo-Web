@@ -26,11 +26,17 @@ html, body {
 #sortButtons {
   text-align: right;
 }
+@media only screen and (max-width: 1299px){
+    #sortButtons {
+      text-align: left;
+    }
+}
 #sortButtons .chip {
   margin-right: 3px;
 }
 .chips{
     border-bottom: none;
+    margin-bottom: 0px;
 }
 #close {
   float: right;
