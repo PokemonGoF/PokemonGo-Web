@@ -387,15 +387,17 @@ var mapView = {
     // Binding sorts
     $('body').on('click', '.pokemon-sort a', function() {
       var item = $(this);
-      $(item).addClass('selected');
-      $(item).parent().find('a').not(item).removeClass('selected');
-      self.sortAndShowBagPokemon(item.parent().data('user-id'));
+      var userId = item.parent().data('user-id');
+      $(item).addClass('selected bot-' + userId);
+      $(item).siblings().removeClass('selected bot-' + userId);
+      self.sortAndShowBagPokemon(userId);
     });
     $('body').on('click', '.pokedex-sort a, .pokedex-filter a', function() {
       var item = $(this);
-      $(item).toggleClass('selected');
-      $(item).parent().find('a').not(item).removeClass('selected');
-      self.sortAndShowPokedex(item.parent().data('user-id'));
+      var userId = item.parent().data('user-id');
+      $(item).toggleClass('selected bot-' + userId);
+      $(item).siblings().removeClass('selected bot-' + userId);
+      self.sortAndShowPokedex(userId);
     });
   },
   initMap: function() {
@@ -442,7 +444,7 @@ var mapView = {
         var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
         $('#subtitle').html($("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
         $('#sortButtons').html('');
-        $('#toggleButtons').html('');
+        $('#filterButtons').html('');
 
         var xps = '';
         if ((user_id in self.user_xps) && self.user_xps[user_id].length) {
@@ -512,7 +514,7 @@ var mapView = {
         var current_user_bag_items = self.user_data[self.settings.users[user_id].username].bagItems;
 
         $('#sortButtons').html('');
-        $('#toggleButtons').html('');
+        $('#filterButtons').html('');
 
         out = '<div class="items"><div class="row">';
         var bagItemCount = 0;
@@ -540,10 +542,10 @@ var mapView = {
         $('#subtitle').html(pkmnTotal + " Pokemon");
 
         $('#sortButtons').html('');
-        $('#toggleButtons').html('');
+        $('#filterButtons').html('');
 
         var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort : ';
-        sortButtons += '<a class="chip selected" href="#" data-sort="cp">CP</a>';
+        sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="cp">CP</a>';
         sortButtons += '<a class="chip" href="#" data-sort="iv">IV</a>';
         sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
         sortButtons += '<a class="chip" href="#" data-sort="id">ID</a>';
@@ -559,7 +561,7 @@ var mapView = {
         $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 151');
 
         var sortButtons = '<div class="pokedex-sort chips" data-user-id="' + user_id + '">Sort: ';
-        sortButtons += '<a class="chip selected" href="#" data-sort="id">ID</a>';
+        sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="id">ID</a>';
         sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
         sortButtons += '<a class="chip" href="#" data-sort="enc">Seen</a>';
         sortButtons += '<a class="chip" href="#" data-sort="cap">Caught</a>';
