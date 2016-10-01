@@ -520,7 +520,7 @@ var mapView = {
         var bagItemCount = 0;
         for (var i = 0; i < current_user_bag_items.length; i++) {
           bagItemCount += current_user_bag_items[i].inventory_item_data.item.count;
-          out += '<div class="col s12 m6 l3 center" style="float: left"><img src="image/items/' +
+          out += '<div class="col s12 m6 l3 center"><img src="image/items/' +
             current_user_bag_items[i].inventory_item_data.item.item_id +
             '.png" class="item_img"><br><b>' +
             self.itemsArray[current_user_bag_items[i].inventory_item_data.item.item_id] +
