@@ -880,6 +880,7 @@ var mapView = {
       pkmCPMultiplier = pokemonData.cp_multiplier,
       pkmFavorite = pokemonData.favorite || 0;
 
+      var pkmDateCaptured = new Date(pokemonData.creation_time_ms);
       var pkmTypeI = self.pokemonArray[pkmID - 1].TypeI[0],
       pkmTypeII = '';
       if (typeof self.pokemonArray[pkmID - 1].TypeII !== 'undefined') {
@@ -915,7 +916,8 @@ var mapView = {
         "type1": pkmTypeI,
         "type2": pkmTypeII,
         "weakness": pkmWeakness,
-        "favorite": pkmFavorite
+        "favorite": pkmFavorite,
+        "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY#" )
       });
     }
     switch ($(".pokemon-sort a.selected").data("sort")) {
@@ -991,7 +993,8 @@ var mapView = {
         pkmnTypeI = sortedPokemon[i].type1,
         pkmnTypeII = sortedPokemon[i].type2,
         pkmnWeakness = sortedPokemon[i].weakness,
-        candyNum = self.getCandy(pkmnNum, user_id);
+        candyNum = self.getCandy(pkmnNum, user_id),
+        pkmnDateCaptured = sortedPokemon[i].date_captured;
 
       var outWeakness = '<b>Weaknesses:</b><br>',
         newLine = '';
@@ -1030,6 +1033,7 @@ var mapView = {
         '<br/><b>IV: </b>' + (pkmnIV >= 0.8 ? '<span style="color: #039be5">' + pkmnIV + '</span>' : pkmnIV) +
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
+        '<br><b>Date Captured: </b>' + pkmnDateCaptured +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
         '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move1ID].type) + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage;
       if (move1STAB != '') {
@@ -1378,3 +1382,23 @@ if (!String.prototype.format) {
     });
   };
 }
+
+Date.prototype.customFormat = function(formatString){
+  var YYYY,YY,MMMM,MMM,MM,M,DDDD,DDD,DD,D,hhhh,hhh,hh,h,mm,m,ss,s,ampm,AMPM,dMod,th;
+  YY = ((YYYY=this.getFullYear())+"").slice(-2);
+  MM = (M=this.getMonth()+1)<10?('0'+M):M;
+  MMM = (MMMM=["January","February","March","April","May","June","July","August","September","October","November","December"][M-1]).substring(0,3);
+  DD = (D=this.getDate())<10?('0'+D):D;
+  DDD = (DDDD=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][this.getDay()]).substring(0,3);
+  th=(D>=10&&D<=20)?'th':((dMod=D%10)==1)?'st':(dMod==2)?'nd':(dMod==3)?'rd':'th';
+  formatString = formatString.replace("#YYYY#",YYYY).replace("#YY#",YY).replace("#MMMM#",MMMM).replace("#MMM#",MMM).replace("#MM#",MM).replace("#M#",M).replace("#DDDD#",DDDD).replace("#DDD#",DDD).replace("#DD#",DD).replace("#D#",D).replace("#th#",th);
+  h=(hhh=this.getHours());
+  if (h==0) h=24;
+  if (h>12) h-=12;
+  hh = h<10?('0'+h):h;
+  hhhh = hhh<10?('0'+hhh):hhh;
+  AMPM=(ampm=hhh<12?'am':'pm').toUpperCase();
+  mm=(m=this.getMinutes())<10?('0'+m):m;
+  ss=(s=this.getSeconds())<10?('0'+s):s;
+  return formatString.replace("#hhhh#",hhhh).replace("#hhh#",hhh).replace("#hh#",hh).replace("#h#",h).replace("#mm#",mm).replace("#m#",m).replace("#ss#",ss).replace("#s#",s).replace("#ampm#",ampm).replace("#AMPM#",AMPM);
+};
