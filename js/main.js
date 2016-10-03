@@ -289,7 +289,7 @@ var mapView = {
         }, self.errorFunc, 'levelXp');
         loadJSON('data/moves.json?'+Date.now(), function(data, successData) {
           self.moveList = {};
-          data.map(move => {
+          data.map(function(move) {
             self.moveList[move.id] = move;
           });
         }, self.errorFunc, 'moveList');
@@ -1018,7 +1018,7 @@ var mapView = {
     user_id = (user_id || 0),
     user = self.user_data[self.settings.users[user_id].username];
 
-    sortedPokedex = self.pokemonArray.slice().map(pokemon => {
+    sortedPokedex = self.pokemonArray.slice().map(function(pokemon) {
       pokemon.enc = 0;
       pokemon.cap = 0;
       return pokemon;
@@ -1036,29 +1036,29 @@ var mapView = {
     }
     switch ($(".pokedex-sort a.selected").data("sort")) {
       case 'id':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return a.Number - b.Number;
         });
         break;
       case 'name':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           if (a.Name < b.Name) return -1;
           if (a.Name > b.Name) return 1;
           return 0;
         });
         break;
       case 'enc':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return b.enc - a.enc;
         });
         break;
       case 'cap':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return b.cap - a.cap;
         });
         break;
       default:
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return a.Number - b.Number;
         });
         break;
