@@ -222,7 +222,7 @@ var mapView = {
         }, self.errorFunc, 'levelXp');
         loadJSON('data/moves.json?'+Date.now(), function(data, successData) {
           self.moveList = {};
-          data.map(move => {
+          data.map(function(move) {
             self.moveList[move.id] = move;
           });
         }, self.errorFunc, 'moveList');
@@ -318,6 +318,20 @@ var mapView = {
     });
 
     // Binding sorts
+    $('body').on('click', '.item-sort a', function() {
+      var item = $(this);
+      var userId = item.parent().data('user-id');
+      $(item).addClass('selected bot-' + userId);
+      $(item).siblings().removeClass('selected bot-' + userId);
+      self.sortAndShowBagItems(userId);
+    });
+    $('body').on('click', '.item-filter a', function() {
+      var item = $(this);
+      var userId = item.parent().data('user-id');
+      $(item).toggleClass('selected bot-' + userId);
+      $(item).siblings().removeClass('selected bot-' + userId);
+      self.sortAndShowBagItems(userId);
+    });
     $('body').on('click', '.pokemon-sort a', function() {
       var item = $(this);
       var userId = item.parent().data('user-id');
@@ -325,7 +339,14 @@ var mapView = {
       $(item).siblings().removeClass('selected bot-' + userId);
       self.sortAndShowBagPokemon(userId);
     });
-    $('body').on('click', '.pokedex-sort a, .pokedex-filter a', function() {
+    $('body').on('click', '.pokedex-sort a', function() {
+      var item = $(this);
+      var userId = item.parent().data('user-id');
+      $(item).addClass('selected bot-' + userId);
+      $(item).siblings().removeClass('selected bot-' + userId);
+      self.sortAndShowPokedex(userId);
+    });
+    $('body').on('click', '.pokedex-filter a', function() {
       var item = $(this);
       var userId = item.parent().data('user-id');
       $(item).toggleClass('selected bot-' + userId);
@@ -535,38 +556,22 @@ var mapView = {
         $('#subcontent').html(out);
         break;
       case 2:
-        var current_user_bag_items = self.user_data[self.settings.users[user_id].username].bagItems;
+        var sortButtons = '<div class="item-sort chips" data-user-id="' + user_id + '">Sort: ';
+        sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="item_id">Type</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
+        sortButtons += '</div>';
+        $('#sortButtons').html(sortButtons);
 
-        $('#sortButtons').html('');
-        $('#filterButtons').html('');
-
-        out = '<div class="items"><div class="row">';
-        var bagItemCount = 0;
-        for (var i = 0; i < current_user_bag_items.length; i++) {
-          bagItemCount += current_user_bag_items[i].inventory_item_data.item.count;
-          out += '<div class="col s12 m6 l3 center" style="float: left"><img src="image/items/' +
-            current_user_bag_items[i].inventory_item_data.item.item_id +
-            '.png" class="item_img"><br><b>' +
-            self.itemsArray[current_user_bag_items[i].inventory_item_data.item.item_id] +
-            '</b><br>Count: ' +
-            (current_user_bag_items[i].inventory_item_data.item.count || 0) +
-            '</div>';
-        }
-        out += '</div></div>';
-        var nth = 0;
-        out = out.replace(/<\/div><div/g, function (match, i, original) {
-          nth++;
-          return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
-        });
-        $('#subtitle').html(bagItemCount + " item" + (bagItemCount !== 1 ? "s" : "") + " in Bag");
-        $('#subcontent').html(out);
+        var filterButtons = '<div class="item-filter chips" data-user-id="' + user_id + '">Toggle: ';
+        filterButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-filter="possession">Possession</a>';
+        filterButtons += '</div>';
+        $('#filterButtons').html(filterButtons);
+        
+        self.sortAndShowBagItems(user_id);
         break;
       case 3:
         var pkmnTotal = self.user_data[self.settings.users[user_id].username].bagPokemon.length;
         $('#subtitle').html(pkmnTotal + " Pokemon");
-
-        $('#sortButtons').html('');
-        $('#filterButtons').html('');
 
         var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort : ';
         sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="cp">CP</a>';
@@ -577,6 +582,8 @@ var mapView = {
         sortButtons += '<a class="chip" href="#" data-sort="time">Time</a>';
         sortButtons += '</div>';
         $('#sortButtons').html(sortButtons);
+        
+        $('#filterButtons').html('');
 
         self.sortAndShowBagPokemon(user_id);
         break;
@@ -785,6 +792,49 @@ var mapView = {
       	loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
       }
     }
+  },
+  sortAndShowBagItems: function(user_id) {
+    var self = this,
+    current_user_bag_items = self.user_data[self.settings.users[user_id].username].bagItems;
+        
+    for (var i = 0; i < current_user_bag_items.length; i++) {
+        var item_id = current_user_bag_items[i].inventory_item_data.item.item_id;
+        var item = $.grep(self.itemsArray, function(e){ return e.id == item_id; })[0];
+        current_user_bag_items[i].inventory_item_data.item.name = item.name;
+        current_user_bag_items[i].inventory_item_data.item.category = item.category;
+    }
+    
+    var sortBy = $(".item-sort a.selected").data("sort");
+    current_user_bag_items.sort(function (a, b){
+        var aSortBy = a.inventory_item_data.item[sortBy];
+        var bSortBy = b.inventory_item_data.item[sortBy];
+        return ((aSortBy < bSortBy) ? -1 : ((aSortBy > bSortBy) ? 1 : 0));
+    });
+
+    var out = '<div class="items"><div class="row">';
+    var bagItemCount = 0;
+    for (var i = 0; i < current_user_bag_items.length; i++) {
+      var item = current_user_bag_items[i].inventory_item_data.item;
+      if ($(".item-filter a.selected").data("filter") === 'possession' && item.count === 0){
+          continue;
+      }
+      bagItemCount += item.count;
+      out += '<div class="col s12 m6 l3 center"><img src="image/items/' +
+        item.item_id +
+        '.png" class="item_img"><br><b>' +
+        item.name +
+        '</b><br>Count: ' +
+        (item.count || 0) +
+        '</div>';
+    }
+    out += '</div></div>';
+    var nth = 0;
+    out = out.replace(/<\/div><div/g, function (match, i, original) {
+      nth++;
+      return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
+    });
+    $('#subtitle').html(bagItemCount + " item" + (bagItemCount !== 1 ? "s" : "") + " in Bag");
+    $('#subcontent').html(out);
   },
   sortAndShowBagPokemon: function(user_id) {
     var self = this,
@@ -1054,7 +1104,7 @@ var mapView = {
     user_id = (user_id || 0),
     user = self.user_data[self.settings.users[user_id].username];
 
-    sortedPokedex = self.pokemonArray.slice().map(pokemon => {
+    sortedPokedex = self.pokemonArray.slice().map(function(pokemon) {
       pokemon.enc = 0;
       pokemon.cap = 0;
       return pokemon;
@@ -1072,29 +1122,29 @@ var mapView = {
     }
     switch ($(".pokedex-sort a.selected").data("sort")) {
       case 'id':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return a.Number - b.Number;
         });
         break;
       case 'name':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           if (a.Name < b.Name) return -1;
           if (a.Name > b.Name) return 1;
           return 0;
         });
         break;
       case 'enc':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return b.enc - a.enc;
         });
         break;
       case 'cap':
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return b.cap - a.cap;
         });
         break;
       default:
-        sortedPokedex.sort((a, b) => {
+        sortedPokedex.sort(function(a, b) {
           return a.Number - b.Number;
         });
         break;

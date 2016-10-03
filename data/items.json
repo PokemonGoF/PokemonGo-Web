@@ -1,43 +1,122 @@
-{
-    "0": "Unknown",
-
-    "1": "Pokeball",
-    "2": "Greatball",
-    "3": "Ultraball",
-    "4": "Masterball",
-
-    "101": "Potion",
-    "102": "Super Potion",
-    "103": "Hyper Potion",
-    "104": "Max Potion",
-
-    "201": "Revive",
-    "202": "Max Revive",
-
-    "301": "Lucky Egg",
-
-    "401": "Incense",
-    "402": "Spicy Incense",
-    "403": "Cool Incense",
-    "404": "Floral Incense",
-
-    "501": "Troy Disk",
-
-    "602": "X Attack",
-    "603": "X Defense",
-    "604": "X Miracle",
-
-    "701": "Razz Berry",
-    "702": "Bluk Berry",
-    "703": "Nanab Berry",
-    "704": "Wepar Berry",
-    "705": "Pinap Berry",
-
-    "801": "Special Camera",
-
-    "901": "Incubator (Unlimited)",
-    "902": "Incubator",
-
-    "1001": "Pokemon Storage Upgrade",
-    "1002": "Item Storage Upgrade"
-}
+[
+   {
+        "id":0,
+        "name":"Unknown"
+   },
+   {
+        "id":1,
+        "name":"Pokeball"
+   },
+   {
+        "id":2,
+        "name":"Greatball"
+   },
+   {
+        "id":3,
+        "name":"Ultraball"
+   },
+   {
+        "id":4,
+        "name":"Masterball"
+   },
+   {
+        "id":101,
+        "name":"Potion"
+   },
+   {
+        "id":102,
+        "name":"Super Potion"
+   },
+   {
+        "id":103,
+        "name":"Hyper Potion"
+   },
+   {
+        "id":104,
+        "name":"Max Potion"
+   },
+   {
+        "id":201,
+        "name":"Revive"
+   },
+   {
+        "id":202,
+        "name":"Max Revive"
+   },
+   {
+        "id":301,
+        "name":"Lucky Egg"
+   },
+   {
+        "id":401,
+        "name":"Incense"
+   },
+   {
+        "id":402,
+        "name":"Spicy Incense"
+   },
+   {
+        "id":403,
+        "name":"Cool Incense"
+   },
+   {
+        "id":404,
+        "name":"Floral Incense"
+   },
+   {
+        "id":501,
+        "name":"Troy Disk"
+   },
+   {
+        "id":602,
+        "name":"X Attack"
+   },
+   {
+        "id":603,
+        "name":"X Defense"
+   },
+   {
+        "id":604,
+        "name":"X Miracle"
+   },
+   {
+        "id":701,
+        "name":"Razz Berry"
+   },
+   {
+        "id":702,
+        "name":"Bluk Berry"
+   },
+   {
+        "id":703,
+        "name":"Nanab Berry"
+   },
+   {
+        "id":704,
+        "name":"Wepar Berry"
+   },
+   {
+        "id":705,
+        "name":"Pinap Berry"
+   },
+   {
+        "id":801,
+        "name":"Special Camera"
+   },
+   {
+        "id":901,
+        "name":"Incubator (Unlimited)"
+   },
+   {
+        "id":902,
+        "name":"Incubator"
+   },
+   {
+        "id":1001,
+        "name":"Pokemon Storage Upgrade"
+   },
+   {
+        "id":1002,
+        "name":"Item Storage Upgrade"
+   }
+]
