@@ -580,6 +580,7 @@ var mapView = {
         sortButtons += '<a class="chip" href="#" data-sort="id">ID</a>';
         sortButtons += '<a class="chip" href="#" data-sort="candy">Candy</a>';
         sortButtons += '<a class="chip" href="#" data-sort="time">Time</a>';
+        sortButtons += '<a class="chip" href="#" data-sort="lvl">Level</a>';
         sortButtons += '</div>';
         $('#sortButtons').html(sortButtons);
         
@@ -964,6 +965,13 @@ var mapView = {
         sortedPokemon.sort(function(a, b) {
           if (a.creation_time > b.creation_time) return -1;
           if (a.creation_time < b.creation_time) return 1;
+          return 0;
+        });
+        break;
+      case 'lvl':
+        sortedPokemon.sort(function(a, b) {
+          if (a.lvl > b.lvl) return -1;
+          if (a.lvl < b.lvl) return 1;
           return 0;
         });
         break;
