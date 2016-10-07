@@ -134,41 +134,11 @@ var moveTypes = {
 
 $(document).ready(function() {
   mapView.initSettings();
-  var retry_time = 30,
-  retry_id;
+  var retry_id;
   for (var i = 0; i < mapView.settings.users.length; i++) {
     if (mapView.settings.users[i].enable && mapView.settings.users[i].enableSocket) {
       retry_id = i;
-      socket_io[i] = io.connect(mapView.settings.users[i].socketAddress, {
-        'reconnectionAttempts': 5
-      });
-
-      socket_io[i].on('connect', function(event) {
-        var thisSocket = this;
-        mapView.log({
-          message: "<span style='color: green;'><b>Connected to '" + thisSocket.io.uri + "'...</b></span>",
-          timeout: 3000
-        });
-      });
-
-      socket_io[i].on('disconnect', function(event) {
-        var thisSocket = this;
-        mapView.log({
-          message: "<span style='color: red;'><b>Disconnected from '" + thisSocket.io.uri + "'... Trying to reconnect, please wait...</b></span>",
-          timeout: 3000
-        });
-      });
-
-      socket_io[i].on('reconnect_failed', function(event) {
-        var thisSocket = this;
-        mapView.log({
-          message: "<span style='color: red;'><b>Connecting to '" + thisSocket.io.uri + "' failed. Retrying after " + retry_time + " seconds.</b></span>",
-          timeout: 3000
-        });
-        setTimeout(function() {
-          mapView.reconnectSocket(thisSocket);
-        }, retry_time * 1000);
-      });
+      mapView.initSockets(i);
     }
   }
 
@@ -230,46 +200,9 @@ var mapView = {
   logCount: 0,
   init: function() {
     var self = this;
-    var prevMsg = '';
-    var timeOut = 5000;
-    var bgColor = '';
-    var logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full|buddy_next_reward|buddy_candy_earned|buddy_pokemon|buddy_update|buddy_reward|buddy_walked)/;
     //self.settings = $.extend(true, self.settings, userInfo);
     self.bindUi();
 
-    for (var k in events){
-      if (events.hasOwnProperty(k)) {
-        //let renk = events[k];
-        for (var i = 0; i < self.settings.users.length; i++) {
-          if (typeof socket_io[i] !== 'undefined') {
-            socket_io[i].on(k+':'+self.settings.users[i].username, function (data) {
-              //console.log(data);
-              if (data['event'] == 'log_stats') {
-                $("div").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
-              }
-              if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
-                var renk = events[data['event']];
-                if (logThis.test(data['event'])) {
-                  if (data['event'] == 'vip_pokemon') {
-                    timeOut = 8000;
-                  }
-
-                  bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
-                  var thisBot = $("div").find("[data-bot-id='" + data['account'] + "']").html();
-                  self.log({
-                    message: "<span style='color: " + renk + "'>[ <b>" + thisBot + "</b> ] " + data['data']['msg'] + "</span>",
-                    timeout: timeOut,
-                    bgcolor: bgColor
-                  });
-                }
-                //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
-                prevMsg = data['data']['msg'];
-              }
-            });
-          }
-        }
-      }
-    }
     $.getScript('https://maps.googleapis.com/maps/api/js?key={0}&libraries=drawing'.format(self.settings.gMapsAPIKey), function() {
         self.log({
           message: 'Loading Data..'
@@ -420,6 +353,26 @@ var mapView = {
       $(item).siblings().removeClass('selected bot-' + userId);
       self.sortAndShowPokedex(userId);
     });
+
+    // Binding toggle for socket connections
+    $('body').on('click', '.toggle-connection', function() {
+      var item = $(this),
+      user_index = item.val();
+
+      self.settings.users[user_index].enableSocket = item.is(':checked');
+
+      if (self.settings.users[user_index].enableSocket) {
+        if (typeof socket_io[user_index] === 'undefined') {
+          self.initSockets(user_index);
+        } else {
+          socket_io[user_index].connect();
+        }
+      } else {
+        if (typeof socket_io[user_index] !== 'undefined') {
+          socket_io[user_index].disconnect();
+        }
+      }
+    });
   },
   initMap: function() {
     var self = this;
@@ -439,6 +392,77 @@ var mapView = {
   initSettings: function() {
     var self = mapView;
     self.settings = $.extend(true, self.settings, userInfo);
+  },
+  initSockets: function(user_index) {
+    var self = mapView,
+    retry_time = 30,
+    prevMsg = '',
+    timeOut = 5000,
+    bgColor = '',
+    logThis = /(egg_hatched|pokemon_appeared|pokemon_caught|pokemon_fled|pokemon_vanished|vip_pokemon|level_up|bot_sleep|show_best_pokemon|show_inventory|no_pokeballs|bot_sleep|bot_random_pause|api_error|pokemon_release|future_pokemon_release|bot_random_alive_pause|next_egg_incubates|spun_pokestop|path_lap_end|gained_candy|used_lucky_egg|lured_pokemon_found|softban|pokemon_inventory_full|inventory_full|buddy_next_reward|buddy_candy_earned|buddy_pokemon|buddy_update|buddy_reward|buddy_walked)/;
+
+    socket_io[user_index] = io.connect(self.settings.users[user_index].socketAddress, {
+      'reconnectionAttempts': 5
+    });
+
+    socket_io[user_index].on('connect', function(event) {
+      var thisSocket = this;
+      self.log({
+        message: "<span style='color: green;'><b>Connected to '" + thisSocket.io.uri + "'...</b></span>",
+        timeout: 3000
+      });
+    });
+
+    socket_io[user_index].on('disconnect', function(event) {
+      var thisSocket = this;
+      self.log({
+        message: "<span style='color: red;'><b>Disconnected from '" + thisSocket.io.uri + "'... Trying to reconnect, please wait...</b></span>",
+        timeout: 3000
+      });
+    });
+
+    socket_io[user_index].on('reconnect_failed', function(event) {
+      var thisSocket = this;
+      self.log({
+        message: "<span style='color: red;'><b>Connecting to '" + thisSocket.io.uri + "' failed. Retrying after " + retry_time + " seconds.</b></span>",
+        timeout: 3000
+      });
+      setTimeout(function() {
+        self.reconnectSocket(thisSocket);
+      }, retry_time * 1000);
+    });
+
+    for (var k in events){
+      if (events.hasOwnProperty(k)) {
+        //let renk = events[k];
+        if (typeof socket_io[user_index] !== 'undefined') {
+          socket_io[user_index].on(k+':'+self.settings.users[user_index].username, function (data) {
+            //console.log(data);
+            if (data['event'] == 'log_stats') {
+              $("div.bot-name").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
+            }
+            if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
+              var renk = events[data['event']];
+              if (logThis.test(data['event'])) {
+                if (data['event'] == 'vip_pokemon') {
+                  timeOut = 8000;
+                }
+
+                bgColor = (/(yellow|cyan|white)/.test(renk)) ? '#323232' : '#dedede';
+                var thisBot = $("div.bot-name").find("[data-bot-id='" + data['account'] + "']").html();
+                self.log({
+                  message: "<span style='color: " + renk + "'>[ <b>" + thisBot + "</b> ] " + data['data']['msg'] + "</span>",
+                  timeout: timeOut,
+                  bgcolor: bgColor
+                });
+              }
+              //Materialize.toast("<span style='color: " + renk + "'>" + data['data']['msg'] + "</span>", 8000);
+              prevMsg = data['data']['msg'];
+            }
+          });
+        }
+      }
+    }
   },
   addCatchable: function() {
     var self = mapView;
@@ -463,7 +487,7 @@ var mapView = {
     switch (menu) {
       case 1:
         var current_user_stats = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats;
-        $('#subtitle').html($("div").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
+        $('#subtitle').html($("div.bot-name").find("[data-bot-id='" + self.settings.users[user_id].username + "']").html());
         $('#sortButtons').html('');
         $('#filterButtons').html('');
 
@@ -597,8 +621,13 @@ var mapView = {
 
     for (var i = 0; i < users.length; i++) {
       if (users[i].enable) {
+        var socketEnabled = (users[i].enableSocket) ? ' checked' : '';
         var content = '<li class="bot-user">\
-                      <div class="collapsible-header bot-name" data-bot-id="{0}">{0}</div>\
+                      <div class="collapsible-header bot-name">\
+                      <span class="right tooltipped" data-position="bottom" data-tooltip="Enable/disable web socket connection">\
+                      <input class="toggle-connection" type="checkbox" id="check_{1}" value="{1}"' + socketEnabled + ' />\
+                      <label for="check_{1}" style="padding-left: 15px; margin-left: 5px;">&nbsp</label></span>\
+                      <span data-bot-id="{0}">{0}</span></div>\
                       <div class="collapsible-body">\
                       <ul class="bot-items" data-user-id="{1}">\
                       <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
@@ -615,6 +644,7 @@ var mapView = {
     out += "</ul></div>";
     $('#trainers').html(out);
     $('.collapsible').collapsible();
+    $('.tooltipped').tooltip({delay: 50, html: true});
   },
   catchSuccess: function(data, user_index) {
     var self = mapView,
@@ -847,8 +877,10 @@ var mapView = {
       pkmUID = pokemonData.id,
       pkmHP = pokemonData.stamina || 0,
       pkmMHP = pokemonData.stamina_max || 0,
-      pkmCPMultiplier = pokemonData.cp_multiplier;
+      pkmCPMultiplier = pokemonData.cp_multiplier,
+      pkmFavorite = pokemonData.favorite || 0;
 
+      var pkmDateCaptured = new Date(pokemonData.creation_time_ms);
       var pkmTypeI = self.pokemonArray[pkmID - 1].TypeI[0],
       pkmTypeII = '';
       if (typeof self.pokemonArray[pkmID - 1].TypeII !== 'undefined') {
@@ -883,7 +915,9 @@ var mapView = {
         "move2": move2ID,
         "type1": pkmTypeI,
         "type2": pkmTypeII,
-        "weakness": pkmWeakness
+        "weakness": pkmWeakness,
+        "favorite": pkmFavorite,
+        "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY#" )
       });
     }
     switch ($(".pokemon-sort a.selected").data("sort")) {
@@ -959,7 +993,8 @@ var mapView = {
         pkmnTypeI = sortedPokemon[i].type1,
         pkmnTypeII = sortedPokemon[i].type2,
         pkmnWeakness = sortedPokemon[i].weakness,
-        candyNum = self.getCandy(pkmnNum, user_id);
+        candyNum = self.getCandy(pkmnNum, user_id),
+        pkmnDateCaptured = sortedPokemon[i].date_captured;
 
       var outWeakness = '<b>Weaknesses:</b><br>',
         newLine = '';
@@ -967,8 +1002,12 @@ var mapView = {
         outWeakness += self.getType(pkmnWeakness[x]) + newLine;
       }
 
-      out += '<div class="col s12 m6 l3 center" data-uniqueid="'+pkmnUnique+'"><img src="image/pokemon/' +
-        pkmnImage + '" class="png_img"></br><span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
+      out += '<div class="col s12 m6 l3 center" data-uniqueid="'+pkmnUnique+'" style="position: relative;">';
+      if (sortedPokemon[i].favorite) {
+        out += '<span class="favorite"><img src="image/trainer/favorite.png"></span>';
+      }
+      out += '<img src="image/pokemon/' + pkmnImage + '" class="png_img"></br>' +
+        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
         pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b></span>' +
         '<br>' + self.getType(pkmnTypeI);
         if (pkmnTypeII != '') {
@@ -994,6 +1033,7 @@ var mapView = {
         '<br/><b>IV: </b>' + (pkmnIV >= 0.8 ? '<span style="color: #039be5">' + pkmnIV + '</span>' : pkmnIV) +
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
+        '<br><b>Date Captured: </b>' + pkmnDateCaptured +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
         '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move1ID].type) + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage;
       if (move1STAB != '') {
@@ -1342,3 +1382,23 @@ if (!String.prototype.format) {
     });
   };
 }
+
+Date.prototype.customFormat = function(formatString){
+  var YYYY,YY,MMMM,MMM,MM,M,DDDD,DDD,DD,D,hhhh,hhh,hh,h,mm,m,ss,s,ampm,AMPM,dMod,th;
+  YY = ((YYYY=this.getFullYear())+"").slice(-2);
+  MM = (M=this.getMonth()+1)<10?('0'+M):M;
+  MMM = (MMMM=["January","February","March","April","May","June","July","August","September","October","November","December"][M-1]).substring(0,3);
+  DD = (D=this.getDate())<10?('0'+D):D;
+  DDD = (DDDD=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][this.getDay()]).substring(0,3);
+  th=(D>=10&&D<=20)?'th':((dMod=D%10)==1)?'st':(dMod==2)?'nd':(dMod==3)?'rd':'th';
+  formatString = formatString.replace("#YYYY#",YYYY).replace("#YY#",YY).replace("#MMMM#",MMMM).replace("#MMM#",MMM).replace("#MM#",MM).replace("#M#",M).replace("#DDDD#",DDDD).replace("#DDD#",DDD).replace("#DD#",DD).replace("#D#",D).replace("#th#",th);
+  h=(hhh=this.getHours());
+  if (h==0) h=24;
+  if (h>12) h-=12;
+  hh = h<10?('0'+h):h;
+  hhhh = hhh<10?('0'+hhh):hhh;
+  AMPM=(ampm=hhh<12?'am':'pm').toUpperCase();
+  mm=(m=this.getMinutes())<10?('0'+m):m;
+  ss=(s=this.getSeconds())<10?('0'+s):s;
+  return formatString.replace("#hhhh#",hhhh).replace("#hhh#",hhh).replace("#hh#",hh).replace("#h#",h).replace("#mm#",mm).replace("#m#",m).replace("#ss#",ss).replace("#s#",s).replace("#ampm#",ampm).replace("#AMPM#",AMPM);
+};
