@@ -570,7 +570,7 @@ var mapView = {
         self.sortAndShowBagItems(user_id);
         break;
       case 3:
-        var pkmnTotal = self.user_data[self.settings.users[user_id].username].bagPokemon.length;
+        var pkmnTotal = self.filter(self.user_data[self.settings.users[user_id].username].bagPokemon, 'pokemon').length;
         $('#subtitle').html(pkmnTotal + " Pokemon");
 
         var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort : ';
@@ -716,8 +716,14 @@ var mapView = {
   filter: function(arr, search) {
     var filtered = [];
     for (var i = 0; i < arr.length; i++) {
-      if (arr[i].inventory_item_data[search] != undefined) {
-        filtered.push(arr[i]);
+      if (search === 'pokemon'){
+        if (!arr[i].inventory_item_data.pokemon_data.is_egg) {
+          filtered.push(arr[i]);
+        }
+      } else {
+        if (arr[i].inventory_item_data[search] != undefined) {
+          filtered.push(arr[i]);
+        }
       }
     }
     return filtered;
@@ -1125,12 +1131,10 @@ var mapView = {
     out = '<div class="items"><div class="row">';
     for (var i = 0; i < user.pokedex.length; i++) {
       var pokedex_entry = user.pokedex[i].inventory_item_data.pokedex_entry,
-        pkmID = pokedex_entry.pokemon_id,
-        pkmEnc = pokedex_entry.times_encountered,
-        pkmCap = pokedex_entry.times_captured;
+        pkmID = pokedex_entry.pokemon_id;
 
-      sortedPokedex[pkmID-1].cap = pkmCap;
-      sortedPokedex[pkmID-1].enc = pkmEnc;
+      sortedPokedex[pkmID-1].cap = pokedex_entry.times_captured || 0;
+      sortedPokedex[pkmID-1].enc = pokedex_entry.times_encountered || 0;
     }
     switch ($(".pokedex-sort a.selected").data("sort")) {
       case 'id':
@@ -1162,8 +1166,8 @@ var mapView = {
         break;
     }
     var filtered = 0,
-    filter = $(".pokedex-filter a.selected").data("filter"),
-    pkmnTotal = 151;
+      filter = $(".pokedex-filter a.selected").data("filter"),
+      pkmnTotal = 151;
     if ($(".pokedex-filter a.selected").length === 0){
         pkmnTotal = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats.unique_pokedex_entries;
     }
