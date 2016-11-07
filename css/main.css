@@ -19,7 +19,7 @@ html, body {
   left: 50%;
   top: 10px;
   transform: translate(-50%, 0);
-  width: 50%;
+  width: 60%;
   z-index: 6;
   display: none;
 }
