@@ -570,7 +570,7 @@ var mapView = {
         self.sortAndShowBagItems(user_id);
         break;
       case 3:
-        var pkmnTotal = self.filter(self.user_data[self.settings.users[user_id].username].bagPokemon, 'pokemon').length;
+        var pkmnTotal = self.user_data[self.settings.users[user_id].username].bagPokemon.length;
         $('#subtitle').html(pkmnTotal + " Pokemon");
 
         var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort : ';
