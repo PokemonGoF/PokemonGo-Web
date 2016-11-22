@@ -51,7 +51,7 @@ var events = {
   path_lap_end:                      'green',
   pokemon_appeared:                  'yellow',
   pokemon_capture_failed:            'red',
-  pokemon_caught:                    'blue',
+  pokemon_caught:                    'lightblue',
   pokemon_evolved:                   'green',
   pokemon_fled:                      'red',
   pokemon_inventory_full:            'red',
