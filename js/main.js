@@ -924,7 +924,7 @@ var mapView = {
         "type2": pkmTypeII,
         "weakness": pkmWeakness,
         "favorite": pkmFavorite,
-        "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY#" )
+        "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY# #hh#:#mm#" )
       });
     }
     switch ($(".pokemon-sort a.selected").data("sort")) {
@@ -1047,7 +1047,7 @@ var mapView = {
         '<br/><b>IV: </b>' + (pkmnIV >= 0.8 ? '<span style="color: #039be5">' + pkmnIV + '</span>' : pkmnIV) +
         '<br/><b>A/D/S: </b>' + pkmnIVA + '/' + pkmnIVD + '/' + pkmnIVS +
         '<br><b>Candy: </b>' + candyNum +
-        '<br><b>Date Captured: </b>' + pkmnDateCaptured +
+        '<br>' + pkmnDateCaptured +
         '<br><span style="background-color: #dadada; display: block; margin: 0 5px 5px; padding-bottom: 2px;"><b>Moves:</b><br>' +
         '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-position="right" data-tooltip="<b>Type:</b> ' + self.getType(self.moveList[move1ID].type) + '<br><b>Damage:</b> ' + self.moveList[move1ID].damage;
       if (move1STAB != '') {
