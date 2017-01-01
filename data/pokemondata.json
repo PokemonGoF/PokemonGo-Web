@@ -1326,7 +1326,7 @@
     },
     {
         "Number":  "029",
-        "Name":  "Nidoran",
+        "Name":  "Nidoran F",
         "Classification":  "Poison Pin Pokemon",
         "Weaknesses":  [
                            "Ground",
@@ -1404,7 +1404,7 @@
         "Previous evolution(s)":  [
                                       {
                                           "Number":  "029",
-                                          "Name":  "Nidoran"
+                                          "Name":  "Nidoran F"
                                       }
                                   ],
         "Special Attack(s)":  [
@@ -1445,7 +1445,7 @@
         "Previous evolution(s)":  [
                                       {
                                           "Number":  "029",
-                                          "Name":  "Nidoran"
+                                          "Name":  "Nidoran F"
                                       },
                                       {
                                           "Number":  "030",
@@ -1472,7 +1472,7 @@
     },
     {
         "Number":  "032",
-        "Name":  "Nidoran",
+        "Name":  "Nidoran M",
         "Classification":  "Poison Pin Pokemon",
         "Weaknesses":  [
                            "Ground",
@@ -1550,7 +1550,7 @@
         "Previous evolution(s)":  [
                                       {
                                           "Number":  "032",
-                                          "Name":  "Nidoran"
+                                          "Name":  "Nidoran M"
                                       }
                                   ],
         "Special Attack(s)":  [
@@ -1591,7 +1591,7 @@
         "Previous evolution(s)":  [
                                       {
                                           "Number":  "032",
-                                          "Name":  "Nidoran"
+                                          "Name":  "Nidoran M"
                                       },
                                       {
                                           "Number":  "033",
@@ -4920,8 +4920,8 @@
         "Weight":  "49.8 kg",
         "Height":  "1.5 m",
         "Candy":  {
-                      "Name":  "Tyrogue candies",
-                      "FamilyID":  236
+                      "Name":  "Hitmonlee candies",
+                      "FamilyID":  106
                   },
         "Previous evolution(s)":  [
                                       {
@@ -4960,8 +4960,8 @@
         "Weight":  "50.2 kg",
         "Height":  "1.4 m",
         "Candy":  {
-                      "Name":  "Tyrogue candies",
-                      "FamilyID":  236
+                      "Name":  "Hitmonlee candies",
+                      "FamilyID":  107
                   },
         "Previous evolution(s)":  [
                                       {
@@ -9936,8 +9936,8 @@
         "Weight":  "48.0 kg",
         "Height":  "1.4 m",
         "Candy":  {
-                      "Name":  "Tyrogue candies",
-                      "FamilyID":  236
+                      "Name":  "Hitmontop candies",
+                      "FamilyID":  237
                   },
         "Previous evolution(s)":  [
                                       {
