@@ -590,7 +590,7 @@ var mapView = {
         break;
       case 4:
         var pkmnTotal = self.user_data[self.settings.users[user_id].username].pokedex.length;
-        $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 151');
+        $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 251');
 
         var sortButtons = '<div class="pokedex-sort chips" data-user-id="' + user_id + '">Sort: ';
         sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="id">ID</a>';
@@ -1167,7 +1167,7 @@ var mapView = {
     }
     var filtered = 0,
       filter = $(".pokedex-filter a.selected").data("filter"),
-      pkmnTotal = 151;
+      pkmnTotal = 251;
     if ($(".pokedex-filter a.selected").length === 0){
         pkmnTotal = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats.unique_pokedex_entries;
     }
@@ -1207,7 +1207,7 @@ var mapView = {
       return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
     });
     $('#subcontent').html(out);
-    $('#subtitle').html('Pokedex ' + (pkmnTotal - filtered) + ' / 151');
+    $('#subtitle').html('Pokedex ' + (pkmnTotal - filtered) + ' / 251');
   },
   trainerFunc: function(data, user_index) {
     var self = mapView,
