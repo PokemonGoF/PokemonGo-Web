@@ -105,11 +105,11 @@
    },
    {
         "id":901,
-        "name":"Incubator (Unlimited)"
+        "name":"Incubator Basic (Unlimited)"
    },
    {
         "id":902,
-        "name":"Incubator"
+        "name":"Incubator Basic"
    },
    {
         "id":1001,
@@ -117,6 +117,21 @@
    },
    {
         "id":1002,
-        "name":"Item Storage Upgrade"
+        "name":"Storage Upgrade"
+   },
+   {    "id":1101,
+        "name":"Sun Stone",
+   },
+   {    "id":1102,
+        "name":"Kings Rock",
+   },
+   {    "id":1103,
+        "name":"Metal Coat",
+   },
+   {    "id":1104,
+        "name":"Dragon Scale",
+   },
+   {    "id":1105,
+        "name":"Upgrade",
    }
 ]
