@@ -7540,7 +7540,7 @@
     "BaseAttack": 139,
     "BaseDefense": 191,
     "BaseStamina": 110,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.05,
     "FleeRate": 0.05,
     "BuddyDistanceNeeded": 3
   },
