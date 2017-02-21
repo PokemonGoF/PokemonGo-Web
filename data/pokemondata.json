@@ -16,6 +16,7 @@
       "Vine Whip",
       "Tackle"
     ],
+    "Weight": "6,9 kg",
     "Height": "0,7 m",
     "Candy": {
       "Name": "Bulbasaur candies",
@@ -65,6 +66,7 @@
       "Razor Leaf",
       "Vine Whip"
     ],
+    "Weight": "13 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Bulbasaur candies",
@@ -116,6 +118,7 @@
       "Razor Leaf",
       "Vine Whip"
     ],
+    "Weight": "100 kg",
     "Height": "2 m",
     "Candy": {
       "Name": "Bulbasaur candies",
@@ -157,6 +160,7 @@
       "Ember",
       "Scratch"
     ],
+    "Weight": "8,5 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Charmander candies",
@@ -204,6 +208,7 @@
       "Fire Fang",
       "Scratch"
     ],
+    "Weight": "19 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Charmander candies",
@@ -257,6 +262,7 @@
       "Ember",
       "Wing Attack"
     ],
+    "Weight": "90,5 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Charmander candies",
@@ -299,6 +305,7 @@
       "Bubble",
       "Tackle"
     ],
+    "Weight": "9 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Squirtle candies",
@@ -345,6 +352,7 @@
       "Water Gun",
       "Bite"
     ],
+    "Weight": "22,5 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Squirtle candies",
@@ -393,6 +401,7 @@
       "Water Gun",
       "Bite"
     ],
+    "Weight": "85,5 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Squirtle candies",
@@ -434,6 +443,7 @@
       "Bug Bite",
       "Tackle"
     ],
+    "Weight": "2,9 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Caterpie candies",
@@ -478,6 +488,7 @@
       "Bug Bite",
       "Tackle"
     ],
+    "Weight": "9,9 kg",
     "Height": "0,7 m",
     "Candy": {
       "Name": "Caterpie candies",
@@ -528,6 +539,7 @@
       "Confusion",
       "Bug Bite"
     ],
+    "Weight": "32 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Caterpie candies",
@@ -572,6 +584,7 @@
       "Bug Bite",
       "Poison Sting"
     ],
+    "Weight": "3,2 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Weedle candies",
@@ -619,6 +632,7 @@
       "Bug Bite",
       "Poison Sting"
     ],
+    "Weight": "10 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Weedle candies",
@@ -669,6 +683,7 @@
       "Poison Jab",
       "Bug Bite"
     ],
+    "Weight": "29,5 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Weedle candies",
@@ -713,6 +728,7 @@
       "Quick Attack",
       "Tackle"
     ],
+    "Weight": "1,8 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Pidgey candies",
@@ -762,6 +778,7 @@
       "Wing Attack",
       "Steel Wing"
     ],
+    "Weight": "30 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Pidgey candies",
@@ -814,6 +831,7 @@
       "Steel Wing",
       "Wing Attack"
     ],
+    "Weight": "39,5 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Pidgey candies",
@@ -856,6 +874,7 @@
       "Tackle",
       "Quick Attack"
     ],
+    "Weight": "3,5 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Rattata candies",
@@ -898,6 +917,7 @@
       "Bite",
       "Quick Attack"
     ],
+    "Weight": "18,5 kg",
     "Height": "0,7 m",
     "Candy": {
       "Name": "Rattata candies",
@@ -938,6 +958,7 @@
       "Peck",
       "Quick Attack"
     ],
+    "Weight": "2 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Spearow candies",
@@ -984,6 +1005,7 @@
       "Peck",
       "Steel Wing"
     ],
+    "Weight": "38 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Spearow candies",
@@ -1022,6 +1044,7 @@
       "Poison Sting",
       "Acid"
     ],
+    "Weight": "6,9 kg",
     "Height": "2 m",
     "Candy": {
       "Name": "Ekans candies",
@@ -1065,6 +1088,7 @@
       "Bite",
       "Acid"
     ],
+    "Weight": "65 kg",
     "Height": "3,5 m",
     "Candy": {
       "Name": "Ekans candies",
@@ -1102,6 +1126,7 @@
       "Thunder Shock",
       "Quick Attack"
     ],
+    "Weight": "6 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Pikachu candies",
@@ -1152,6 +1177,7 @@
       "Spark",
       "Thunder Shock"
     ],
+    "Weight": "30 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Pikachu candies",
@@ -1194,6 +1220,7 @@
       "Scratch",
       "Mud Shot"
     ],
+    "Weight": "12 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Sandshrew candies",
@@ -1237,6 +1264,7 @@
       "Metal Claw",
       "Mud Shot"
     ],
+    "Weight": "29,5 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Sandshrew candies",
@@ -1274,6 +1302,7 @@
       "Bite",
       "Poison Sting"
     ],
+    "Weight": "7 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Nidoran F candies",
@@ -1320,6 +1349,7 @@
       "Bite",
       "Poison Sting"
     ],
+    "Weight": "20 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Nidoran F candies",
@@ -1371,6 +1401,7 @@
       "Poison Jab",
       "Bite"
     ],
+    "Weight": "60 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Nidoran F candies",
@@ -1412,6 +1443,7 @@
       "Peck",
       "Poison Sting"
     ],
+    "Weight": "9 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Nidoran M candies",
@@ -1458,6 +1490,7 @@
       "Poison Jab",
       "Poison Sting"
     ],
+    "Weight": "19,5 kg",
     "Height": "0,9 m",
     "Candy": {
       "Name": "Nidoran M candies",
@@ -1510,6 +1543,7 @@
       "Iron Tail",
       "Fury Cutter"
     ],
+    "Weight": "62 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Nidoran M candies",
@@ -1551,6 +1585,7 @@
       "Pound",
       "Zen Headbutt"
     ],
+    "Weight": "7,5 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Clefairy candies",
@@ -1600,6 +1635,7 @@
       "Zen Headbutt",
       "Pound"
     ],
+    "Weight": "40 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Clefairy candies",
@@ -1641,6 +1677,7 @@
       "Quick Attack",
       "Ember"
     ],
+    "Weight": "9,9 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Vulpix candies",
@@ -1684,6 +1721,7 @@
       "Fire Spin",
       "Ember"
     ],
+    "Weight": "19,9 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Vulpix candies",
@@ -1726,6 +1764,7 @@
       "Pound",
       "Feint Attack"
     ],
+    "Weight": "5,5 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Jigglypuff candies",
@@ -1779,6 +1818,7 @@
       "Pound",
       "Feint Attack"
     ],
+    "Weight": "12 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Jigglypuff candies",
@@ -1823,6 +1863,7 @@
       "Quick Attack",
       "Bite"
     ],
+    "Weight": "7,5 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Zubat candies",
@@ -1873,6 +1914,7 @@
       "Wing Attack",
       "Bite"
     ],
+    "Weight": "55 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Zubat candies",
@@ -1914,6 +1956,7 @@
       "Razor Leaf",
       "Acid"
     ],
+    "Weight": "5,4 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Oddish candies",
@@ -1967,6 +2010,7 @@
       "Razor Leaf",
       "Acid"
     ],
+    "Weight": "8,6 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Oddish candies",
@@ -2022,6 +2066,7 @@
       "Razor Leaf",
       "Acid"
     ],
+    "Weight": "18,6 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Oddish candies",
@@ -2066,6 +2111,7 @@
       "Scratch",
       "Bug Bite"
     ],
+    "Weight": "5,4 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Paras candies",
@@ -2112,6 +2158,7 @@
       "Fury Cutter",
       "Bug Bite"
     ],
+    "Weight": "29,5 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Paras candies",
@@ -2152,6 +2199,7 @@
       "Bug Bite",
       "Confusion"
     ],
+    "Weight": "30 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Venonat candies",
@@ -2198,6 +2246,7 @@
       "Confusion",
       "Bug Bite"
     ],
+    "Weight": "12,5 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Venonat candies",
@@ -2236,6 +2285,7 @@
       "Mud Slap",
       "Scratch"
     ],
+    "Weight": "0,8 kg",
     "Height": "0,2 m",
     "Candy": {
       "Name": "Diglett candies",
@@ -2279,6 +2329,7 @@
       "Mud Slap",
       "Mud Shot"
     ],
+    "Weight": "33,3 kg",
     "Height": "0,7 m",
     "Candy": {
       "Name": "Diglett candies",
@@ -2316,6 +2367,7 @@
       "Scratch",
       "Bite"
     ],
+    "Weight": "4,2 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Meowth candies",
@@ -2359,6 +2411,7 @@
       "Scratch",
       "Feint Attack"
     ],
+    "Weight": "32 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Meowth candies",
@@ -2397,6 +2450,7 @@
       "Water Gun",
       "Zen Headbutt"
     ],
+    "Weight": "19,6 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Psyduck candies",
@@ -2439,6 +2493,7 @@
       "Water Gun",
       "Confusion"
     ],
+    "Weight": "76,6 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Psyduck candies",
@@ -2476,6 +2531,7 @@
       "Karate Chop",
       "Scratch"
     ],
+    "Weight": "28 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Mankey candies",
@@ -2519,6 +2575,7 @@
       "Counter",
       "Karate Chop"
     ],
+    "Weight": "32 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Mankey candies",
@@ -2557,6 +2614,7 @@
       "Ember",
       "Bite"
     ],
+    "Weight": "19 kg",
     "Height": "0,7 m",
     "Candy": {
       "Name": "Growlithe candies",
@@ -2600,6 +2658,7 @@
       "Snarl",
       "Bite"
     ],
+    "Weight": "155 kg",
     "Height": "1,9 m",
     "Candy": {
       "Name": "Growlithe candies",
@@ -2639,6 +2698,7 @@
       "Bubble",
       "Mud Shot"
     ],
+    "Weight": "12,4 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Poliwag candies",
@@ -2689,6 +2749,7 @@
       "Bubble",
       "Mud Shot"
     ],
+    "Weight": "20 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Poliwag candies",
@@ -2746,6 +2807,7 @@
       "Rock Smash",
       "Mud Shot"
     ],
+    "Weight": "54 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Poliwag candies",
@@ -2788,6 +2850,7 @@
       "Zen Headbutt",
       "Charge Beam"
     ],
+    "Weight": "19,5 kg",
     "Height": "0,9 m",
     "Candy": {
       "Name": "Abra candies",
@@ -2834,6 +2897,7 @@
       "Psycho Cut",
       "Confusion"
     ],
+    "Weight": "56,5 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Abra candies",
@@ -2882,6 +2946,7 @@
       "Psycho Cut",
       "Confusion"
     ],
+    "Weight": "48 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Abra candies",
@@ -2926,6 +2991,7 @@
       "Karate Chop",
       "Low Kick"
     ],
+    "Weight": "19,5 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Machop candies",
@@ -2972,6 +3038,7 @@
       "Low Kick",
       "Karate Chop"
     ],
+    "Weight": "70,5 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Machop candies",
@@ -3022,6 +3089,7 @@
       "Counter",
       "Karate Chop"
     ],
+    "Weight": "130 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Machop candies",
@@ -3069,6 +3137,7 @@
       "Vine Whip",
       "Acid"
     ],
+    "Weight": "4 kg",
     "Height": "0,7 m",
     "Candy": {
       "Name": "Bellsprout candies",
@@ -3119,6 +3188,7 @@
       "Acid",
       "Razor Leaf"
     ],
+    "Weight": "6,4 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Bellsprout candies",
@@ -3170,6 +3240,7 @@
       "Razor Leaf",
       "Acid"
     ],
+    "Weight": "15,5 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Bellsprout candies",
@@ -3214,6 +3285,7 @@
       "Bubble",
       "Poison Sting"
     ],
+    "Weight": "45,5 kg",
     "Height": "0,9 m",
     "Candy": {
       "Name": "Tentacool candies",
@@ -3259,6 +3331,7 @@
       "Acid",
       "Poison Jab"
     ],
+    "Weight": "55 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Tentacool candies",
@@ -3299,6 +3372,7 @@
       "Rock Throw",
       "Tackle"
     ],
+    "Weight": "20 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Geodude candies",
@@ -3349,6 +3423,7 @@
       "Mud Slap",
       "Mud Shot"
     ],
+    "Weight": "105 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Geodude candies",
@@ -3403,6 +3478,7 @@
       "Mud Slap",
       "Mud Shot"
     ],
+    "Weight": "300 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Geodude candies",
@@ -3445,6 +3521,7 @@
       "Tackle",
       "Ember"
     ],
+    "Weight": "30 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Ponyta candies",
@@ -3489,6 +3566,7 @@
       "Fire Spin",
       "Ember"
     ],
+    "Weight": "95 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Ponyta candies",
@@ -3529,6 +3607,7 @@
       "Water Gun",
       "Confusion"
     ],
+    "Weight": "36 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Slowpoke candies",
@@ -3578,6 +3657,7 @@
       "Water Gun",
       "Confusion"
     ],
+    "Weight": "78,5 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Slowpoke candies",
@@ -3618,6 +3698,7 @@
       "Spark",
       "Thunder Shock"
     ],
+    "Weight": "6 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Magnemite candies",
@@ -3664,6 +3745,7 @@
       "Charge Beam",
       "Thunder Shock"
     ],
+    "Weight": "60 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Magnemite candies",
@@ -3706,6 +3788,7 @@
       "Fury Cutter",
       "Cut"
     ],
+    "Weight": "15 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Farfetchd candies",
@@ -3740,6 +3823,7 @@
       "Peck",
       "Quick Attack"
     ],
+    "Weight": "39,2 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Doduo candies",
@@ -3786,6 +3870,7 @@
       "Feint Attack",
       "Steel Wing"
     ],
+    "Weight": "85,2 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Doduo candies",
@@ -3826,6 +3911,7 @@
       "Rock Throw",
       "Water Gun"
     ],
+    "Weight": "90 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Seel candies",
@@ -3874,6 +3960,7 @@
       "Iron Tail",
       "Ice Shard"
     ],
+    "Weight": "120 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Seel candies",
@@ -3913,6 +4000,7 @@
       "Poison Jab",
       "Mud Slap"
     ],
+    "Weight": "30 kg",
     "Height": "0,9 m",
     "Candy": {
       "Name": "Grimer candies",
@@ -3957,6 +4045,7 @@
       "Lick",
       "Acid"
     ],
+    "Weight": "30 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Grimer candies",
@@ -3994,6 +4083,7 @@
       "Ice Shard",
       "Tackle"
     ],
+    "Weight": "4 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Shellder candies",
@@ -4039,6 +4129,7 @@
       "Frost Breath",
       "Ice Shard"
     ],
+    "Weight": "132,5 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Shellder candies",
@@ -4082,6 +4173,7 @@
       "Astonish",
       "Sucker Punch"
     ],
+    "Weight": "0,1 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Gastly candies",
@@ -4133,6 +4225,7 @@
       "Astonish",
       "Lick"
     ],
+    "Weight": "0,1 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Gastly candies",
@@ -4186,6 +4279,7 @@
       "Hex",
       "Shadow Claw"
     ],
+    "Weight": "40,5 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Gastly candies",
@@ -4231,6 +4325,7 @@
       "Rock Throw",
       "Tackle"
     ],
+    "Weight": "210 kg",
     "Height": "8,8 m",
     "Candy": {
       "Name": "Onix candies",
@@ -4264,6 +4359,7 @@
       "Pound",
       "Confusion"
     ],
+    "Weight": "32,4 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Drowzee candies",
@@ -4306,6 +4402,7 @@
       "Zen Headbutt",
       "Confusion"
     ],
+    "Weight": "75,6 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Drowzee candies",
@@ -4345,6 +4442,7 @@
       "Bubble",
       "Mud Shot"
     ],
+    "Weight": "6,5 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Krabby candies",
@@ -4388,6 +4486,7 @@
       "Metal Claw",
       "Mud Shot"
     ],
+    "Weight": "60 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Krabby candies",
@@ -4425,6 +4524,7 @@
       "Spark",
       "Tackle"
     ],
+    "Weight": "10,4 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Voltorb candies",
@@ -4469,6 +4569,7 @@
       "Volt Switch",
       "Tackle"
     ],
+    "Weight": "66,6 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Voltorb candies",
@@ -4509,6 +4610,7 @@
       "Confusion",
       "Bullet Seed"
     ],
+    "Weight": "2,5 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Exeggcute candies",
@@ -4556,6 +4658,7 @@
       "Confusion",
       "Zen Headbutt"
     ],
+    "Weight": "120 kg",
     "Height": "2 m",
     "Candy": {
       "Name": "Exeggcute candies",
@@ -4593,6 +4696,7 @@
       "Mud Slap",
       "Rock Smash"
     ],
+    "Weight": "6,5 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Cubone candies",
@@ -4635,6 +4739,7 @@
       "Mud Slap",
       "Rock Smash"
     ],
+    "Weight": "45 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Cubone candies",
@@ -4672,6 +4777,7 @@
       "Low Kick",
       "Rock Smash"
     ],
+    "Weight": "49,8 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Tyrogue candies",
@@ -4706,6 +4812,7 @@
       "Counter",
       "Rock Smash"
     ],
+    "Weight": "50,2 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Tyrogue candies",
@@ -4739,6 +4846,7 @@
       "Lick",
       "Zen Headbutt"
     ],
+    "Weight": "65,5 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Lickitung candies",
@@ -4770,6 +4878,7 @@
       "Tackle",
       "Infestation"
     ],
+    "Weight": "1 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Koffing candies",
@@ -4813,6 +4922,7 @@
       "Infestation",
       "Acid"
     ],
+    "Weight": "9,5 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Koffing candies",
@@ -4853,6 +4963,7 @@
       "Mud Slap",
       "Rock Smash"
     ],
+    "Weight": "115 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Rhyhorn candies",
@@ -4898,6 +5009,7 @@
       "Mud Slap",
       "Rock Smash"
     ],
+    "Weight": "120 kg",
     "Height": "1,9 m",
     "Candy": {
       "Name": "Rhyhorn candies",
@@ -4935,6 +5047,7 @@
       "Pound",
       "Zen Headbutt"
     ],
+    "Weight": "34,6 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Chansey candies",
@@ -4966,6 +5079,7 @@
       "Vine Whip",
       "Infestation"
     ],
+    "Weight": "35 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Tangela candies",
@@ -4998,6 +5112,7 @@
       "Mud Slap",
       "Low Kick"
     ],
+    "Weight": "80 kg",
     "Height": "2,2 m",
     "Candy": {
       "Name": "Kangaskhan candies",
@@ -5031,6 +5146,7 @@
       "Water Gun",
       "Bubble"
     ],
+    "Weight": "8 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Horsea candies",
@@ -5073,6 +5189,7 @@
       "Water Gun",
       "Dragon Breath"
     ],
+    "Weight": "25 kg",
     "Height": "1,2 m",
     "Candy": {
       "Name": "Horsea candies",
@@ -5111,6 +5228,7 @@
       "Peck",
       "Mud Shot"
     ],
+    "Weight": "15 kg",
     "Height": "0,6 m",
     "Candy": {
       "Name": "Goldeen candies",
@@ -5153,6 +5271,7 @@
       "Peck",
       "Poison Jab"
     ],
+    "Weight": "39 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Goldeen candies",
@@ -5193,6 +5312,7 @@
       "Water Gun",
       "Quick Attack"
     ],
+    "Weight": "34,5 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Staryu candies",
@@ -5240,6 +5360,7 @@
       "Tackle",
       "Quick Attack"
     ],
+    "Weight": "80 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Staryu candies",
@@ -5281,6 +5402,7 @@
       "Confusion",
       "Zen Headbutt"
     ],
+    "Weight": "54,5 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "MrMime candies",
@@ -5316,6 +5438,7 @@
       "Air Slash",
       "Steel Wing"
     ],
+    "Weight": "56 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Scyther candies",
@@ -5352,6 +5475,7 @@
       "Confusion",
       "Pound"
     ],
+    "Weight": "40,6 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Jynx candies",
@@ -5390,6 +5514,7 @@
       "Thunder Shock",
       "Low Kick"
     ],
+    "Weight": "30 kg",
     "Height": "1,1 m",
     "Candy": {
       "Name": "Electabuzz candies",
@@ -5427,6 +5552,7 @@
       "Ember",
       "Karate Chop"
     ],
+    "Weight": "44,5 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Magmar candies",
@@ -5465,6 +5591,7 @@
       "Bug Bite",
       "Fury Cutter"
     ],
+    "Weight": "55 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Pinsir candies",
@@ -5497,6 +5624,7 @@
       "Tackle",
       "Zen Headbutt"
     ],
+    "Weight": "88,4 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Tauros candies",
@@ -5527,6 +5655,7 @@
     "Fast Attack(s)": [
       "Splash"
     ],
+    "Weight": "10 kg",
     "Height": "0,9 m",
     "Candy": {
       "Name": "Magikarp candies",
@@ -5571,6 +5700,7 @@
       "Dragon Tail",
       "Dragon Breath"
     ],
+    "Weight": "235 kg",
     "Height": "6,5 m",
     "Candy": {
       "Name": "Magikarp candies",
@@ -5614,6 +5744,7 @@
       "Water Gun",
       "Ice Shard"
     ],
+    "Weight": "220 kg",
     "Height": "2,5 m",
     "Candy": {
       "Name": "Lapras candies",
@@ -5645,6 +5776,7 @@
     "Fast Attack(s)": [
       "Transform"
     ],
+    "Weight": "4 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Ditto candies",
@@ -5674,6 +5806,7 @@
       "Quick Attack",
       "Tackle"
     ],
+    "Weight": "6,5 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Eevee candies",
@@ -5731,6 +5864,7 @@
     "Fast Attack(s)": [
       "Water Gun"
     ],
+    "Weight": "29 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Eevee candies",
@@ -5768,6 +5902,7 @@
       "Thunder Shock",
       "Volt Switch"
     ],
+    "Weight": "24,5 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Eevee candies",
@@ -5805,6 +5940,7 @@
       "Ember",
       "Fire Spin"
     ],
+    "Weight": "25 kg",
     "Height": "0,9 m",
     "Candy": {
       "Name": "Eevee candies",
@@ -5846,6 +5982,7 @@
       "Quick Attack",
       "Zen Headbutt"
     ],
+    "Weight": "36,5 kg",
     "Height": "0,8 m",
     "Candy": {
       "Name": "Porygon candies",
@@ -5883,6 +6020,7 @@
       "Water Gun",
       "Mud Shot"
     ],
+    "Weight": "7,5 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Omanyte candies",
@@ -5931,6 +6069,7 @@
       "Water Gun",
       "Rock Throw"
     ],
+    "Weight": "35 kg",
     "Height": "1 m",
     "Candy": {
       "Name": "Omanyte candies",
@@ -5972,6 +6111,7 @@
       "Scratch",
       "Mud Shot"
     ],
+    "Weight": "11,5 kg",
     "Height": "0,5 m",
     "Candy": {
       "Name": "Kabuto candies",
@@ -6018,6 +6158,7 @@
       "Rock Smash",
       "Fury Cutter"
     ],
+    "Weight": "40,5 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Kabuto candies",
@@ -6058,6 +6199,7 @@
       "Steel Wing",
       "Bite"
     ],
+    "Weight": "59 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Aerodactyl candies",
@@ -6089,6 +6231,7 @@
       "Zen Headbutt",
       "Lick"
     ],
+    "Weight": "460 kg",
     "Height": "2,1 m",
     "Candy": {
       "Name": "Snorlax candies",
@@ -6123,6 +6266,7 @@
     "Fast Attack(s)": [
       "Frost Breath"
     ],
+    "Weight": "55,4 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Articuno candies",
@@ -6157,6 +6301,7 @@
       "Charge Beam",
       "Thunder Shock"
     ],
+    "Weight": "52,6 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Zapdos candies",
@@ -6192,6 +6337,7 @@
       "Fire Spin",
       "Ember"
     ],
+    "Weight": "60 kg",
     "Height": "2 m",
     "Candy": {
       "Name": "Moltres candies",
@@ -6224,6 +6370,7 @@
       "Dragon Breath",
       "Iron Tail"
     ],
+    "Weight": "3,3 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Dratini candies",
@@ -6270,6 +6417,7 @@
       "Dragon Breath",
       "Iron Tail"
     ],
+    "Weight": "16,5 kg",
     "Height": "4 m",
     "Candy": {
       "Name": "Dratini candies",
@@ -6322,6 +6470,7 @@
       "Steel Wing",
       "Dragon Breath"
     ],
+    "Weight": "210 kg",
     "Height": "2,2 m",
     "Candy": {
       "Name": "Dratini candies",
@@ -6365,6 +6514,7 @@
       "Psycho Cut",
       "Confusion"
     ],
+    "Weight": "122 kg",
     "Height": "2 m",
     "Candy": {
       "Name": "Mewtwo candies",
@@ -6396,6 +6546,7 @@
     "Fast Attack(s)": [
       "Pound"
     ],
+    "Weight": "4 kg",
     "Height": "0,4 m",
     "Candy": {
       "Name": "Mew candies",
@@ -6434,6 +6585,7 @@
       "Tackle",
       "Razor Leaf"
     ],
+    "Weight": "6,4 kg",
     "Height": "0,89 m",
     "Candy": {
       "Name": "Chikorita candies",
@@ -6481,6 +6633,7 @@
       "Razor Leaf",
       "Tackle"
     ],
+    "Weight": "15,8 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Chikorita candies",
@@ -6530,6 +6683,7 @@
       "Razor Leaf",
       "Vine Whip"
     ],
+    "Weight": "100,5 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Chikorita candies",
@@ -6572,6 +6726,7 @@
       "Ember",
       "Tackle"
     ],
+    "Weight": "7,9 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Cyndaquil candies",
@@ -6619,6 +6774,7 @@
       "Ember",
       "Tackle"
     ],
+    "Weight": "19 kg",
     "Height": "0,89 m",
     "Candy": {
       "Name": "Cyndaquil candies",
@@ -6668,6 +6824,7 @@
       "Ember",
       "Shadow Claw"
     ],
+    "Weight": "79,5 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Cyndaquil candies",
@@ -6710,6 +6867,7 @@
       "Water Gun",
       "Scratch"
     ],
+    "Weight": "9,5 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Totodile candies",
@@ -6757,6 +6915,7 @@
       "Water Gun",
       "Scratch"
     ],
+    "Weight": "25 kg",
     "Height": "1,09 m",
     "Candy": {
       "Name": "Totodile candies",
@@ -6806,6 +6965,7 @@
       "Water Gun",
       "Bite"
     ],
+    "Weight": "88,8 kg",
     "Height": "2,31 m",
     "Candy": {
       "Name": "Totodile candies",
@@ -6848,6 +7008,7 @@
       "Scratch",
       "Quick Attack"
     ],
+    "Weight": "6 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Sentret candies",
@@ -6891,6 +7052,7 @@
       "Quick Attack",
       "Sucker Punch"
     ],
+    "Weight": "32,5 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Sentret candies",
@@ -6933,6 +7095,7 @@
       "Peck",
       "Tackle"
     ],
+    "Weight": "21,2 kg",
     "Height": "0,71 m",
     "Candy": {
       "Name": "Hoothoot candies",
@@ -6981,6 +7144,7 @@
       "Peck",
       "Tackle"
     ],
+    "Weight": "40,8 kg",
     "Height": "1,6 m",
     "Candy": {
       "Name": "Hoothoot candies",
@@ -7022,6 +7186,7 @@
       "Tackle",
       "Bug Bite"
     ],
+    "Weight": "10,8 kg",
     "Height": "0,99 m",
     "Candy": {
       "Name": "Ledyba candies",
@@ -7069,6 +7234,7 @@
       "Bug Bite",
       "Tackle"
     ],
+    "Weight": "35,6 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Ledyba candies",
@@ -7110,6 +7276,7 @@
       "Poison Sting",
       "Bug Bite"
     ],
+    "Weight": "8,5 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Spinarak candies",
@@ -7157,6 +7324,7 @@
       "Infestation",
       "Bug Bite"
     ],
+    "Weight": "33,5 kg",
     "Height": "1,09 m",
     "Candy": {
       "Name": "Spinarak candies",
@@ -7199,6 +7367,7 @@
       "Bite",
       "Wing Attack"
     ],
+    "Weight": "75 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Zubat candies",
@@ -7244,6 +7413,7 @@
       "Bubble",
       "Spark"
     ],
+    "Weight": "12 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Chinchou candies",
@@ -7291,6 +7461,7 @@
       "Charge Beam",
       "Spark"
     ],
+    "Weight": "22,5 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Chinchou candies",
@@ -7329,6 +7500,7 @@
       "Thunder Shock",
       "Quick Attack"
     ],
+    "Weight": "2 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Pikachu candies",
@@ -7375,6 +7547,7 @@
       "Pound",
       "Zen Headbutt"
     ],
+    "Weight": "3 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Clefairy candies",
@@ -7426,6 +7599,7 @@
       "Pound",
       "Feint Attack"
     ],
+    "Weight": "1 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Jigglypuff candies",
@@ -7474,6 +7648,7 @@
       "Peck",
       "Zen Headbutt"
     ],
+    "Weight": "1,5 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Togepi candies",
@@ -7521,6 +7696,7 @@
       "Steel Wing",
       "Zen Headbutt"
     ],
+    "Weight": "3,2 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Togepi candies",
@@ -7561,6 +7737,7 @@
       "Peck",
       "Quick Attack"
     ],
+    "Weight": "2 kg",
     "Height": "0,2 m",
     "Candy": {
       "Name": "Natu candies",
@@ -7608,6 +7785,7 @@
       "Feint Attack",
       "Tackle"
     ],
+    "Weight": "15 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Natu candies",
@@ -7646,6 +7824,7 @@
       "Tackle",
       "Thunder Shock"
     ],
+    "Weight": "7,8 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Mareep candies",
@@ -7693,6 +7872,7 @@
       "Tackle",
       "Charge Beam"
     ],
+    "Weight": "13,3 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Mareep candies",
@@ -7743,6 +7923,7 @@
       "Volt Switch",
       "Tackle"
     ],
+    "Weight": "61,5 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Mareep candies",
@@ -7786,6 +7967,7 @@
       "Acid",
       "Tackle"
     ],
+    "Weight": "5,8 kg",
     "Height": "0,41 m",
     "Candy": {
       "Name": "Oddish candies",
@@ -7831,6 +8013,7 @@
       "Tackle",
       "Bubble"
     ],
+    "Weight": "8,5 kg",
     "Height": "0,41 m",
     "Candy": {
       "Name": "Marill candies",
@@ -7878,6 +8061,7 @@
       "Bubble",
       "Tackle"
     ],
+    "Weight": "28,5 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Marill candies",
@@ -7917,6 +8101,7 @@
       "Counter",
       "Tackle"
     ],
+    "Weight": "38 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Sudowoodo candies",
@@ -7950,6 +8135,7 @@
       "Bubble",
       "Tackle"
     ],
+    "Weight": "33,9 kg",
     "Height": "1,09 m",
     "Candy": {
       "Name": "Poliwag candies",
@@ -7995,6 +8181,7 @@
       "Tackle",
       "Bullet Seed"
     ],
+    "Weight": "0,5 kg",
     "Height": "0,41 m",
     "Candy": {
       "Name": "Hoppip candies",
@@ -8045,6 +8232,7 @@
       "Tackle",
       "Bullet Seed"
     ],
+    "Weight": "1 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Hoppip candies",
@@ -8098,6 +8286,7 @@
       "Bullet Seed",
       "Tackle"
     ],
+    "Weight": "3 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Hoppip candies",
@@ -8141,6 +8330,7 @@
       "Astonish",
       "Tackle"
     ],
+    "Weight": "11,5 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Aipom candies",
@@ -8174,6 +8364,7 @@
       "Cut",
       "Tackle"
     ],
+    "Weight": "1,8 kg",
     "Height": "0,3 m",
     "Candy": {
       "Name": "Sunkern candies",
@@ -8218,6 +8409,7 @@
       "Bullet Seed",
       "Tackle"
     ],
+    "Weight": "8,5 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Sunkern candies",
@@ -8260,6 +8452,7 @@
       "Wing Attack",
       "Tackle"
     ],
+    "Weight": "38 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Yanma candies",
@@ -8296,6 +8489,7 @@
       "Mud Shot",
       "Tackle"
     ],
+    "Weight": "8,5 kg",
     "Height": "0,41 m",
     "Candy": {
       "Name": "Wooper candies",
@@ -8343,6 +8537,7 @@
       "Mud Shot",
       "Tackle"
     ],
+    "Weight": "75 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Wooper candies",
@@ -8381,6 +8576,7 @@
       "Confusion",
       "Zen Headbutt"
     ],
+    "Weight": "26,5 kg",
     "Height": "0,89 m",
     "Candy": {
       "Name": "Eevee candies",
@@ -8420,6 +8616,7 @@
       "Snarl",
       "Bite"
     ],
+    "Weight": "27 kg",
     "Height": "0,99 m",
     "Candy": {
       "Name": "Eevee candies",
@@ -8461,6 +8658,7 @@
       "Feint Attack",
       "Tackle"
     ],
+    "Weight": "2,1 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Murkrow candies",
@@ -8497,6 +8695,7 @@
       "Confusion",
       "Tackle"
     ],
+    "Weight": "79,5 kg",
     "Height": "2,01 m",
     "Candy": {
       "Name": "Slowpoke candies",
@@ -8536,6 +8735,7 @@
       "Hex",
       "Tackle"
     ],
+    "Weight": "1 kg",
     "Height": "0,71 m",
     "Candy": {
       "Name": "Misdreavus candies",
@@ -8568,6 +8768,7 @@
       "Hidden Power",
       "Tackle"
     ],
+    "Weight": "5 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Unown candies",
@@ -8598,6 +8799,7 @@
       "Splash",
       "Tackle"
     ],
+    "Weight": "28,5 kg",
     "Height": "1,3 m",
     "Candy": {
       "Name": "Wobbuffet candies",
@@ -8631,6 +8833,7 @@
       "Tackle",
       "Confusion"
     ],
+    "Weight": "41,5 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Girafarig candies",
@@ -8663,6 +8866,7 @@
       "Tackle",
       "Bug Bite"
     ],
+    "Weight": "7,2 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Pineco candies",
@@ -8710,6 +8914,7 @@
       "Struggle Bug",
       "Tackle"
     ],
+    "Weight": "125,8 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Pineco candies",
@@ -8749,6 +8954,7 @@
       "Astonish",
       "Tackle"
     ],
+    "Weight": "14 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Dunsparce candies",
@@ -8785,6 +8991,7 @@
       "Wing Attack",
       "Tackle"
     ],
+    "Weight": "64,8 kg",
     "Height": "1,09 m",
     "Candy": {
       "Name": "Gligar candies",
@@ -8821,6 +9028,7 @@
       "Dragon Tail",
       "Tackle"
     ],
+    "Weight": "400 kg",
     "Height": "9,19 m",
     "Candy": {
       "Name": "Onix candies",
@@ -8859,6 +9067,7 @@
       "Tackle",
       "Bite"
     ],
+    "Weight": "7,8 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Snubbull candies",
@@ -8903,6 +9112,7 @@
       "Snarl",
       "Tackle"
     ],
+    "Weight": "48,7 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Snubbull candies",
@@ -8945,6 +9155,7 @@
       "Water Gun",
       "Tackle"
     ],
+    "Weight": "3,9 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Qwilfish candies",
@@ -8981,6 +9192,7 @@
       "Fury Cutter",
       "Tackle"
     ],
+    "Weight": "125 kg",
     "Height": "2,01 m",
     "Candy": {
       "Name": "Scyther candies",
@@ -9023,6 +9235,7 @@
       "Rock Throw",
       "Tackle"
     ],
+    "Weight": "20,5 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Shuckle candies",
@@ -9059,6 +9272,7 @@
       "Struggle Bug",
       "Tackle"
     ],
+    "Weight": "54 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Heracross candies",
@@ -9095,6 +9309,7 @@
       "Feint Attack",
       "Tackle"
     ],
+    "Weight": "28 kg",
     "Height": "0,89 m",
     "Candy": {
       "Name": "Sneasel candies",
@@ -9128,6 +9343,7 @@
       "Lick",
       "Tackle"
     ],
+    "Weight": "8,8 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Teddiursa candies",
@@ -9172,6 +9388,7 @@
       "Counter",
       "Tackle"
     ],
+    "Weight": "125,8 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Teddiursa candies",
@@ -9211,6 +9428,7 @@
       "Rock Throw",
       "Tackle"
     ],
+    "Weight": "35 kg",
     "Height": "0,71 m",
     "Candy": {
       "Name": "Slugma candies",
@@ -9258,6 +9476,7 @@
       "Rock Throw",
       "Tackle"
     ],
+    "Weight": "55 kg",
     "Height": "0,79 m",
     "Candy": {
       "Name": "Slugma candies",
@@ -9299,6 +9518,7 @@
       "Tackle",
       "Powder Snow"
     ],
+    "Weight": "6,5 kg",
     "Height": "0,41 m",
     "Candy": {
       "Name": "Swinub candies",
@@ -9346,6 +9566,7 @@
       "Powder Snow",
       "Tackle"
     ],
+    "Weight": "55,8 kg",
     "Height": "1,09 m",
     "Candy": {
       "Name": "Swinub candies",
@@ -9387,6 +9608,7 @@
       "Tackle",
       "Bubble"
     ],
+    "Weight": "5 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Corsola candies",
@@ -9420,6 +9642,7 @@
       "Mud Shot",
       "Tackle"
     ],
+    "Weight": "12 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Remoraid candies",
@@ -9464,6 +9687,7 @@
       "Mud Shot",
       "Tackle"
     ],
+    "Weight": "28,5 kg",
     "Height": "0,89 m",
     "Candy": {
       "Name": "Remoraid candies",
@@ -9506,6 +9730,7 @@
       "Quick Attack",
       "Tackle"
     ],
+    "Weight": "16 kg",
     "Height": "0,89 m",
     "Candy": {
       "Name": "Delibird candies",
@@ -9542,6 +9767,7 @@
       "Wing Attack",
       "Tackle"
     ],
+    "Weight": "220 kg",
     "Height": "2,11 m",
     "Candy": {
       "Name": "Mantine candies",
@@ -9578,6 +9804,7 @@
       "Air Slash",
       "Tackle"
     ],
+    "Weight": "50,5 kg",
     "Height": "1,7 m",
     "Candy": {
       "Name": "Skarmory candies",
@@ -9614,6 +9841,7 @@
       "Ember",
       "Tackle"
     ],
+    "Weight": "10,8 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Houndour candies",
@@ -9661,6 +9889,7 @@
       "Fire Fang",
       "Tackle"
     ],
+    "Weight": "35 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Houndour candies",
@@ -9703,6 +9932,7 @@
       "Dragon Breath",
       "Tackle"
     ],
+    "Weight": "152 kg",
     "Height": "1,8 m",
     "Candy": {
       "Name": "Horsea candies",
@@ -9735,6 +9965,7 @@
       "Tackle",
       "Rock Smash"
     ],
+    "Weight": "33,5 kg",
     "Height": "0,51 m",
     "Candy": {
       "Name": "Phanpy candies",
@@ -9778,6 +10009,7 @@
       "Tackle",
       "Counter"
     ],
+    "Weight": "120 kg",
     "Height": "1,09 m",
     "Candy": {
       "Name": "Phanpy candies",
@@ -9817,6 +10049,7 @@
       "Charge Beam",
       "Tackle"
     ],
+    "Weight": "32,5 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Porygon candies",
@@ -9855,6 +10088,7 @@
       "Tackle",
       "Zen Headbutt"
     ],
+    "Weight": "71,2 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Stantler candies",
@@ -9886,6 +10120,7 @@
     "Fast Attack(s)": [
       "Tackle"
     ],
+    "Weight": "58 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Smeargle candies",
@@ -9916,6 +10151,7 @@
       "Tackle",
       "Low Kick"
     ],
+    "Weight": "21 kg",
     "Height": "0,71 m",
     "Candy": {
       "Name": "Tyrogue candies",
@@ -9960,6 +10196,7 @@
       "Counter",
       "Tackle"
     ],
+    "Weight": "48 kg",
     "Height": "1,4 m",
     "Candy": {
       "Name": "Tyrogue candies",
@@ -10002,6 +10239,7 @@
       "Pound",
       "Frost Breath"
     ],
+    "Weight": "6 kg",
     "Height": "0,41 m",
     "Candy": {
       "Name": "Jynx candies",
@@ -10044,6 +10282,7 @@
       "Thunder Shock",
       "Low Kick"
     ],
+    "Weight": "23,5 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Electabuzz candies",
@@ -10087,6 +10326,7 @@
       "Ember",
       "Karate Chop"
     ],
+    "Weight": "21,4 kg",
     "Height": "0,71 m",
     "Candy": {
       "Name": "Magmar candies",
@@ -10130,6 +10370,7 @@
       "Tackle",
       "Zen Headbutt"
     ],
+    "Weight": "75,5 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Miltank candies",
@@ -10163,6 +10404,7 @@
       "Zen Headbutt",
       "Tackle"
     ],
+    "Weight": "46,8 kg",
     "Height": "1,5 m",
     "Candy": {
       "Name": "Chansey candies",
@@ -10202,6 +10444,7 @@
       "Volt Switch",
       "Tackle"
     ],
+    "Weight": "178 kg",
     "Height": "1,91 m",
     "Candy": {
       "Name": "Raikou candies",
@@ -10235,6 +10478,7 @@
       "Fire Fang",
       "Tackle"
     ],
+    "Weight": "198 kg",
     "Height": "2,11 m",
     "Candy": {
       "Name": "Entei candies",
@@ -10268,6 +10512,7 @@
       "Snarl",
       "Tackle"
     ],
+    "Weight": "187 kg",
     "Height": "2,01 m",
     "Candy": {
       "Name": "Suicune candies",
@@ -10304,6 +10549,7 @@
       "Rock Smash",
       "Tackle"
     ],
+    "Weight": "72 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Larvitar candies",
@@ -10355,6 +10601,7 @@
       "Rock Smash",
       "Tackle"
     ],
+    "Weight": "152 kg",
     "Height": "1,19 m",
     "Candy": {
       "Name": "Larvitar candies",
@@ -10408,6 +10655,7 @@
       "Iron Tail",
       "Tackle"
     ],
+    "Weight": "202 kg",
     "Height": "2,01 m",
     "Candy": {
       "Name": "Larvitar candies",
@@ -10454,6 +10702,7 @@
       "Dragon Tail",
       "Tackle"
     ],
+    "Weight": "216 kg",
     "Height": "5,21 m",
     "Candy": {
       "Name": "Lugia candies",
@@ -10490,6 +10739,7 @@
       "Steel Wing",
       "Tackle"
     ],
+    "Weight": "199 kg",
     "Height": "3,81 m",
     "Candy": {
       "Name": "HoOh candies",
@@ -10526,6 +10776,7 @@
       "Charge Beam",
       "Tackle"
     ],
+    "Weight": "5 kg",
     "Height": "0,61 m",
     "Candy": {
       "Name": "Celebi candies",
