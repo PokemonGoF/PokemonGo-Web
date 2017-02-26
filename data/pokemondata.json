@@ -1920,6 +1920,17 @@
       "Name": "Zubat candies",
       "FamilyID": 41
     },
+    "Next Evolution Requirements": {
+      "Amount": 0,
+      "Family": 41,
+      "Name": "Zubat candies"
+    },
+    "Next evolution(s)": [
+      {
+        "Number": "169",
+        "Name": "Crobat"
+      }
+    ],
     "Previous evolution(s)": [
       {
         "Number": "41",
@@ -4331,6 +4342,17 @@
       "Name": "Onix candies",
       "FamilyID": 95
     },
+    "Next Evolution Requirements": {
+      "Amount": 0,
+      "Family": 95,
+      "Name": "Onix candies"
+    },
+    "Next evolution(s)": [
+      {
+        "Number": "208",
+        "Name": "Steelix"
+      }
+    ],
     "Special Attack(s)": [
       "Sand Tomb",
       "Stone Edge",
@@ -5053,6 +5075,17 @@
       "Name": "Chansey candies",
       "FamilyID": 113
     },
+    "Next Evolution Requirements": {
+      "Amount": 0,
+      "Family": 113,
+      "Name": "Chansey candies"
+    },
+    "Next evolution(s)": [
+      {
+        "Number": "242",
+        "Name": "Blissey"
+      }
+    ],
     "Special Attack(s)": [
       "Psychic",
       "Hyper Beam",
@@ -5195,6 +5228,12 @@
       "Name": "Horsea candies",
       "FamilyID": 116
     },
+    "Next Evolution Requirements": {
+      "Amount": 0,
+      "Family": 116,
+      "Name": "Horsea candies"
+    },
+    "Next evolution(s)": [],
     "Previous evolution(s)": [
       {
         "Number": "116",
@@ -5444,6 +5483,17 @@
       "Name": "Scyther candies",
       "FamilyID": 123
     },
+    "Next Evolution Requirements": {
+      "Amount": 0,
+      "Family": 123,
+      "Name": "Scyther candies"
+    },
+    "Next evolution(s)": [
+      {
+        "Number": "212",
+        "Name": "Scizor"
+      }
+    ],
     "Special Attack(s)": [
       "Night Slash",
       "X Scissor",
@@ -5988,6 +6038,17 @@
       "Name": "Porygon candies",
       "FamilyID": 137
     },
+    "Next Evolution Requirements": {
+      "Amount": 0,
+      "Family": 137,
+      "Name": "Porygon candies"
+    },
+    "Next evolution(s)": [
+      {
+        "Number": "233",
+        "Name": "Porygon2"
+      }
+    ],
     "Special Attack(s)": [
       "Solar Beam",
       "Hyper Beam",
