@@ -2,7 +2,7 @@
   {
     "Number": "001",
     "Name": "Bulbasaur",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Seed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -10,7 +10,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Vine Whip",
@@ -52,7 +58,7 @@
   {
     "Number": "002",
     "Name": "Ivysaur",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Seed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -60,7 +66,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -104,7 +116,7 @@
   {
     "Number": "003",
     "Name": "Venusaur",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Seed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -112,7 +124,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -149,12 +167,14 @@
   {
     "Number": "004",
     "Name": "Charmander",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Lizard Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -196,12 +216,14 @@
   {
     "Number": "005",
     "Name": "Charmeleon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flame Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -246,7 +268,7 @@
   {
     "Number": "006",
     "Name": "Charizard",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tiny Turtle Pokemon",
     "TypeI": [
       "Fire"
     ],
@@ -254,7 +276,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water",
+      "Electric",
+      "Ice" 
     ],
     "Fast Attack(s)": [
       "Fire Spin",
@@ -294,12 +320,13 @@
   {
     "Number": "007",
     "Name": "Squirtle",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tiny Turtle Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -341,12 +368,13 @@
   {
     "Number": "008",
     "Name": "Wartortle",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Turtle Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -390,12 +418,13 @@
   {
     "Number": "009",
     "Name": "Blastoise",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Shellfish Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -432,12 +461,14 @@
   {
     "Number": "010",
     "Name": "Caterpie",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Worm Pokemon",
     "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Bug Bite",
@@ -477,12 +508,14 @@
   {
     "Number": "011",
     "Name": "Metapod",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Cocoon Pokemon",
     "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Bug Bite",
@@ -524,7 +557,7 @@
   {
     "Number": "012",
     "Name": "Butterfree",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Butterfly Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -532,7 +565,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Struggle Bug",
@@ -570,7 +607,7 @@
   {
     "Number": "013",
     "Name": "Weedle",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Hairy Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -578,7 +615,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bug Bite",
@@ -618,7 +659,7 @@
   {
     "Number": "014",
     "Name": "Kakuna",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Cocoon Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -626,7 +667,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bug Bite",
@@ -668,7 +713,7 @@
   {
     "Number": "015",
     "Name": "Beedrill",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Bee Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -676,7 +721,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Infestation",
@@ -714,7 +763,7 @@
   {
     "Number": "016",
     "Name": "Pidgey",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tiny Bird Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -722,7 +771,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Quick Attack",
@@ -764,7 +816,7 @@
   {
     "Number": "017",
     "Name": "Pidgeotto",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bird Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -772,7 +824,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Wing Attack",
@@ -816,7 +871,7 @@
   {
     "Number": "018",
     "Name": "Pidgeot",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bird Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -824,7 +879,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Air Slash",
@@ -863,12 +921,12 @@
   {
     "Number": "019",
     "Name": "Rattata",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mouse Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -906,12 +964,12 @@
   {
     "Number": "020",
     "Name": "Raticate",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mouse Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -944,7 +1002,7 @@
   {
     "Number": "021",
     "Name": "Spearow",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tiny Bird Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -952,7 +1010,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -991,7 +1052,7 @@
   {
     "Number": "022",
     "Name": "Fearow",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Beak Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -999,7 +1060,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -1033,12 +1097,13 @@
   {
     "Number": "023",
     "Name": "Ekans",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Snake Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Poison Sting",
@@ -1077,12 +1142,13 @@
   {
     "Number": "024",
     "Name": "Arbok",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Cobra Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -1115,12 +1181,12 @@
   {
     "Number": "025",
     "Name": "Pikachu",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mouse Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Thunder Shock",
@@ -1165,12 +1231,12 @@
   {
     "Number": "026",
     "Name": "Raichu",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mouse Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Volt Switch",
@@ -1209,12 +1275,14 @@
   {
     "Number": "027",
     "Name": "Sandshrew",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mouse Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -1253,12 +1321,14 @@
   {
     "Number": "028",
     "Name": "Sandslash",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mouse Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Metal Claw",
@@ -1291,12 +1361,13 @@
   {
     "Number": "029",
     "Name": "Nidoran F",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Pin Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -1338,12 +1409,13 @@
   {
     "Number": "030",
     "Name": "Nidorina",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Pin Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -1387,7 +1459,7 @@
   {
     "Number": "031",
     "Name": "Nidoqueen",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Drill Pokemon",
     "TypeI": [
       "Poison"
     ],
@@ -1395,7 +1467,11 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Water",
+      "Grass",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Poison Jab",
@@ -1432,12 +1508,13 @@
   {
     "Number": "032",
     "Name": "Nidoran M",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Pin Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -1479,12 +1556,13 @@
   {
     "Number": "033",
     "Name": "Nidorino",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Pin Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Poison Jab",
@@ -1528,7 +1606,7 @@
   {
     "Number": "034",
     "Name": "Nidoking",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Drill Pokemon",
     "TypeI": [
       "Poison"
     ],
@@ -1536,7 +1614,11 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Water",
+      "Grass",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Poison Jab",
@@ -1574,12 +1656,13 @@
   {
     "Number": "035",
     "Name": "Clefairy",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fairy Pokemon",
     "TypeI": [
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -1623,12 +1706,13 @@
   {
     "Number": "036",
     "Name": "Clefable",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fairy Pokemon",
     "TypeI": [
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Charge Beam",
@@ -1666,12 +1750,14 @@
   {
     "Number": "037",
     "Name": "Vulpix",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fox Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Quick Attack",
@@ -1709,12 +1795,14 @@
   {
     "Number": "038",
     "Name": "Ninetales",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fox Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Feint Attack",
@@ -1750,7 +1838,7 @@
   {
     "Number": "039",
     "Name": "Jigglypuff",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Balloon Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -1758,7 +1846,9 @@
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -1804,7 +1894,7 @@
   {
     "Number": "040",
     "Name": "Wigglytuff",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Balloon Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -1812,7 +1902,9 @@
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -1849,7 +1941,7 @@
   {
     "Number": "041",
     "Name": "Zubat",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bat Pokemon",
     "TypeI": [
       "Poison"
     ],
@@ -1857,7 +1949,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Electric",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Quick Attack",
@@ -1900,7 +1996,7 @@
   {
     "Number": "042",
     "Name": "Golbat",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bat Pokemon",
     "TypeI": [
       "Poison"
     ],
@@ -1908,7 +2004,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Electric",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Wing Attack",
@@ -1953,7 +2053,7 @@
   {
     "Number": "043",
     "Name": "Oddish",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Weed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -1961,7 +2061,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -2007,7 +2113,7 @@
   {
     "Number": "044",
     "Name": "Gloom",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Weed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -2015,7 +2121,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -2063,7 +2175,7 @@
   {
     "Number": "045",
     "Name": "Vileplume",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flower Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -2071,7 +2183,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -2108,7 +2226,7 @@
   {
     "Number": "046",
     "Name": "Paras",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mushroom Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -2116,7 +2234,12 @@
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Rock",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -2154,7 +2277,7 @@
   {
     "Number": "047",
     "Name": "Parasect",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mushroom Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -2162,7 +2285,12 @@
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Rock",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Struggle Bug",
@@ -2196,7 +2324,7 @@
   {
     "Number": "048",
     "Name": "Venonat",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Insect Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -2204,7 +2332,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bug Bite",
@@ -2242,7 +2374,7 @@
   {
     "Number": "049",
     "Name": "Venomoth",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Moth Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -2250,7 +2382,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Infestation",
@@ -2285,12 +2421,14 @@
   {
     "Number": "050",
     "Name": "Diglett",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mole Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Mud Slap",
@@ -2328,12 +2466,14 @@
   {
     "Number": "051",
     "Name": "Dugtrio",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mole Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Sucker Punch",
@@ -2367,12 +2507,12 @@
   {
     "Number": "052",
     "Name": "Meowth",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Scratch Cat Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -2411,12 +2551,12 @@
   {
     "Number": "053",
     "Name": "Persian",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Classy Cat Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -2450,12 +2590,13 @@
   {
     "Number": "054",
     "Name": "Psyduck",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Duck Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -2493,12 +2634,13 @@
   {
     "Number": "055",
     "Name": "Golduck",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Duck Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -2531,12 +2673,14 @@
   {
     "Number": "056",
     "Name": "Mankey",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Pig Monkey Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Karate Chop",
@@ -2574,12 +2718,14 @@
   {
     "Number": "057",
     "Name": "Primeape",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Pig Monkey Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Low Kick",
@@ -2614,12 +2760,14 @@
   {
     "Number": "058",
     "Name": "Growlithe",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Puppy Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -2657,12 +2805,14 @@
   {
     "Number": "059",
     "Name": "Arcanine",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Legendary Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Fire Fang",
@@ -2698,12 +2848,13 @@
   {
     "Number": "060",
     "Name": "Poliwag",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tadpole Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -2749,12 +2900,13 @@
   {
     "Number": "061",
     "Name": "Poliwhirl",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tadpole Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -2803,7 +2955,7 @@
   {
     "Number": "062",
     "Name": "Poliwrath",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tadpole Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -2811,7 +2963,11 @@
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Grass",
+      "Electric",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -2850,12 +3006,14 @@
   {
     "Number": "063",
     "Name": "Abra",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Psi Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Zen Headbutt",
@@ -2897,12 +3055,14 @@
   {
     "Number": "064",
     "Name": "Kadabra",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Psi Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Psycho Cut",
@@ -2946,12 +3106,14 @@
   {
     "Number": "065",
     "Name": "Alakazam",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Psi Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Psycho Cut",
@@ -2990,12 +3152,14 @@
   {
     "Number": "066",
     "Name": "Machop",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Superpower Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Rock Smash",
@@ -3038,12 +3202,14 @@
   {
     "Number": "067",
     "Name": "Machoke",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Superpower Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Low Kick",
@@ -3088,12 +3254,14 @@
   {
     "Number": "068",
     "Name": "Machamp",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Superpower Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Bullet Punch",
@@ -3142,7 +3310,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Vine Whip",
@@ -3184,7 +3358,7 @@
   {
     "Number": "070",
     "Name": "Weepinbell",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flower Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -3192,7 +3366,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Bullet Seed",
@@ -3237,7 +3417,7 @@
   {
     "Number": "071",
     "Name": "Victreebel",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flycatcher Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -3245,7 +3425,13 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Ground",
+      "Bug",
+      "Fire",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -3282,7 +3468,7 @@
   {
     "Number": "072",
     "Name": "Tentacool",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Jellyfish Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -3290,7 +3476,10 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Grass",
+      "Electric",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -3328,7 +3517,7 @@
   {
     "Number": "073",
     "Name": "Tentacruel",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Jellyfish Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -3336,7 +3525,10 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Grass",
+      "Electric",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Acid",
@@ -3369,7 +3561,7 @@
   {
     "Number": "074",
     "Name": "Geodude",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Rock Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -3377,7 +3569,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Rock Throw",
@@ -3419,7 +3616,7 @@
   {
     "Number": "075",
     "Name": "Graveler",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Rock Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -3427,7 +3624,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Rock Throw",
@@ -3474,7 +3676,7 @@
   {
     "Number": "076",
     "Name": "Golem",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Megaton Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -3482,7 +3684,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Rock Throw",
@@ -3521,12 +3728,14 @@
   {
     "Number": "077",
     "Name": "Ponyta",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fire Horse Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -3565,12 +3774,14 @@
   {
     "Number": "078",
     "Name": "Rapidash",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fire Horse Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Low Kick",
@@ -3604,7 +3815,7 @@
   {
     "Number": "079",
     "Name": "Slowpoke",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dopey Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -3612,7 +3823,11 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Grass",
+      "Electric",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -3654,7 +3869,7 @@
   {
     "Number": "080",
     "Name": "Slowbro",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Hermit Crab Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -3662,7 +3877,11 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Grass",
+      "Electric",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -3695,7 +3914,7 @@
   {
     "Number": "081",
     "Name": "Magnemite",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Magnet Pokemon",
     "TypeI": [
       "Electric"
     ],
@@ -3703,7 +3922,9 @@
       "Steel"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Spark",
@@ -3741,7 +3962,7 @@
   {
     "Number": "082",
     "Name": "Magneton",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Magnet Pokemon",
     "TypeI": [
       "Electric"
     ],
@@ -3749,7 +3970,9 @@
       "Steel"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Spark",
@@ -3784,7 +4007,7 @@
   {
     "Number": "083",
     "Name": "Farfetchd",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Wild Duck Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -3792,7 +4015,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Air Slash",
@@ -3820,7 +4046,7 @@
   {
     "Number": "084",
     "Name": "Doduo",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Twin Bird Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -3828,7 +4054,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -3867,7 +4096,7 @@
   {
     "Number": "085",
     "Name": "Dodrio",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Triple Bird Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -3875,7 +4104,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Feint Attack",
@@ -3909,12 +4141,13 @@
   {
     "Number": "086",
     "Name": "Seel",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sea Lion Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Ice Shard",
@@ -3956,7 +4189,7 @@
   {
     "Number": "087",
     "Name": "Dewgong",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sea Lion Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -3964,7 +4197,12 @@
       "Ice"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Frost Breath",
@@ -4000,12 +4238,13 @@
   {
     "Number": "088",
     "Name": "Grimer",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sludge Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Poison Jab",
@@ -4043,12 +4282,13 @@
   {
     "Number": "089",
     "Name": "Muk",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sludge Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Infestation",
@@ -4083,12 +4323,13 @@
   {
     "Number": "090",
     "Name": "Shellder",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bivalve Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Ice Shard",
@@ -4126,7 +4367,7 @@
   {
     "Number": "091",
     "Name": "Cloyster",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bivalve Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -4134,7 +4375,12 @@
       "Ice"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Frost Breath",
@@ -4169,7 +4415,7 @@
   {
     "Number": "092",
     "Name": "Gastly",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Gas Pokemon",
     "TypeI": [
       "Ghost"
     ],
@@ -4177,7 +4423,10 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Ghost",
+      "Psychic",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Lick",
@@ -4221,7 +4470,7 @@
   {
     "Number": "093",
     "Name": "Haunter",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Gas Pokemon",
     "TypeI": [
       "Ghost"
     ],
@@ -4229,7 +4478,10 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Ghost",
+      "Psychic",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Shadow Claw",
@@ -4275,7 +4527,7 @@
   {
     "Number": "094",
     "Name": "Gengar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Shadow Pokemon",
     "TypeI": [
       "Ghost"
     ],
@@ -4283,7 +4535,10 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Ghost",
+      "Psychic",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Sucker Punch",
@@ -4322,7 +4577,7 @@
   {
     "Number": "095",
     "Name": "Onix",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Rock Snake Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -4330,7 +4585,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Rock Throw",
@@ -4370,12 +4630,14 @@
   {
     "Number": "096",
     "Name": "Drowzee",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Hypnosis Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -4413,12 +4675,14 @@
   {
     "Number": "097",
     "Name": "Hypno",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Hypnosis Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Zen Headbutt",
@@ -4453,12 +4717,13 @@
   {
     "Number": "098",
     "Name": "Krabby",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "River Crab Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -4496,12 +4761,13 @@
   {
     "Number": "099",
     "Name": "Kingler",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Pincer Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -4535,12 +4801,12 @@
   {
     "Number": "100",
     "Name": "Voltorb",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Ball Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Spark",
@@ -4579,12 +4845,12 @@
   {
     "Number": "101",
     "Name": "Electrode",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Ball Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Spark",
@@ -4618,7 +4884,7 @@
   {
     "Number": "102",
     "Name": "Exeggcute",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Egg Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -4626,7 +4892,13 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Ghost",
+      "Fire",
+      "Ice",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Confusion",
@@ -4664,7 +4936,7 @@
   {
     "Number": "103",
     "Name": "Exeggutor",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Coconut Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -4672,7 +4944,13 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Ghost",
+      "Fire",
+      "Ice",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Bullet Seed",
@@ -4707,12 +4985,14 @@
   {
     "Number": "104",
     "Name": "Cubone",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Lonely Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Mud Slap",
@@ -4750,12 +5030,14 @@
   {
     "Number": "105",
     "Name": "Marowak",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bone Keeper Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Mud Slap",
@@ -4788,12 +5070,14 @@
   {
     "Number": "106",
     "Name": "Hitmonlee",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Kicking Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Low Kick",
@@ -4822,12 +5106,14 @@
   {
     "Number": "107",
     "Name": "Hitmonchan",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Punching Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Bullet Punch",
@@ -4857,12 +5143,12 @@
   {
     "Number": "108",
     "Name": "Lickitung",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Licking Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Lick",
@@ -4889,12 +5175,13 @@
   {
     "Number": "109",
     "Name": "Koffing",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Gas Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -4932,12 +5219,13 @@
   {
     "Number": "110",
     "Name": "Weezing",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Poison Gas Pokemon",
     "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -4971,7 +5259,7 @@
   {
     "Number": "111",
     "Name": "Rhyhorn",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Spikes Pokemon",
     "TypeI": [
       "Ground"
     ],
@@ -4979,7 +5267,12 @@
       "Rock"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Mud Slap",
@@ -5017,7 +5310,7 @@
   {
     "Number": "112",
     "Name": "Rhydon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Drill Pokemon",
     "TypeI": [
       "Ground"
     ],
@@ -5025,7 +5318,12 @@
       "Rock"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Mud Slap",
@@ -5058,12 +5356,12 @@
   {
     "Number": "113",
     "Name": "Chansey",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Egg Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -5101,12 +5399,16 @@
   {
     "Number": "114",
     "Name": "Tangela",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Vine Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Vine Whip",
@@ -5134,12 +5436,12 @@
   {
     "Number": "115",
     "Name": "Kangaskhan",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Parent Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Mud Slap",
@@ -5168,12 +5470,13 @@
   {
     "Number": "116",
     "Name": "Horsea",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dragon Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -5211,12 +5514,13 @@
   {
     "Number": "117",
     "Name": "Seadra",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dragon Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -5256,12 +5560,13 @@
   {
     "Number": "118",
     "Name": "Goldeen",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Goldfish Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -5299,12 +5604,13 @@
   {
     "Number": "119",
     "Name": "Seaking",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Goldfish Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -5339,12 +5645,13 @@
   {
     "Number": "120",
     "Name": "Staryu",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Starshape Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -5383,7 +5690,7 @@
   {
     "Number": "121",
     "Name": "Starmie",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mysterious Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -5391,7 +5698,11 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Grass",
+      "Electric",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Hidden Power",
@@ -5427,7 +5738,7 @@
   {
     "Number": "122",
     "Name": "MrMime",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Barrier Pokemon",
     "TypeI": [
       "Psychic"
     ],
@@ -5435,7 +5746,11 @@
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Bug",
+      "Ghost",
+      "Steel",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Confusion",
@@ -5462,7 +5777,7 @@
   {
     "Number": "123",
     "Name": "Scyther",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mantis Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -5470,7 +5785,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Fury Cutter",
@@ -5510,7 +5829,7 @@
   {
     "Number": "124",
     "Name": "Jynx",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Humanshape Pokemon",
     "TypeI": [
       "Ice"
     ],
@@ -5518,7 +5837,13 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Bug",
+      "Ghost",
+      "Steel",
+      "Fire",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Frost Breath",
@@ -5553,12 +5878,12 @@
   {
     "Number": "125",
     "Name": "Electabuzz",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Electric Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Thunder Shock",
@@ -5591,12 +5916,14 @@
   {
     "Number": "126",
     "Name": "Magmar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Spitfire Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -5629,12 +5956,14 @@
   {
     "Number": "127",
     "Name": "Pinsir",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Stagbeetle Pokemon",
     "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Rock Smash",
@@ -5663,12 +5992,12 @@
   {
     "Number": "128",
     "Name": "Tauros",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Wild Bull Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -5695,12 +6024,13 @@
   {
     "Number": "129",
     "Name": "Magikarp",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fish Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Splash"
@@ -5735,7 +6065,7 @@
   {
     "Number": "130",
     "Name": "Gyarados",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Atrocious Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -5743,7 +6073,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Grass",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -5779,7 +6112,7 @@
   {
     "Number": "131",
     "Name": "Lapras",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Transport Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -5787,7 +6120,12 @@
       "Ice"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Frost Breath",
@@ -5816,12 +6154,12 @@
   {
     "Number": "132",
     "Name": "Ditto",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Transform Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Transform"
@@ -5845,12 +6183,12 @@
   {
     "Number": "133",
     "Name": "Eevee",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Evolution Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Quick Attack",
@@ -5904,12 +6242,13 @@
   {
     "Number": "134",
     "Name": "Vaporeon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bubble Jet Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun"
@@ -5941,12 +6280,12 @@
   {
     "Number": "135",
     "Name": "Jolteon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Lightning Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Thunder Shock",
@@ -5979,12 +6318,14 @@
   {
     "Number": "136",
     "Name": "Flareon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flame Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -6018,12 +6359,12 @@
   {
     "Number": "137",
     "Name": "Porygon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Virtual Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Charge Beam",
@@ -6067,7 +6408,7 @@
   {
     "Number": "138",
     "Name": "Omanyte",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Spiral Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -6075,7 +6416,12 @@
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -6115,7 +6461,7 @@
   {
     "Number": "139",
     "Name": "Omastar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Spiral Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -6123,7 +6469,12 @@
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Mud Shot",
@@ -6158,7 +6509,7 @@
   {
     "Number": "140",
     "Name": "Kabuto",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Shellfish Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -6166,7 +6517,12 @@
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -6204,7 +6560,7 @@
   {
     "Number": "141",
     "Name": "Kabutops",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Shellfish Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -6212,7 +6568,12 @@
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Mud Shot",
@@ -6246,7 +6607,7 @@
   {
     "Number": "142",
     "Name": "Aerodactyl",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fossil Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -6254,7 +6615,14 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Rock",
+      "Steel",
+      "Water",
+      "Grass",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Steel Wing",
@@ -6281,12 +6649,12 @@
   {
     "Number": "143",
     "Name": "Snorlax",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sleeping Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Zen Headbutt",
@@ -6314,7 +6682,7 @@
   {
     "Number": "144",
     "Name": "Articuno",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Freeze Pokemon",
     "TypeI": [
       "Ice"
     ],
@@ -6322,7 +6690,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Frost Breath"
@@ -6348,7 +6721,7 @@
   {
     "Number": "145",
     "Name": "Zapdos",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Electric Pokemon",
     "TypeI": [
       "Electric"
     ],
@@ -6356,7 +6729,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Charge Beam",
@@ -6384,7 +6760,7 @@
   {
     "Number": "146",
     "Name": "Moltres",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flame Pokemon",
     "TypeI": [
       "Fire"
     ],
@@ -6392,7 +6768,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Fire Spin",
@@ -6420,12 +6800,14 @@
   {
     "Number": "147",
     "Name": "Dratini",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dragon Pokemon",
     "TypeI": [
       "Dragon"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ice",
+      "Dragon",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Dragon Breath",
@@ -6467,12 +6849,14 @@
   {
     "Number": "148",
     "Name": "Dragonair",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dragon Pokemon",
     "TypeI": [
       "Dragon"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ice",
+      "Dragon",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Dragon Breath",
@@ -6516,7 +6900,7 @@
   {
     "Number": "149",
     "Name": "Dragonite",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dragon Pokemon",
     "TypeI": [
       "Dragon"
     ],
@@ -6524,7 +6908,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Electric",
+      "Ice",
+      "Dragon",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Dragon Tail",
@@ -6564,12 +6952,14 @@
   {
     "Number": "150",
     "Name": "Mewtwo",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Genetic Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Psycho Cut",
@@ -6597,12 +6987,14 @@
   {
     "Number": "151",
     "Name": "Mew",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "New Species Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Pound"
@@ -6634,12 +7026,16 @@
   {
     "Number": "152",
     "Name": "Chikorita",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Leaf Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Vine Whip",
@@ -6683,12 +7079,16 @@
   {
     "Number": "153",
     "Name": "Bayleef",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Leaf Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -6733,12 +7133,16 @@
   {
     "Number": "154",
     "Name": "Meganium",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Herb Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -6776,12 +7180,14 @@
   {
     "Number": "155",
     "Name": "Cyndaquil",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fire Mouse Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -6824,12 +7230,14 @@
   {
     "Number": "156",
     "Name": "Quilava",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Volcano Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -6874,12 +7282,14 @@
   {
     "Number": "157",
     "Name": "Typhlosion",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Volcano Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -6917,12 +7327,13 @@
   {
     "Number": "158",
     "Name": "Totodile",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Big Jaw Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -6965,12 +7376,13 @@
   {
     "Number": "159",
     "Name": "Croconaw",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Big Jaw Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -7015,12 +7427,13 @@
   {
     "Number": "160",
     "Name": "Feraligatr",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Big Jaw Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -7058,12 +7471,12 @@
   {
     "Number": "161",
     "Name": "Sentret",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Scout Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -7102,12 +7515,12 @@
   {
     "Number": "162",
     "Name": "Furret",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Long Body Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Quick Attack",
@@ -7141,7 +7554,7 @@
   {
     "Number": "163",
     "Name": "Hoothoot",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Owl Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -7149,7 +7562,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Feint Attack",
@@ -7189,7 +7605,7 @@
   {
     "Number": "164",
     "Name": "Noctowl",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Owl Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -7197,7 +7613,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Wing Attack",
@@ -7233,7 +7652,7 @@
   {
     "Number": "165",
     "Name": "Ledyba",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Five Star Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -7241,7 +7660,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -7280,7 +7703,7 @@
   {
     "Number": "166",
     "Name": "Ledian",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Five Star Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -7288,7 +7711,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Struggle Bug",
@@ -7323,7 +7750,7 @@
   {
     "Number": "167",
     "Name": "Spinarak",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "String Spit Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -7331,7 +7758,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Poison Sting",
@@ -7370,7 +7801,7 @@
   {
     "Number": "168",
     "Name": "Ariados",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Long Leg Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -7378,7 +7809,11 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Poison Sting",
@@ -7413,7 +7848,7 @@
   {
     "Number": "169",
     "Name": "Crobat",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bat Pokemon",
     "TypeI": [
       "Poison"
     ],
@@ -7421,7 +7856,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Electric",
+      "Psychic",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Air Slash",
@@ -7460,7 +7899,7 @@
   {
     "Number": "170",
     "Name": "Chinchou",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Angler Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -7468,7 +7907,9 @@
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -7507,7 +7948,7 @@
   {
     "Number": "171",
     "Name": "Lanturn",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Light Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -7515,7 +7956,9 @@
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -7550,12 +7993,12 @@
   {
     "Number": "172",
     "Name": "Pichu",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Tiny Mouse Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Thunder Shock",
@@ -7597,12 +8040,13 @@
   {
     "Number": "173",
     "Name": "Cleffa",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Star Shape Pokemon",
     "TypeI": [
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -7646,7 +8090,7 @@
   {
     "Number": "174",
     "Name": "Igglybuff",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Balloon Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -7654,7 +8098,9 @@
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -7697,12 +8143,13 @@
   {
     "Number": "175",
     "Name": "Togepi",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Spike Ball Pokemon",
     "TypeI": [
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Hidden Power",
@@ -7741,7 +8188,7 @@
   {
     "Number": "176",
     "Name": "Togetic",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Happiness Pokemon",
     "TypeI": [
       "Fairy"
     ],
@@ -7749,7 +8196,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Rock",
+      "Steel",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Extrasensory",
@@ -7784,7 +8235,7 @@
   {
     "Number": "177",
     "Name": "Natu",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Little Bird Pokemon",
     "TypeI": [
       "Psychic"
     ],
@@ -7792,7 +8243,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Bug",
+      "Ghost",
+      "Electric",
+      "Ice",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -7831,7 +8287,7 @@
   {
     "Number": "178",
     "Name": "Xatu",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mystic Pokemon",
     "TypeI": [
       "Psychic"
     ],
@@ -7839,7 +8295,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Bug",
+      "Ghost",
+      "Electric",
+      "Ice",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Air Slash",
@@ -7874,12 +8335,12 @@
   {
     "Number": "179",
     "Name": "Mareep",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Wool Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -7922,12 +8383,12 @@
   {
     "Number": "180",
     "Name": "Flaaffy",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Wool Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -7972,12 +8433,12 @@
   {
     "Number": "181",
     "Name": "Ampharos",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Light Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Charge Beam",
@@ -8016,12 +8477,16 @@
   {
     "Number": "182",
     "Name": "Bellossom",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flower Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -8060,7 +8525,7 @@
   {
     "Number": "183",
     "Name": "Marill",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Aquamouse Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -8068,7 +8533,10 @@
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -8107,7 +8575,7 @@
   {
     "Number": "184",
     "Name": "Azumarill",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Aquarabbit Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -8115,7 +8583,10 @@
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Rock Smash",
@@ -8150,12 +8621,16 @@
   {
     "Number": "185",
     "Name": "Sudowoodo",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Imitation Pokemon",
     "TypeI": [
       "Rock"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass"
     ],
     "Fast Attack(s)": [
       "Rock Throw",
@@ -8184,12 +8659,13 @@
   {
     "Number": "186",
     "Name": "Politoed",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Frog Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Mud Shot",
@@ -8228,7 +8704,7 @@
   {
     "Number": "187",
     "Name": "Hoppip",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Cottonweed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -8236,7 +8712,13 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Rock",
+      "Bug",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -8279,7 +8761,7 @@
   {
     "Number": "188",
     "Name": "Skiploom",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Cottonweed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -8287,7 +8769,13 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Rock",
+      "Bug",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -8332,7 +8820,7 @@
   {
     "Number": "189",
     "Name": "Jumpluff",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Cottonweed Pokemon",
     "TypeI": [
       "Grass"
     ],
@@ -8340,7 +8828,13 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Rock",
+      "Bug",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Infestation",
@@ -8379,12 +8873,12 @@
   {
     "Number": "190",
     "Name": "Aipom",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Long Tail Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -8413,12 +8907,16 @@
   {
     "Number": "191",
     "Name": "Sunkern",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Seed Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -8458,12 +8956,16 @@
   {
     "Number": "192",
     "Name": "Sunflora",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sun Pokemon",
     "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Fire",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Razor Leaf",
@@ -8498,7 +9000,7 @@
   {
     "Number": "193",
     "Name": "Yanma",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Clear Wing Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -8506,7 +9008,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Quick Attack",
@@ -8535,7 +9041,7 @@
   {
     "Number": "194",
     "Name": "Wooper",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Water Fish Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -8543,7 +9049,10 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -8583,7 +9092,7 @@
   {
     "Number": "195",
     "Name": "Quagsire",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Water Fish Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -8591,7 +9100,10 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -8626,12 +9138,14 @@
   {
     "Number": "196",
     "Name": "Espeon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sun Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Confusion",
@@ -8665,12 +9179,14 @@
   {
     "Number": "197",
     "Name": "Umbreon",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Moonlight Pokemon",
     "TypeI": [
       "Dark"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Bug",
+     "Fairy" 
     ],
     "Fast Attack(s)": [
       "Feint Attack",
@@ -8704,7 +9220,7 @@
   {
     "Number": "198",
     "Name": "Murkrow",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Darkness Pokemon",
     "TypeI": [
       "Dark"
     ],
@@ -8712,7 +9228,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Bug",
+      "Electric",
+      "Ice",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Peck",
@@ -8741,7 +9262,7 @@
   {
     "Number": "199",
     "Name": "Slowking",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Royal Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -8749,7 +9270,11 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Grass",
+      "Electric",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -8784,12 +9309,13 @@
   {
     "Number": "200",
     "Name": "Misdreavus",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Screech Pokemon",
     "TypeI": [
       "Ghost"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Astonish",
@@ -8818,12 +9344,14 @@
   {
     "Number": "201",
     "Name": "Unown",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Symbol Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Hidden Power",
@@ -8848,12 +9376,14 @@
   {
     "Number": "202",
     "Name": "Wobbuffet",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Patient Pokemon",
     "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Counter",
@@ -8880,7 +9410,7 @@
   {
     "Number": "203",
     "Name": "Girafarig",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Long Neck Pokemon",
     "TypeI": [
       "Normal"
     ],
@@ -8888,7 +9418,10 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Bug",
+      "Ghost",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -8916,12 +9449,14 @@
   {
     "Number": "204",
     "Name": "Pineco",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bagworm Pokemon",
     "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -8960,7 +9495,7 @@
   {
     "Number": "205",
     "Name": "Forretress",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Bagworm Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -8968,7 +9503,11 @@
       "Steel"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Bug Bite",
@@ -9003,12 +9542,12 @@
   {
     "Number": "206",
     "Name": "Dunsparce",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Land Snake Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -9037,7 +9576,7 @@
   {
     "Number": "207",
     "Name": "Gligar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Flyscorpion Pokemon",
     "TypeI": [
       "Ground"
     ],
@@ -9045,7 +9584,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Water",
+      "Grass",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Fury Cutter",
@@ -9074,7 +9617,7 @@
   {
     "Number": "208",
     "Name": "Steelix",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Iron Snake Pokemon",
     "TypeI": [
       "Steel"
     ],
@@ -9082,7 +9625,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Fire",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Iron Tail",
@@ -9117,12 +9665,13 @@
   {
     "Number": "209",
     "Name": "Snubbull",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fairy Pokemon",
     "TypeI": [
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -9161,12 +9710,13 @@
   {
     "Number": "210",
     "Name": "Granbull",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Fairy Pokemon",
     "TypeI": [
       "Fairy"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Poison",
+      "Steel"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -9201,7 +9751,7 @@
   {
     "Number": "211",
     "Name": "Qwilfish",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Balloon Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -9209,7 +9759,10 @@
       "Poison"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Grass",
+      "Electric",
+      "Psychic"
     ],
     "Fast Attack(s)": [
       "Poison Sting",
@@ -9238,7 +9791,7 @@
   {
     "Number": "212",
     "Name": "Scizor",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Pincer Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -9246,7 +9799,11 @@
       "Steel"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Flying",
+      "Ground",
+      "Rock",
+      "Fire"
     ],
     "Fast Attack(s)": [
       "Bullet Punch",
@@ -9281,7 +9838,7 @@
   {
     "Number": "213",
     "Name": "Shuckle",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Mold Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -9289,7 +9846,14 @@
       "Rock"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Flying",
+      "Ground",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Water",
+      "Grass"
     ],
     "Fast Attack(s)": [
       "Struggle Bug",
@@ -9318,7 +9882,7 @@
   {
     "Number": "214",
     "Name": "Heracross",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Singlehorn Pokemon",
     "TypeI": [
       "Bug"
     ],
@@ -9326,7 +9890,11 @@
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Rock",
+      "Fire",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Counter",
@@ -9355,7 +9923,7 @@
   {
     "Number": "215",
     "Name": "Sneasel",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Sharp Claw Pokemon",
     "TypeI": [
       "Dark"
     ],
@@ -9363,7 +9931,12 @@
       "Ice"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Bug",
+      "Steel",
+      "Fire",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Ice Shard",
@@ -9392,12 +9965,12 @@
   {
     "Number": "216",
     "Name": "Teddiursa",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Little Bear Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Scratch",
@@ -9437,12 +10010,12 @@
   {
     "Number": "217",
     "Name": "Ursaring",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Hibernator Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Metal Claw",
@@ -9477,12 +10050,14 @@
   {
     "Number": "218",
     "Name": "Slugma",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Lava Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -9522,7 +10097,7 @@
   {
     "Number": "219",
     "Name": "Magcargo",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Lava Pokemon",
     "TypeI": [
       "Fire"
     ],
@@ -9530,7 +10105,12 @@
       "Rock"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Rock",
+      "Steel",
+      "Water",
+      "Grass"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -9565,7 +10145,7 @@
   {
     "Number": "220",
     "Name": "Swinub",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Pig Pokemon",
     "TypeI": [
       "Ice"
     ],
@@ -9573,7 +10153,13 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -9612,7 +10198,7 @@
   {
     "Number": "221",
     "Name": "Piloswine",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Swine Pokemon",
     "TypeI": [
       "Ice"
     ],
@@ -9620,7 +10206,13 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Ice Shard",
@@ -9655,7 +10247,7 @@
   {
     "Number": "222",
     "Name": "Corsola",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Coral Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -9663,7 +10255,12 @@
       "Rock"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -9691,12 +10288,13 @@
   {
     "Number": "223",
     "Name": "Remoraid",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Jet Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -9736,12 +10334,13 @@
   {
     "Number": "224",
     "Name": "Octillery",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Jet Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -9776,7 +10375,7 @@
   {
     "Number": "225",
     "Name": "Delibird",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Delivery Pokemon",
     "TypeI": [
       "Ice"
     ],
@@ -9784,7 +10383,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Steel",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Ice Shard",
@@ -9813,7 +10417,7 @@
   {
     "Number": "226",
     "Name": "Mantine",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Kite Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -9821,7 +10425,10 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Grass",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Bubble",
@@ -9850,7 +10457,7 @@
   {
     "Number": "227",
     "Name": "Skarmory",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Armor Bird Pokemon",
     "TypeI": [
       "Steel"
     ],
@@ -9858,7 +10465,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Rock",
+      "Fire",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Steel Wing",
@@ -9887,7 +10499,7 @@
   {
     "Number": "228",
     "Name": "Houndour",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dark Pokemon",
     "TypeI": [
       "Dark"
     ],
@@ -9895,7 +10507,12 @@
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Rock",
+      "Bug",
+      "Water",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Feint Attack",
@@ -9935,7 +10552,7 @@
   {
     "Number": "229",
     "Name": "Houndoom",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dark Pokemon",
     "TypeI": [
       "Dark"
     ],
@@ -9943,7 +10560,12 @@
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Rock",
+      "Bug",
+      "Water",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Snarl",
@@ -9978,7 +10600,7 @@
   {
     "Number": "230",
     "Name": "Kingdra",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Dragon Pokemon",
     "TypeI": [
       "Water"
     ],
@@ -9986,7 +10608,11 @@
       "Dragon"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric",
+      "Ice",
+      "Dragon",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Water Gun",
@@ -10015,12 +10641,14 @@
   {
     "Number": "231",
     "Name": "Phanpy",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Long Nose Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -10059,12 +10687,14 @@
   {
     "Number": "232",
     "Name": "Donphan",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Armor Pokemon",
     "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -10098,12 +10728,12 @@
   {
     "Number": "233",
     "Name": "Porygon2",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Virtual Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Hidden Power",
@@ -10138,12 +10768,12 @@
   {
     "Number": "234",
     "Name": "Stantler",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Big Horn Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -10171,12 +10801,12 @@
   {
     "Number": "235",
     "Name": "Smeargle",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Painter Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Tackle"
@@ -10200,12 +10830,14 @@
   {
     "Number": "236",
     "Name": "Tyrogue",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Scuffle Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Rock Smash",
@@ -10245,12 +10877,14 @@
   {
     "Number": "237",
     "Name": "Hitmontop",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Handstand Pokemon",
     "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Psychic",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Rock Smash",
@@ -10285,7 +10919,7 @@
   {
     "Number": "238",
     "Name": "Smoochum",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Kiss Pokemon",
     "TypeI": [
       "Ice"
     ],
@@ -10293,7 +10927,13 @@
       "Psychic"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Rock",
+      "Bug",
+      "Ghost",
+      "Steel",
+      "Fire",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Powder Snow",
@@ -10332,12 +10972,12 @@
   {
     "Number": "239",
     "Name": "Elekid",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Electric Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Thunder Shock",
@@ -10376,12 +11016,14 @@
   {
     "Number": "240",
     "Name": "Magby",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Live Coal Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Ember",
@@ -10420,12 +11062,12 @@
   {
     "Number": "241",
     "Name": "Miltank",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Milk Cow Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Tackle",
@@ -10453,12 +11095,12 @@
   {
     "Number": "242",
     "Name": "Blissey",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Happiness Pokemon",
     "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting"
     ],
     "Fast Attack(s)": [
       "Pound",
@@ -10493,12 +11135,12 @@
   {
     "Number": "243",
     "Name": "Raikou",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Thunder Pokemon",
     "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground"
     ],
     "Fast Attack(s)": [
       "Thunder Shock",
@@ -10527,12 +11169,14 @@
   {
     "Number": "244",
     "Name": "Entei",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Volcano Pokemon",
     "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water"
     ],
     "Fast Attack(s)": [
       "Fire Spin",
@@ -10561,12 +11205,13 @@
   {
     "Number": "245",
     "Name": "Suicune",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Aurora Pokemon",
     "TypeI": [
       "Water"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Grass",
+      "Electric"
     ],
     "Fast Attack(s)": [
       "Extrasensory",
@@ -10595,7 +11240,7 @@
   {
     "Number": "246",
     "Name": "Larvitar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Rock Skin Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -10603,7 +11248,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -10647,7 +11297,7 @@
   {
     "Number": "247",
     "Name": "Pupitar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Hard Shell Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -10655,7 +11305,12 @@
       "Ground"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Steel",
+      "Water",
+      "Grass",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -10701,7 +11356,7 @@
   {
     "Number": "248",
     "Name": "Tyranitar",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Armor Pokemon",
     "TypeI": [
       "Rock"
     ],
@@ -10709,7 +11364,13 @@
       "Dark"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Fighting",
+      "Ground",
+      "Bug",
+      "Steel",
+      "Water",
+      "Grass",
+      "Fairy"
     ],
     "Fast Attack(s)": [
       "Bite",
@@ -10748,7 +11409,7 @@
   {
     "Number": "249",
     "Name": "Lugia",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Diving Pokemon",
     "TypeI": [
       "Psychic"
     ],
@@ -10756,7 +11417,12 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Rock",
+      "Bug",
+      "Ghost",
+      "Electric",
+      "Ice",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Extrasensory",
@@ -10785,7 +11451,7 @@
   {
     "Number": "250",
     "Name": "HoOh",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Rainbow Pokemon",
     "TypeI": [
       "Fire"
     ],
@@ -10793,7 +11459,11 @@
       "Flying"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Ground",
+      "Rock",
+      "Water",
+      "Electric",
+      "Ice"
     ],
     "Fast Attack(s)": [
       "Extrasensory",
@@ -10822,7 +11492,7 @@
   {
     "Number": "251",
     "Name": "Celebi",
-    "Classification": "DataNotInGameMaster",
+    "Classification": "Time Travel Pokemon",
     "TypeI": [
       "Psychic"
     ],
@@ -10830,7 +11500,13 @@
       "Grass"
     ],
     "Weaknesses": [
-      "DataNotInGameMaster"
+      "Flying",
+      "Poison",
+      "Bug",
+      "Ghost",
+      "Fire",
+      "Ice",
+      "Dark"
     ],
     "Fast Attack(s)": [
       "Confusion",
