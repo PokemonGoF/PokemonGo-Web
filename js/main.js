@@ -885,7 +885,8 @@ var mapView = {
       pkmHP = pokemonData.stamina || 0,
       pkmMHP = pokemonData.stamina_max || 0,
       pkmCPMultiplier = pokemonData.cp_multiplier,
-      pkmFavorite = pokemonData.favorite || 0;
+      pkmFavorite = pokemonData.favorite || 0,
+      pkmIsBad = pokemonData.is_bad || false;
 
       var pkmDateCaptured = new Date(pokemonData.creation_time_ms);
       var pkmTypeI = self.pokemonArray[pkmID - 1].TypeI[0],
@@ -924,7 +925,8 @@ var mapView = {
         "type2": pkmTypeII,
         "weakness": pkmWeakness,
         "favorite": pkmFavorite,
-        "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY# #hh#:#mm#" )
+        "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY# #hh#:#mm#" ),
+        "is_bad": pkmIsBad
       });
     }
     switch ($(".pokemon-sort a.selected").data("sort")) {
@@ -1020,8 +1022,14 @@ var mapView = {
       if (sortedPokemon[i].favorite) {
         out += '<span class="favorite"><img src="image/trainer/favorite.png"></span>';
       }
-      out += '<img src="image/pokemon/' + pkmnImage + '" class="png_img"></br>' +
-        '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
+      if (sortedPokemon[i].is_bad) {
+          out += '<div style="height:102px; width:80px;"><img src="image/pokemon/' + pkmnImage + 
+            '" class="png_img" style="position:absolute;">' +
+            '<img src="image/is_bad.png" class="png_img" style="position:absolute;"></div>'
+      } else {
+        out += '<img src="image/pokemon/' + pkmnImage + '" class="png_img"></br>'
+      }
+        out += '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
         pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b></span>' +
         '<br>' + self.getType(pkmnTypeI);
         if (pkmnTypeII != '') {
