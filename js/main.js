@@ -1023,9 +1023,9 @@ var mapView = {
         out += '<span class="favorite"><img src="image/trainer/favorite.png"></span>';
       }
       if (sortedPokemon[i].is_bad) {
-          out += '<div style="height:102px; width:80px;"><img src="image/pokemon/' + pkmnImage + 
+          out += '<div style="height:80px; width:80px;"><img src="image/pokemon/' + pkmnImage + 
             '" class="png_img" style="position:absolute;">' +
-            '<img src="image/is_bad.png" class="png_img" style="position:absolute;"></div>'
+            '<img src="image/is_bad.png" class="png_img" style="position:absolute;"></div></br>'
       } else {
         out += '<img src="image/pokemon/' + pkmnImage + '" class="png_img"></br>'
       }
