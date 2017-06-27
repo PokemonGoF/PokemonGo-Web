@@ -28,6 +28,13 @@
         "Thresholds":[3, 20, 200]
    },
    {
+        "Name":"Defender?",
+        "Protobuf":"BADGE_HOURS_DEFENDED",
+        "Description":"Hours Defender",
+        "Playerstat":"hours_defender",
+        "Thresholds":[10, 100, 1000]
+   },
+   {
         "Name":"Breeder",
         "Protobuf":"BADGE_HATCHED_TOTAL",
         "Description":"Eggs Hatched",
@@ -40,6 +47,13 @@
         "Description":"Pokestops Visited",
         "Playerstat":"poke_stop_visits",
         "Thresholds":[100, 1000, 2000]
+   },
+   {
+        "Name":"Backpacker",
+        "Protobuf":"BADGE_RAID_BATTLE_WON",
+        "Description":"Raid Battle Won",
+        "Playerstat":"raid_battle_won",
+        "Thresholds":[10, 100, 1000]
    },
    {
         "Name":"Fisherman",
@@ -60,6 +74,13 @@
         "Protobuf":"BADGE_BATTLE_TRAINING_WON",
         "Description":"Training Battles Won",
         "Playerstat":"battle_training_won",
+        "Thresholds":[10, 100, 1000]
+   },
+   {
+        "Name":"Berries Feeder",
+        "Protobuf":"BADGE_BERRIES_FED",
+        "Description":"Berries Fed",
+        "Playerstat":"berries_Fed",
         "Thresholds":[10, 100, 1000]
    },
    {
@@ -222,3 +243,4 @@
         "Thresholds":[3, 50, 300]
    }
 ]
+
