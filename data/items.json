@@ -20,6 +20,10 @@
     "name": "Masterball"
   },
   {
+    "id": "5",
+    "name": "Premierball"
+  },
+  {
     "id": "101",
     "name": "Potion"
   },
@@ -100,6 +104,18 @@
     "name": "Pinap Berry"
   },
   {
+    "id": "706",
+    "name": "Golden Razz Berry"
+  },
+  {
+    "id": "707",
+    "name": "Golden Nanab Berry"
+  },
+  {
+    "id": "708",
+    "name": "Golden Pinap Berry"
+  },
+  {
     "id": "801",
     "name": "Special Camera"
   },
@@ -138,5 +154,29 @@
   {
     "id": "1105",
     "name": "Upgrade"
+  },
+  {
+    "id": "1201",
+    "name": "Reroll Fast Attack"
+  },
+  {
+    "id": "1202",
+    "name": "Reroll Special Attack"
+  },
+  {
+    "id": "1301",
+    "name": "Rare Candy"
+  },
+  {
+    "id": "1401",
+    "name": "Free Raid Ticket"
+  },
+  {
+    "id": "1402",
+    "name": "Paid Raid Ticket"
+  },
+  {
+    "id": "1403",
+    "name": "Legendary Raid Ticket"
   }
 ]
