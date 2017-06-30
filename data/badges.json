@@ -7,7 +7,7 @@
         "Thresholds":[10, 100,1000]
    },
    {
-        "Name":"Kanto",
+        "Name":"Pokedex",
         "Protobuf":"BADGE_POKEDEX_ENTRIES",
         "Description":"Unique Pokedex Entries",
         "Playerstat":"unique_pokedex_entries",
@@ -16,21 +16,21 @@
    {
         "Name":"Collector",
         "Protobuf":"BADGE_CAPTURE_TOTAL",
-        "Description":"Pokemon Caught",
+        "Description":"Pokemons Caught",
         "Playerstat":"pokemons_captured",
         "Thresholds":[30, 500, 2000]
    },
    {
         "Name":"Scientist",
         "Protobuf":"BADGE_EVOLVED_TOTAL",
-        "Description":"Pokemon Evolved",
+        "Description":"Pokemons Evolved",
         "Playerstat":"evolutions",
         "Thresholds":[3, 20, 200]
    },
    {
-        "Name":"Defender?",
+        "Name":"Gym Leader",
         "Protobuf":"BADGE_HOURS_DEFENDED",
-        "Description":"Hours Defender",
+        "Description":"Gym Hours Defended",
         "Playerstat":"hours_defender",
         "Thresholds":[10, 100, 1000]
    },
@@ -49,9 +49,9 @@
         "Thresholds":[100, 1000, 2000]
    },
    {
-        "Name":"Backpacker",
+        "Name":"Champion",
         "Protobuf":"BADGE_RAID_BATTLE_WON",
-        "Description":"Raid Battle Won",
+        "Description":"Raid Battles Won",
         "Playerstat":"raid_battle_won",
         "Thresholds":[10, 100, 1000]
    },
@@ -77,16 +77,16 @@
         "Thresholds":[10, 100, 1000]
    },
    {
-        "Name":"Berries Feeder",
+        "Name":"Berry Master",
         "Protobuf":"BADGE_BERRIES_FED",
-        "Description":"Berries Fed",
+        "Description":"Berries Feed At Gym",
         "Playerstat":"berries_Fed",
         "Thresholds":[10, 100, 1000]
    },
    {
         "Name":"Schoolkid",
         "Protobuf":"BADGE_TYPE_NORMAL",
-        "Description":"Normal Pokemon Caught",
+        "Description":"Normal-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":1,
         "Thresholds":[10, 50, 200]
@@ -94,7 +94,7 @@
    {
         "Name":"Black Belt",
         "Protobuf":"BADGE_TYPE_FIGHTING",
-        "Description":"Fight Pokemon Caught",
+        "Description":"Fight-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":2,
         "Thresholds":[10, 50, 200]
@@ -102,7 +102,7 @@
    {
         "Name":"Bird Keeper",
         "Protobuf":"BADGE_TYPE_FLYING",
-        "Description":"Flying Pokemon Caught",
+        "Description":"Flying-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":3,
         "Thresholds":[10, 50, 200]
@@ -110,7 +110,7 @@
    {
         "Name":"Punk Girl",
         "Protobuf":"BADGE_TYPE_POISON",
-        "Description":"Poison Pokemon Caught",
+        "Description":"Poison-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":4,
         "Thresholds":[10, 50, 200]
@@ -118,7 +118,7 @@
    {
         "Name":"Ruin Maniac",
         "Protobuf":"BADGE_TYPE_GROUND",
-        "Description":"Ground Pokemon Caught",
+        "Description":"Ground-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":5,
         "Thresholds":[10, 50, 200]
@@ -126,7 +126,7 @@
    {
         "Name":"Hiker",
         "Protobuf":"BADGE_TYPE_ROCK",
-        "Description":"Rock Pokemon Caught",
+        "Description":"Rock-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":6,
         "Thresholds":[10, 50, 200]
@@ -134,7 +134,7 @@
    {
         "Name":"Bug Catcher",
         "Protobuf":"BADGE_TYPE_BUG",
-        "Description":"Bug Pokemon Caught",
+        "Description":"Bug-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":7,
         "Thresholds":[10, 50, 200]
@@ -142,7 +142,7 @@
    {
         "Name":"Hex Maniac",
         "Protobuf":"BADGE_TYPE_GHOST",
-        "Description":"Ghost Pokemon Caught",
+        "Description":"Ghost-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":8,
         "Thresholds":[10, 50, 200]
@@ -150,7 +150,7 @@
    {
         "Name":"Depot Agent",
         "Protobuf":"BADGE_TYPE_STEEL",
-        "Description":"Steel Pokemon Caught",
+        "Description":"Steel-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":9,
         "Thresholds":[10, 50, 200]
@@ -158,7 +158,7 @@
    {
         "Name":"Kindler",
         "Protobuf":"BADGE_TYPE_FIRE",
-        "Description":"Fire Pokemon Caught",
+        "Description":"Fire-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":10,
         "Thresholds":[10, 50, 200]
@@ -166,7 +166,7 @@
    {
         "Name":"Swimmer",
         "Protobuf":"BADGE_TYPE_WATER",
-        "Description":"Water Pokemon Caught",
+        "Description":"Water-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":11,
         "Thresholds":[10, 50, 200]
@@ -174,7 +174,7 @@
    {
         "Name":"Gardener",
         "Protobuf":"BADGE_TYPE_GRASS",
-        "Description":"Grass Pokemon Caught",
+        "Description":"Grass-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":12,
         "Thresholds":[10, 50, 200]
@@ -182,7 +182,7 @@
    {
         "Name":"Rocker",
         "Protobuf":"BADGE_TYPE_ELECTRIC",
-        "Description":"Electric Pokemon Caught",
+        "Description":"Electric-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":13,
         "Thresholds":[10, 50, 200]
@@ -190,7 +190,7 @@
    {
         "Name":"Psychic",
         "Protobuf":"BADGE_TYPE_PSYCHIC",
-        "Description":"Psychic Pokemon Caught",
+        "Description":"Psychic-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":14,
         "Thresholds":[10, 50, 200]
@@ -198,7 +198,7 @@
    {
         "Name":"Skier",
         "Protobuf":"BADGE_TYPE_ICE",
-        "Description":"Ice Pokemon Caught",
+        "Description":"Ice-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":15,
         "Thresholds":[10, 50, 200]
@@ -206,16 +206,15 @@
    {
         "Name":"Dragon Tamer",
         "Protobuf":"BADGE_TYPE_DRAGON",
-        "Description":"Dragon Pokemon Caught",
+        "Description":"Dragon-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":16,
         "Thresholds":[10, 50, 200]
    },
    {
-        "disabled":"true",
-        "Name":"???",
+        "Name":"Delinquent",
         "Protobuf":"BADGE_TYPE_DARK",
-        "Description":"Dark Pokemon Caught",
+        "Description":"Dark-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":17,
         "Thresholds":[10, 50, 200]
@@ -223,7 +222,7 @@
    {
         "Name":"Fairy Tale Girl",
         "Protobuf":"BADGE_TYPE_FAIRY",
-        "Description":"Fairy Pokemon Caught",
+        "Description":"Fairy-type Pokemon Caught",
         "Playerstat":"pokemon_caught_by_type",
         "Pokemontype":18,
         "Thresholds":[10, 50, 200]
@@ -231,7 +230,7 @@
    {
         "Name":"Youngster",
         "Protobuf":"BADGE_SMALL_RATTATA",
-        "Description":"Small Rattata Caught",
+        "Description":"Tiny Rattata Caught",
         "Playerstat":"small_rattata_caught",
         "Thresholds":[3, 50, 300]
    },
