@@ -50,6 +50,15 @@ html, body {
   cursor: pointer;
   line-height: 18px;
 }
+
+#close-events {
+  float: left;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 18px;
+}
+
+
 .items, .trainerinfo {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -134,7 +143,7 @@ html, body {
   height: 50vh;
   width: 660px;
   z-index: 5;
-  left: 10px;
+  left: 680px;
   bottom: 10px;
 }
 #logs-panel .card {
@@ -151,8 +160,7 @@ html, body {
 }
 
 
-#event-panel {
-  display: none;
+#events-panel {
   position: fixed;
   height: 50vh;
   width: 660px;
@@ -160,7 +168,7 @@ html, body {
   left: 10px;
   bottom: 10px;
 }
-#event-panel .card {
+#events-panel .card {
   overflow-y: scroll;
   height: 100%;
   margin: 0;
@@ -170,7 +178,11 @@ html, body {
   font-size: 14px;
 }
 .event-date {
+  color: #888;
+}
+.event-type {
   color: #666;
+  display:none;
 }
 
 

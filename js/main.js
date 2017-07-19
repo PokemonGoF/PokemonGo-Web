@@ -2,7 +2,7 @@
 
 var socket_io = [];
 
-var events = {
+var eventsColors = {
   api_error:                         'red',
   badges:                            'blue',
   bot_exit:                          'red',
@@ -108,7 +108,9 @@ var events = {
   used_lucky_egg:                    'white',
   gained_candy:                      'white',
   //player_data:                       'white',
-  moving_to_pokemon_throught_fort:   'white'
+  moving_to_pokemon_throught_fort:   'white',
+  pokemon_vip_caught:                'green',
+  pokemon_caugt:                     'blue'
 }
 
 var moveTypes = {
@@ -308,6 +310,7 @@ var mapView = {
         submenuIndex = itemIndex;
         self.currentUserId = userId;
         self.buildMenu(userId, itemIndex);
+        self.updateEvents();
       }
     });
 
@@ -397,7 +400,9 @@ var mapView = {
     });
     self.placeTrainer();
     self.addCatchable();
+    self.placeEvents();
     setInterval(self.updateTrainer, 1000);
+    setInterval(self.updateEvents, 500);
     setInterval(self.addCatchable, 1000);
     setInterval(self.addInventory, 5000);
   },
@@ -444,8 +449,8 @@ var mapView = {
       }, retry_time * 1000);
     });
 
-    for (var k in events){
-      if (events.hasOwnProperty(k)) {
+    for (var k in eventsColors){
+      if (eventsColors.hasOwnProperty(k)) {
         //let renk = events[k];
         if (typeof socket_io[user_index] !== 'undefined') {
           socket_io[user_index].on(k+':'+self.settings.users[user_index].username, function (data) {
@@ -454,7 +459,7 @@ var mapView = {
               $("div.bot-name").find("[data-bot-id='" + data['account'] + "']").text(data['data']['stats_raw']['username'])
             }
             if(data['data']['msg'] != null && data['data']['msg'] !== prevMsg){
-              var renk = events[data['event']];
+              var renk = eventsColors[data['event']];
               if (logThis.test(data['event'])) {
                 if (data['event'] == 'vip_pokemon') {
                   timeOut = 8000;
@@ -811,6 +816,10 @@ var mapView = {
       	loadJSON('location-' + self.settings.users[i].username + '.json?'+Date.now(), self.trainerFunc, self.errorFunc, i);
       }
     }
+  },
+  placeEvents: function() {
+    var self = mapView;
+  	loadJSON('events-' + self.settings.users[self.currentUserId].username + '.json?'+Date.now(), self.eventsFunc, self.errorFunc, 0);
   },
   sortAndShowBagItems: function(user_id) {
     var self = this,
@@ -1359,6 +1368,33 @@ var mapView = {
       }
     }
   },
+  eventsFunc: function(data, user_index) {
+    var self = mapView,
+    coords = self.pathcoords[self.settings.users[user_index].username][self.pathcoords[self.settings.users[user_index].username].length - 1];
+    //alert(JSON.stringify(data[0]));
+
+    //alert(JSON.stringify(tEvent.event.friendly_msg));
+
+    //first clear all messages
+    $(".event-item").empty();
+    
+    //Print them in different order, so that newest is always on top.
+    for (var i = 0; i<data.length;i++) {
+        var tEvent = data[i];
+        self.printevent({
+          message: tEvent.event.friendly_msg,
+          event: tEvent.event.event,
+          timestamp: tEvent.event.timestamp,
+          level: tEvent.event.level
+        });
+
+    }
+
+  },
+  updateEvents: function() {
+    var self = mapView;
+  	loadJSON('events-' + self.settings.users[self.currentUserId].username + '.json?'+Date.now(), self.eventsFunc, self.errorFunc, 0);
+  },
   calc_cp: function(base_attack, base_defense, base_stamina, iv_attack, iv_defense, iv_stamina, cp_multiplier) {
     var bAttack = (base_attack + iv_attack),
     bDefense = Math.sqrt(base_defense + iv_defense),
@@ -1403,38 +1439,32 @@ var mapView = {
     if (self.logCount > 100) {
       $(".log-item:last-child").remove();
     }
-  }
-};
-
-  // Adds events to event panel
-  event: function(event_object) {
+  },
+  
+  printevent: function(event_object) {
     var self = mapView;
     var timeout = event_object.timeout
-    var logColor = '';
-    var logBGColor = '';
-    if (typeof timeout == 'undefined') {
-      timeout = 3000;
-    }
-    if (typeof event_object.color !== 'undefined' && event_object.color != '') {
-      logColor = 'color: ' + event_object.color + ';';
-    }
-    if (typeof event_object.bgcolor !== 'undefined' && event_object.bgcolor != '') {
-      logBGColor = 'background-color: ' + event_object.bgcolor + ';';
-    }
-    var currentDate = new Date();
-    var time = ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + (currentDate.getMinutes())).slice(-2);
-    $("#logs-output").prepend("<div class='event-item'>\
-        <span class='event-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + event_object.message + "</p></div>");
-    if (!$('#event-panel').is(":visible")) {
-      //Materialize.toast(event_object.message, timeout);
-    }
+    var eventColor = '';
+    var eventBGColor = '';
 
-    self.logCount = $(".event-item").length;
-    if (self.logCount > 100) {
+    var eventType = event_object.event;
+    eventColor = 'color: ' + eventsColors[eventType] + ';';
+    
+    if (typeof event_object.bgcolor !== 'undefined' && event_object.bgcolor != '') {
+      eventBGColor = 'background-color: ' + event_object.bgcolor + ';';
+    }
+    var currentDate = new Date(event_object.timestamp);
+    var time = ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + (currentDate.getMinutes())).slice(-2);
+    $("#events-output").prepend("<div class='event-item'>\
+        <span class='event-date'>" + time + "</span><span class='event-type'>[" + event_object.event + "] </span><span style='" + eventColor + "padding: 2px 5px;" + eventBGColor + "'>" + event_object.message + "</span></div>");
+
+    self.eventCount = $(".event-item").length;
+    if (self.eventCount > 100) {
       $(".event-item:last-child").remove();
     }
   }
 };
+
 
 
 
