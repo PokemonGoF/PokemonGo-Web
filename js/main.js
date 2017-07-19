@@ -284,6 +284,12 @@ var mapView = {
     $('#logs-button').click(function() {
       $('#logs-panel').toggle();
     });
+
+    $('#events-button').click(function() {
+      $('#events-panel').toggle();
+    });
+
+
     // Init tooltip
     $(document).ready(function() {
       $('.tooltipped').tooltip({
@@ -312,6 +318,12 @@ var mapView = {
     $('body').on('click', '#close-logs', function() {
       $('#logs-panel').toggle();
     });
+
+    $('body').on('click', '#close-events', function() {
+      $('#events-panel').toggle();
+    });
+
+
 
     $('body').on('click', '.tFind', function() {
       self.findBot($(this).closest('ul').data('user-id'));
@@ -1393,6 +1405,38 @@ var mapView = {
     }
   }
 };
+
+  // Adds events to event panel
+  event: function(event_object) {
+    var self = mapView;
+    var timeout = event_object.timeout
+    var logColor = '';
+    var logBGColor = '';
+    if (typeof timeout == 'undefined') {
+      timeout = 3000;
+    }
+    if (typeof event_object.color !== 'undefined' && event_object.color != '') {
+      logColor = 'color: ' + event_object.color + ';';
+    }
+    if (typeof event_object.bgcolor !== 'undefined' && event_object.bgcolor != '') {
+      logBGColor = 'background-color: ' + event_object.bgcolor + ';';
+    }
+    var currentDate = new Date();
+    var time = ('0' + currentDate.getHours()).slice(-2) + ':' + ('0' + (currentDate.getMinutes())).slice(-2);
+    $("#logs-output").prepend("<div class='event-item'>\
+        <span class='event-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + event_object.message + "</p></div>");
+    if (!$('#event-panel').is(":visible")) {
+      //Materialize.toast(event_object.message, timeout);
+    }
+
+    self.logCount = $(".event-item").length;
+    if (self.logCount > 100) {
+      $(".event-item:last-child").remove();
+    }
+  }
+};
+
+
 
 if (!String.prototype.format) {
   String.prototype.format = function() {
