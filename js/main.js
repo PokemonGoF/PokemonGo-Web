@@ -1432,7 +1432,7 @@ var mapView = {
     $("#logs-output").prepend("<div class='log-item'>\
         <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
-      Materialize.toast(log_object.message, timeout);
+      //Materialize.toast(log_object.message, timeout);
     }
 
     self.logCount = $(".log-item").length;
