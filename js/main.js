@@ -388,6 +388,18 @@ var mapView = {
         }
       }
     });
+    
+    //Change title
+    var alias =self.settings.users[0].alias;
+    if (!alias) {
+        alias=self.settings.users[0].username;
+    }
+    $("#UI-Title").empty();
+    $("#UI-Title").append("&nbsp;&nbsp;");
+    $("#UI-Title").append(alias);
+    $("#UI-Title").append(" - Pikabot web ui");
+    
+    
   },
   initMap: function() {
     var self = this;
@@ -640,12 +652,16 @@ var mapView = {
     for (var i = 0; i < users.length; i++) {
       if (users[i].enable) {
         var socketEnabled = (users[i].enableSocket) ? ' checked' : '';
+        var alias =users[i].alias;
+        if (!alias) {
+            alias=users[i].username;
+        }
         var content = '<li class="bot-user">\
                       <div class="collapsible-header bot-name">\
                       <span class="right tooltipped" data-position="bottom" data-tooltip="Enable/disable web socket connection">\
                       <input class="toggle-connection" type="checkbox" id="check_{1}" value="{1}"' + socketEnabled + ' />\
                       <label for="check_{1}" style="padding-left: 15px; margin-left: 5px;">&nbsp</label></span>\
-                      <span data-bot-id="{0}">{0}</span></div>\
+                      <span data-bot-id="{0}">' + alias + '</span></div>\
                       <div class="collapsible-body">\
                       <ul class="bot-items" data-user-id="{1}">\
                       <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
@@ -749,7 +765,16 @@ var mapView = {
     var self = this,
     coords = self.pathcoords[self.settings.users[user_index].username][self.pathcoords[self.settings.users[user_index].username].length - 1];
     self.currentUserId = user_index;
-
+    //Change title
+    var alias =self.settings.users[user_index].alias;
+    if (!alias) {
+        alias=self.settings.users[user_index].username;
+    }
+    $("#UI-Title").empty();
+    $("#UI-Title").append("&nbsp;&nbsp;");
+    $("#UI-Title").append(alias);
+    $("#UI-Title").append(" - Pikabot web ui");
+    
     self.map.setZoom(self.settings.zoom);
     self.map.panTo({
       lat: parseFloat(coords.lat),
