@@ -388,6 +388,18 @@ var mapView = {
         }
       }
     });
+    
+    //Change title
+    var alias =self.settings.users[0].alias;
+    if (!alias) {
+        alias=self.settings.users[0].username;
+    }
+    $("#UI-Title").empty();
+    $("#UI-Title").append("&nbsp;&nbsp;");
+    $("#UI-Title").append(alias);
+    $("#UI-Title").append(" - Pikabot web ui");
+    
+    
   },
   initMap: function() {
     var self = this;
@@ -753,7 +765,16 @@ var mapView = {
     var self = this,
     coords = self.pathcoords[self.settings.users[user_index].username][self.pathcoords[self.settings.users[user_index].username].length - 1];
     self.currentUserId = user_index;
-
+    //Change title
+    var alias =self.settings.users[user_index].alias;
+    if (!alias) {
+        alias=self.settings.users[user_index].username;
+    }
+    $("#UI-Title").empty();
+    $("#UI-Title").append("&nbsp;&nbsp;");
+    $("#UI-Title").append(alias);
+    $("#UI-Title").append(" - Pikabot web ui");
+    
     self.map.setZoom(self.settings.zoom);
     self.map.panTo({
       lat: parseFloat(coords.lat),
