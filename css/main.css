@@ -164,7 +164,7 @@ html, body {
   position: fixed;
   height: 30vh;
   /*width: 660px;*/
-  width: 90%;
+  width: 80%;
   z-index: 4;
   left: 10px;
   bottom: 10px;
@@ -363,3 +363,14 @@ span.favorite {
     line-height: 32px;
 }
 
+
+
+header, main, footer, #map, #events-panel {
+   left: 210px;
+}
+
+@media only screen and (max-width : 992px) {
+      header, main, footer, #map, #events-panel {
+    left: 0;
+    }
+}
