@@ -374,3 +374,14 @@ header, main, footer, #map, #events-panel {
     left: 0;
     }
 }
+
+#UI-Title {
+   padding-left: 190px;
+}
+
+
+@media only screen and (max-width : 992px) {
+      #UI-Title {
+    padding-left: 0px;
+    }
+}
