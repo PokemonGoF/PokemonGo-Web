@@ -413,10 +413,10 @@ var mapView = {
     self.placeTrainer();
     self.addCatchable();
     self.placeEvents();
-    setInterval(self.updateTrainer, 1000);
-    setInterval(self.updateEvents, 500);
-    setInterval(self.addCatchable, 1000);
-    setInterval(self.addInventory, 5000);
+    setInterval(self.updateTrainer, 10000);
+    setInterval(self.updateEvents, 1500);
+    setInterval(self.addCatchable, 15000);
+    setInterval(self.addInventory, 15000);
   },
   initSettings: function() {
     var self = mapView;
