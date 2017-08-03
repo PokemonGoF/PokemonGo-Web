@@ -388,6 +388,18 @@ var mapView = {
         }
       }
     });
+    
+    //Change title
+    var alias =self.settings.users[0].alias;
+    if (!alias) {
+        alias=self.settings.users[0].username;
+    }
+    $("#UI-Title").empty();
+    $("#UI-Title").append("&nbsp;&nbsp;");
+    $("#UI-Title").append(alias);
+    $("#UI-Title").append(" - Pikabot web ui");
+    
+    
   },
   initMap: function() {
     var self = this;
@@ -401,10 +413,10 @@ var mapView = {
     self.placeTrainer();
     self.addCatchable();
     self.placeEvents();
-    setInterval(self.updateTrainer, 1000);
-    setInterval(self.updateEvents, 500);
-    setInterval(self.addCatchable, 1000);
-    setInterval(self.addInventory, 5000);
+    setInterval(self.updateTrainer, 10000);
+    setInterval(self.updateEvents, 1500);
+    setInterval(self.addCatchable, 15000);
+    setInterval(self.addInventory, 15000);
   },
   initSettings: function() {
     var self = mapView;
@@ -640,12 +652,16 @@ var mapView = {
     for (var i = 0; i < users.length; i++) {
       if (users[i].enable) {
         var socketEnabled = (users[i].enableSocket) ? ' checked' : '';
+        var alias =users[i].alias;
+        if (!alias) {
+            alias=users[i].username;
+        }
         var content = '<li class="bot-user">\
                       <div class="collapsible-header bot-name">\
                       <span class="right tooltipped" data-position="bottom" data-tooltip="Enable/disable web socket connection">\
                       <input class="toggle-connection" type="checkbox" id="check_{1}" value="{1}"' + socketEnabled + ' />\
                       <label for="check_{1}" style="padding-left: 15px; margin-left: 5px;">&nbsp</label></span>\
-                      <span data-bot-id="{0}">{0}</span></div>\
+                      <span data-bot-id="{0}">' + alias + '</span></div>\
                       <div class="collapsible-body">\
                       <ul class="bot-items" data-user-id="{1}">\
                       <li><a class="bot-' + i + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
@@ -749,7 +765,16 @@ var mapView = {
     var self = this,
     coords = self.pathcoords[self.settings.users[user_index].username][self.pathcoords[self.settings.users[user_index].username].length - 1];
     self.currentUserId = user_index;
-
+    //Change title
+    var alias =self.settings.users[user_index].alias;
+    if (!alias) {
+        alias=self.settings.users[user_index].username;
+    }
+    $("#UI-Title").empty();
+    $("#UI-Title").append("&nbsp;&nbsp;");
+    $("#UI-Title").append(alias);
+    $("#UI-Title").append(" - Pikabot web ui");
+    
     self.map.setZoom(self.settings.zoom);
     self.map.panTo({
       lat: parseFloat(coords.lat),
@@ -1432,7 +1457,7 @@ var mapView = {
     $("#logs-output").prepend("<div class='log-item'>\
         <span class='log-date'>" + time + "</span><p style='" + logColor + "padding: 2px 5px;" + logBGColor + "'>" + log_object.message + "</p></div>");
     if (!$('#logs-panel').is(":visible")) {
-      Materialize.toast(log_object.message, timeout);
+      //Materialize.toast(log_object.message, timeout);
     }
 
     self.logCount = $(".log-item").length;
