@@ -5,23 +5,23 @@
   },
   {
     "id": "1",
-    "name": "Pokeball"
+    "name": "Poke Ball"
   },
   {
     "id": "2",
-    "name": "Greatball"
+    "name": "Great Ball"
   },
   {
     "id": "3",
-    "name": "Ultraball"
+    "name": "Ultra Ball"
   },
   {
     "id": "4",
-    "name": "Masterball"
+    "name": "Master Ball"
   },
   {
     "id": "5",
-    "name": "Premierball"
+    "name": "Premier Ball"
   },
   {
     "id": "101",
@@ -53,7 +53,7 @@
   },
   {
     "id": "401",
-    "name": "Incense Ordinary"
+    "name": "Incense"
   },
   {
     "id": "402",
@@ -69,7 +69,7 @@
   },
   {
     "id": "501",
-    "name": "Troy Disk"
+    "name": "Lure Module"
   },
   {
     "id": "602",
@@ -117,15 +117,15 @@
   },
   {
     "id": "801",
-    "name": "Special Camera"
+    "name": "Camera"
   },
   {
     "id": "901",
-    "name": "Incubator Basic Unlimited"
+    "name": "Egg Incubator Unlimited"
   },
   {
     "id": "902",
-    "name": "Incubator Basic"
+    "name": "Egg Incubator"
   },
   {
     "id": "1001",
@@ -133,7 +133,7 @@
   },
   {
     "id": "1002",
-    "name": "Storage Upgrade"
+    "name": "Bag Upgrade"
   },
   {
     "id": "1101",
@@ -157,11 +157,11 @@
   },
   {
     "id": "1201",
-    "name": "Reroll Fast Attack"
+    "name": "Fast TM"
   },
   {
     "id": "1202",
-    "name": "Reroll Special Attack"
+    "name": "Charged TM"
   },
   {
     "id": "1301",
@@ -169,14 +169,14 @@
   },
   {
     "id": "1401",
-    "name": "Free Raid Ticket"
+    "name": "Raid Pass"
   },
   {
     "id": "1402",
-    "name": "Paid Raid Ticket"
+    "name": "Premium Raid Pass"
   },
   {
     "id": "1403",
-    "name": "Legendary Raid Ticket"
+    "name": "Legendary Raid Pass"
   }
 ]
