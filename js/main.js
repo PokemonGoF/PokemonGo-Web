@@ -932,7 +932,8 @@ var mapView = {
       pkmMHP = pokemonData.stamina_max || 0,
       pkmCPMultiplier = pokemonData.cp_multiplier,
       pkmFavorite = pokemonData.favorite || 0,
-      pkmIsBad = pokemonData.is_bad || false;
+      pkmIsBad = pokemonData.is_bad || false,
+      pkmShiny = pokemonData.pokemon_display.shiny || false;
 
       var pkmDateCaptured = new Date(pokemonData.creation_time_ms);
       var pkmTypeI = self.pokemonArray[pkmID - 1].TypeI[0],
@@ -972,7 +973,8 @@ var mapView = {
         "weakness": pkmWeakness,
         "favorite": pkmFavorite,
         "date_captured": pkmDateCaptured.customFormat( "#MM#/#DD#/#YYYY# #hh#:#mm#" ),
-        "is_bad": pkmIsBad
+        "is_bad": pkmIsBad,
+        "is_shiny": pkmShiny,
       });
     }
     switch ($(".pokemon-sort a.selected").data("sort")) {
@@ -1039,7 +1041,7 @@ var mapView = {
     }
     for (var i = 0; i < sortedPokemon.length; i++) {
       var pkmnNum = sortedPokemon[i].id,
-        pkmnImage = self.pad_with_zeroes(pkmnNum, 3) + '.png',
+        pkmnImage = self.pad_with_zeroes(pkmnNum, 3),
         pkmnName = self.pokemonArray[pkmnNum - 1].Name,
         pkmnLvl = sortedPokemon[i].lvl,
         pkmnCP = sortedPokemon[i].cp,
@@ -1069,11 +1071,13 @@ var mapView = {
         out += '<span class="favorite"><img src="image/trainer/favorite.png"></span>';
       }
       if (sortedPokemon[i].is_bad) {
-          out += '<div style="height:80px; width:80px;"><img src="image/pokemon/' + pkmnImage + 
-            '" class="png_img" style="position:absolute;">' +
-            '<img src="image/is_bad.png" class="png_img" style="position:absolute;"></div></br>'
-      } else {
-        out += '<img src="image/pokemon/' + pkmnImage + '" class="png_img"></br>'
+         out += '<div style="height:80px; width:80px;"><img src="image/pokemon/' + pkmnImage + '.png"' + 
+         'class="png_img" style="position:absolute;">' +  
+         '<img src="image/trainer/is_bad.png" class="png_img" style="position:absolute;"></div></br>'
+      } else if (sortedPokemon[i].is_shiny) { 
+        out += '<img src="image/pokemon/' + pkmnImage + '_shiny.png" class="png_img"></br>'
+      } else { 
+        out += '<img src="image/pokemon/' + pkmnImage + '.png" class="png_img"></br>'
       }
         out += '<span style="cursor: pointer;" class="tooltipped" data-html="true" data-tooltip="' + outWeakness + '"><b>' +
         pkmnName + ' [ Lv.' + pkmnLvl + ' ]</b></span>' +
