@@ -557,6 +557,16 @@ var mapView = {
                 if (pikachu_entry.length === 1){
                     current_value = pikachu_entry[0].inventory_item_data.pokedex_entry.times_captured;
                 }
+			} else if (playerstat == 'unown_caught') {
+                var unown_entry = self.user_data[self.settings.users[user_id].username].pokedex.filter(function ( obj ) {
+                    return obj.inventory_item_data.pokedex_entry.pokemon_id === 201;
+                });
+                if (unown_entry.length === 1){
+                    current_value = unown_entry[0].inventory_item_data.pokedex_entry.times_captured;
+                }
+			} else if (playerstat == 'gym_hours_defended') {
+                var gym_def_ms_to_hours = self.user_data[self.settings.users[user_id].username].stats[0].inventory_item_data.player_stats.total_defended_ms / 1000 / 60 / 60;
+                current_value = Math.round(gym_def_ms_to_hours);
             } else {
                 current_value = current_user_stats[playerstat];
             }

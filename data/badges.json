@@ -10,7 +10,7 @@
         "Name":"Kanto",
         "Protobuf":"BADGE_POKEDEX_ENTRIES",
         "Description":"Kanto region Pokemons",
-        "Playerstat":"unique_pokedex_entries",
+        "Playerstat":"pokedex_entries_gen1",
         "Thresholds":[5, 50, 100]
    },
    {
@@ -59,28 +59,28 @@
         "Name":"Gym Leader",
         "Protobuf":"BADGE_HOURS_DEFENDED",
         "Description":"Gym hours defended",
-        "Playerstat":"hours_defender",
+        "Playerstat":"gym_hours_defended",
         "Thresholds":[10, 100, 1000]
    },
    {
         "Name":"Berry Master",
         "Protobuf":"BADGE_BERRIES_FED",
         "Description":"Berries feed at gym",
-        "Playerstat":"berries_Fed",
+        "Playerstat":"num_berries_fed",
         "Thresholds":[10, 100, 1000]
    },
    {
         "Name":"Champion",
         "Protobuf":"BADGE_RAID_BATTLE_WON",
         "Description":"Raid battles won",
-        "Playerstat":"raid_battle_won",
+        "Playerstat":"num_raid_battle_won",
         "Thresholds":[10, 100, 1000]
    },
    {
         "Name":"Legendary Pokemon",
         "Protobuf":"BADGE_LEGENDARY_BATTLE_WON",
         "Description":"Win legendary raid battles",
-        "Playerstat":"legendary_battle_won",
+        "Playerstat":"num_legendary_battle_won",
         "Thresholds":[3, 10, 26]
    },
    {
