@@ -371,8 +371,8 @@ function MapViewManager() {
         };
 
         var eventsHandler = function (data, user_index) {
-            //first clear all messages
-            $(".event-item").empty();
+            // //first clear all messages
+            $("#events-output").empty();
 
             //Print them in different order, so that newest is always on top.
             for (var key in data) {
@@ -489,10 +489,14 @@ function MapViewManager() {
 
         $('#logs-button').click(function () {
             $('#logs-panel').toggle();
+            if ($('#events-panel').css('display') != "none")
+                $('#events-panel').toggle();
         });
 
         $('#events-button').click(function () {
             $('#events-panel').toggle();
+            if ($('#logs-panel').css('display') != "none")
+                $('#logs-panel').toggle();
         });
 
         // Init tooltip
@@ -1199,7 +1203,7 @@ function MapViewManager() {
         self.placeEvents();
 
         setInterval(self.placeTrainer, 10000);
-        setInterval(self.placeEvents, 1500);
+        setInterval(self.placeEvents, 2500);
         setInterval(self.addCatchable, 15000);
         setInterval(self.addInventory, 15000);
     };
