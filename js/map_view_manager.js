@@ -255,7 +255,7 @@ function MapViewManager() {
                         <span class="right tooltipped" data-position="bottom" data-tooltip="Enable/disable web socket connection">\
                         <input class="toggle-connection" type="checkbox" id="check_{1}" value="{1}"' + socketEnabled + ' />\
                         <label for="check_{1}" style="padding-left: 15px; margin-left: 5px;">&nbsp</label></span>\
-                        <span data-bot-id="{0}">' + alias + '</span></div>\
+                        <span data-bot-id="{0}" class="bot_title">' + alias + '</span></div>\
                         <div class="collapsible-body">\
                         <ul class="bot-items" data-user-id="{1}">\
                         <li><a class="bot-' + key + ' waves-effect waves-light btn tInfo">Info</a></li><br>\
@@ -275,7 +275,7 @@ function MapViewManager() {
             out += "</ul></div>";
             $('#trainers').html(out);
             $('.collapsible').collapsible();
-            $('.tooltipped').tooltip({ delay: 50, html: true });
+            $('.tooltipped').tooltip({ delay: 10, html: true });
         }
 
         var invSuccess = function (data, user_index) {

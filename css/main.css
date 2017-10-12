@@ -133,6 +133,8 @@ html, body {
 }
 
 .bot-name {
+  display: flex;
+  flex-direction: row-reverse;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -316,6 +318,14 @@ html, body {
 .gray {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+}
+span.bot_title{
+  margin: auto;
+  margin-left: 5px;
+}
+span.tooltipped {
+  margin: auto;
+  margin-right: 5px;
 }
 span.tooltipped:hover {
   font-weight: bold;
