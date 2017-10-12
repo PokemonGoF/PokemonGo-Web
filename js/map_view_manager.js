@@ -500,6 +500,8 @@ function MapViewManager() {
             $('.tooltipped').tooltip({
                 delay: 50
             });
+
+            $('#events-title').width($('#events-output').width());
         });
 
         // Bots list and menus
