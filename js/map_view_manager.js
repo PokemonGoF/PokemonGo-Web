@@ -557,10 +557,18 @@ function MapViewManager() {
         });
 
         $('body').on('click', '.pokemon-sort a', function () {
-            var item = $(this);
-            var userId = item.parent().data('user-id');
-            $(item).addClass('selected bot-' + userId);
-            $(item).siblings().removeClass('selected bot-' + userId);
+            var pokemon = $(this);
+            var userId = pokemon.parent().data('user-id');
+            $(pokemon).addClass('selected bot-' + userId);
+            $(pokemon).siblings().removeClass('selected bot-' + userId);
+            sortAndShowBagPokemon(userId);
+        });
+		
+        $('body').on('click', '.pokemon-filter a', function () {
+            var pokemon = $(this);
+            var userId = pokemon.parent().data('user-id');
+            $(pokemon).toggleClass('selected bot-' + userId);
+            $(pokemon).siblings().removeClass('selected bot-' + userId);
             sortAndShowBagPokemon(userId);
         });
 
@@ -747,7 +755,7 @@ function MapViewManager() {
                     var pkmnTotal = user_data[settings.users[user_id].username].bagPokemon.length;
                     $('#subtitle').html(pkmnTotal + " Pokemon");
 
-                    var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort : ';
+                    var sortButtons = '<div class="col s12 pokemon-sort chips" data-user-id="' + user_id + '">Sort: ';
                     sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="cp">CP</a>';
                     sortButtons += '<a class="chip" href="#" data-sort="iv">IV</a>';
                     sortButtons += '<a class="chip" href="#" data-sort="name">Name</a>';
@@ -756,10 +764,15 @@ function MapViewManager() {
                     sortButtons += '<a class="chip" href="#" data-sort="time">Time</a>';
                     sortButtons += '<a class="chip" href="#" data-sort="lvl">Level</a>';
                     sortButtons += '</div>';
-
                     $('#sortButtons').html(sortButtons);
-                    $('#filterButtons').html('');
-                    sortAndShowBagPokemon(user_id);
+					
+                    var filterButtons = '<div class="pokemon-filter chips" data-user-id="' + user_id + '">Filter: ';
+                    filterButtons += '<a class="chip" href="#" data-filter="asc">Ascending</a>';
+                    filterButtons += '<a class="chip" href="#" data-filter="desc">Descending</a>';
+                    filterButtons += '</div>';
+                    $('#filterButtons').html(filterButtons);
+                    
+					sortAndShowBagPokemon(user_id);
                     break;
 
                 case 4:
