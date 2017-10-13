@@ -556,6 +556,14 @@ function MapViewManager() {
             sortAndShowBagItems(userId);
         });
 
+        $('body').on('click', '.pokemon-orderby a', function () {
+            var item = $(this);
+            var userId = item.parent().data('user-id');
+            $(item).addClass('selected bot-' + userId);
+            $(item).siblings().removeClass('selected bot-' + userId);
+            sortAndShowBagPokemon(userId);
+        });
+
         $('body').on('click', '.pokemon-sort a', function () {
             var item = $(this);
             var userId = item.parent().data('user-id');
@@ -757,8 +765,12 @@ function MapViewManager() {
                     sortButtons += '<a class="chip" href="#" data-sort="lvl">Level</a>';
                     sortButtons += '</div>';
 
-                    $('#sortButtons').html(sortButtons);
-                    $('#filterButtons').html('');
+                    var orderBy = '<div class="col s12 pokemon-orderby chips" data-user-id="' + user_id + '">OrderBy : ' 
+                    + '<a class="chip selected bot-' + user_id + '" href="#" data-order="as">Ascending</a>' 
+                    + '<a class="chip" href="#" data-order="ds">Descending</a>'
+
+                    $('#sortButtons').html(orderBy);
+                    $('#filterButtons').html(sortButtons);
                     sortAndShowBagPokemon(user_id);
                     break;
 
@@ -937,15 +949,26 @@ function MapViewManager() {
             }
 
             var sortby = typeof $(".pokemon-sort a.selected").data("sort") != "undefined" ? $(".pokemon-sort a.selected").data("sort") : '';
+            var orderby = typeof $(".pokemon-orderby a.selected").data("order") != "undefined" ? $(".pokemon-orderby a.selected").data("order") : 'as';
             sortedPokemon.sort(function (a, b) {
                 if (sortby != '' && sortby != "cp") {
-                    if (a[sortby == "time" ? "creation_time" : sortby] < b[sortby == "time" ? "creation_time" : sortby]) return -1;
-                    if (a[sortby == "time" ? "creation_time" : sortby] > b[sortby == "time" ? "creation_time" : sortby]) return 1;
+                    if(orderby == 'as'){
+                        if (a[sortby == "time" ? "creation_time" : sortby] < b[sortby == "time" ? "creation_time" : sortby]) return -1;
+                        if (a[sortby == "time" ? "creation_time" : sortby] > b[sortby == "time" ? "creation_time" : sortby]) return 1;
+                    }else{
+                        if (a[sortby == "time" ? "creation_time" : sortby] > b[sortby == "time" ? "creation_time" : sortby]) return -1;
+                        if (a[sortby == "time" ? "creation_time" : sortby] < b[sortby == "time" ? "creation_time" : sortby]) return 1;
+                    }                    
                 }
 
                 if (sortby == '' || sortby == 'cp' || sortby != 'candy' && sortby != 'iv' && sortby != 'time' && sortby != 'lvl') {
-                    if (a.cp > b.cp) return -1;
-                    if (a.cp < b.cp) return 1;
+                    if (orderby == 'as'){
+                        if (a.cp < b.cp) return -1;
+                        if (a.cp > b.cp) return 1;
+                    }else{
+                        if (a.cp > b.cp) return -1;
+                        if (a.cp < b.cp) return 1;
+                    }
                 }
                 return 0;
             });
