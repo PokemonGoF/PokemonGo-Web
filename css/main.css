@@ -2,9 +2,10 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 #map {
-  height: 100%;
+  height: 100%
 }
 #menu {
   position: fixed;
@@ -133,6 +134,8 @@ html, body {
 }
 
 .bot-name {
+  display: flex;
+  flex-direction: row-reverse;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -317,6 +320,14 @@ html, body {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+span.bot_title{
+  margin: auto;
+  margin-left: 5px;
+}
+span.tooltipped {
+  margin: auto;
+  margin-right: 5px;
+}
 span.tooltipped:hover {
   font-weight: bold;
   color: #039be5;
@@ -363,8 +374,6 @@ span.favorite {
     line-height: 32px;
 }
 
-
-
 header, main, footer, #map, #events-panel {
    left: 210px;
 }
@@ -376,12 +385,23 @@ header, main, footer, #map, #events-panel {
 }
 
 #UI-Title {
-   padding-left: 190px;
+  margin: auto;
+  margin-left: 0px;
 }
 
+.page-title-container{
+  display: none;
+  height: 40px;
+  margin-left: 215px;
+}
 
-@media only screen and (max-width : 992px) {
-      #UI-Title {
-    padding-left: 0px;
-    }
+@media only screen and (max-width : 992px) {  
+  .page-title-container{
+    display: flex;
+    margin-left: 0px;
+  }
+
+  #map {
+    height: calc(100% - 40px);
+  }
 }

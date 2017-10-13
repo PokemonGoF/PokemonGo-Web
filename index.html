@@ -23,7 +23,7 @@
         <div class="colT s12T">
           <ul class="collapsible" data-collapsible="accordion">
           <li>
-            <div class="collapsible-header"><i class="material-icons">settings</i>Settings
+            <div class="collapsible-header" style="display:flex;align-items: center;padding: 0 15px;"><i class="material-icons">settings</i>Settings
             </div>
             <div class="collapsible-body">
               <ul class="collapsible" id="optionsList">
@@ -81,7 +81,10 @@
     </div>
 
   </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons" style="height: 40px;">menu</i><span id="UI-Title"></span></a>
+    <a href="#" data-activates="slide-out" class="button-collapse page-title-container">
+      <i class="material-icons" style="margin: auto;margin-left: 10px;margin-right: 10px;">menu</i>
+      <span id="UI-Title"></span>
+    </a>
     <div class="container" id="submenu">
         <div class="col s12">
           <div class="card white">
@@ -114,8 +117,8 @@
     <div id="events-panel">
       <div class="card black">
         <div class="card-content white-text">
-          <div style="position: fixed; width: 100%; margin-top: -10px; padding-top: 10px;" class="black">
-            <span id="close-events">×</span>
+          <div id="events-title" style="position: fixed; margin-top: -10px; padding-top: 10px;" class="black">
+            <span id="close-events" style="margin-right:10px;margin-top:2px;">×</span>
             <b>Events</b>
             <hr style="margin-bottom: 0;" />
           </div>
@@ -123,12 +126,14 @@
         </div>
       </div>
     </div>
-
     
     <div id="map"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.js"></script>
     <script type="text/javascript" src="config/userdata.js"></script>
     <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/global_vars_utils.js"></script>
+    <script type="text/javascript" src="js/users_socket_io.js"></script>
+    <script type="text/javascript" src="js/map_view_manager.js"></script>    
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
