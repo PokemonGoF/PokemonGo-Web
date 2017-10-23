@@ -11536,7 +11536,7 @@
     "Number": "252",
     "Name": "Treecko",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
@@ -11580,7 +11580,7 @@
     "Number": "253",
     "Name": "Grovyle",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
@@ -11626,7 +11626,7 @@
     "Number": "254",
     "Name": "Sceptile",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
@@ -11665,7 +11665,7 @@
     "Number": "255",
     "Name": "Torchic",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
@@ -11709,10 +11709,10 @@
     "Number": "256",
     "Name": "Combusken",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fire"
     ],
-    "Type II": [
+    "TypeII": [
       "Fighting"
     ],
     "Weaknesses": [
@@ -11758,10 +11758,10 @@
     "Number": "257",
     "Name": "Blaziken",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fire"
     ],
-    "Type II": [
+    "TypeII": [
       "Fighting"
     ],
     "Weaknesses": [
@@ -11800,7 +11800,7 @@
     "Number": "258",
     "Name": "Mudkip",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -11844,10 +11844,10 @@
     "Number": "259",
     "Name": "Marshtomp",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -11893,10 +11893,10 @@
     "Number": "260",
     "Name": "Swampert",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -11935,7 +11935,7 @@
     "Number": "261",
     "Name": "Poochyena",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dark"
     ],
     "Weaknesses": [
@@ -11975,7 +11975,7 @@
     "Number": "262",
     "Name": "Mightyena",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dark"
     ],
     "Weaknesses": [
@@ -12010,7 +12010,7 @@
     "Number": "263",
     "Name": "Zigzagoon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -12050,7 +12050,7 @@
     "Number": "264",
     "Name": "Linoone",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -12085,7 +12085,7 @@
     "Number": "265",
     "Name": "Wurmple",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
@@ -12137,7 +12137,7 @@
     "Number": "266",
     "Name": "Silcoon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
@@ -12187,10 +12187,10 @@
     "Number": "267",
     "Name": "Beautifly",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -12233,7 +12233,7 @@
     "Number": "268",
     "Name": "Cascoon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
@@ -12283,10 +12283,10 @@
     "Number": "269",
     "Name": "Dustox",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Poison"
     ],
     "Weaknesses": [
@@ -12329,10 +12329,10 @@
     "Number": "270",
     "Name": "Lotad",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Grass"
     ],
     "Weaknesses": [
@@ -12376,10 +12376,10 @@
     "Number": "271",
     "Name": "Lombre",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Grass"
     ],
     "Weaknesses": [
@@ -12425,10 +12425,10 @@
     "Number": "272",
     "Name": "Ludicolo",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Grass"
     ],
     "Weaknesses": [
@@ -12467,7 +12467,7 @@
     "Number": "273",
     "Name": "Seedot",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
@@ -12511,10 +12511,10 @@
     "Number": "274",
     "Name": "Nuzleaf",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
-    "Type II": [
+    "TypeII": [
       "Dark"
     ],
     "Weaknesses": [
@@ -12560,10 +12560,10 @@
     "Number": "275",
     "Name": "Shiftry",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
-    "Type II": [
+    "TypeII": [
       "Dark"
     ],
     "Weaknesses": [
@@ -12602,10 +12602,10 @@
     "Number": "276",
     "Name": "Taillow",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -12645,10 +12645,10 @@
     "Number": "277",
     "Name": "Swellow",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -12683,10 +12683,10 @@
     "Number": "278",
     "Name": "Wingull",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -12726,10 +12726,10 @@
     "Number": "279",
     "Name": "Pelipper",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -12764,10 +12764,10 @@
     "Number": "280",
     "Name": "Ralts",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
-    "Type II": [
+    "TypeII": [
       "Fairy"
     ],
     "Weaknesses": [
@@ -12811,10 +12811,10 @@
     "Number": "281",
     "Name": "Kirlia",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
-    "Type II": [
+    "TypeII": [
       "Fairy"
     ],
     "Weaknesses": [
@@ -12860,10 +12860,10 @@
     "Number": "282",
     "Name": "Gardevoir",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
-    "Type II": [
+    "TypeII": [
       "Fairy"
     ],
     "Weaknesses": [
@@ -12902,10 +12902,10 @@
     "Number": "283",
     "Name": "Surskit",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Water"
     ],
     "Weaknesses": [
@@ -12945,10 +12945,10 @@
     "Number": "284",
     "Name": "Masquerain",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -12983,7 +12983,7 @@
     "Number": "285",
     "Name": "Shroomish",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
@@ -13023,10 +13023,10 @@
     "Number": "286",
     "Name": "Breloom",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
-    "Type II": [
+    "TypeII": [
       "Fighting"
     ],
     "Weaknesses": [
@@ -13061,7 +13061,7 @@
     "Number": "287",
     "Name": "Slakoth",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13105,7 +13105,7 @@
     "Number": "288",
     "Name": "Vigoroth",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13151,7 +13151,7 @@
     "Number": "289",
     "Name": "Slaking",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13190,10 +13190,10 @@
     "Number": "290",
     "Name": "Nincada",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -13237,10 +13237,10 @@
     "Number": "291",
     "Name": "Ninjask",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -13275,10 +13275,10 @@
     "Number": "292",
     "Name": "Shedinja",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
-    "Type II": [
+    "TypeII": [
       "Ghost"
     ],
     "Weaknesses": [
@@ -13313,7 +13313,7 @@
     "Number": "293",
     "Name": "Whismur",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13357,7 +13357,7 @@
     "Number": "294",
     "Name": "Loudred",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13403,7 +13403,7 @@
     "Number": "295",
     "Name": "Exploud",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13442,7 +13442,7 @@
     "Number": "296",
     "Name": "Makuhita",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
@@ -13482,7 +13482,7 @@
     "Number": "297",
     "Name": "Hariyama",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fighting"
     ],
     "Weaknesses": [
@@ -13517,10 +13517,10 @@
     "Number": "298",
     "Name": "Azurill",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
-    "Type II": [
+    "TypeII": [
       "Fairy"
     ],
     "Weaknesses": [
@@ -13559,7 +13559,7 @@
     "Number": "299",
     "Name": "Nosepass",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
     "Weaknesses": [
@@ -13588,7 +13588,7 @@
     "Number": "300",
     "Name": "Skitty",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13628,7 +13628,7 @@
     "Number": "301",
     "Name": "Delcatty",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -13663,10 +13663,10 @@
     "Number": "302",
     "Name": "Sableye",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dark"
     ],
-    "Type II": [
+    "TypeII": [
       "Ghost"
     ],
     "Weaknesses": [
@@ -13698,10 +13698,10 @@
     "Number": "303",
     "Name": "Mawile",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Fairy"
     ],
     "Weaknesses": [
@@ -13730,10 +13730,10 @@
     "Number": "304",
     "Name": "Aron",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Rock"
     ],
     "Weaknesses": [
@@ -13777,10 +13777,10 @@
     "Number": "305",
     "Name": "Lairon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Rock"
     ],
     "Weaknesses": [
@@ -13826,10 +13826,10 @@
     "Number": "306",
     "Name": "Aggron",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Rock"
     ],
     "Weaknesses": [
@@ -13868,10 +13868,10 @@
     "Number": "307",
     "Name": "Meditite",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fighting"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -13911,10 +13911,10 @@
     "Number": "308",
     "Name": "Medicham",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fighting"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -13949,7 +13949,7 @@
     "Number": "309",
     "Name": "Electrike",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
@@ -13989,7 +13989,7 @@
     "Number": "310",
     "Name": "Manectric",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
@@ -14024,7 +14024,7 @@
     "Number": "311",
     "Name": "Plusle",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
@@ -14053,7 +14053,7 @@
     "Number": "312",
     "Name": "Minun",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Electric"
     ],
     "Weaknesses": [
@@ -14082,7 +14082,7 @@
     "Number": "313",
     "Name": "Volbeat",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
@@ -14111,7 +14111,7 @@
     "Number": "314",
     "Name": "Illumise",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Bug"
     ],
     "Weaknesses": [
@@ -14140,10 +14140,10 @@
     "Number": "315",
     "Name": "Roselia",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
-    "Type II": [
+    "TypeII": [
       "Poison"
     ],
     "Weaknesses": [
@@ -14172,7 +14172,7 @@
     "Number": "316",
     "Name": "Gulpin",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
@@ -14212,7 +14212,7 @@
     "Number": "317",
     "Name": "Swalot",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
@@ -14247,10 +14247,10 @@
     "Number": "318",
     "Name": "Carvanha",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Dark"
     ],
     "Weaknesses": [
@@ -14290,10 +14290,10 @@
     "Number": "319",
     "Name": "Sharpedo",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Dark"
     ],
     "Weaknesses": [
@@ -14328,7 +14328,7 @@
     "Number": "320",
     "Name": "Wailmer",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -14368,7 +14368,7 @@
     "Number": "321",
     "Name": "Wailord",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -14403,10 +14403,10 @@
     "Number": "322",
     "Name": "Numel",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fire"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -14446,10 +14446,10 @@
     "Number": "323",
     "Name": "Camerupt",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fire"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -14484,7 +14484,7 @@
     "Number": "324",
     "Name": "Torkoal",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Fire"
     ],
     "Weaknesses": [
@@ -14513,7 +14513,7 @@
     "Number": "325",
     "Name": "Spoink",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -14553,7 +14553,7 @@
     "Number": "326",
     "Name": "Grumpig",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -14588,7 +14588,7 @@
     "Number": "327",
     "Name": "Spinda",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -14617,7 +14617,7 @@
     "Number": "328",
     "Name": "Trapinch",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
@@ -14661,10 +14661,10 @@
     "Number": "329",
     "Name": "Vibrava",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ground"
     ],
-    "Type II": [
+    "TypeII": [
       "Dragon"
     ],
     "Weaknesses": [
@@ -14710,10 +14710,10 @@
     "Number": "330",
     "Name": "Flygon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ground"
     ],
-    "Type II": [
+    "TypeII": [
       "Dragon"
     ],
     "Weaknesses": [
@@ -14752,7 +14752,7 @@
     "Number": "331",
     "Name": "Cacnea",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
     "Weaknesses": [
@@ -14792,10 +14792,10 @@
     "Number": "332",
     "Name": "Cacturne",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
-    "Type II": [
+    "TypeII": [
       "Dark"
     ],
     "Weaknesses": [
@@ -14830,10 +14830,10 @@
     "Number": "333",
     "Name": "Swablu",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -14873,10 +14873,10 @@
     "Number": "334",
     "Name": "Altaria",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -14911,7 +14911,7 @@
     "Number": "335",
     "Name": "Zangoose",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -14940,7 +14940,7 @@
     "Number": "336",
     "Name": "Seviper",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Poison"
     ],
     "Weaknesses": [
@@ -14969,10 +14969,10 @@
     "Number": "337",
     "Name": "Lunatone",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -15001,10 +15001,10 @@
     "Number": "338",
     "Name": "Solrock",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -15033,10 +15033,10 @@
     "Number": "339",
     "Name": "Barboach",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -15076,10 +15076,10 @@
     "Number": "340",
     "Name": "Whiscash",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Ground"
     ],
     "Weaknesses": [
@@ -15114,7 +15114,7 @@
     "Number": "341",
     "Name": "Corphish",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -15154,10 +15154,10 @@
     "Number": "342",
     "Name": "Crawdaunt",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Dark"
     ],
     "Weaknesses": [
@@ -15192,10 +15192,10 @@
     "Number": "343",
     "Name": "Baltoy",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ground"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -15235,10 +15235,10 @@
     "Number": "344",
     "Name": "Claydol",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ground"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -15273,10 +15273,10 @@
     "Number": "345",
     "Name": "Lileep",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
-    "Type II": [
+    "TypeII": [
       "Grass"
     ],
     "Weaknesses": [
@@ -15316,10 +15316,10 @@
     "Number": "346",
     "Name": "Cradily",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
-    "Type II": [
+    "TypeII": [
       "Grass"
     ],
     "Weaknesses": [
@@ -15354,10 +15354,10 @@
     "Number": "347",
     "Name": "Anorith",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
-    "Type II": [
+    "TypeII": [
       "Bug"
     ],
     "Weaknesses": [
@@ -15397,10 +15397,10 @@
     "Number": "348",
     "Name": "Armaldo",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
-    "Type II": [
+    "TypeII": [
       "Bug"
     ],
     "Weaknesses": [
@@ -15435,7 +15435,7 @@
     "Number": "349",
     "Name": "Feebas",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -15475,7 +15475,7 @@
     "Number": "350",
     "Name": "Milotic",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -15510,7 +15510,7 @@
     "Number": "351",
     "Name": "Castform",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -15539,7 +15539,7 @@
     "Number": "352",
     "Name": "Kecleon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Normal"
     ],
     "Weaknesses": [
@@ -15568,7 +15568,7 @@
     "Number": "353",
     "Name": "Shuppet",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ghost"
     ],
     "Weaknesses": [
@@ -15611,7 +15611,7 @@
     "Number": "354",
     "Name": "Banette",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ghost"
     ],
     "Weaknesses": [
@@ -15649,7 +15649,7 @@
     "Number": "355",
     "Name": "Duskull",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ghost"
     ],
     "Weaknesses": [
@@ -15692,7 +15692,7 @@
     "Number": "356",
     "Name": "Dusclops",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ghost"
     ],
     "Weaknesses": [
@@ -15730,10 +15730,10 @@
     "Number": "357",
     "Name": "Tropius",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Grass"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -15762,7 +15762,7 @@
     "Number": "358",
     "Name": "Chimecho",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -15791,7 +15791,7 @@
     "Number": "359",
     "Name": "Absol",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dark"
     ],
     "Weaknesses": [
@@ -15820,7 +15820,7 @@
     "Number": "360",
     "Name": "Wynaut",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -15855,7 +15855,7 @@
     "Number": "361",
     "Name": "Snorunt",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ice"
     ],
     "Weaknesses": [
@@ -15895,7 +15895,7 @@
     "Number": "362",
     "Name": "Glalie",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ice"
     ],
     "Weaknesses": [
@@ -15930,10 +15930,10 @@
     "Number": "363",
     "Name": "Spheal",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ice"
     ],
-    "Type II": [
+    "TypeII": [
       "Water"
     ],
     "Weaknesses": [
@@ -15977,10 +15977,10 @@
     "Number": "364",
     "Name": "Sealeo",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ice"
     ],
-    "Type II": [
+    "TypeII": [
       "Water"
     ],
     "Weaknesses": [
@@ -16026,10 +16026,10 @@
     "Number": "365",
     "Name": "Walrein",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ice"
     ],
-    "Type II": [
+    "TypeII": [
       "Water"
     ],
     "Weaknesses": [
@@ -16068,7 +16068,7 @@
     "Number": "366",
     "Name": "Clamperl",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -16112,7 +16112,7 @@
     "Number": "367",
     "Name": "Huntail",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -16147,7 +16147,7 @@
     "Number": "368",
     "Name": "Gorebyss",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -16182,10 +16182,10 @@
     "Number": "369",
     "Name": "Relicanth",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
-    "Type II": [
+    "TypeII": [
       "Rock"
     ],
     "Weaknesses": [
@@ -16214,7 +16214,7 @@
     "Number": "370",
     "Name": "Luvdisc",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -16243,7 +16243,7 @@
     "Number": "371",
     "Name": "Bagon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
     "Weaknesses": [
@@ -16287,7 +16287,7 @@
     "Number": "372",
     "Name": "Shelgon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
     "Weaknesses": [
@@ -16333,10 +16333,10 @@
     "Number": "373",
     "Name": "Salamence",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -16375,10 +16375,10 @@
     "Number": "374",
     "Name": "Beldum",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -16422,10 +16422,10 @@
     "Number": "375",
     "Name": "Metang",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -16471,10 +16471,10 @@
     "Number": "376",
     "Name": "Metagross",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -16513,7 +16513,7 @@
     "Number": "377",
     "Name": "Regirock",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Rock"
     ],
     "Weaknesses": [
@@ -16542,7 +16542,7 @@
     "Number": "378",
     "Name": "Regice",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ice"
     ],
     "Weaknesses": [
@@ -16571,7 +16571,7 @@
     "Number": "379",
     "Name": "Registeel",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
     "Weaknesses": [
@@ -16600,10 +16600,10 @@
     "Number": "380",
     "Name": "Latias",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -16632,10 +16632,10 @@
     "Number": "381",
     "Name": "Latios",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -16664,7 +16664,7 @@
     "Number": "382",
     "Name": "Kyogre",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Water"
     ],
     "Weaknesses": [
@@ -16693,7 +16693,7 @@
     "Number": "383",
     "Name": "Groudon",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Ground"
     ],
     "Weaknesses": [
@@ -16722,10 +16722,10 @@
     "Number": "384",
     "Name": "Rayquaza",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Dragon"
     ],
-    "Type II": [
+    "TypeII": [
       "Flying"
     ],
     "Weaknesses": [
@@ -16754,10 +16754,10 @@
     "Number": "385",
     "Name": "Jirachi",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Steel"
     ],
-    "Type II": [
+    "TypeII": [
       "Psychic"
     ],
     "Weaknesses": [
@@ -16786,7 +16786,7 @@
     "Number": "386",
     "Name": "Deoxys",
     "Classification": "DataNotInGameMaster",
-    "Type I": [
+    "TypeI": [
       "Psychic"
     ],
     "Weaknesses": [
