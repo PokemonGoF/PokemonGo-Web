@@ -776,7 +776,7 @@ function MapViewManager() {
 
                 case 4:
                     var pkmnTotal = user_data[settings.users[user_id].username].pokedex.length;
-                    $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 251');
+                    $('#subtitle').html('Pokedex ' + pkmnTotal + ' / 386');
 
                     var sortButtons = '<div class="pokedex-sort chips" data-user-id="' + user_id + '">Sort: ';
                     sortButtons += '<a class="chip selected bot-' + user_id + '" href="#" data-sort="id">ID</a>';
@@ -1164,7 +1164,7 @@ function MapViewManager() {
 
             var filtered = 0,
                 filter = $(".pokedex-filter a.selected").data("filter"),
-                pkmnTotal = 251;
+                pkmnTotal = 386;
 
             if ($(".pokedex-filter a.selected").length === 0) {
                 pkmnTotal = user_data[settings.users[user_id].username].stats[0].inventory_item_data.player_stats.unique_pokedex_entries;
@@ -1207,7 +1207,7 @@ function MapViewManager() {
                 return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
             });
             $('#subcontent').html(out);
-            $('#subtitle').html('Pokedex ' + (pkmnTotal - filtered) + ' / 251');
+            $('#subtitle').html('Pokedex ' + (pkmnTotal - filtered) + ' / 386');
         }
     };
 

@@ -21,6 +21,13 @@
         "Thresholds":[5, 30, 70]
    },
    {
+        "Name":"Hoenn",
+        "Protobuf":"BADGE_POKEDEX_ENTRIES_GEN3",
+        "Description":"Hoenn region Pokemons",
+        "Playerstat":"pokedex_entries_gen3",
+        "Thresholds":[5, 40, 90]
+   },
+   {
         "Name":"Collector",
         "Protobuf":"BADGE_CAPTURE_TOTAL",
         "Description":"Pokemons caught",
@@ -77,7 +84,7 @@
         "Thresholds":[10, 100, 1000]
    },
    {
-        "Name":"Legendary Pokemon",
+        "Name":"Battle Legend",
         "Protobuf":"BADGE_LEGENDARY_BATTLE_WON",
         "Description":"Win legendary raid battles",
         "Playerstat":"num_legendary_battle_won",
