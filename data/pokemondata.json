@@ -11543,7 +11543,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Pound",
+      "Bullet Seed"
     ],
     "Weight": "5 kg",
     "Height": "0.51 m",
@@ -11567,14 +11568,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Energy Ball",
+      "Aerial Ace",
+      "Grass Knot"
     ],
     "BaseAttack": 124,
     "BaseDefense": 104,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "253",
@@ -11587,7 +11590,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Quick Attack",
+      "Bullet Seed"
     ],
     "Weight": "21.6 kg",
     "Height": "0.89 m",
@@ -11613,14 +11617,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Leaf Blade",
+      "Aerial Ace",
+      "Grass Knot"
     ],
     "BaseAttack": 172,
     "BaseDefense": 130,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.1,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "254",
@@ -11633,7 +11639,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Fury Cutter",
+      "Bullet Seed"
     ],
     "Weight": "52.2 kg",
     "Height": "1.7 m",
@@ -11652,14 +11659,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Leaf Blade",
+      "Aerial Ace",
+      "Earthquake"
     ],
     "BaseAttack": 223,
     "BaseDefense": 180,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "255",
@@ -11672,7 +11681,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Scratch",
+      "Ember"
     ],
     "Weight": "2.5 kg",
     "Height": "0.41 m",
@@ -11696,14 +11706,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Flame Charge",
+      "Flamethrower",
+      "Rock Tomb"
     ],
     "BaseAttack": 130,
     "BaseDefense": 92,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "256",
@@ -11719,7 +11731,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Peck",
+      "Ember"
     ],
     "Weight": "19.5 kg",
     "Height": "0.89 m",
@@ -11745,14 +11758,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Flame Charge",
+      "Flamethrower",
+      "Rock Slide"
     ],
     "BaseAttack": 163,
     "BaseDefense": 115,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.1,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "257",
@@ -11768,7 +11783,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Counter",
+      "Fire Spin"
     ],
     "Weight": "52 kg",
     "Height": "1.91 m",
@@ -11787,14 +11803,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Focus Blast",
+      "Overheat",
+      "Brave Bird"
     ],
     "BaseAttack": 240,
     "BaseDefense": 141,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "258",
@@ -11807,7 +11825,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Tackle",
+      "Water Gun"
     ],
     "Weight": "7.6 kg",
     "Height": "0.41 m",
@@ -11831,14 +11850,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Dig",
+      "Sludge",
+      "Stomp"
     ],
     "BaseAttack": 126,
     "BaseDefense": 93,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "259",
@@ -11854,7 +11875,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Mud Shot",
+      "Water Gun"
     ],
     "Weight": "28 kg",
     "Height": "0.71 m",
@@ -11880,14 +11902,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Mud Bomb",
+      "Sludge",
+      "Surf"
     ],
     "BaseAttack": 156,
     "BaseDefense": 133,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.1,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "260",
@@ -11903,7 +11927,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Mud Shot",
+      "Water Gun"
     ],
     "Weight": "81.9 kg",
     "Height": "1.5 m",
@@ -11922,14 +11947,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Earthquake",
+      "Sludge Wave",
+      "Surf"
     ],
     "BaseAttack": 208,
     "BaseDefense": 175,
     "BaseStamina": 200,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "261",
@@ -11942,7 +11969,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Tackle",
+      "Snarl"
     ],
     "Weight": "13.6 kg",
     "Height": "0.51 m",
@@ -11962,14 +11990,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Crunch",
+      "Dig",
+      "Poison Fang"
     ],
     "BaseAttack": 96,
     "BaseDefense": 63,
     "BaseStamina": 70,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "262",
@@ -11982,7 +12012,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Fire Fang"
     ],
     "Weight": "37 kg",
     "Height": "0.99 m",
@@ -11997,14 +12028,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Crunch",
+      "Play Rough",
+      "Poison Fang"
     ],
     "BaseAttack": 171,
     "BaseDefense": 137,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "263",
@@ -12017,7 +12050,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Tackle",
+      "Rock Smash"
     ],
     "Weight": "17.5 kg",
     "Height": "0.41 m",
@@ -12037,14 +12071,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Dig",
+      "Grass Knot",
+      "Thunderbolt"
     ],
     "BaseAttack": 58,
     "BaseDefense": 80,
     "BaseStamina": 76,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "264",
@@ -12057,7 +12093,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Shadow Claw",
+      "Tackle"
     ],
     "Weight": "32.5 kg",
     "Height": "0.51 m",
@@ -12072,14 +12109,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Dig",
+      "Grass Knot",
+      "Thunder"
     ],
     "BaseAttack": 142,
     "BaseDefense": 128,
     "BaseStamina": 156,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "265",
@@ -12092,7 +12131,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Tackle",
+      "Bug Bite"
     ],
     "Weight": "3.6 kg",
     "Height": "0.3 m",
@@ -12129,9 +12169,9 @@
     "BaseAttack": 75,
     "BaseDefense": 61,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "266",
@@ -12144,7 +12184,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Poison Sting",
+      "Bug Bite"
     ],
     "Weight": "10 kg",
     "Height": "0.61 m",
@@ -12179,9 +12220,9 @@
     "BaseAttack": 60,
     "BaseDefense": 91,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "267",
@@ -12197,7 +12238,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Struggle Bug",
+      "Infestation"
     ],
     "Weight": "28.4 kg",
     "Height": "0.99 m",
@@ -12220,14 +12262,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Silver Wind",
+      "Air Cutter",
+      "Bug Buzz"
     ],
     "BaseAttack": 189,
     "BaseDefense": 98,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "268",
@@ -12240,7 +12284,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Poison Sting",
+      "Bug Bite"
     ],
     "Weight": "11.5 kg",
     "Height": "0.71 m",
@@ -12275,9 +12320,9 @@
     "BaseAttack": 60,
     "BaseDefense": 91,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "269",
@@ -12293,7 +12338,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Struggle Bug",
+      "Confusion"
     ],
     "Weight": "31.6 kg",
     "Height": "1.19 m",
@@ -12316,14 +12362,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Silver Wind",
+      "Sludge Bomb",
+      "Bug Buzz"
     ],
     "BaseAttack": 98,
     "BaseDefense": 172,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "270",
@@ -12339,7 +12387,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Razor Leaf"
     ],
     "Weight": "2.6 kg",
     "Height": "0.51 m",
@@ -12363,14 +12412,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Bubble Beam",
+      "Energy Ball"
     ],
     "BaseAttack": 71,
     "BaseDefense": 86,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "271",
@@ -12386,7 +12436,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bubble",
+      "Razor Leaf"
     ],
     "Weight": "32.5 kg",
     "Height": "1.19 m",
@@ -12412,14 +12463,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Bubble Beam",
+      "Ice Beam",
+      "Grass Knot"
     ],
     "BaseAttack": 112,
     "BaseDefense": 128,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "272",
@@ -12435,7 +12488,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bubble",
+      "Razor Leaf"
     ],
     "Weight": "55 kg",
     "Height": "1.5 m",
@@ -12454,14 +12508,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Hydro Pump",
+      "Blizzard",
+      "Solar Beam"
     ],
     "BaseAttack": 173,
     "BaseDefense": 191,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "273",
@@ -12474,7 +12530,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bullet Seed",
+      "Quick Attack"
     ],
     "Weight": "4 kg",
     "Height": "0.51 m",
@@ -12498,14 +12555,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Energy Ball",
+      "Grass Knot",
+      "Foul Play"
     ],
     "BaseAttack": 71,
     "BaseDefense": 86,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "274",
@@ -12521,7 +12580,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Razor Leaf",
+      "Feint Attack"
     ],
     "Weight": "28 kg",
     "Height": "0.99 m",
@@ -12547,14 +12607,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Leaf Blade",
+      "Grass Knot",
+      "Foul Play"
     ],
     "BaseAttack": 134,
     "BaseDefense": 78,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "275",
@@ -12570,7 +12632,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Razor Leaf",
+      "Feint Attack"
     ],
     "Weight": "59.6 kg",
     "Height": "1.3 m",
@@ -12589,14 +12652,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Leaf Blade",
+      "Hurricane",
+      "Foul Play"
     ],
     "BaseAttack": 200,
     "BaseDefense": 121,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "276",
@@ -12612,7 +12677,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Peck",
+      "Quick Attack"
     ],
     "Weight": "2.3 kg",
     "Height": "0.3 m",
@@ -12632,14 +12698,14 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aerial Ace"
     ],
     "BaseAttack": 106,
     "BaseDefense": 61,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "277",
@@ -12655,7 +12721,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Wing Attack",
+      "Steel Wing"
     ],
     "Weight": "19.8 kg",
     "Height": "0.71 m",
@@ -12670,14 +12737,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aerial Ace",
+      "Brave Bird",
+      "Sky Attack"
     ],
     "BaseAttack": 185,
     "BaseDefense": 130,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "278",
@@ -12693,7 +12762,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Quick Attack"
     ],
     "Weight": "9.5 kg",
     "Height": "0.61 m",
@@ -12713,14 +12783,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Water Pulse",
+      "Air Cutter",
+      "Ice Beam"
     ],
     "BaseAttack": 106,
     "BaseDefense": 61,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "279",
@@ -12736,7 +12808,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Wing Attack"
     ],
     "Weight": "28 kg",
     "Height": "1.19 m",
@@ -12751,14 +12824,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Hydro Pump",
+      "Hurricane",
+      "Blizzard"
     ],
     "BaseAttack": 175,
     "BaseDefense": 189,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "280",
@@ -12774,7 +12849,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Confusion",
+      "Charge Beam"
     ],
     "Weight": "6.6 kg",
     "Height": "0.41 m",
@@ -12798,13 +12874,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psyshock",
+      "Disarming Voice",
+      "Shadow Sneak"
     ],
     "BaseAttack": 79,
     "BaseDefense": 63,
     "BaseStamina": 56,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.4,
+    "FleeRate": 0.09,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -12821,7 +12899,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Confusion",
+      "Charge Beam"
     ],
     "Weight": "20.2 kg",
     "Height": "0.79 m",
@@ -12847,13 +12926,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Disarming Voice",
+      "Shadow Sneak"
     ],
     "BaseAttack": 117,
     "BaseDefense": 100,
     "BaseStamina": 76,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.06,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -12870,7 +12951,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Confusion",
+      "Charge Beam"
     ],
     "Weight": "48.4 kg",
     "Height": "1.6 m",
@@ -12889,13 +12971,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Dazzling Gleam",
+      "Shadow Ball"
     ],
     "BaseAttack": 237,
     "BaseDefense": 220,
     "BaseStamina": 136,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -12912,7 +12996,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bubble",
+      "Bug Bite"
     ],
     "Weight": "1.7 kg",
     "Height": "0.51 m",
@@ -12932,14 +13017,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aqua Jet",
+      "Bubble Beam",
+      "Signal Beam"
     ],
     "BaseAttack": 93,
     "BaseDefense": 97,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "284",
@@ -12955,7 +13042,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Infestation",
+      "Air Slash"
     ],
     "Weight": "3.6 kg",
     "Height": "0.79 m",
@@ -12970,14 +13058,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Air Cutter",
+      "Ominous Wind",
+      "Silver Wind"
     ],
     "BaseAttack": 192,
     "BaseDefense": 161,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "285",
@@ -12990,7 +13080,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Tackle",
+      "Bullet Seed"
     ],
     "Weight": "4.5 kg",
     "Height": "0.41 m",
@@ -13010,14 +13101,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Seed Bomb",
+      "Grass Knot",
+      "Energy Ball"
     ],
     "BaseAttack": 74,
     "BaseDefense": 110,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "286",
@@ -13033,7 +13126,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Counter",
+      "Bullet Seed"
     ],
     "Weight": "39.2 kg",
     "Height": "1.19 m",
@@ -13048,14 +13142,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Dynamic Punch",
+      "Seed Bomb",
+      "Sludge Bomb"
     ],
     "BaseAttack": 241,
     "BaseDefense": 153,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "287",
@@ -13068,7 +13164,7 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Yawn"
     ],
     "Weight": "24 kg",
     "Height": "0.79 m",
@@ -13092,13 +13188,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Body Slam",
+      "Night Slash",
+      "Brick Break"
     ],
     "BaseAttack": 104,
     "BaseDefense": 104,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.4,
+    "FleeRate": 0.09,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13112,7 +13210,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Scratch",
+      "Counter"
     ],
     "Weight": "46.5 kg",
     "Height": "1.4 m",
@@ -13138,13 +13237,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Body Slam",
+      "Bulldoze",
+      "Brick Break"
     ],
     "BaseAttack": 159,
     "BaseDefense": 159,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.06,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13158,7 +13259,7 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Yawn"
     ],
     "Weight": "130.5 kg",
     "Height": "2.01 m",
@@ -13177,13 +13278,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Hyper Beam",
+      "Play Rough",
+      "Earthquake"
     ],
-    "BaseAttack": 319,
-    "BaseDefense": 201,
-    "BaseStamina": 300,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "BaseAttack": 290,
+    "BaseDefense": 183,
+    "BaseStamina": 273,
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13200,7 +13303,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Scratch",
+      "Bug Bite"
     ],
     "Weight": "5.5 kg",
     "Height": "0.51 m",
@@ -13224,13 +13328,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Night Slash",
+      "Bug Buzz",
+      "Aerial Ace"
     ],
     "BaseAttack": 80,
     "BaseDefense": 153,
     "BaseStamina": 62,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.2,
+    "FleeRate": 0.1,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13247,7 +13353,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Fury Cutter",
+      "Metal Claw"
     ],
     "Weight": "12 kg",
     "Height": "0.79 m",
@@ -13262,13 +13369,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Shadow Ball",
+      "Bug Buzz",
+      "Aerial Ace"
     ],
     "BaseAttack": 196,
     "BaseDefense": 114,
     "BaseStamina": 122,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.07,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13285,7 +13394,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Struggle Bug"
     ],
     "Weight": "1.2 kg",
     "Height": "0.79 m",
@@ -13300,13 +13410,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Shadow Sneak",
+      "Aerial Ace",
+      "Dig"
     ],
     "BaseAttack": 153,
     "BaseDefense": 80,
     "BaseStamina": 2,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13320,7 +13432,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Pound",
+      "Astonish"
     ],
     "Weight": "16.3 kg",
     "Height": "0.61 m",
@@ -13344,14 +13457,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Stomp",
+      "Disarming Voice",
+      "Flamethrower"
     ],
     "BaseAttack": 92,
     "BaseDefense": 42,
     "BaseStamina": 128,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "294",
@@ -13364,7 +13479,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Rock Smash"
     ],
     "Weight": "40.5 kg",
     "Height": "0.99 m",
@@ -13390,14 +13506,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Crunch",
+      "Disarming Voice",
+      "Flamethrower"
     ],
     "BaseAttack": 134,
     "BaseDefense": 81,
     "BaseStamina": 168,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "295",
@@ -13410,7 +13528,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Astonish"
     ],
     "Weight": "84 kg",
     "Height": "1.5 m",
@@ -13429,14 +13548,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Crunch",
+      "Disarming Voice",
+      "Fire Blast"
     ],
     "BaseAttack": 179,
     "BaseDefense": 142,
     "BaseStamina": 208,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "296",
@@ -13449,7 +13570,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Rock Smash",
+      "Tackle"
     ],
     "Weight": "86.4 kg",
     "Height": "0.99 m",
@@ -13469,14 +13591,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Heavy Slam",
+      "Low Sweep",
+      "Cross Chop"
     ],
     "BaseAttack": 99,
     "BaseDefense": 54,
     "BaseStamina": 144,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "297",
@@ -13489,7 +13613,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Counter",
+      "Bullet Punch"
     ],
     "Weight": "253.8 kg",
     "Height": "2.31 m",
@@ -13504,14 +13629,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Heavy Slam",
+      "Close Combat",
+      "Dynamic Punch"
     ],
     "BaseAttack": 209,
     "BaseDefense": 114,
     "BaseStamina": 288,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "298",
@@ -13527,7 +13654,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Splash",
+      "Bubble"
     ],
     "Weight": "2 kg",
     "Height": "0.2 m",
@@ -13535,7 +13663,12 @@
       "Name": "Marill candies",
       "FamilyID": 183
     },
-    "Previous evolution(s)": [
+    "Next Evolution Requirements": {
+      "Amount": 25,
+      "Family": 183,
+      "Name": "Marill candies"
+    },
+    "Next evolution(s)": [
       {
         "Number": "183",
         "Name": "Marill"
@@ -13546,14 +13679,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Bubble Beam",
+      "Ice Beam",
+      "Body Slam"
     ],
     "BaseAttack": 36,
     "BaseDefense": 71,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.1,
     "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "299",
@@ -13566,7 +13701,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Rock Throw",
+      "Spark"
     ],
     "Weight": "97 kg",
     "Height": "0.99 m",
@@ -13575,14 +13711,16 @@
       "FamilyID": 299
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Rock Blast",
+      "Rock Slide",
+      "Thunderbolt"
     ],
     "BaseAttack": 82,
     "BaseDefense": 236,
     "BaseStamina": 60,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "300",
@@ -13595,7 +13733,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Feint Attack",
+      "Tackle"
     ],
     "Weight": "11 kg",
     "Height": "0.61 m",
@@ -13615,14 +13754,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Dig",
+      "Disarming Voice",
+      "Wild Charge"
     ],
     "BaseAttack": 84,
     "BaseDefense": 84,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "301",
@@ -13635,7 +13776,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Feint Attack",
+      "Zen Headbutt"
     ],
     "Weight": "32.6 kg",
     "Height": "1.09 m",
@@ -13650,14 +13792,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Play Rough",
+      "Disarming Voice",
+      "Wild Charge"
     ],
     "BaseAttack": 132,
     "BaseDefense": 132,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "302",
@@ -13708,7 +13852,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Astonish"
     ],
     "Weight": "11.5 kg",
     "Height": "0.61 m",
@@ -13717,13 +13862,15 @@
       "FamilyID": 303
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Play Rough",
+      "Vice Grip",
+      "Iron Head"
     ],
     "BaseAttack": 155,
     "BaseDefense": 155,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.5,
+    "FleeRate": 0.09,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -13740,7 +13887,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Tackle",
+      "Metal Claw"
     ],
     "Weight": "60 kg",
     "Height": "0.41 m",
@@ -13764,14 +13912,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Iron Head",
+      "Rock Tomb",
+      "Body Slam"
     ],
     "BaseAttack": 121,
     "BaseDefense": 168,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.2,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "305",
@@ -13787,7 +13937,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Metal Claw",
+      "Iron Tail"
     ],
     "Weight": "120 kg",
     "Height": "0.89 m",
@@ -13813,14 +13964,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Body Slam",
+      "Rock Slide",
+      "Heavy Slam"
     ],
     "BaseAttack": 158,
     "BaseDefense": 240,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "306",
@@ -13836,7 +13989,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Dragon Tail",
+      "Iron Tail"
     ],
     "Weight": "360 kg",
     "Height": "2.11 m",
@@ -13855,14 +14009,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Thunder",
+      "Stone Edge",
+      "Heavy Slam"
     ],
     "BaseAttack": 198,
     "BaseDefense": 314,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "307",
@@ -13878,7 +14034,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Confusion",
+      "Rock Smash"
     ],
     "Weight": "11.2 kg",
     "Height": "0.61 m",
@@ -13898,14 +14055,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Ice Punch",
+      "Psyshock",
+      "Low Sweep"
     ],
     "BaseAttack": 78,
     "BaseDefense": 107,
     "BaseStamina": 60,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "308",
@@ -13921,7 +14080,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Psycho Cut",
+      "Counter"
     ],
     "Weight": "31.5 kg",
     "Height": "1.3 m",
@@ -13936,14 +14096,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Ice Punch",
+      "Psychic",
+      "Dynamic Punch"
     ],
     "BaseAttack": 121,
     "BaseDefense": 152,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "309",
@@ -13956,7 +14118,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Quick Attack",
+      "Spark"
     ],
     "Weight": "15.2 kg",
     "Height": "0.61 m",
@@ -13976,14 +14139,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Thunderbolt",
+      "Discharge",
+      "Swift"
     ],
     "BaseAttack": 123,
     "BaseDefense": 78,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "310",
@@ -13996,7 +14161,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Snarl",
+      "Charge Beam"
     ],
     "Weight": "40.2 kg",
     "Height": "1.5 m",
@@ -14011,14 +14177,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Thunder",
+      "Wild Charge",
+      "Flame Burst"
     ],
     "BaseAttack": 215,
     "BaseDefense": 127,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "311",
@@ -14031,7 +14199,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Spark",
+      "Quick Attack"
     ],
     "Weight": "4.2 kg",
     "Height": "0.41 m",
@@ -14040,14 +14209,16 @@
       "FamilyID": 311
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Thunderbolt",
+      "Discharge",
+      "Swift"
     ],
     "BaseAttack": 167,
     "BaseDefense": 147,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "312",
@@ -14060,7 +14231,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Spark",
+      "Quick Attack"
     ],
     "Weight": "4.2 kg",
     "Height": "0.41 m",
@@ -14069,14 +14241,16 @@
       "FamilyID": 312
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Thunderbolt",
+      "Discharge",
+      "Swift"
     ],
     "BaseAttack": 147,
     "BaseDefense": 167,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "313",
@@ -14089,7 +14263,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Struggle Bug",
+      "Tackle"
     ],
     "Weight": "17.7 kg",
     "Height": "0.71 m",
@@ -14098,14 +14273,16 @@
       "FamilyID": 313
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Signal Beam",
+      "Bug Buzz",
+      "Thunderbolt"
     ],
     "BaseAttack": 143,
     "BaseDefense": 171,
     "BaseStamina": 130,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "314",
@@ -14118,7 +14295,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Struggle Bug",
+      "Tackle"
     ],
     "Weight": "17.7 kg",
     "Height": "0.61 m",
@@ -14127,14 +14305,16 @@
       "FamilyID": 314
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Silver Wind",
+      "Bug Buzz",
+      "Dazzling Gleam"
     ],
     "BaseAttack": 143,
     "BaseDefense": 171,
     "BaseStamina": 130,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "315",
@@ -14150,7 +14330,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Poison Jab",
+      "Razor Leaf"
     ],
     "Weight": "2 kg",
     "Height": "0.3 m",
@@ -14159,14 +14340,16 @@
       "FamilyID": 315
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Petal Blizzard",
+      "Sludge Bomb",
+      "Dazzling Gleam"
     ],
     "BaseAttack": 186,
     "BaseDefense": 148,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "316",
@@ -14179,7 +14362,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Pound",
+      "Rock Smash"
     ],
     "Weight": "10.3 kg",
     "Height": "0.41 m",
@@ -14199,14 +14383,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Sludge",
+      "Gunk Shot",
+      "Ice Beam"
     ],
     "BaseAttack": 80,
     "BaseDefense": 99,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "317",
@@ -14219,7 +14405,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Rock Smash",
+      "Infestation"
     ],
     "Weight": "80 kg",
     "Height": "1.7 m",
@@ -14234,14 +14421,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Gunk Shot",
+      "Sludge Bomb",
+      "Ice Beam"
     ],
     "BaseAttack": 140,
     "BaseDefense": 159,
     "BaseStamina": 200,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "318",
@@ -14257,7 +14446,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Snarl"
     ],
     "Weight": "20.8 kg",
     "Height": "0.79 m",
@@ -14277,14 +14467,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aqua Jet",
+      "Crunch",
+      "Poison Fang"
     ],
     "BaseAttack": 171,
     "BaseDefense": 39,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "319",
@@ -14300,7 +14492,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Waterfall"
     ],
     "Weight": "88.8 kg",
     "Height": "1.8 m",
@@ -14315,14 +14508,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Hydro Pump",
+      "Crunch",
+      "Poison Fang"
     ],
     "BaseAttack": 243,
     "BaseDefense": 83,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "320",
@@ -14335,7 +14530,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Splash",
+      "Water Gun"
     ],
     "Weight": "130 kg",
     "Height": "2.01 m",
@@ -14344,7 +14540,7 @@
       "FamilyID": 320
     },
     "Next Evolution Requirements": {
-      "Amount": 50,
+      "Amount": 400,
       "Family": 320,
       "Name": "Wailmer candies"
     },
@@ -14355,14 +14551,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Heavy Slam",
+      "Water Pulse",
+      "Body Slam"
     ],
     "BaseAttack": 136,
     "BaseDefense": 68,
     "BaseStamina": 260,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "321",
@@ -14375,7 +14573,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Zen Headbutt",
+      "Water Gun"
     ],
     "Weight": "398 kg",
     "Height": "14.5 m",
@@ -14390,14 +14589,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Surf",
+      "Blizzard",
+      "Hyper Beam"
     ],
     "BaseAttack": 175,
     "BaseDefense": 87,
     "BaseStamina": 340,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "322",
@@ -14413,7 +14614,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Ember",
+      "Tackle"
     ],
     "Weight": "24 kg",
     "Height": "0.71 m",
@@ -14433,14 +14635,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Bulldoze",
+      "Heat Wave",
+      "Stomp"
     ],
     "BaseAttack": 119,
     "BaseDefense": 82,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "323",
@@ -14456,7 +14660,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Ember",
+      "Rock Smash"
     ],
     "Weight": "220 kg",
     "Height": "1.91 m",
@@ -14471,14 +14676,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Earthquake",
+      "Overheat",
+      "Solar Beam"
     ],
     "BaseAttack": 194,
     "BaseDefense": 139,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "324",
@@ -14491,7 +14698,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Fire Spin",
+      "Ember"
     ],
     "Weight": "80.4 kg",
     "Height": "0.51 m",
@@ -14500,14 +14708,16 @@
       "FamilyID": 324
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Overheat",
+      "Solar Beam",
+      "Earthquake"
     ],
     "BaseAttack": 151,
     "BaseDefense": 234,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "325",
@@ -14520,7 +14730,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Splash",
+      "Zen Headbutt"
     ],
     "Weight": "30.6 kg",
     "Height": "0.71 m",
@@ -14540,14 +14751,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psybeam",
+      "Shadow Ball",
+      "Mirror Coat"
     ],
     "BaseAttack": 125,
     "BaseDefense": 145,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "326",
@@ -14560,7 +14773,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Charge Beam",
+      "Extrasensory"
     ],
     "Weight": "71.5 kg",
     "Height": "0.89 m",
@@ -14575,14 +14789,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Shadow Ball",
+      "Mirror Coat"
     ],
     "BaseAttack": 171,
     "BaseDefense": 211,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "327",
@@ -14595,7 +14811,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Sucker Punch",
+      "Psycho Cut"
     ],
     "Weight": "5 kg",
     "Height": "1.09 m",
@@ -14604,14 +14821,16 @@
       "FamilyID": 327
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Dig",
+      "Rock Tomb",
+      "Icy Wind"
     ],
     "BaseAttack": 116,
     "BaseDefense": 116,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "328",
@@ -14624,7 +14843,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Mud Shot",
+      "Struggle Bug"
     ],
     "Weight": "15 kg",
     "Height": "0.71 m",
@@ -14648,13 +14868,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Sand Tomb",
+      "Dig",
+      "Crunch"
     ],
     "BaseAttack": 162,
     "BaseDefense": 78,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.4,
+    "FleeRate": 0.09,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -14671,7 +14893,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Mud Shot",
+      "Dragon Breath"
     ],
     "Weight": "15.3 kg",
     "Height": "1.09 m",
@@ -14697,13 +14920,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Sand Tomb",
+      "Bulldoze",
+      "Bug Buzz"
     ],
     "BaseAttack": 134,
     "BaseDefense": 99,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.06,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -14720,7 +14945,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Mud Shot",
+      "Dragon Tail"
     ],
     "Weight": "82 kg",
     "Height": "2.01 m",
@@ -14739,13 +14965,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Earthquake",
+      "Dragon Claw",
+      "Stone Edge"
     ],
     "BaseAttack": 205,
     "BaseDefense": 168,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -14759,7 +14987,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Poison Sting",
+      "Sucker Punch"
     ],
     "Weight": "51.3 kg",
     "Height": "0.41 m",
@@ -14779,14 +15008,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Grass Knot",
+      "Brick Break",
+      "Seed Bomb"
     ],
     "BaseAttack": 156,
     "BaseDefense": 74,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "332",
@@ -14802,7 +15033,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Poison Jab",
+      "Sucker Punch"
     ],
     "Weight": "77.4 kg",
     "Height": "1.3 m",
@@ -14817,14 +15049,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Dark Pulse",
+      "Dynamic Punch",
+      "Grass Knot"
     ],
     "BaseAttack": 221,
     "BaseDefense": 115,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "333",
@@ -14840,7 +15074,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Peck",
+      "Astonish"
     ],
     "Weight": "1.2 kg",
     "Height": "0.41 m",
@@ -14849,7 +15084,7 @@
       "FamilyID": 333
     },
     "Next Evolution Requirements": {
-      "Amount": 50,
+      "Amount": 400,
       "Family": 333,
       "Name": "Swablu candies"
     },
@@ -14860,14 +15095,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Disarming Voice",
+      "Aerial Ace",
+      "Ice Beam"
     ],
     "BaseAttack": 76,
     "BaseDefense": 139,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "334",
@@ -14883,7 +15120,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Peck",
+      "Dragon Breath"
     ],
     "Weight": "20.6 kg",
     "Height": "1.09 m",
@@ -14898,14 +15136,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Sky Attack",
+      "Dazzling Gleam",
+      "Dragon Pulse"
     ],
     "BaseAttack": 141,
     "BaseDefense": 208,
     "BaseStamina": 150,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "335",
@@ -14918,7 +15158,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Fury Cutter",
+      "Shadow Claw"
     ],
     "Weight": "40.3 kg",
     "Height": "1.3 m",
@@ -14927,14 +15168,16 @@
       "FamilyID": 335
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Close Combat",
+      "Night Slash",
+      "Dig"
     ],
     "BaseAttack": 222,
     "BaseDefense": 124,
     "BaseStamina": 146,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "336",
@@ -14947,7 +15190,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Poison Jab",
+      "Iron Tail"
     ],
     "Weight": "52.5 kg",
     "Height": "2.69 m",
@@ -14956,14 +15200,16 @@
       "FamilyID": 336
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Poison Fang",
+      "Crunch",
+      "Wrap"
     ],
     "BaseAttack": 196,
     "BaseDefense": 118,
     "BaseStamina": 146,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "337",
@@ -14979,7 +15225,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Rock Throw",
+      "Confusion"
     ],
     "Weight": "168 kg",
     "Height": "0.99 m",
@@ -14988,14 +15235,16 @@
       "FamilyID": 337
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Rock Slide",
+      "Moonblast"
     ],
     "BaseAttack": 178,
     "BaseDefense": 163,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "338",
@@ -15011,7 +15260,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Rock Throw",
+      "Confusion"
     ],
     "Weight": "154 kg",
     "Height": "1.19 m",
@@ -15020,14 +15270,16 @@
       "FamilyID": 338
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Rock Slide",
+      "Solar Beam"
     ],
     "BaseAttack": 178,
     "BaseDefense": 163,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.09,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "339",
@@ -15043,7 +15295,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Mud Shot"
     ],
     "Weight": "1.9 kg",
     "Height": "0.41 m",
@@ -15063,14 +15316,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aqua Tail",
+      "Ice Beam",
+      "Mud Bomb"
     ],
     "BaseAttack": 93,
     "BaseDefense": 83,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "340",
@@ -15086,7 +15341,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Mud Shot"
     ],
     "Weight": "23.6 kg",
     "Height": "0.89 m",
@@ -15101,14 +15357,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Water Pulse",
+      "Blizzard",
+      "Mud Bomb"
     ],
     "BaseAttack": 151,
     "BaseDefense": 142,
     "BaseStamina": 220,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 1
   },
   {
     "Number": "341",
@@ -15121,7 +15379,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bubble",
+      "Rock Smash"
     ],
     "Weight": "11.5 kg",
     "Height": "0.61 m",
@@ -15141,14 +15400,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Vice Grip",
+      "Bubble Beam",
+      "Aqua Jet"
     ],
     "BaseAttack": 141,
     "BaseDefense": 113,
     "BaseStamina": 86,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "342",
@@ -15164,7 +15425,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Waterfall",
+      "Snarl"
     ],
     "Weight": "32.8 kg",
     "Height": "1.09 m",
@@ -15179,14 +15441,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Vice Grip",
+      "Bubble Beam",
+      "Night Slash"
     ],
     "BaseAttack": 224,
     "BaseDefense": 156,
     "BaseStamina": 126,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "343",
@@ -15202,7 +15466,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Confusion",
+      "Extrasensory"
     ],
     "Weight": "21.5 kg",
     "Height": "0.51 m",
@@ -15222,14 +15487,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Gyro Ball",
+      "Psybeam",
+      "Dig"
     ],
     "BaseAttack": 77,
     "BaseDefense": 131,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "344",
@@ -15245,7 +15512,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Extrasensory",
+      "Confusion"
     ],
     "Weight": "108 kg",
     "Height": "1.5 m",
@@ -15260,14 +15528,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Gyro Ball",
+      "Psychic",
+      "Earthquake"
     ],
     "BaseAttack": 140,
     "BaseDefense": 236,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "345",
@@ -15283,7 +15553,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Acid",
+      "Infestation"
     ],
     "Weight": "23.8 kg",
     "Height": "0.99 m",
@@ -15303,14 +15574,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Grass Knot",
+      "Mirror Coat",
+      "Ancient Power"
     ],
     "BaseAttack": 105,
     "BaseDefense": 154,
     "BaseStamina": 132,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "346",
@@ -15326,7 +15599,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Acid",
+      "Infestation"
     ],
     "Weight": "60.4 kg",
     "Height": "1.5 m",
@@ -15341,14 +15615,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Grass Knot",
+      "Bulldoze",
+      "Stone Edge"
     ],
     "BaseAttack": 152,
     "BaseDefense": 198,
     "BaseStamina": 172,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "347",
@@ -15364,7 +15640,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Struggle Bug",
+      "Scratch"
     ],
     "Weight": "12.5 kg",
     "Height": "0.71 m",
@@ -15384,14 +15661,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Cross Poison",
+      "Aqua Jet",
+      "Ancient Power"
     ],
     "BaseAttack": 176,
     "BaseDefense": 100,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "348",
@@ -15407,7 +15686,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Fury Cutter",
+      "Struggle Bug"
     ],
     "Weight": "68.2 kg",
     "Height": "1.5 m",
@@ -15422,14 +15702,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Cross Poison",
+      "Water Pulse",
+      "Rock Blast"
     ],
     "BaseAttack": 222,
     "BaseDefense": 183,
     "BaseStamina": 150,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "349",
@@ -15442,7 +15724,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Splash",
+      "Tackle"
     ],
     "Weight": "7.4 kg",
     "Height": "0.61 m",
@@ -15462,13 +15745,13 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Mirror Coat"
     ],
     "BaseAttack": 29,
     "BaseDefense": 102,
     "BaseStamina": 40,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.7,
+    "FleeRate": 0.15,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15482,7 +15765,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Waterfall",
+      "Dragon Tail"
     ],
     "Weight": "162 kg",
     "Height": "6.2 m",
@@ -15497,13 +15781,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Surf",
+      "Blizzard",
+      "Hyper Beam"
     ],
     "BaseAttack": 192,
     "BaseDefense": 242,
     "BaseStamina": 190,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.07,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15517,7 +15803,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Rock Smash"
     ],
     "Weight": "0.8 kg",
     "Height": "0.3 m",
@@ -15526,13 +15813,15 @@
       "FamilyID": 351
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Stomp",
+      "Crunch",
+      "Ancient Power"
     ],
     "BaseAttack": 139,
     "BaseDefense": 139,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.3,
+    "FleeRate": 0.1,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15546,7 +15835,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Lick",
+      "Sucker Punch"
     ],
     "Weight": "22 kg",
     "Height": "0.99 m",
@@ -15555,13 +15845,18 @@
       "FamilyID": 352
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Foul Play",
+      "Flamethrower",
+      "Thunder",
+      "Ice Beam",
+      "Aerial Ace",
+      "Shadow Sneak"
     ],
     "BaseAttack": 161,
     "BaseDefense": 212,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.3,
+    "FleeRate": 0.1,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15740,7 +16035,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Air Slash",
+      "Razor Leaf"
     ],
     "Weight": "100 kg",
     "Height": "2.01 m",
@@ -15749,13 +16045,15 @@
       "FamilyID": 357
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Stomp",
+      "Aerial Ace",
+      "Leaf Blade"
     ],
     "BaseAttack": 136,
     "BaseDefense": 165,
     "BaseStamina": 198,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.3,
+    "FleeRate": 0.1,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15769,7 +16067,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Extrasensory",
+      "Astonish"
     ],
     "Weight": "1 kg",
     "Height": "0.61 m",
@@ -15778,13 +16077,15 @@
       "FamilyID": 358
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Energy Ball",
+      "Shadow Ball",
+      "Psyshock"
     ],
     "BaseAttack": 175,
     "BaseDefense": 174,
     "BaseStamina": 150,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.3,
+    "FleeRate": 0.1,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15798,7 +16099,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Psycho Cut",
+      "Snarl"
     ],
     "Weight": "47 kg",
     "Height": "1.19 m",
@@ -15807,13 +16109,15 @@
       "FamilyID": 359
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Dark Pulse",
+      "Thunder",
+      "Megahorn"
     ],
     "BaseAttack": 246,
     "BaseDefense": 120,
     "BaseStamina": 130,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -15827,7 +16131,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Splash",
+      "Counter"
     ],
     "Weight": "14 kg",
     "Height": "0.61 m",
@@ -15836,20 +16141,25 @@
       "FamilyID": 202
     },
     "Next Evolution Requirements": {
-      "Amount": 50,
+      "Amount": 25,
       "Family": 202,
       "Name": "Wobbuffet candies"
     },
-    "Next evolution(s)": [],
+    "Next evolution(s)": [
+      {
+        "Number": "202",
+        "Name": "Wobbuffet"
+      }
+    ],
     "Special Attack(s)": [
-      "Struggle"
+      "Mirror Coat"
     ],
     "BaseAttack": 41,
     "BaseDefense": 86,
     "BaseStamina": 190,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "361",
@@ -15862,7 +16172,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Powder Snow",
+      "Hex"
     ],
     "Weight": "16.8 kg",
     "Height": "0.71 m",
@@ -15882,14 +16193,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Avalanche",
+      "Icy Wind",
+      "Shadow Ball"
     ],
     "BaseAttack": 95,
     "BaseDefense": 95,
     "BaseStamina": 100,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "362",
@@ -15902,7 +16215,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Ice Shard",
+      "Frost Breath"
     ],
     "Weight": "256.5 kg",
     "Height": "1.5 m",
@@ -15917,14 +16231,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Avalanche",
+      "Gyro Ball",
+      "Shadow Ball"
     ],
     "BaseAttack": 162,
     "BaseDefense": 162,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "363",
@@ -15940,7 +16256,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Rock Smash"
     ],
     "Weight": "39.5 kg",
     "Height": "0.79 m",
@@ -15964,14 +16281,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aurora Beam",
+      "Body Slam",
+      "Water Pulse"
     ],
     "BaseAttack": 95,
     "BaseDefense": 90,
     "BaseStamina": 140,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "364",
@@ -15987,7 +16306,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Powder Snow"
     ],
     "Weight": "87.6 kg",
     "Height": "1.09 m",
@@ -16013,14 +16333,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Aurora Beam",
+      "Body Slam",
+      "Water Pulse"
     ],
     "BaseAttack": 137,
     "BaseDefense": 132,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.25,
+    "FleeRate": 0.07,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "365",
@@ -16036,7 +16358,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Waterfall",
+      "Frost Breath"
     ],
     "Weight": "150.6 kg",
     "Height": "1.4 m",
@@ -16055,14 +16378,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Blizzard",
+      "Earthquake",
+      "Water Pulse"
     ],
     "BaseAttack": 182,
     "BaseDefense": 176,
     "BaseStamina": 220,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.13,
+    "FleeRate": 0.05,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "366",
@@ -16075,7 +16400,7 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun"
     ],
     "Weight": "52.5 kg",
     "Height": "0.41 m",
@@ -16099,14 +16424,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Body Slam",
+      "Ice Beam",
+      "Water Pulse"
     ],
     "BaseAttack": 133,
     "BaseDefense": 149,
     "BaseStamina": 70,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.5,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "367",
@@ -16119,7 +16446,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Bite"
     ],
     "Weight": "27 kg",
     "Height": "1.7 m",
@@ -16134,14 +16462,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Crunch",
+      "Ice Beam",
+      "Aqua Tail"
     ],
     "BaseAttack": 197,
     "BaseDefense": 194,
     "BaseStamina": 110,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "368",
@@ -16154,7 +16484,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Confusion"
     ],
     "Weight": "22.6 kg",
     "Height": "1.8 m",
@@ -16169,14 +16500,16 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Draining Kiss",
+      "Psychic",
+      "Water Pulse"
     ],
     "BaseAttack": 211,
     "BaseDefense": 194,
     "BaseStamina": 110,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.2,
+    "FleeRate": 0.06,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "369",
@@ -16192,7 +16525,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Water Gun",
+      "Zen Headbutt"
     ],
     "Weight": "23.4 kg",
     "Height": "0.99 m",
@@ -16201,13 +16535,15 @@
       "FamilyID": 369
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Ancient Power",
+      "Aqua Tail",
+      "Hydro Pump"
     ],
     "BaseAttack": 162,
     "BaseDefense": 234,
     "BaseStamina": 200,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.9,
+    "FleeRate": 0.01,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16221,6 +16557,7 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
+      "Water Gun",
       "Splash"
     ],
     "Weight": "8.7 kg",
@@ -16230,14 +16567,16 @@
       "FamilyID": 370
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Draining Kiss",
+      "Water Pulse",
+      "Aqua Jet"
     ],
     "BaseAttack": 81,
     "BaseDefense": 134,
     "BaseStamina": 86,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.3,
+    "FleeRate": 0.1,
+    "BuddyDistanceNeeded": 3
   },
   {
     "Number": "371",
@@ -16250,7 +16589,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bite",
+      "Ember"
     ],
     "Weight": "42.1 kg",
     "Height": "0.61 m",
@@ -16274,13 +16614,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Flamethrower",
+      "Twister",
+      "Crunch"
     ],
     "BaseAttack": 134,
     "BaseDefense": 107,
     "BaseStamina": 90,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.4,
+    "FleeRate": 0.09,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16294,7 +16636,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Ember",
+      "Dragon Breath"
     ],
     "Weight": "110.5 kg",
     "Height": "1.09 m",
@@ -16320,13 +16663,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Flamethrower",
+      "Dragon Pulse",
+      "Twister"
     ],
     "BaseAttack": 172,
     "BaseDefense": 179,
     "BaseStamina": 130,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.06,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16343,7 +16688,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Dragon Tail",
+      "Fire Fang"
     ],
     "Weight": "102.6 kg",
     "Height": "1.5 m",
@@ -16362,13 +16708,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Fire Blast",
+      "Hydro Pump",
+      "Draco Meteor"
     ],
     "BaseAttack": 277,
     "BaseDefense": 168,
     "BaseStamina": 190,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16385,7 +16733,7 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Take Down"
     ],
     "Weight": "95.2 kg",
     "Height": "0.61 m",
@@ -16414,8 +16762,8 @@
     "BaseAttack": 96,
     "BaseDefense": 141,
     "BaseStamina": 80,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.4,
+    "FleeRate": 0.09,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16432,7 +16780,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Zen Headbutt",
+      "Metal Claw"
     ],
     "Weight": "202.5 kg",
     "Height": "1.19 m",
@@ -16458,13 +16807,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Gyro Ball",
+      "Psyshock"
     ],
     "BaseAttack": 138,
     "BaseDefense": 185,
     "BaseStamina": 120,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.1,
+    "FleeRate": 0.06,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16481,7 +16832,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Bullet Punch",
+      "Zen Headbutt"
     ],
     "Weight": "550 kg",
     "Height": "1.6 m",
@@ -16500,13 +16852,15 @@
       }
     ],
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Flash Cannon",
+      "Earthquake"
     ],
     "BaseAttack": 257,
     "BaseDefense": 247,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
+    "CaptureRate": 0.05,
+    "FleeRate": 0.05,
     "BuddyDistanceNeeded": 5
   },
   {
@@ -16520,7 +16874,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Rock Throw",
+      "Rock Smash"
     ],
     "Weight": "230 kg",
     "Height": "1.7 m",
@@ -16529,14 +16884,16 @@
       "FamilyID": 377
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Stone Edge",
+      "Zap Cannon",
+      "Focus Blast"
     ],
     "BaseAttack": 179,
     "BaseDefense": 356,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "378",
@@ -16549,7 +16906,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Frost Breath",
+      "Rock Smash"
     ],
     "Weight": "175 kg",
     "Height": "1.8 m",
@@ -16558,14 +16916,16 @@
       "FamilyID": 378
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Blizzard",
+      "Earthquake",
+      "Focus Blast"
     ],
     "BaseAttack": 179,
     "BaseDefense": 356,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "379",
@@ -16578,7 +16938,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Metal Claw",
+      "Rock Smash"
     ],
     "Weight": "205 kg",
     "Height": "1.91 m",
@@ -16587,14 +16948,16 @@
       "FamilyID": 379
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Flash Cannon",
+      "Hyper Beam",
+      "Focus Blast"
     ],
     "BaseAttack": 143,
     "BaseDefense": 285,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "380",
@@ -16610,7 +16973,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Dragon Breath",
+      "Zen Headbutt"
     ],
     "Weight": "40 kg",
     "Height": "1.4 m",
@@ -16619,14 +16983,16 @@
       "FamilyID": 380
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Dragon Claw",
+      "Thunder"
     ],
     "BaseAttack": 228,
     "BaseDefense": 268,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "381",
@@ -16642,7 +17008,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Dragon Breath",
+      "Zen Headbutt"
     ],
     "Weight": "60 kg",
     "Height": "2.01 m",
@@ -16651,14 +17018,16 @@
       "FamilyID": 381
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Psychic",
+      "Dragon Claw",
+      "Solar Beam"
     ],
     "BaseAttack": 268,
     "BaseDefense": 228,
     "BaseStamina": 160,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "382",
@@ -16671,7 +17040,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Waterfall",
+      "Dragon Tail"
     ],
     "Weight": "352 kg",
     "Height": "4.5 m",
@@ -16680,14 +17050,16 @@
       "FamilyID": 382
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Hydro Pump",
+      "Blizzard",
+      "Thunder"
     ],
-    "BaseAttack": 297,
-    "BaseDefense": 276,
-    "BaseStamina": 200,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BaseAttack": 270,
+    "BaseDefense": 251,
+    "BaseStamina": 182,
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "383",
@@ -16700,7 +17072,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Mud Shot",
+      "Dragon Tail"
     ],
     "Weight": "950 kg",
     "Height": "3.51 m",
@@ -16709,14 +17082,16 @@
       "FamilyID": 383
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Earthquake",
+      "Fire Blast",
+      "Solar Beam"
     ],
-    "BaseAttack": 297,
-    "BaseDefense": 276,
-    "BaseStamina": 200,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BaseAttack": 270,
+    "BaseDefense": 251,
+    "BaseStamina": 182,
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "384",
@@ -16732,7 +17107,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Air Slash",
+      "Dragon Tail"
     ],
     "Weight": "206.5 kg",
     "Height": "7.01 m",
@@ -16741,14 +17117,16 @@
       "FamilyID": 384
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Outrage",
+      "Aerial Ace",
+      "Ancient Power"
     ],
-    "BaseAttack": 312,
-    "BaseDefense": 187,
-    "BaseStamina": 210,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BaseAttack": 284,
+    "BaseDefense": 170,
+    "BaseStamina": 191,
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "385",
@@ -16764,7 +17142,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Confusion",
+      "Charge Beam"
     ],
     "Weight": "1.1 kg",
     "Height": "0.3 m",
@@ -16773,14 +17152,16 @@
       "FamilyID": 385
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Dazzling Gleam",
+      "Psychic",
+      "Doom Desire"
     ],
     "BaseAttack": 210,
     "BaseDefense": 210,
     "BaseStamina": 200,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "386",
@@ -16793,7 +17174,8 @@
       "DataNotInGameMaster"
     ],
     "Fast Attack(s)": [
-      "Splash"
+      "Zen Headbutt",
+      "Counter"
     ],
     "Weight": "60.8 kg",
     "Height": "1.7 m",
@@ -16802,13 +17184,15 @@
       "FamilyID": 386
     },
     "Special Attack(s)": [
-      "Struggle"
+      "Psycho Boost",
+      "Zap Cannon",
+      "Swift"
     ],
     "BaseAttack": 1,
     "BaseDefense": 1,
     "BaseStamina": 1,
-    "CaptureRate": 0.0,
-    "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "CaptureRate": 0.02,
+    "FleeRate": 0.01,
+    "BuddyDistanceNeeded": 20
   }
 ]
