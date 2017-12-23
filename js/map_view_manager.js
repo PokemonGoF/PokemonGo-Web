@@ -904,11 +904,12 @@ function MapViewManager() {
                 var ptd = pokemonArray[pkmID - 1];
 
                 var pkmDateCaptured = new Date(pokemonData.creation_time_ms);
-                var pkmTypeI = ptd.TypeI[0],
-                    pkmTypeII = '';
+                var pkmTypeI = ptd['Type I'][0];
 
-                if (typeof ptd.TypeII !== 'undefined') {
-                    pkmTypeII = ptd.TypeII[0];
+                if (typeof ptd['Type II'] !== 'undefined') {
+                    pkmTypeII = ptd['Type II'][0];
+                } else {
+                    pkmTypeII = '';
                 }
 
                 var pkmWeakness = ptd.Weaknesses,
