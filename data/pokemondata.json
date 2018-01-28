@@ -1220,7 +1220,8 @@
       "Discharge",
       "Thunderbolt",
       "Wild Charge",
-      "Thunder"
+      "Thunder",
+      "Surf"
     ],
     "BaseAttack": 112,
     "BaseDefense": 101,
@@ -13510,7 +13511,8 @@
     "Special Attack(s)": [
       "Crunch",
       "Disarming Voice",
-      "Flamethrower"
+      "Flamethrower",
+      "Stomp"
     ],
     "BaseAttack": 134,
     "BaseDefense": 81,
