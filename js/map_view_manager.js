@@ -849,7 +849,7 @@ function MapViewManager() {
                 return (nth % 4 === 0) ? '</div></div><div class="row"><div' : match;
             });
 
-            $('#subtitle').html(bagItemCount + " item" + (bagItemCount !== 1 ? "s" : "") + " in Bag");
+            $('#subtitle').html(bagItemCount + " item" + (bagItemCount !== 1 ? "s" : "") + " in bag");
             $('#subcontent').html(out);
         };
 
@@ -1178,6 +1178,7 @@ function MapViewManager() {
                     pkmnName = pSorted.Name,
                     pkmnEnc = pSorted.enc,
                     pkmnCap = pSorted.cap,
+                    pkmnBuddyDist = pSorted.BuddyDistanceNeeded,
                     candyNum = getCandy(parseInt(pkmnNum), user_id) || 0;
 
                 if ((filter === 'seen' && pkmnEnc === 0) || (filter === 'unseen' && pkmnEnc > 0) || (filter === 'caught' && pkmnCap === 0) || (filter === 'uncaught' && pkmnCap > 0)) {
@@ -1193,12 +1194,14 @@ function MapViewManager() {
                     pkmnNum +
                     ' ' +
                     pkmnName +
-                    '</b><br>Times Seen: ' +
+                    '</b><br>Times seen: ' +
                     pkmnEnc +
-                    '<br>Times Caught: ' +
+                    '<br>Times caught: ' +
                     pkmnCap +
                     '<br>Candy: ' +
                     candyNum +
+                    '<br>Buddy distance: ' +
+                    pkmnBuddyDist +
                     '</div>';
             }
             out += '</div></div>';

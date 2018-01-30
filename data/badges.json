@@ -88,7 +88,7 @@
         "Protobuf":"BADGE_LEGENDARY_BATTLE_WON",
         "Description":"Win legendary raid battles",
         "Playerstat":"num_legendary_battle_won",
-        "Thresholds":[3, 10, 26]
+        "Thresholds":[10, 100, 1000]
    },
    {
         "Name":"Fisherman",
@@ -270,4 +270,3 @@
         "Thresholds":[10, 50, 200]
    }
 ]
-
