@@ -6716,9 +6716,9 @@
     "BaseAttack": 192,
     "BaseDefense": 249,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.03,
     "FleeRate": 0.1,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "145",
@@ -6755,9 +6755,9 @@
     "BaseAttack": 253,
     "BaseDefense": 188,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.03,
     "FleeRate": 0.1,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "146",
@@ -6795,9 +6795,9 @@
     "BaseAttack": 251,
     "BaseDefense": 184,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.03,
     "FleeRate": 0.1,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "147",
@@ -6982,9 +6982,9 @@
     "BaseAttack": 330,
     "BaseDefense": 200,
     "BaseStamina": 212,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.06,
     "FleeRate": 0.1,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "151",
@@ -7023,7 +7023,7 @@
     "BaseStamina": 200,
     "CaptureRate": 0.0,
     "FleeRate": 0.1,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "152",
@@ -11164,9 +11164,9 @@
     "BaseAttack": 241,
     "BaseDefense": 210,
     "BaseStamina": 180,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.02,
     "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "244",
@@ -11200,9 +11200,9 @@
     "BaseAttack": 235,
     "BaseDefense": 176,
     "BaseStamina": 230,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.02,
     "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "245",
@@ -11235,9 +11235,9 @@
     "BaseAttack": 180,
     "BaseDefense": 235,
     "BaseStamina": 200,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.02,
     "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "246",
@@ -11446,13 +11446,13 @@
     "BaseAttack": 193,
     "BaseDefense": 323,
     "BaseStamina": 212,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.02,
     "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "250",
-    "Name": "HoOh",
+    "Name": "Ho-Oh",
     "Classification": "Rainbow Pokemon",
     "Type I": [
       "Fire"
@@ -11475,7 +11475,7 @@
     "Weight": "199 kg",
     "Height": "3,81 m",
     "Candy": {
-      "Name": "HoOh candies",
+      "Name": "Ho-Oh candies",
       "FamilyID": 250
     },
     "Special Attack(s)": [
@@ -11487,9 +11487,9 @@
     "BaseAttack": 263,
     "BaseDefense": 301,
     "BaseStamina": 212,
-    "CaptureRate": 0.0,
+    "CaptureRate": 0.02,
     "FleeRate": 0.04,
-    "BuddyDistanceNeeded": 5
+    "BuddyDistanceNeeded": 20
   },
   {
     "Number": "251",
