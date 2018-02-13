@@ -1107,9 +1107,12 @@ function MapViewManager() {
                 } else {
                     eggString += '<b>Not in use</b><br>';
                 }
-                var img = 'EggIncubatorUnlimited';
+                var img = '901_full';
                 if (incubator.item_id == 902) {
-                    img = 'EggIncubator';
+                    img = '902_full';
+                    eggString += '<b>Uses Remaining:</b> ' + incubator.uses_remaining;
+                } else if (incubator.item_id == 903) {
+                    img = '903_full';
                     eggString += '<b>Uses Remaining:</b> ' + incubator.uses_remaining;
                 }
                 out += '<div class="col s12 m4 l3 center" style="float: left;"><img src="image/items/' + img + '.png" class="png_img"><br>';
