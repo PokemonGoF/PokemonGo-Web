@@ -6942,7 +6942,8 @@
       "Hyper Beam",
       "Outrage",
       "Dragon Claw",
-      "Dragon Pulse"
+      "Dragon Pulse",
+      "Draco Meteor"
     ],
     "BaseAttack": 263,
     "BaseDefense": 201,
@@ -15812,6 +15813,8 @@
       "Hex",
       "Water Gun",
       "Powder Snow",
+      "Bite",
+      "Rock Smash",
       "Ember"
     ],
     "Weight": "0.8 kg",
@@ -15828,7 +15831,10 @@
       "Blizzard",
       "Ice Beam",
       "Fire Blast",
-      "Solar Beam"
+      "Solar Beam",
+      "Stomp",
+      "Crunch",
+      "Ancient Power"
     ],
     "BaseAttack": 139,
     "BaseDefense": 139,
